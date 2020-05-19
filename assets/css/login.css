@@ -1,0 +1,119 @@
+body.login{
+  background-color: #FFF;
+}
+#login {
+  background: #FFF;
+  margin: 50px auto;
+  padding: 40px 20px;
+  width: 460px !important;
+  border:2px dashed #EAEAEA;
+  padding-bottom:25px;
+}
+#login h1 a {
+  background-image: url(../images/betizen-logo.png);
+  background-size: 100%;
+  height: 49px;
+  width: 43%;
+  margin-bottom: 3px;
+}
+
+@media(max-width:570px){
+  #login {
+    width:350px !important;
+  }
+}
+@media(max-width:415px){
+  #login {
+    width:300px !important;
+    border:0 !important;
+  }
+  #login h1 a{
+    height:40px !important;
+  }
+  #wp-submit{
+    font-size:13px !important;
+    padding:9px !important;
+  }
+  .input{
+    font-size:18px !important;
+  }
+  .login-message{
+    font-size:14px !important;
+  }
+  label{
+    font-size:12px !important;
+  }
+
+}
+.message{
+  border-left:0 !important;
+  text-align:center;
+}
+.input{
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.login-message{
+  padding: 0px 18px 9px;font-family: Tahoma, Verdana, Segoe, sans-serif;font-size: 18px;font-style: normal;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #222222;line-height: 150%;
+  text-align:center;
+}
+.login form{
+  box-shadow:none;
+  padding:20px;
+}
+
+.login label {
+  color: #555;
+  font-size: 14px;
+}
+.login form .forgetmenot{
+  float:none;
+}
+#login form p.submit{
+margin-top:15px;
+}
+.login.wp-core-ui .button-primary {
+  color: #fff;
+  background-color: #7952B3;
+  text-shadow: none;
+  float: none;
+  clear: both;
+  width: 100%;
+  padding: 13px 27px;
+  height: auto;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 15px;
+  line-height: 1.25;
+  border-radius: 0.25rem;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+.login.wp-core-ui .button-primary:hover {
+  color: #fff;
+  background-color: #614092;
+  border-color: #6a3381;
+}

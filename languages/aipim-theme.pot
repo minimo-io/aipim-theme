@@ -1,0 +1,1432 @@
+# Copyright (C) 2020 Minimo
+# This file is distributed under the .
+msgid ""
+msgstr ""
+"Project-Id-Version: Aipim 1.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-05-19T16:35:29+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.3.0\n"
+"X-Domain: aipim\n"
+
+#. Theme Name of the theme
+msgid "Aipim"
+msgstr ""
+
+#. Description of the theme
+msgid "A community theme developed for Betizen.org based on themes.getbootstrap.com"
+msgstr ""
+
+#. Author of the theme
+msgid "Minimo"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://minimo.io/"
+msgstr ""
+
+#: 404.php:14
+msgid "We couldn't find this page."
+msgstr ""
+
+#: 404.php:15
+msgid "Back to top"
+msgstr ""
+
+#: assets/includes/admin.inc.php:53
+msgid "Homepage title"
+msgstr ""
+
+#: assets/includes/admin.inc.php:57
+msgid "Homepage slogan"
+msgstr ""
+
+#: assets/includes/admin.inc.php:61
+msgid "Homepage button"
+msgstr ""
+
+#: assets/includes/admin.inc.php:65
+msgid "Homepage button link"
+msgstr ""
+
+#: assets/includes/admin.inc.php:69
+msgid "Quick guide link"
+msgstr ""
+
+#: assets/includes/admin.inc.php:73
+msgid "Big guide link"
+msgstr ""
+
+#: assets/includes/admin.inc.php:79
+msgid "Save Settings"
+msgstr ""
+
+#: assets/includes/admin.inc.php:102
+msgid "Betizen stats"
+msgstr ""
+
+#: assets/includes/admin.inc.php:125
+msgid "Posts"
+msgstr ""
+
+#: assets/includes/admin.inc.php:139
+msgid "Total posts published"
+msgstr ""
+
+#: assets/includes/carrousel.inc.php:29
+#: category-blog.php:101
+#: page-686.php:102
+msgid "Previous"
+msgstr ""
+
+#: assets/includes/carrousel.inc.php:33
+#: category-blog.php:102
+#: functions.php:310
+#: page-686.php:105
+msgid "Next"
+msgstr ""
+
+#: assets/includes/nav.inc.php:26
+msgid "Join"
+msgstr ""
+
+#: assets/includes/nav.inc.php:36
+#: search.php:26
+msgid "Search"
+msgstr ""
+
+#: assets/includes/nav.inc.php:134
+msgid "Profile"
+msgstr ""
+
+#: assets/includes/nav.inc.php:135
+#: assets/includes/nav.inc.php:178
+msgid "Exit"
+msgstr ""
+
+#: assets/includes/nav.inc.php:137
+#: assets/includes/nav.inc.php:152
+#: buddypress/members/register.php:208
+msgid "Sign in"
+msgstr ""
+
+#: assets/includes/nav.inc.php:149
+msgid "Sign up"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:55
+msgid "More"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:119
+#: assets/includes/views/category.html.php:46
+msgid "Play for free"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:130
+#: single-juegos.php:305
+#: _single-juegos.php:49
+#: _single-juegos.php:188
+#: _single-juegos.php:496
+msgid "Volatility"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:152
+msgid "Visit casino"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:201
+#: assets/includes/reusable-htmls.inc.php:202
+#: single-casinos.php:266
+#: single-casinos.php:441
+msgid "Reputation details"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:207
+#: assets/includes/reusable-htmls.inc.php:284
+msgid "Analysis"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:211
+#: assets/includes/reusable-htmls.inc.php:287
+#: single-casinos.php:128
+#: single-casinos.php:249
+#: single-casinos.php:277
+#: single-casinos.php:432
+msgid "Visit"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:295
+#: assets/includes/reusable-htmls.inc.php:445
+msgid "active"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:295
+#: assets/includes/reusable-htmls.inc.php:445
+msgid "inactive"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:300
+msgid "bonus-image"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:301
+msgid "More info"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:309
+#: assets/includes/reusable-htmls.inc.php:492
+#: single-bonus.php:294
+msgid "Get bonus"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:372
+msgid "official response"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:397
+msgid "reply"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:398
+msgid "login to reply"
+msgstr ""
+
+#: assets/includes/reusable-htmls.inc.php:499
+msgid "This bonus is <b><u>inactive</u></b>."
+msgstr ""
+
+#: assets/includes/shortcodes/alerts.inc.php:19
+msgid "It is advisable to exercise caution with providers that are not transparent with games basic values. If you are going to play for real money keep in mind that there is no complete official information for this game."
+msgstr ""
+
+#: assets/includes/shortcodes/alerts.inc.php:20
+msgid "ATTENTION!"
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:49
+msgid "There is an error in the captcha resolution. Please try again."
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:62
+msgid "New inquiry for expert"
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:71
+msgid "Inquiry sent correctly. Our professionals will contact you shortly."
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:75
+msgid "An unexpected error occurred while trying to submit the inquiry."
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:90
+msgid "Ask the pros"
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:106
+msgid "Simply select the area (Slots, Bingo, Casino, etc.), enter your contact information and send your question to our professionals. You will be answered personally and shortly."
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:115
+msgid "I have a question about"
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:122
+#: footer.php:24
+msgid "Email address"
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:125
+msgid "Phone"
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:136
+msgid "Send inquiry"
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:144
+msgid "You need to login to be able to submit an inquiry to our professionals. If you don't have an account "
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:144
+msgid "signup now"
+msgstr ""
+
+#: assets/includes/shortcodes/askpros.inc.php:144
+msgid ", it's free!"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:18
+#: assets/includes/views/home.html.php:132
+#: assets/includes/views/home.html.php:158
+msgid "/en/online-casinos/"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:24
+#: assets/includes/views/home.html.php:118
+#: assets/includes/views/home.html.php:199
+#: _single-juegos.php:30
+msgid "/en/games/"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:24
+#: single-juegos.php:531
+#: _single-juegos.php:113
+#: _single-juegos.php:463
+msgid "Free play"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:31
+#: page-686.php:40
+msgid "Player profile"
+msgstr ""
+
+#: assets/includes/shortcodes/short-providers-list.inc.php:23
+#: category-blog.php:44
+msgid "Visualization type"
+msgstr ""
+
+#: assets/includes/shortcodes/short-providers-list.inc.php:24
+#: category-blog.php:45
+msgid "Gallery view"
+msgstr ""
+
+#: assets/includes/shortcodes/short-providers-list.inc.php:25
+#: category-blog.php:46
+msgid "List view"
+msgstr ""
+
+#: assets/includes/shortcodes/short-providers-list.inc.php:39
+#: assets/includes/shortcodes/short-providers-list.inc.php:56
+msgid "games"
+msgstr ""
+
+#: assets/includes/shortcodes/short-providers-list.inc.php:44
+msgid "provider-image"
+msgstr ""
+
+#: assets/includes/shortcodes/short-providers-list.inc.php:47
+msgid "View games"
+msgstr ""
+
+#: assets/includes/user-profile-test.inc.php:56
+#: assets/includes/user-profile-test.inc.php:65
+#: assets/includes/user-profile-test.inc.php:74
+#: assets/includes/user-profile-test.inc.php:83
+#: assets/includes/user-profile-test.inc.php:109
+#: assets/includes/user-profile-test.inc.php:136
+#: assets/includes/user-profile-test.inc.php:145
+#: assets/includes/user-profile-test.inc.php:154
+#: single-juegos.php:402
+#: single-juegos.php:412
+#: single-juegos.php:420
+#: single-juegos.php:428
+#: single-juegos.php:436
+#: single-juegos.php:571
+#: single-juegos.php:581
+#: single-juegos.php:589
+#: single-juegos.php:597
+#: single-juegos.php:605
+#: _single-juegos.php:194
+#: _single-juegos.php:502
+msgid "Yes"
+msgstr ""
+
+#: assets/includes/user-profile-test.inc.php:57
+#: assets/includes/user-profile-test.inc.php:66
+#: assets/includes/user-profile-test.inc.php:75
+#: assets/includes/user-profile-test.inc.php:84
+#: assets/includes/user-profile-test.inc.php:110
+#: assets/includes/user-profile-test.inc.php:137
+#: assets/includes/user-profile-test.inc.php:146
+#: assets/includes/user-profile-test.inc.php:155
+#: single-juegos.php:404
+#: single-juegos.php:411
+#: single-juegos.php:419
+#: single-juegos.php:427
+#: single-juegos.php:435
+#: single-juegos.php:573
+#: single-juegos.php:580
+#: single-juegos.php:588
+#: single-juegos.php:596
+#: single-juegos.php:604
+#: _single-juegos.php:196
+#: _single-juegos.php:504
+msgid "No"
+msgstr ""
+
+#: assets/includes/user-profile-test.inc.php:99
+msgid "I'm interested in new games"
+msgstr ""
+
+#: assets/includes/user-profile-test.inc.php:100
+msgid "I'm interested in classic games"
+msgstr ""
+
+#: assets/includes/user-profile-test.inc.php:118
+msgid "I am interested in winning little and often"
+msgstr ""
+
+#: assets/includes/user-profile-test.inc.php:119
+msgid "I'm interested in big prizes"
+msgstr ""
+
+#: assets/includes/user-profile-test.inc.php:127
+msgid "I prefer to play alone"
+msgstr ""
+
+#: assets/includes/user-profile-test.inc.php:128
+msgid "I prefer to play with other people"
+msgstr ""
+
+#: assets/includes/views/category.html.php:8
+#: _single-juegos.php:29
+msgid "Home"
+msgstr ""
+
+#: assets/includes/views/category.html.php:89
+#: assets/includes/views/page.html.php:11
+#: category-bonos.php:100
+#: category-casinos.php:100
+#: category.php:92
+#: search.php:41
+#: tag.php:59
+#: taxonomy-proveedores.php:72
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: assets/includes/views/home.html.php:66
+msgid "Join free"
+msgstr ""
+
+#: assets/includes/views/home.html.php:68
+msgid "It's free"
+msgstr ""
+
+#: assets/includes/views/home.html.php:89
+msgid "Users"
+msgstr ""
+
+#: assets/includes/views/home.html.php:105
+#: single-bonus.php:246
+#: single-casinos.php:355
+#: single-juegos.php:472
+msgid "Reviews"
+msgstr ""
+
+#: assets/includes/views/home.html.php:120
+#: functions.php:420
+#: functions.php:425
+#: _single-juegos.php:30
+msgid "Games"
+msgstr ""
+
+#: assets/includes/views/home.html.php:134
+msgid "Online Casinos"
+msgstr ""
+
+#: assets/includes/views/home.html.php:155
+msgid "The best online casinos"
+msgstr ""
+
+#: assets/includes/views/home.html.php:156
+msgid "According to other users. Vote now, free now, you decide!"
+msgstr ""
+
+#: assets/includes/views/home.html.php:158
+#: assets/includes/views/home.html.php:199
+msgid "See all"
+msgstr ""
+
+#: assets/includes/views/home.html.php:185
+msgid "View all casinos"
+msgstr ""
+
+#: assets/includes/views/home.html.php:196
+msgid "Top ranked games"
+msgstr ""
+
+#: assets/includes/views/home.html.php:197
+msgid "These are the best games according to other users"
+msgstr ""
+
+#: assets/includes/xhr/favs.xhr.php:83
+#: single-juegos.php:53
+msgid "Remove from favorites"
+msgstr ""
+
+#: assets/includes/xhr/favs.xhr.php:92
+#: single-juegos.php:57
+msgid "Add to favorites"
+msgstr ""
+
+#: assets/includes/xhr/favs.xhr.php:102
+#: single-casinos.php:10
+msgid "Stop following"
+msgstr ""
+
+#: assets/includes/xhr/favs.xhr.php:111
+#: single-casinos.php:16
+msgid "Follow casino"
+msgstr ""
+
+#: buddypress/activity/index.php:21
+msgid "Activity"
+msgstr ""
+
+#: buddypress/assets/emails/single-bp-email.php:468
+#: functions.php:619
+msgid "The trusted community for learning to bet online"
+msgstr ""
+
+#: buddypress/assets/emails/single-bp-email.php:598
+#: buddypress/members/activate.php:65
+msgid "Activate now"
+msgstr ""
+
+#: buddypress/members/activate.php:32
+msgid "Thanks for registering!"
+msgstr ""
+
+#: buddypress/members/activate.php:33
+msgid "Your account is already confirmed."
+msgstr ""
+
+#: buddypress/members/activate.php:38
+msgid "Login"
+msgstr ""
+
+#: buddypress/members/activate.php:41
+msgid "with your username and password and take advantage of all the benefits of being part of Betizen."
+msgstr ""
+
+#: buddypress/members/activate.php:42
+msgid "What can you do now?"
+msgstr ""
+
+#: buddypress/members/activate.php:55
+msgid "Activate your account"
+msgstr ""
+
+#: buddypress/members/activate.php:56
+msgid "You are almost part of Betizen. <br> To complete your registration, all you have to do is click on the \"<strong>Activate now</strong>\" button that appears below."
+msgstr ""
+
+#: buddypress/members/activate.php:60
+msgid "Activation code:"
+msgstr ""
+
+#: buddypress/members/activate.php:62
+msgid "This is the activation code sent to your email"
+msgstr ""
+
+#: buddypress/members/activate.php:74
+msgid "This page will redirect automatically in"
+msgstr ""
+
+#: buddypress/members/activate.php:74
+msgid "seconds"
+msgstr ""
+
+#: buddypress/members/register.php:80
+msgid "Join for free"
+msgstr ""
+
+#: buddypress/members/register.php:87
+msgid "Check your email"
+msgstr ""
+
+#: buddypress/members/register.php:208
+msgid "Already have an account?"
+msgstr ""
+
+#: buddypress/members/single/home.php:61
+msgid "administrator"
+msgstr ""
+
+#: buddypress/members/single/home.php:63
+msgid "lead partner"
+msgstr ""
+
+#: buddypress/members/single/home.php:67
+msgid "member"
+msgstr ""
+
+#: buddypress/members/single/home.php:82
+#: buddypress/members/single/member-header.php:50
+#: single-bonus.php:84
+#: single-bonus.php:185
+#: single-bonus.php:274
+#: single-casinos.php:84
+#: single-casinos.php:271
+#: single-casinos.php:412
+#: single-juegos.php:125
+#: single-juegos.php:232
+#: single-juegos.php:337
+#: single-juegos.php:512
+#: _single-juegos.php:107
+#: _single-juegos.php:457
+msgid "/en/ranks/"
+msgstr ""
+
+#: buddypress/members/single/notifications/notifications-loop.php:18
+msgid "All"
+msgstr ""
+
+#. translators: %s = profile field group name
+#: buddypress/members/single/profile/edit.php:34
+msgid "Editing the profile"
+msgstr ""
+
+#: buddypress/members/single/profile/profile-loop.php:12
+msgid "Public profile"
+msgstr ""
+
+#: category-bonos.php:29
+#: category.php:31
+#: tag.php:31
+#: taxonomy-proveedores.php:44
+msgid "Order by date"
+msgstr ""
+
+#: category-bonos.php:30
+#: category.php:32
+#: tag.php:32
+#: taxonomy-proveedores.php:45
+msgid "Order by name"
+msgstr ""
+
+#: category-bonos.php:62
+#: category-casinos.php:40
+msgid "Before placing a bet learn to choose!"
+msgstr ""
+
+#: category-bonos.php:64
+#: category-casinos.php:42
+#: category.php:63
+msgid "Read quick guide (5 min.)"
+msgstr ""
+
+#: category-bonos.php:65
+#: category-casinos.php:43
+#: category.php:64
+msgid "Read mega guide (30 min.)"
+msgstr ""
+
+#: category.php:61
+msgid "Before you start!"
+msgstr ""
+
+#: comments.php:12
+msgid "There are no comments yet. Be the first and earn prestige points!"
+msgstr ""
+
+#: comments.php:15
+msgid "Casinos are not allowed to comment, only reply."
+msgstr ""
+
+#: comments.php:51
+#: comments.php:156
+msgid "What do you think about "
+msgstr ""
+
+#: comments.php:51
+msgid "<strong><u>Your opinions help the community grow stronger</u></strong>. Share it so everybody so we can all benefit!"
+msgstr ""
+
+#: comments.php:52
+msgid "Opinion"
+msgstr ""
+
+#: comments.php:82
+msgid "Thanks for your comment!"
+msgstr ""
+
+#: comments.php:83
+msgid "This will determine the position of"
+msgstr ""
+
+#: comments.php:85
+msgid "in the rankings."
+msgstr ""
+
+#: comments.php:90
+msgid "Comments are closed for the moment."
+msgstr ""
+
+#: comments.php:95
+msgid "You must be registered to leave an opinion."
+msgstr ""
+
+#: comments.php:97
+msgid "If you already have an account"
+msgstr ""
+
+#: comments.php:98
+msgid "access with your username"
+msgstr ""
+
+#: comments.php:99
+msgid "to share your opinion."
+msgstr ""
+
+#: comments.php:133
+msgid "Your comment"
+msgstr ""
+
+#: comments.php:136
+msgid "Edit"
+msgstr ""
+
+#: comments.php:137
+msgid "Cancel"
+msgstr ""
+
+#: comments.php:184
+msgid "What do you like?"
+msgstr ""
+
+#: comments.php:188
+msgid "What do you dislike?"
+msgstr ""
+
+#: comments.php:192
+msgid "Edit comment"
+msgstr ""
+
+#: footer.php:18
+msgid "New games, bonus and casinos in your inbox!"
+msgstr ""
+
+#: footer.php:19
+msgid "Get tips about how to win, and get the most out of your money! Never spam."
+msgstr ""
+
+#: footer.php:43
+msgid "/en/about-us/"
+msgstr ""
+
+#: footer.php:43
+msgid "About us"
+msgstr ""
+
+#: footer.php:46
+msgid "Glossary"
+msgstr ""
+
+#: footer.php:46
+msgid "/en/glossary/"
+msgstr ""
+
+#: footer.php:49
+#: functions.php:571
+msgid "Providers"
+msgstr ""
+
+#: footer.php:49
+#: taxonomy-proveedores.php:26
+msgid "/en/providers/"
+msgstr ""
+
+#: footer.php:52
+msgid "Affiliates"
+msgstr ""
+
+#: footer.php:52
+msgid "/en/affiliates/"
+msgstr ""
+
+#: footer.php:55
+msgid "Developed by"
+msgstr ""
+
+#: footer.php:80
+#: single-juegos.php:697
+msgid "Terms & Conditions"
+msgstr ""
+
+#: functions.php:421
+msgid "Game"
+msgstr ""
+
+#: functions.php:422
+#: functions.php:454
+#: functions.php:485
+msgid "Add new"
+msgstr ""
+
+#: functions.php:424
+msgid "New game published"
+msgstr ""
+
+#: functions.php:426
+msgid "%1$s posted a new <a href=\"%2$s\">game</a>"
+msgstr ""
+
+#: functions.php:427
+msgid "%1$s posted a new <a href=\"%2$s\">game</a>, on the site %3$s"
+msgstr ""
+
+#: functions.php:428
+msgid "Comments about games"
+msgstr ""
+
+#: functions.php:429
+msgid "Games comments"
+msgstr ""
+
+#: functions.php:430
+msgid "%1$s commented on a <a href=\"%2$s\">game</a>"
+msgstr ""
+
+#: functions.php:431
+msgid "%1$s commented on a <a href=\"%2$s\">game</a>, on the site %3$s"
+msgstr ""
+
+#: functions.php:452
+#: functions.php:456
+msgid "Casinos"
+msgstr ""
+
+#: functions.php:453
+#: functions.php:518
+#: single-bonus.php:236
+#: single-bonus.php:300
+msgid "Casino"
+msgstr ""
+
+#: functions.php:455
+msgid "New casino published"
+msgstr ""
+
+#: functions.php:457
+msgid "%1$s posted a new <a href=\"%2$s\">casino</a>"
+msgstr ""
+
+#: functions.php:458
+msgid "%1$s posted a new <a href=\"%2$s\">casino</a>, on the site %3$s"
+msgstr ""
+
+#: functions.php:459
+msgid "Comments about casinos"
+msgstr ""
+
+#: functions.php:460
+msgid "Casinos comments"
+msgstr ""
+
+#: functions.php:461
+msgid "%1$s commented on a <a href=\"%2$s\">casino</a>"
+msgstr ""
+
+#: functions.php:462
+msgid "%1$s commented on a <a href=\"%2$s\">casino</a>, on the site %3$s"
+msgstr ""
+
+#: functions.php:483
+#: functions.php:487
+msgid "Bonuses"
+msgstr ""
+
+#: functions.php:484
+msgid "Bonus"
+msgstr ""
+
+#: functions.php:486
+msgid "New bonus published"
+msgstr ""
+
+#: functions.php:488
+msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>"
+msgstr ""
+
+#: functions.php:489
+msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>, on the site %3$s"
+msgstr ""
+
+#: functions.php:490
+#: functions.php:491
+msgid "Comments about bonuses"
+msgstr ""
+
+#: functions.php:492
+msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>"
+msgstr ""
+
+#: functions.php:493
+msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>, on the site %3$s"
+msgstr ""
+
+#: functions.php:529
+msgid "Lead Partner"
+msgstr ""
+
+#: functions.php:543
+msgid "Auxiliary sidebar"
+msgstr ""
+
+#: functions.php:564
+#: taxonomy-proveedores.php:26
+msgid "All providers"
+msgstr ""
+
+#: functions.php:615
+msgid "Betizen - The trusted community for learning to bet online"
+msgstr ""
+
+#: functions.php:630
+msgid "Casino to casino"
+msgstr ""
+
+#: functions.php:634
+msgid "Casino post"
+msgstr ""
+
+#: functions.php:637
+msgid "Not linked to any casino"
+msgstr ""
+
+#: functions.php:784
+msgid "Copied!"
+msgstr ""
+
+#: page-686.php:42
+msgid "Do you know what type of player you are?"
+msgstr ""
+
+#: page-686.php:44
+msgid "Are you aware about what your skills and risks are when playing? <br> Knowing yourself you will avoid being scammed and you will be able to make the most of your time and money."
+msgstr ""
+
+#: page-686.php:109
+msgid "Get result"
+msgstr ""
+
+#: page-686.php:131
+msgid "You are one step away from being a better player!"
+msgstr ""
+
+#: page-686.php:134
+msgid "We are processing the results of the test you just completed. <br> We will send them to you by email shortly."
+msgstr ""
+
+#: page-686.php:143
+msgid "You are already a better player!"
+msgstr ""
+
+#: page-686.php:145
+#: page-686.php:179
+#: page-686.php:206
+msgid "problematic"
+msgstr ""
+
+#: page-686.php:158
+#: page-686.php:224
+msgid "worrying"
+msgstr ""
+
+#: page-686.php:160
+#: page-686.php:180
+msgid "Gambling when you are a minor is a problem, but not just because adults say so. <br><br><strong>WHY?</strong>"
+msgstr ""
+
+#: page-686.php:162
+msgid "<br><br> It is likely that to gamble as a minor you must have lied or spent money that you do not have. That's just what adults with gambling problems will do."
+msgstr ""
+
+#: page-686.php:163
+msgid "<br><br>Gambling in any of its forms, leads every year millions of people to economic ruin, to losing contact with their friends and families."
+msgstr ""
+
+#: page-686.php:165
+msgid "<br><br>Games are made to make us think that we have a high chance of winning, when in fact the opposite usually occurs."
+msgstr ""
+
+#: page-686.php:167
+#: page-686.php:184
+msgid "<br><br><strong>WHAT TO DO?</strong>"
+msgstr ""
+
+#: page-686.php:168
+#: page-686.php:189
+msgid "<br><br>It is possible to have fun on the Internet playing games that do not involve gambling. There are some interesting sites and lots of fun communities around them."
+msgstr ""
+
+#: page-686.php:170
+msgid "<br><br>Our goal is to inform you, not to judge you. So we will always keep the reserve."
+msgstr ""
+
+#: page-686.php:171
+msgid "<br><br>Find your tribe, play games according to your age. Write us and we will tell you how to really have fun."
+msgstr ""
+
+#: page-686.php:182
+msgid "<br>Slots and other games are designed to encourage us to keep playing, forgetting our friends or family. And unless you have the necessary knowledge, it is highly likely that you will be manipulated and harmed."
+msgstr ""
+
+#: page-686.php:187
+msgid "<br>If you want to play less it is possible. There are techniques so you can do it without having to stop playing at all. We can help you."
+msgstr ""
+
+#: page-686.php:191
+msgid "<br><br>Find your tribe, play games according to your age and have fun. An old seawolf have said."
+msgstr ""
+
+#: page-686.php:192
+msgid "<br><br>Write us and we will tell you how to do it right."
+msgstr ""
+
+#: page-686.php:212
+msgid "Look, we have detected that you are a player with potential gambling problems. Do not worry. <br><strong>WE WOULD LIKE TO HELP YOU!</strong> Let's see what you need to know:"
+msgstr ""
+
+#: page-686.php:213
+msgid "<br><br><strong> 1. YOU ARE NOT ALONE.</strong>"
+msgstr ""
+
+#: page-686.php:214
+msgid "<br> In the world in which we live, bad habits derived from emotional problems are very common. Even public people and people who don't seem to, suffer in silence. You have already taken the first step. Don't stop now!"
+msgstr ""
+
+#: page-686.php:216
+msgid "<br><br><strong>2. IT IS ALWAYS POSSIBLE TO IMPROVE.</strong>"
+msgstr ""
+
+#: page-686.php:217
+msgid "<br> The most complex step is to recognize the problem. It is the beginning of a path of greater individual freedom where you can leave behind a problem that in many cases takes over people's lives. It is not an easy path, but step by step, not only is it possible to improve, but if you allow yourself to start the process, improvement is inevitable."
+msgstr ""
+
+#: page-686.php:219
+msgid "<br><br><strong>3. IT IS EASIER IF YOU GET HELP FROM SOMEONE.</strong>"
+msgstr ""
+
+#: page-686.php:220
+msgid "br>It is statistically more likely that you will not succeed if you try it alone. It can be the way you want, but you have to take the step of seeking help. Our mind is complex and intelligent, in these cases it is capable of deceiving ourselves that it is not necessary to expose our problem. Unfortunately this is not the case."
+msgstr ""
+
+#: page-686.php:225
+msgid "<br><br>It is always possible to get out of debt with good planning, but first of all you should not continue accumulating it. Let us help you."
+msgstr ""
+
+#: page-686.php:230
+msgid "<br><br>In order to control your gambling time it is necessary that you use certain tools that will help you to do so and choose those <a href='/en/online-casinos/'>online casinos</a> that have the good reputation of taking care of their clients."
+msgstr ""
+
+#: page-686.php:236
+msgid "<br><br>One of the symptoms that you may have a gambling problem is to hide the fact that you bet on friends or family. As we have said this is a problem that you should not be ashamed of, it affects many people and recognizing it is the first step to improve."
+msgstr ""
+
+#: page-686.php:240
+msgid "<br><br>Another symptom of a gambling problem is having borrowed money to keep betting. This begins a process that inevitably leads to getting into debt or lying. It is possible to improve, but for this it is necessary to be accompanied in the process."
+msgstr ""
+
+#: page-686.php:244
+msgid "<br><br>Betting should be fun. And without blame. A symptom that an activity has become obsessive, (whatever it is) is confirmed by the fact that you have tried to stop it and for whatever reason you were unable. If you are here, it is also the first guideline that you can stop it and control it. And for that you will have a much better chance of success if you seek help from reliable people. Let us help you!"
+msgstr ""
+
+#: page-686.php:248
+msgid "<br><br>Our goal is to <u>take care of you</u>. Write to us and we will campaign to help you contact professionals and have someone you trustworthy to talk to."
+msgstr ""
+
+#: page-686.php:249
+msgid "<br>While we process your doubts with the utmost discretion, we recommend you read the read  <a href='/en/articles/'>articles on gambling</a> written by our experts."
+msgstr ""
+
+#: page-686.php:257
+#: page-686.php:275
+msgid "healthy"
+msgstr ""
+
+#: page-686.php:258
+msgid "<br><br>Gambling is fun and exciting. Unfortunately not all players who take this test see it this way."
+msgstr ""
+
+#: page-686.php:259
+msgid "<br>You are among the select group of healthy players, looking for big emotions, money and fun."
+msgstr ""
+
+#: page-686.php:260
+msgid "<br><br>Here are some quality recommendations."
+msgstr ""
+
+#: page-686.php:277
+msgid "<br><br>In Betizen it is possible to play, have fun and participate in the community without having to bet real money."
+msgstr ""
+
+#: page-686.php:278
+msgid "<br>And we promise to keep the site that way."
+msgstr ""
+
+#: page-686.php:279
+msgid "<br><br>In order for you to do this we leave you this selection of the best Betizen games according to users votes. Remember that your votes have an influence over the rankings, so if you are a connoisseur leave your review in the games and earn points."
+msgstr ""
+
+#: page-686.php:280
+msgid "<br><br><h2>The 6 best rated slot machines in Betizen according to users</h2>"
+msgstr ""
+
+#: page-686.php:306
+msgid "<br><br><a class='button button-brand btn-lg mb-5 mb-lg-2 hero-button btn-xs-block' href='/en/contact/' target='_blank'>Get in touch (it's free)</a>"
+msgstr ""
+
+#: page-686.php:322
+msgid "You took the player test the"
+msgstr ""
+
+#: page-686.php:323
+msgid "And the result is"
+msgstr ""
+
+#: page-686.php:379
+msgid "Do you want to do this test again? Get in touch with us and we will help you."
+msgstr ""
+
+#: page-686.php:421
+msgid "Please complete an answer"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Search Page"
+msgstr ""
+
+#: search.php:19
+msgid "Search result"
+msgstr ""
+
+#: single-bonus.php:76
+msgid "Bonus status"
+msgstr ""
+
+#: single-bonus.php:81
+#: single-bonus.php:189
+#: single-casinos.php:81
+#: single-casinos.php:275
+#: single-juegos.php:122
+#: single-juegos.php:341
+#: _single-juegos.php:115
+msgid "Review"
+msgstr ""
+
+#: single-bonus.php:128
+msgid "Rollover"
+msgstr ""
+
+#: single-bonus.php:129
+msgid "https://www.betizen.org/en/articles/what-is-the-rollover-of-bonuses/"
+msgstr ""
+
+#: single-bonus.php:142
+#: single-casinos.php:193
+msgid "Minimum deposit"
+msgstr ""
+
+#: single-bonus.php:154
+msgid "Code"
+msgstr ""
+
+#: single-bonus.php:166
+msgid "Bonus Terms & Condiciones details "
+msgstr ""
+
+#: single-bonus.php:183
+#: single-juegos.php:334
+msgid "Rank"
+msgstr ""
+
+#: single-bonus.php:191
+msgid "Get"
+msgstr ""
+
+#: single-bonus.php:237
+#: single-bonus.php:302
+msgid "Published"
+msgstr ""
+
+#: single-bonus.php:239
+#: single-bonus.php:303
+#: single-casinos.php:326
+#: single-casinos.php:471
+#: single-juegos.php:441
+#: single-juegos.php:610
+#: _single-juegos.php:517
+msgid "Questions?"
+msgstr ""
+
+#: single-bonus.php:239
+#: single-bonus.php:303
+#: single-casinos.php:326
+#: single-casinos.php:471
+#: single-juegos.php:441
+#: single-juegos.php:610
+#: _single-juegos.php:517
+msgid "Contact us"
+msgstr ""
+
+#: single-bonus.php:293
+#: single-casinos.php:431
+#: single-juegos.php:532
+msgid "Write review"
+msgstr ""
+
+#: single-casinos.php:76
+msgid "Operated by"
+msgstr ""
+
+#: single-casinos.php:115
+msgid "Conclusion about the casino"
+msgstr ""
+
+#: single-casinos.php:125
+#: single-juegos.php:160
+msgid "Read more"
+msgstr ""
+
+#: single-casinos.php:139
+#: single-juegos.php:172
+msgid "Read less"
+msgstr ""
+
+#: single-casinos.php:180
+msgid "Max withdrawal"
+msgstr ""
+
+#: single-casinos.php:205
+msgid "Min withdrawal"
+msgstr ""
+
+#: single-casinos.php:264
+#: single-casinos.php:440
+msgid "Reputation"
+msgstr ""
+
+#: single-casinos.php:322
+#: single-casinos.php:467
+msgid "Founded"
+msgstr ""
+
+#: single-casinos.php:323
+#: single-casinos.php:469
+msgid "License(s)"
+msgstr ""
+
+#: single-casinos.php:324
+#: single-casinos.php:470
+msgid "Withdrawal times"
+msgstr ""
+
+#: single-casinos.php:361
+#: single-juegos.php:473
+msgid "Promotions"
+msgstr ""
+
+#: single-juegos.php:33
+msgid "Start"
+msgstr ""
+
+#: single-juegos.php:35
+#: single-juegos.php:43
+msgid "Coins"
+msgstr ""
+
+#: single-juegos.php:36
+msgid "Coin value"
+msgstr ""
+
+#: single-juegos.php:37
+msgid "Lines"
+msgstr ""
+
+#: single-juegos.php:38
+msgid "Coins wagered per spin"
+msgstr ""
+
+#: single-juegos.php:40
+msgid "End"
+msgstr ""
+
+#: single-juegos.php:42
+msgid "Total spins (500 + free spins)"
+msgstr ""
+
+#: single-juegos.php:45
+msgid "Test carried out on"
+msgstr ""
+
+#: single-juegos.php:117
+msgid "Created by"
+msgstr ""
+
+#: single-juegos.php:153
+msgid "Conclusion about the"
+msgstr ""
+
+#: single-juegos.php:164
+msgid "Theme: "
+msgstr ""
+
+#: single-juegos.php:198
+msgid "The best casino to play "
+msgstr ""
+
+#: single-juegos.php:231
+#: single-juegos.php:343
+msgid "Play"
+msgstr ""
+
+#: single-juegos.php:234
+msgid "Play in the casino"
+msgstr ""
+
+#: single-juegos.php:292
+#: _single-juegos.php:58
+#: _single-juegos.php:187
+#: _single-juegos.php:495
+msgid "RTP"
+msgstr ""
+
+#: single-juegos.php:293
+msgid "/en/articles/what-is-the-rtp-in-slots/"
+msgstr ""
+
+#: single-juegos.php:306
+msgid "/en/articles/what-does-volatility-in-slots-mean/"
+msgstr ""
+
+#: single-juegos.php:317
+msgid "Paylines"
+msgstr ""
+
+#: single-juegos.php:367
+#: single-juegos.php:543
+msgid "Tests carried out"
+msgstr ""
+
+#: single-juegos.php:369
+#: single-juegos.php:545
+msgid "500 spins"
+msgstr ""
+
+#: single-juegos.php:370
+#: single-juegos.php:546
+msgid "500 Spin Test Result"
+msgstr ""
+
+#: single-juegos.php:370
+#: single-juegos.php:546
+msgid "<p>To see the detail and to know what is the <strong>500 spins test</strong> visit <a target=\"_blank\" href=\"/en/articles/500-spins-test\">this page</a>.</p>"
+msgstr ""
+
+#: single-juegos.php:375
+msgid "Provider"
+msgstr ""
+
+#: single-juegos.php:382
+#: single-juegos.php:551
+#: _single-juegos.php:200
+#: _single-juegos.php:508
+msgid "Category"
+msgstr ""
+
+#: single-juegos.php:391
+#: single-juegos.php:560
+msgid "Reels"
+msgstr ""
+
+#: single-juegos.php:395
+#: single-juegos.php:564
+#: _single-juegos.php:190
+#: _single-juegos.php:498
+msgid "Jackpot (max.)"
+msgstr ""
+
+#: single-juegos.php:398
+#: single-juegos.php:567
+msgid "Bonus game"
+msgstr ""
+
+#: single-juegos.php:408
+#: single-juegos.php:577
+msgid "Free spins"
+msgstr ""
+
+#: single-juegos.php:416
+#: single-juegos.php:585
+msgid "Multiplier"
+msgstr ""
+
+#: single-juegos.php:424
+#: single-juegos.php:593
+msgid "Wilds"
+msgstr ""
+
+#: single-juegos.php:432
+#: single-juegos.php:601
+msgid "Scatter"
+msgstr ""
+
+#: single-juegos.php:685
+#: _single-juegos.php:603
+msgid "Close"
+msgstr ""
+
+#: single-juegos.php:686
+#: _single-juegos.php:604
+msgid "Fullscreen"
+msgstr ""
+
+#: single-post.php:25
+msgid "By"
+msgstr ""
+
+#: _single-juegos.php:146
+msgid "Just voted"
+msgstr ""
+
+#: _single-juegos.php:174
+msgid "Description"
+msgstr ""
+
+#: _single-juegos.php:175
+msgid "Opinions"
+msgstr ""
+
+#: _single-juegos.php:184
+#: _single-juegos.php:492
+msgid "Software"
+msgstr ""
+
+#: _single-juegos.php:185
+#: _single-juegos.php:493
+msgid "Release year"
+msgstr ""
+
+#: _single-juegos.php:191
+#: _single-juegos.php:499
+msgid "Bonus screen"
+msgstr ""
+
+#: _single-juegos.php:221
+msgid "You must register in order to leave an opinion."
+msgstr ""
+
+#: _single-juegos.php:222
+msgid "If you already signed up"
+msgstr ""
+
+#: _single-juegos.php:222
+msgid "login with your user"
+msgstr ""
+
+#: _single-juegos.php:222
+msgid "to share your opinion"
+msgstr ""
+
+#: _single-juegos.php:462
+msgid "Share opinion"
+msgstr ""
