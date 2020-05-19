@@ -11,7 +11,7 @@ function am_register_settings() {
     register_setting( 'am_options', 'am_home_button_link' );
 
     register_setting( 'am_options', 'am_guide_quick' );
-    register_setting( 'am_options', 'am_guide_big' );
+    register_setting( 'am_options', 'am_guide_big' ); 
 
 }
 function am_options_page_html(){

@@ -6,31 +6,15 @@
             if (!is_page(92)){
             ?>
             <div class="footer__item">
-
-                    <?php
-                    if ( shortcode_exists( 'mc4wp_form' ) ) {
-                    echo do_shortcode('[mc4wp_form id="546"]');
-                    }else{
-                    ?>
-                        <form action="#" method="post" id="mc-embedded-subscribe-form"  name="mc-embedded-subscribe-form" target="_blank" novalidate>
-                            <div class="d-md-flex justify-content-between align-items-center">
-                                <div class="form-group">
-                                    <h5 class="mb-1"><?php _e("New games, bonus and casinos in your inbox!", "aipim");  ?></h5>
-                                    <div class="form-text mt-0"><?php _e("Get tips about how to win, and get the most out of your money! Never spam.", "aipim");  ?></div>
-                                </div>
-                                <div id="signup_footer" class="d-flex align-items-start">
-                                    <div class="form-group w-100 mr-2">
-                                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e3428dd6b8fda73bc5ba8b6e6_198881a019" tabindex="-1" value=""></div>
-                                        <input id="mce-EMAIL" class="footer__email-input form-control form-control--muted" name="EMAIL" type="email" aria-describedby="footerEmail" placeholder="<?php _e("Email address", "aipim");  ?>">
-                                    </div>
-                                    <input class="btn btn-brand" type="submit" value="Suscribir" name="subscibe" id="mc-embedded-subscribe">
-                                </div>
-                            </div>
-                        </form>
-
-                    <?php
-                    }
-                    ?>
+              <div class="d-md-flex justify-content-between align-items-center">
+                  <div class="form-group">
+                      <h5 class="mb-1"><?php _e("New games, bonus and casinos in your inbox!", "aipim");  ?></h5>
+                      <div class="form-text mt-0"><?php _e("Get tips about how to win, and get the most out of your money! Never spam.", "aipim");  ?></div>
+                  </div>
+                  <?php
+                  if ( shortcode_exists( 'mc4wp_form' ) ) echo do_shortcode('[mc4wp_form id="546"]');
+                  ?>
+              </div>
             </div>
           <?php
           }else{
