@@ -217,7 +217,7 @@
                                                             $veredict_texts .= __("<br> The most complex step is to recognize the problem. It is the beginning of a path of greater individual freedom where you can leave behind a problem that in many cases takes over people's lives. It is not an easy path, but step by step, not only is it possible to improve, but if you allow yourself to start the process, improvement is inevitable.", "aipim");
 
                                                             $veredict_texts .= __("<br><br><strong>3. IT IS EASIER IF YOU GET HELP FROM SOMEONE.</strong>", "aipim");
-                                                            $veredict_texts .= __("br>It is statistically more likely that you will not succeed if you try it alone. It can be the way you want, but you have to take the step of seeking help. Our mind is complex and intelligent, in these cases it is capable of deceiving ourselves that it is not necessary to expose our problem. Unfortunately this is not the case.", "aipim");
+                                                            $veredict_texts .= __("<br>It is statistically more likely that you will not succeed if you try it alone. It can be the way you want, but you have to take the step of seeking help. Our mind is complex and intelligent, in these cases it is capable of deceiving ourselves that it is not necessary to expose our problem. Unfortunately this is not the case.", "aipim");
 
                                                             if (in_array("possibly-in-debt", $veredicts)){
                                                               $veredict_button_color = "btn-danger";

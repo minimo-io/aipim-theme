@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
-"POT-Creation-Date: 2020-05-19T16:35:29+00:00\n"
-"PO-Revision-Date: 2020-05-19 13:56-0300\n"
+"POT-Creation-Date: 2020-05-20T15:49:04+00:00\n"
+"PO-Revision-Date: 2020-05-20 12:49-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -70,15 +70,15 @@ msgstr "Enlace guía grande"
 msgid "Save Settings"
 msgstr "Guardar configuración"
 
-#: assets/includes/admin.inc.php:102
+#: assets/includes/admin.inc.php:94
 msgid "Betizen stats"
 msgstr "Estadísticas de Betizen"
 
-#: assets/includes/admin.inc.php:125
+#: assets/includes/admin.inc.php:117
 msgid "Posts"
 msgstr "Entradas"
 
-#: assets/includes/admin.inc.php:139
+#: assets/includes/admin.inc.php:131
 msgid "Total posts published"
 msgstr "Total del artículos publicados"
 
@@ -126,7 +126,6 @@ msgid "Play for free"
 msgstr "Jugar gratis"
 
 #: assets/includes/reusable-htmls.inc.php:130 single-juegos.php:305
-#: _single-juegos.php:49 _single-juegos.php:188 _single-juegos.php:496
 msgid "Volatility"
 msgstr "Volatilidad"
 
@@ -243,7 +242,7 @@ msgstr ""
 msgid "I have a question about"
 msgstr "Tengo una consulta sobre"
 
-#: assets/includes/shortcodes/askpros.inc.php:122 footer.php:24
+#: assets/includes/shortcodes/askpros.inc.php:122
 msgid "Email address"
 msgstr "Correo electrónico"
 
@@ -279,12 +278,11 @@ msgstr "/casinos/"
 
 #: assets/includes/shortcodes/domore.inc.php:24
 #: assets/includes/views/home.html.php:118
-#: assets/includes/views/home.html.php:199 _single-juegos.php:30
+#: assets/includes/views/home.html.php:199
 msgid "/en/games/"
 msgstr "/juegos/"
 
 #: assets/includes/shortcodes/domore.inc.php:24 single-juegos.php:531
-#: _single-juegos.php:113 _single-juegos.php:463
 msgid "Free play"
 msgstr "Jugar gratis"
 
@@ -331,7 +329,6 @@ msgstr "Ver juegos"
 #: single-juegos.php:412 single-juegos.php:420 single-juegos.php:428
 #: single-juegos.php:436 single-juegos.php:571 single-juegos.php:581
 #: single-juegos.php:589 single-juegos.php:597 single-juegos.php:605
-#: _single-juegos.php:194 _single-juegos.php:502
 msgid "Yes"
 msgstr "Sí"
 
@@ -346,7 +343,6 @@ msgstr "Sí"
 #: single-juegos.php:411 single-juegos.php:419 single-juegos.php:427
 #: single-juegos.php:435 single-juegos.php:573 single-juegos.php:580
 #: single-juegos.php:588 single-juegos.php:596 single-juegos.php:604
-#: _single-juegos.php:196 _single-juegos.php:504
 msgid "No"
 msgstr "No"
 
@@ -374,7 +370,7 @@ msgstr "Prefiero jugar solo/a"
 msgid "I prefer to play with other people"
 msgstr "Prefiero jugar vinculándome con otras personas"
 
-#: assets/includes/views/category.html.php:8 _single-juegos.php:29
+#: assets/includes/views/category.html.php:8
 msgid "Home"
 msgstr "Inicio"
 
@@ -403,7 +399,6 @@ msgid "Reviews"
 msgstr "Reseñas"
 
 #: assets/includes/views/home.html.php:120 functions.php:420 functions.php:425
-#: _single-juegos.php:30
 msgid "Games"
 msgstr "Juegos"
 
@@ -548,7 +543,6 @@ msgstr "miembro"
 #: single-bonus.php:185 single-bonus.php:274 single-casinos.php:84
 #: single-casinos.php:271 single-casinos.php:412 single-juegos.php:125
 #: single-juegos.php:232 single-juegos.php:337 single-juegos.php:512
-#: _single-juegos.php:107 _single-juegos.php:457
 msgid "/en/ranks/"
 msgstr "/rankings/"
 
@@ -669,54 +663,54 @@ msgstr "¿Qué es lo que te desagrada?"
 msgid "Edit comment"
 msgstr "Editar comentario"
 
-#: footer.php:18
+#: footer.php:11
 msgid "New games, bonus and casinos in your inbox!"
 msgstr "Nuevos juegos, bonos y casinos en tu correo!"
 
-#: footer.php:19
+#: footer.php:12
 msgid ""
 "Get tips about how to win, and get the most out of your money! Never spam."
 msgstr ""
 "¡Obtenga consejos sobre cómo ganar y aproveche al máximo su dinero! Nunca "
 "spam."
 
-#: footer.php:43
+#: footer.php:27
 msgid "/en/about-us/"
 msgstr "/nosotros/"
 
-#: footer.php:43
+#: footer.php:27
 msgid "About us"
 msgstr "Nosotros"
 
-#: footer.php:46
+#: footer.php:30
 msgid "Glossary"
 msgstr "Glosario"
 
-#: footer.php:46
+#: footer.php:30
 msgid "/en/glossary/"
 msgstr "/glosario/"
 
-#: footer.php:49 functions.php:571
+#: footer.php:33 functions.php:571
 msgid "Providers"
 msgstr "Proveedores"
 
-#: footer.php:49 taxonomy-proveedores.php:26
+#: footer.php:33 taxonomy-proveedores.php:26
 msgid "/en/providers/"
 msgstr "/proveedores/"
 
-#: footer.php:52
+#: footer.php:36
 msgid "Affiliates"
 msgstr "Afiliados"
 
-#: footer.php:52
+#: footer.php:36
 msgid "/en/affiliates/"
 msgstr "/afiliados/"
 
-#: footer.php:55
+#: footer.php:39
 msgid "Developed by"
 msgstr "Creado por"
 
-#: footer.php:80 single-juegos.php:697
+#: footer.php:64 single-juegos.php:697
 msgid "Terms & Conditions"
 msgstr "Términos y condiciones"
 
@@ -1044,7 +1038,7 @@ msgstr "<br><br><strong>3. ES MAS SENCILLO CON LA AYUDA DE ALGUIEN.</strong>"
 
 #: page-686.php:220
 msgid ""
-"br>It is statistically more likely that you will not succeed if you try it "
+"<br>It is statistically more likely that you will not succeed if you try it "
 "alone. It can be the way you want, but you have to take the step of seeking "
 "help. Our mind is complex and intelligent, in these cases it is capable of "
 "deceiving ourselves that it is not necessary to expose our problem. "
@@ -1236,7 +1230,6 @@ msgstr "Estado del bono"
 
 #: single-bonus.php:81 single-bonus.php:189 single-casinos.php:81
 #: single-casinos.php:275 single-juegos.php:122 single-juegos.php:341
-#: _single-juegos.php:115
 msgid "Review"
 msgstr "Opinar"
 
@@ -1276,13 +1269,11 @@ msgstr "Publicado"
 
 #: single-bonus.php:239 single-bonus.php:303 single-casinos.php:326
 #: single-casinos.php:471 single-juegos.php:441 single-juegos.php:610
-#: _single-juegos.php:517
 msgid "Questions?"
 msgstr "¿Preguntas?"
 
 #: single-bonus.php:239 single-bonus.php:303 single-casinos.php:326
 #: single-casinos.php:471 single-juegos.php:441 single-juegos.php:610
-#: _single-juegos.php:517
 msgid "Contact us"
 msgstr "Contáctanos"
 
@@ -1390,8 +1381,7 @@ msgstr "Jugar"
 msgid "Play in the casino"
 msgstr "Jugar en el casino"
 
-#: single-juegos.php:292 _single-juegos.php:58 _single-juegos.php:187
-#: _single-juegos.php:495
+#: single-juegos.php:292
 msgid "RTP"
 msgstr "RTP"
 
@@ -1433,8 +1423,7 @@ msgstr ""
 msgid "Provider"
 msgstr "Proveedor"
 
-#: single-juegos.php:382 single-juegos.php:551 _single-juegos.php:200
-#: _single-juegos.php:508
+#: single-juegos.php:382 single-juegos.php:551
 msgid "Category"
 msgstr "Categoría"
 
@@ -1442,8 +1431,7 @@ msgstr "Categoría"
 msgid "Reels"
 msgstr "Rieles"
 
-#: single-juegos.php:395 single-juegos.php:564 _single-juegos.php:190
-#: _single-juegos.php:498
+#: single-juegos.php:395 single-juegos.php:564
 msgid "Jackpot (max.)"
 msgstr "Acumulado (max.)"
 
@@ -1467,11 +1455,11 @@ msgstr "Comodines"
 msgid "Scatter"
 msgstr "Scatter"
 
-#: single-juegos.php:685 _single-juegos.php:603
+#: single-juegos.php:685
 msgid "Close"
 msgstr "Cerrar"
 
-#: single-juegos.php:686 _single-juegos.php:604
+#: single-juegos.php:686
 msgid "Fullscreen"
 msgstr "Pantalla completa"
 
@@ -1479,46 +1467,35 @@ msgstr "Pantalla completa"
 msgid "By"
 msgstr "Por"
 
-#: _single-juegos.php:146
-msgid "Just voted"
-msgstr "Recién votado"
+#~ msgid "Just voted"
+#~ msgstr "Recién votado"
 
-#: _single-juegos.php:174
-msgid "Description"
-msgstr "Descripción"
+#~ msgid "Description"
+#~ msgstr "Descripción"
 
-#: _single-juegos.php:175
-msgid "Opinions"
-msgstr "Opiniones"
+#~ msgid "Opinions"
+#~ msgstr "Opiniones"
 
-#: _single-juegos.php:184 _single-juegos.php:492
-msgid "Software"
-msgstr "Software"
+#~ msgid "Software"
+#~ msgstr "Software"
 
-#: _single-juegos.php:185 _single-juegos.php:493
-msgid "Release year"
-msgstr "Año de lanzamiento"
+#~ msgid "Release year"
+#~ msgstr "Año de lanzamiento"
 
-#: _single-juegos.php:191 _single-juegos.php:499
-msgid "Bonus screen"
-msgstr "Pantalla de bono"
+#~ msgid "Bonus screen"
+#~ msgstr "Pantalla de bono"
 
-#: _single-juegos.php:221
-msgid "You must register in order to leave an opinion."
-msgstr "Debes estar registrado para dejar una opinión."
+#~ msgid "You must register in order to leave an opinion."
+#~ msgstr "Debes estar registrado para dejar una opinión."
 
-#: _single-juegos.php:222
-msgid "If you already signed up"
-msgstr "Si ya estas registrado"
+#~ msgid "If you already signed up"
+#~ msgstr "Si ya estas registrado"
 
-#: _single-juegos.php:222
-msgid "login with your user"
-msgstr "ingresa con tu usuario"
+#~ msgid "login with your user"
+#~ msgstr "ingresa con tu usuario"
 
-#: _single-juegos.php:222
-msgid "to share your opinion"
-msgstr "para compartir tu opinión"
+#~ msgid "to share your opinion"
+#~ msgstr "para compartir tu opinión"
 
-#: _single-juegos.php:462
-msgid "Share opinion"
-msgstr "Compartir opinión"
+#~ msgid "Share opinion"
+#~ msgstr "Compartir opinión"

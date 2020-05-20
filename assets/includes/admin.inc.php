@@ -11,7 +11,7 @@ function am_register_settings() {
     register_setting( 'am_options', 'am_home_button_link' );
 
     register_setting( 'am_options', 'am_guide_quick' );
-    register_setting( 'am_options', 'am_guide_big' ); 
+    register_setting( 'am_options', 'am_guide_big' );
 
 }
 function am_options_page_html(){
@@ -83,15 +83,7 @@ function am_options_page_html(){
     <?php
 }
 function am_options_page(){
-    add_menu_page(
-        'Aipim',
-        'Aipim',
-        'manage_options',
-        'aipim',
-        'am_options_page_html',
-        null,
-        20
-    );
+    add_menu_page("Aipim", "Aipim", "manage_options", "aipim", "am_options_page_html", null, 99);
     add_action( 'admin_init', 'am_register_settings' );
 }
 

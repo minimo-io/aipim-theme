@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-05-19T16:35:29+00:00\n"
+"POT-Creation-Date: 2020-05-20T15:49:04+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.3.0\n"
 "X-Domain: aipim\n"
@@ -66,15 +66,15 @@ msgstr ""
 msgid "Save Settings"
 msgstr ""
 
-#: assets/includes/admin.inc.php:102
+#: assets/includes/admin.inc.php:94
 msgid "Betizen stats"
 msgstr ""
 
-#: assets/includes/admin.inc.php:125
+#: assets/includes/admin.inc.php:117
 msgid "Posts"
 msgstr ""
 
-#: assets/includes/admin.inc.php:139
+#: assets/includes/admin.inc.php:131
 msgid "Total posts published"
 msgstr ""
 
@@ -130,9 +130,6 @@ msgstr ""
 
 #: assets/includes/reusable-htmls.inc.php:130
 #: single-juegos.php:305
-#: _single-juegos.php:49
-#: _single-juegos.php:188
-#: _single-juegos.php:496
 msgid "Volatility"
 msgstr ""
 
@@ -238,7 +235,6 @@ msgid "I have a question about"
 msgstr ""
 
 #: assets/includes/shortcodes/askpros.inc.php:122
-#: footer.php:24
 msgid "Email address"
 msgstr ""
 
@@ -271,14 +267,11 @@ msgstr ""
 #: assets/includes/shortcodes/domore.inc.php:24
 #: assets/includes/views/home.html.php:118
 #: assets/includes/views/home.html.php:199
-#: _single-juegos.php:30
 msgid "/en/games/"
 msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:24
 #: single-juegos.php:531
-#: _single-juegos.php:113
-#: _single-juegos.php:463
 msgid "Free play"
 msgstr ""
 
@@ -333,8 +326,6 @@ msgstr ""
 #: single-juegos.php:589
 #: single-juegos.php:597
 #: single-juegos.php:605
-#: _single-juegos.php:194
-#: _single-juegos.php:502
 msgid "Yes"
 msgstr ""
 
@@ -356,8 +347,6 @@ msgstr ""
 #: single-juegos.php:588
 #: single-juegos.php:596
 #: single-juegos.php:604
-#: _single-juegos.php:196
-#: _single-juegos.php:504
 msgid "No"
 msgstr ""
 
@@ -386,7 +375,6 @@ msgid "I prefer to play with other people"
 msgstr ""
 
 #: assets/includes/views/category.html.php:8
-#: _single-juegos.php:29
 msgid "Home"
 msgstr ""
 
@@ -423,7 +411,6 @@ msgstr ""
 #: assets/includes/views/home.html.php:120
 #: functions.php:420
 #: functions.php:425
-#: _single-juegos.php:30
 msgid "Games"
 msgstr ""
 
@@ -570,8 +557,6 @@ msgstr ""
 #: single-juegos.php:232
 #: single-juegos.php:337
 #: single-juegos.php:512
-#: _single-juegos.php:107
-#: _single-juegos.php:457
 msgid "/en/ranks/"
 msgstr ""
 
@@ -700,53 +685,53 @@ msgstr ""
 msgid "Edit comment"
 msgstr ""
 
-#: footer.php:18
+#: footer.php:11
 msgid "New games, bonus and casinos in your inbox!"
 msgstr ""
 
-#: footer.php:19
+#: footer.php:12
 msgid "Get tips about how to win, and get the most out of your money! Never spam."
 msgstr ""
 
-#: footer.php:43
+#: footer.php:27
 msgid "/en/about-us/"
 msgstr ""
 
-#: footer.php:43
+#: footer.php:27
 msgid "About us"
 msgstr ""
 
-#: footer.php:46
+#: footer.php:30
 msgid "Glossary"
 msgstr ""
 
-#: footer.php:46
+#: footer.php:30
 msgid "/en/glossary/"
 msgstr ""
 
-#: footer.php:49
+#: footer.php:33
 #: functions.php:571
 msgid "Providers"
 msgstr ""
 
-#: footer.php:49
+#: footer.php:33
 #: taxonomy-proveedores.php:26
 msgid "/en/providers/"
 msgstr ""
 
-#: footer.php:52
+#: footer.php:36
 msgid "Affiliates"
 msgstr ""
 
-#: footer.php:52
+#: footer.php:36
 msgid "/en/affiliates/"
 msgstr ""
 
-#: footer.php:55
+#: footer.php:39
 msgid "Developed by"
 msgstr ""
 
-#: footer.php:80
+#: footer.php:64
 #: single-juegos.php:697
 msgid "Terms & Conditions"
 msgstr ""
@@ -1007,7 +992,7 @@ msgid "<br><br><strong>3. IT IS EASIER IF YOU GET HELP FROM SOMEONE.</strong>"
 msgstr ""
 
 #: page-686.php:220
-msgid "br>It is statistically more likely that you will not succeed if you try it alone. It can be the way you want, but you have to take the step of seeking help. Our mind is complex and intelligent, in these cases it is capable of deceiving ourselves that it is not necessary to expose our problem. Unfortunately this is not the case."
+msgid "<br>It is statistically more likely that you will not succeed if you try it alone. It can be the way you want, but you have to take the step of seeking help. Our mind is complex and intelligent, in these cases it is capable of deceiving ourselves that it is not necessary to expose our problem. Unfortunately this is not the case."
 msgstr ""
 
 #: page-686.php:225
@@ -1109,7 +1094,6 @@ msgstr ""
 #: single-casinos.php:275
 #: single-juegos.php:122
 #: single-juegos.php:341
-#: _single-juegos.php:115
 msgid "Review"
 msgstr ""
 
@@ -1154,7 +1138,6 @@ msgstr ""
 #: single-casinos.php:471
 #: single-juegos.php:441
 #: single-juegos.php:610
-#: _single-juegos.php:517
 msgid "Questions?"
 msgstr ""
 
@@ -1164,7 +1147,6 @@ msgstr ""
 #: single-casinos.php:471
 #: single-juegos.php:441
 #: single-juegos.php:610
-#: _single-juegos.php:517
 msgid "Contact us"
 msgstr ""
 
@@ -1284,9 +1266,6 @@ msgid "Play in the casino"
 msgstr ""
 
 #: single-juegos.php:292
-#: _single-juegos.php:58
-#: _single-juegos.php:187
-#: _single-juegos.php:495
 msgid "RTP"
 msgstr ""
 
@@ -1328,8 +1307,6 @@ msgstr ""
 
 #: single-juegos.php:382
 #: single-juegos.php:551
-#: _single-juegos.php:200
-#: _single-juegos.php:508
 msgid "Category"
 msgstr ""
 
@@ -1340,8 +1317,6 @@ msgstr ""
 
 #: single-juegos.php:395
 #: single-juegos.php:564
-#: _single-juegos.php:190
-#: _single-juegos.php:498
 msgid "Jackpot (max.)"
 msgstr ""
 
@@ -1371,62 +1346,13 @@ msgid "Scatter"
 msgstr ""
 
 #: single-juegos.php:685
-#: _single-juegos.php:603
 msgid "Close"
 msgstr ""
 
 #: single-juegos.php:686
-#: _single-juegos.php:604
 msgid "Fullscreen"
 msgstr ""
 
 #: single-post.php:25
 msgid "By"
-msgstr ""
-
-#: _single-juegos.php:146
-msgid "Just voted"
-msgstr ""
-
-#: _single-juegos.php:174
-msgid "Description"
-msgstr ""
-
-#: _single-juegos.php:175
-msgid "Opinions"
-msgstr ""
-
-#: _single-juegos.php:184
-#: _single-juegos.php:492
-msgid "Software"
-msgstr ""
-
-#: _single-juegos.php:185
-#: _single-juegos.php:493
-msgid "Release year"
-msgstr ""
-
-#: _single-juegos.php:191
-#: _single-juegos.php:499
-msgid "Bonus screen"
-msgstr ""
-
-#: _single-juegos.php:221
-msgid "You must register in order to leave an opinion."
-msgstr ""
-
-#: _single-juegos.php:222
-msgid "If you already signed up"
-msgstr ""
-
-#: _single-juegos.php:222
-msgid "login with your user"
-msgstr ""
-
-#: _single-juegos.php:222
-msgid "to share your opinion"
-msgstr ""
-
-#: _single-juegos.php:462
-msgid "Share opinion"
 msgstr ""
