@@ -27,9 +27,9 @@ require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/short-p
 require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/domore.inc.php');
 require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/top-rtp.inc.php');
 require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/alerts.inc.php');
+require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/short-playertest.inc.php');
 // extra functionalities
 require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/user-ip-on-signup.inc.php');
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/user-profile-test.inc.php');
 // xhr / ajax calls
 require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/xhr/favs.xhr.php'); // favs
 require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/xhr/user-profile-test.xhr.php'); // user profile test
@@ -726,6 +726,18 @@ function aipim_reputation_color($rep){
   if ($rep == "negativo") return "danger";
 
   return "";
+}
+
+function aipim_reputation_label_translate($rep_val){
+  if ($rep_val == "justo") return __("Fair", "aipim");
+  if ($rep_val == "aceptable") return __("Acceptable", "aipim");
+  if ($rep_val == "dudoso") return __("Caution", "aipim");
+  if ($rep_val == "fraudulento") return __("Dishonest", "aipim");
+  if ($rep_val == "peligroso") return __("Dangerous", "aipim");
+  // para los juegos (resultado 500 giros)
+  if ($rep_val == "positivo") return __("Positive", "aipim");
+  if ($rep_val == "regular") return __("Regular", "aipim");
+  if ($rep_val == "negativo") return __("Negative", "aipim");
 }
 
 // disable Yoast rich snippets

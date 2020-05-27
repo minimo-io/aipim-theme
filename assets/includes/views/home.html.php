@@ -218,8 +218,5 @@
             </ul>
             <button class="btn btn-light btn-loadmore loadmore-games-button btn-block"><i class="fa fa-plus fa-2x fa-fw"></i></button>
         </div>
-
-
-
     </div>
 </section>

@@ -19,7 +19,10 @@
 
         $o_reputation = get_field_object( 'sensacion_de_reputacion' );
         $reputation_value = $o_reputation['value'];
-        $reputation_label = $o_reputation['choices'][ $reputation_value ];
+        // $reputation_label = $o_reputation['choices'][ $reputation_value ];
+        $reputation_label = aipim_reputation_label_translate($o_reputation['value']);
+
+
 
         $casino_thumb = '<img src="'.get_the_post_thumbnail_url(get_the_ID(), 'am-casino-180').'" alt="'.str_replace(" ", "-", get_the_title()).'" width="100">';
         $casino_rep_content = aipim_casino_reputation_html($casino_thumb, $reputation_label, $post);
@@ -112,7 +115,7 @@
                                                     <div class="container-fluid">
                                                         <div class="card border-0">
                                                             <div class="card-body" >
-                                                                <h2 class="card-title"><?php _e("Conclusion about the casino","aipim");  ?><?php the_title(); ?></h2>
+                                                                <h2 class="card-title"><?php _e("Conclusion about the casino","aipim");  ?> <?php the_title(); ?></h2>
                                                                 <div class="card-text general-description is-showmore height-120">
                                                                   <?php echo get_the_excerpt();  ?>
                                                                   <br><br>

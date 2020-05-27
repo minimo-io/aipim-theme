@@ -176,6 +176,8 @@ function aipim_loadmore_casinos_html($o_casino, $redirect_to_casino = false){
   $reputation_label = get_field( 'sensacion_de_reputacion', $o_casino->ID);
   if ('dudoso' == $reputation_label) $reputation_label = "precaución";
 
+  $reputation_label = aipim_reputation_label_translate(get_field("sensacion_de_reputacion", $o_casino->ID));
+
   $casino_thumb = '<img width="100" src="'.get_the_post_thumbnail_url($o_casino->ID, 'am-180').'" class="theme-card__img wp-post-image" alt="'.str_replace(" ", "-", $o_casino->post_title).'" />';
   $casino_url = esc_url( get_permalink($o_casino->ID) );
 

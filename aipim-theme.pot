@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-05-20T15:49:04+00:00\n"
+"POT-Creation-Date: 2020-05-27T16:54:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.3.0\n"
 "X-Domain: aipim\n"
@@ -137,64 +137,64 @@ msgstr ""
 msgid "Visit casino"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:201
-#: assets/includes/reusable-htmls.inc.php:202
-#: single-casinos.php:266
-#: single-casinos.php:441
+#: assets/includes/reusable-htmls.inc.php:203
+#: assets/includes/reusable-htmls.inc.php:204
+#: single-casinos.php:269
+#: single-casinos.php:444
 msgid "Reputation details"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:207
-#: assets/includes/reusable-htmls.inc.php:284
+#: assets/includes/reusable-htmls.inc.php:209
+#: assets/includes/reusable-htmls.inc.php:286
 msgid "Analysis"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:211
-#: assets/includes/reusable-htmls.inc.php:287
-#: single-casinos.php:128
-#: single-casinos.php:249
-#: single-casinos.php:277
-#: single-casinos.php:432
+#: assets/includes/reusable-htmls.inc.php:213
+#: assets/includes/reusable-htmls.inc.php:289
+#: single-casinos.php:131
+#: single-casinos.php:252
+#: single-casinos.php:280
+#: single-casinos.php:435
 msgid "Visit"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:295
-#: assets/includes/reusable-htmls.inc.php:445
+#: assets/includes/reusable-htmls.inc.php:297
+#: assets/includes/reusable-htmls.inc.php:447
 msgid "active"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:295
-#: assets/includes/reusable-htmls.inc.php:445
+#: assets/includes/reusable-htmls.inc.php:297
+#: assets/includes/reusable-htmls.inc.php:447
 msgid "inactive"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:300
+#: assets/includes/reusable-htmls.inc.php:302
 msgid "bonus-image"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:301
+#: assets/includes/reusable-htmls.inc.php:303
 msgid "More info"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:309
-#: assets/includes/reusable-htmls.inc.php:492
+#: assets/includes/reusable-htmls.inc.php:311
+#: assets/includes/reusable-htmls.inc.php:494
 #: single-bonus.php:294
 msgid "Get bonus"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:372
+#: assets/includes/reusable-htmls.inc.php:374
 msgid "official response"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:397
+#: assets/includes/reusable-htmls.inc.php:399
 msgid "reply"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:398
+#: assets/includes/reusable-htmls.inc.php:400
 msgid "login to reply"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:499
+#: assets/includes/reusable-htmls.inc.php:501
 msgid "This bonus is <b><u>inactive</u></b>."
 msgstr ""
 
@@ -258,10 +258,30 @@ msgstr ""
 msgid ", it's free!"
 msgstr ""
 
+#: assets/includes/shortcodes/domore.inc.php:16
+msgid "List of trustworthy casinos"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:17
+msgid "Avoid being scammed. Find out about the list of casinos that have the best and worst scores according to other users and experts."
+msgstr ""
+
 #: assets/includes/shortcodes/domore.inc.php:18
 #: assets/includes/views/home.html.php:132
 #: assets/includes/views/home.html.php:158
 msgid "/en/online-casinos/"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:18
+msgid "See rankings"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:22
+msgid "Free games"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:23
+msgid "Before betting online it is good to familiarize yourself with the games and the tests we carry out to see how they pay."
 msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:24
@@ -278,6 +298,35 @@ msgstr ""
 #: assets/includes/shortcodes/domore.inc.php:31
 #: page-686.php:40
 msgid "Player profile"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:32
+msgid "Use this free tool to discover which games, casinos and bonuses are best for your natural abilities."
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:33
+msgid "/en/player-profile/"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:33
+msgid "Take test"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:39
+msgid "Information from experts"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:40
+msgid "Keep learning how to win with these articles written by our experts on the world of online casinos."
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:41
+#: page-686.php:249
+msgid "/en/articles/"
+msgstr ""
+
+#: assets/includes/shortcodes/domore.inc.php:41
+msgid "Read information"
 msgstr ""
 
 #: assets/includes/shortcodes/short-providers-list.inc.php:23
@@ -403,7 +452,7 @@ msgstr ""
 
 #: assets/includes/views/home.html.php:105
 #: single-bonus.php:246
-#: single-casinos.php:355
+#: single-casinos.php:358
 #: single-juegos.php:472
 msgid "Reviews"
 msgstr ""
@@ -550,9 +599,9 @@ msgstr ""
 #: single-bonus.php:84
 #: single-bonus.php:185
 #: single-bonus.php:274
-#: single-casinos.php:84
-#: single-casinos.php:271
-#: single-casinos.php:412
+#: single-casinos.php:87
+#: single-casinos.php:274
+#: single-casinos.php:415
 #: single-juegos.php:125
 #: single-juegos.php:232
 #: single-juegos.php:337
@@ -877,7 +926,39 @@ msgstr ""
 msgid "Not linked to any casino"
 msgstr ""
 
-#: functions.php:784
+#: functions.php:732
+msgid "Fair"
+msgstr ""
+
+#: functions.php:733
+msgid "Acceptable"
+msgstr ""
+
+#: functions.php:734
+msgid "Caution"
+msgstr ""
+
+#: functions.php:735
+msgid "Dishonest"
+msgstr ""
+
+#: functions.php:736
+msgid "Dangerous"
+msgstr ""
+
+#: functions.php:738
+msgid "Positive"
+msgstr ""
+
+#: functions.php:739
+msgid "Regular"
+msgstr ""
+
+#: functions.php:740
+msgid "Negative"
+msgstr ""
+
+#: functions.php:796
 msgid "Copied!"
 msgstr ""
 
@@ -1020,7 +1101,15 @@ msgid "<br><br>Our goal is to <u>take care of you</u>. Write to us and we will c
 msgstr ""
 
 #: page-686.php:249
-msgid "<br>While we process your doubts with the utmost discretion, we recommend you read the read  <a href='/en/articles/'>articles on gambling</a> written by our experts."
+msgid "<br>While we process your doubts with the utmost discretion, we recommend you read the read"
+msgstr ""
+
+#: page-686.php:249
+msgid "articles on gambling"
+msgstr ""
+
+#: page-686.php:249
+msgid "written by our experts."
 msgstr ""
 
 #: page-686.php:257
@@ -1057,7 +1146,11 @@ msgid "<br><br><h2>The 6 best rated slot machines in Betizen according to users<
 msgstr ""
 
 #: page-686.php:306
-msgid "<br><br><a class='button button-brand btn-lg mb-5 mb-lg-2 hero-button btn-xs-block' href='/en/contact/' target='_blank'>Get in touch (it's free)</a>"
+msgid "/en/contact/"
+msgstr ""
+
+#: page-686.php:306
+msgid "Get in touch (it's free)"
 msgstr ""
 
 #: page-686.php:322
@@ -1090,8 +1183,8 @@ msgstr ""
 
 #: single-bonus.php:81
 #: single-bonus.php:189
-#: single-casinos.php:81
-#: single-casinos.php:275
+#: single-casinos.php:84
+#: single-casinos.php:278
 #: single-juegos.php:122
 #: single-juegos.php:341
 msgid "Review"
@@ -1106,7 +1199,7 @@ msgid "https://www.betizen.org/en/articles/what-is-the-rollover-of-bonuses/"
 msgstr ""
 
 #: single-bonus.php:142
-#: single-casinos.php:193
+#: single-casinos.php:196
 msgid "Minimum deposit"
 msgstr ""
 
@@ -1134,8 +1227,8 @@ msgstr ""
 
 #: single-bonus.php:239
 #: single-bonus.php:303
-#: single-casinos.php:326
-#: single-casinos.php:471
+#: single-casinos.php:329
+#: single-casinos.php:474
 #: single-juegos.php:441
 #: single-juegos.php:610
 msgid "Questions?"
@@ -1143,66 +1236,66 @@ msgstr ""
 
 #: single-bonus.php:239
 #: single-bonus.php:303
-#: single-casinos.php:326
-#: single-casinos.php:471
+#: single-casinos.php:329
+#: single-casinos.php:474
 #: single-juegos.php:441
 #: single-juegos.php:610
 msgid "Contact us"
 msgstr ""
 
 #: single-bonus.php:293
-#: single-casinos.php:431
+#: single-casinos.php:434
 #: single-juegos.php:532
 msgid "Write review"
 msgstr ""
 
-#: single-casinos.php:76
+#: single-casinos.php:79
 msgid "Operated by"
 msgstr ""
 
-#: single-casinos.php:115
+#: single-casinos.php:118
 msgid "Conclusion about the casino"
 msgstr ""
 
-#: single-casinos.php:125
+#: single-casinos.php:128
 #: single-juegos.php:160
 msgid "Read more"
 msgstr ""
 
-#: single-casinos.php:139
+#: single-casinos.php:142
 #: single-juegos.php:172
 msgid "Read less"
 msgstr ""
 
-#: single-casinos.php:180
+#: single-casinos.php:183
 msgid "Max withdrawal"
 msgstr ""
 
-#: single-casinos.php:205
+#: single-casinos.php:208
 msgid "Min withdrawal"
 msgstr ""
 
-#: single-casinos.php:264
-#: single-casinos.php:440
+#: single-casinos.php:267
+#: single-casinos.php:443
 msgid "Reputation"
 msgstr ""
 
-#: single-casinos.php:322
-#: single-casinos.php:467
+#: single-casinos.php:325
+#: single-casinos.php:470
 msgid "Founded"
 msgstr ""
 
-#: single-casinos.php:323
-#: single-casinos.php:469
+#: single-casinos.php:326
+#: single-casinos.php:472
 msgid "License(s)"
 msgstr ""
 
-#: single-casinos.php:324
-#: single-casinos.php:470
+#: single-casinos.php:327
+#: single-casinos.php:473
 msgid "Withdrawal times"
 msgstr ""
 
-#: single-casinos.php:361
+#: single-casinos.php:364
 #: single-juegos.php:473
 msgid "Promotions"
 msgstr ""
