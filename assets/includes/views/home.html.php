@@ -121,8 +121,8 @@
                             <p class="card-text display-4">
                                 <i class="fa fa-gamepad" aria-hidden="true"></i>
                                 <?php
-                                $count = wp_count_posts("juegos");
-                                echo $count->publish;
+                                $count = aipim_wpml_count_posts("juegos");
+                                echo (isset($count["publish"]) ? $count["publish"][ICL_LANGUAGE_CODE] : "");
                                 ?>
                             </p>
                         </div>
@@ -135,8 +135,10 @@
                             <p class="card-text display-4">
                                 <i class="fa fa-bullseye" aria-hidden="true"></i>
                                 <?php
-                                $count = wp_count_posts("casinos");
-                                echo $count->publish;
+                                // $count = wp_count_posts("casinos");
+                                // echo $count->publish;
+                                $count = aipim_wpml_count_posts("casinos");
+                                echo (isset($count["publish"]) ? $count["publish"][ICL_LANGUAGE_CODE] : "");
                                 ?>
                             </p>
                         </div>

@@ -28,7 +28,8 @@ function am_ranking_calc() {
         'nopaging' => true,
         'showposts' => -1,
         'post_type' => Array('casinos'),
-        'no_found_rows' => true
+        'no_found_rows' => true,
+        'suppress_filters' => false
     ) );
 
     $casinos_scores = Array();
@@ -67,7 +68,8 @@ function am_ranking_calc() {
         'nopaging' => true,
         'showposts' => -1,
         'post_type' => Array('bonus'),
-        'no_found_rows' => true
+        'no_found_rows' => true,
+        'suppress_filters' => false
     ) );
 
     $casinos_scores = Array();
@@ -107,7 +109,8 @@ function am_ranking_calc() {
         'post_status' => 'publish',
         'post_type' => 'juegos',
         'showposts' => -1,
-        'no_found_rows' => true
+        'no_found_rows' => true,
+        'suppress_filters' => false
     ) );
     $games_scores = Array();
     foreach ($the_query_games->posts as $game){

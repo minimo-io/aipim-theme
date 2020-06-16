@@ -150,7 +150,7 @@
                                                     <div class="container-fluid">
                                                         <div class="card border-0">
                                                             <div class="card-body" >
-                                                                <h2 class="card-title"><?php _e("Conclusion about the","aipim");  ?><?php echo $single_category->slug; ?> <?php the_title(); ?></h2>
+                                                                <h2 class="card-title"><?php _e("Conclusion about the","aipim");  ?> <?php echo $single_category->slug; ?> <?php the_title(); ?></h2>
                                                                 <div class="card-text general-description is-showmore height-120">
                                                                   <?php echo get_the_excerpt();  ?>
                                                                   <br><br>
@@ -469,7 +469,7 @@
 
                                                 <div class="d-flex justify-content-between align-items-center has-border">
                                                     <ul class="nav sub-nav sub-nav--has-border" role="tablist">
-                                                        <li class="nav-item"><a class="nav-link sub-nav-link active" data-toggle="tab" href="#reviews-tab" role="tab"><?php _e("Reviews", "aipim"); ?>&nbsp;<span class="badge badge-secondary"><?php echo wp_count_comments( get_the_ID() )->approved;  ?></span></a></li>
+                                                        <li class="nav-item"><a class="nav-link sub-nav-link active" data-toggle="tab" href="#reviews-tab" role="tab"><?php _e("Reviews", "aipim"); ?>&nbsp;<span class="badge badge-secondary"><?php echo count(get_comments());  ?></span></a></li>
                                                         <li class="nav-item"><a class="nav-link sub-nav-link" data-toggle="tab" href="#promotions-tab" role="tab"><?php _e("Promotions", "aipim"); ?></a></li>
 
                                                         <!-- <li class="nav-item"><a class="nav-link sub-nav-link" data-toggle="tab" href="#changelog-tab" role="tab">Pantallas especiales</a></li> -->

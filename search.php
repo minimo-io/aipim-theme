@@ -19,15 +19,15 @@ get_header(); ?>
                             <h5 class="theme-cards__title"><?php _e( 'Search result', 'aipim' ); ?></h5>
                         </div>
                     </div>
-
-                    <form method="GET" class="Xform-inline" action="<?php echo site_url();  ?>">
+                    <form method="GET" id="searchform" class="Xform-inline" action="<?php echo aipim_search_url();  ?>">
 
                       <div class="form-group mb-5">
                         <!-- <label for="s"><?php _e("Search", "aipim"); ?></label> -->
                         <input type="text" onClick="this.select();" id="s" name="s" class="form-control form-control-lg" value="<?php echo get_search_query(); ?>">
                       </div>
-                      <button type="submit" class="btn btn-primary hidden">Submit</button>
+                      <button type="submit" class="btn btn-primary hidden"><?php _e("Search", "aipim"); ?></button>
                       <script>$(function(){ $("#s").select(); });</script>
+
                     </form>
 
                     <ul class="row">

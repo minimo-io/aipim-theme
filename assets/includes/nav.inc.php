@@ -32,7 +32,7 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
 
 
       <div class="collapse navbar-collapse" id="globalNavbar">
-            <form class="form-inline form-navbar my-2 my-lg-0 order-2" method="GET" action="<?php echo site_url();  ?>">
+            <form class="form-inline form-navbar my-2 my-lg-0 order-2" method="GET" action="<?php echo aipim_search_url();  ?>">
                 <input class="form-control" name="s" type="text" placeholder="<?php _e("Search", "aipim");  ?>" value="<?php echo get_search_query();  ?>" />
             </form>
             <ul class="navbar-nav navbar-main ml-auto order-1">

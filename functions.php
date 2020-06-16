@@ -55,6 +55,76 @@ add_filter('duplicate_comment_id', '__return_false'); // allow diplicate comment
 add_filter('pre_get_posts', 'am_sort_arc');
 add_filter('pre_get_posts','providers_page_games_only');
 
+function aipim_wpml_count_posts( $post_type ) {
+  global $wpdb;
+
+	$arr_statuses = array("publish", "draft", "trash", "future", "private");
+	$arr_counts = array();
+
+	foreach ($arr_statuses as $post_status) {
+
+		$extra_cond = "";
+		if ($post_status){
+			$extra_cond .= " AND post_status = '" . $post_status . "'";
+		}
+		if ($post_status != 'trash'){
+			$extra_cond .= " AND post_status <> 'trash'";
+		}
+		$extra_cond .= " AND post_status <> 'auto-draft'";
+		$sql = "
+			SELECT language_code, COUNT(p.ID) AS c FROM {$wpdb->prefix}icl_translations t
+			JOIN {$wpdb->posts} p ON t.element_id=p.ID
+			JOIN {$wpdb->prefix}icl_languages l ON t.language_code=l.code AND l.active = 1
+			WHERE p.post_type='{$post_type}' AND t.element_type='post_{$post_type}' {$extra_cond}
+			GROUP BY language_code
+		";
+
+		$res = $wpdb->get_results($sql);
+
+		$langs = array();
+		$langs['all'] = 0;
+		foreach($res as $r) {
+			$langs[$r->language_code] = $r->c;
+			$langs['all'] += $r->c;
+		}
+
+		$arr_counts[$post_status] = $langs;
+
+	}
+
+	return $arr_counts;
+}
+
+function aipim_wpmlc_query_wpml_comments( $arr, $query ){
+  global $wpdb;
+
+  // Get all active languages
+  $languages = $wpdb->get_results("SELECT code FROM ".$wpdb->prefix."icl_languages WHERE active=1", ARRAY_A);
+  $post_id = (!empty($query->query_vars["post_id"]) ? $query->query_vars["post_id"] : get_the_ID());
+  $post_type = get_post_type($post_id);
+  $lang_ids = [];
+  // Foreach active language get the post_id
+  foreach( $languages as $lang ){
+    $lang_ids[] = "comment_post_ID = '".icl_object_id($post_id, $post_type, false, $lang['code'])."'";
+  }
+  //var_dump($lang_ids);
+  // Edit the query to include all 'post_id's'
+  $arr['where'] = str_replace("AND icltr2.language_code = '".ICL_LANGUAGE_CODE."'", '', $arr['where']);
+  $arr['where'] = str_replace("AND comment_post_ID = ".$post_id."", '', $arr['where']);
+
+  $arr['where'] .= ' AND ('.implode(" OR ", $lang_ids).')';
+
+
+
+  return $arr;
+}
+function aipim_wpmlc_change_comment_number(){
+  	return count( get_comments() );
+}
+// filter to display all comments in posts, independent from languages
+add_filter( 'comments_clauses', 'aipim_wpmlc_query_wpml_comments', 99, 2 );
+add_filter( 'get_comments_number', 'aipim_wpmlc_change_comment_number', 200);
+
 
 function aipim_geocode($ip_to_check = false){
   // Geo Code Ip
@@ -128,6 +198,15 @@ function aipim_get_short_language_code($lang){
   $language_code = $a_language_code[0];
   if ($language_code == "pt") $language_code = "br";
   return $language_code;
+}
+
+// build the language minded multilingual stuff
+function aipim_search_url(){
+  $search_lang = site_url();
+  if (defined('ICL_LANGUAGE_CODE') && ICL_LANGUAGE_CODE != "es"){
+    $search_lang = site_url()."/".ICL_LANGUAGE_CODE."/";
+  }
+  return $search_lang;
 }
 
 

@@ -243,7 +243,7 @@
 
                                                 <div class="d-flex justify-content-between align-items-center has-border">
                                                     <ul class="nav sub-nav sub-nav--has-border" role="tablist">
-                                                        <li class="nav-item"><a class="nav-link sub-nav-link active" data-toggle="tab" href="#reviews-tab" role="tab"><?php _e("Reviews", "aipim"); ?>&nbsp;<span class="badge badge-secondary"><?php echo wp_count_comments( get_the_ID() )->approved;  ?></span></a></li>
+                                                        <li class="nav-item"><a class="nav-link sub-nav-link active" data-toggle="tab" href="#reviews-tab" role="tab"><?php _e("Reviews", "aipim"); ?>&nbsp;<span class="badge badge-secondary"><?php echo count(get_comments());  ?></span></a></li>
                                                     </ul>
 
 
