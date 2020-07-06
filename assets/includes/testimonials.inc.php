@@ -1,9 +1,9 @@
 <div>
   <div>
     <div class="Testimonials ns-tabs" data-ns-plugin="tabs" style="height: 84px;">
-      <blockquote class="is-active"><p>"Finalmente un lugar enfocado en latinoamérica donde subir mis quejas y encontrar nuevos casinos confiables"</p></blockquote>
-      <blockquote class=""><p>"Gracias a los rankings automáticos Betizen es un sitio justo para los casinos que desean promocionarse"</p></blockquote>
-      <blockquote class=""><p>"Era necesaria una comunidad que protegiera a los jugadores de los casinos y sitios promocionales fraudulentos"</p></blockquote>
+      <blockquote class="is-active"><p>"<?php _e("Finally a place focused on Latin America where to find new reliable casinos", "aipim"); ?>"</p></blockquote>
+      <blockquote class=""><p>"<?php _e("Thanks to automatic rankings Betizen is a fair site for casinos and users", "aipim"); ?>"</p></blockquote>
+      <blockquote class=""><p>"<?php _e("There was a need for a community to protect players from casino and fraudulent promotional sites", "aipim"); ?>"</p></blockquote>
 
     </div>
     <div class="Testimonials-dots -xl-ml4 -xl-mr4 -s-ml2 -s-mr2 -tac" data-ns-plugin="tabs">
@@ -14,7 +14,7 @@
             <img alt="avatar-luisa" src="https://www.betizen.org/wp-content/uploads/2020/02/avatar-luisa.png" width="80" height="80">
             <figcaption>
             <cite>Luisa Espin</cite>
-            <span>Jugadora online</span>
+            <span><?php _e("Online player", "aipim"); ?></span>
             </figcaption>
           </figure>
         </a>
@@ -22,8 +22,8 @@
           <figure>
             <img alt="avatar-ramon" src="https://www.betizen.org/wp-content/uploads/2020/02/avatar-ramon.png" width="80" height="80">
             <figcaption>
-              <cite>Ramín Segui</cite>
-              <span>Director de Marketing @ DiProCasino</span>
+              <cite>Ramón Segui</cite>
+              <span><?php _e("Marketing director", "aipim"); ?> @ DiProCasino</span>
             </figcaption>
           </figure>
         </a>
@@ -32,7 +32,7 @@
             <img alt="" src="https://www.betizen.org/wp-content/uploads/2019/04/nicolas.png" width="80" height="80">
             <figcaption>
               <cite>Nicolás Erramuspe</cite>
-              <span>Product developer @ minimo.io</span>
+              <span><?php _e("Product developer", "aipim"); ?> @ Mínimo</span>
             </figcaption>
           </figure>
         </a>

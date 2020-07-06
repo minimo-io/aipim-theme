@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
-"POT-Creation-Date: 2020-05-27T16:54:20+00:00\n"
-"PO-Revision-Date: 2020-05-27 13:57-0300\n"
+"POT-Creation-Date: 2020-07-06T16:36:52+00:00\n"
+"PO-Revision-Date: 2020-07-06 13:43-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -82,12 +82,14 @@ msgstr "Artigos"
 msgid "Total posts published"
 msgstr "Total de artigos publicadas"
 
-#: assets/includes/carrousel.inc.php:29 category-blog.php:101 page-686.php:102
+#: assets/includes/carrousel.inc.php:29
+#: assets/includes/shortcodes/short-playertest.inc.php:97 category-blog.php:101
 msgid "Previous"
 msgstr "Anterior"
 
-#: assets/includes/carrousel.inc.php:33 category-blog.php:102 functions.php:310
-#: page-686.php:105
+#: assets/includes/carrousel.inc.php:33
+#: assets/includes/shortcodes/short-playertest.inc.php:100
+#: category-blog.php:102 functions.php:389
 msgid "Next"
 msgstr "Próximo"
 
@@ -95,24 +97,24 @@ msgstr "Próximo"
 msgid "Join"
 msgstr "Unir-se"
 
-#: assets/includes/nav.inc.php:36 search.php:26
+#: assets/includes/nav.inc.php:36 search.php:25 search.php:28
 msgid "Search"
 msgstr "Procurar"
 
-#: assets/includes/nav.inc.php:134
+#: assets/includes/nav.inc.php:137
 msgid "Profile"
 msgstr "Perfil"
 
-#: assets/includes/nav.inc.php:135 assets/includes/nav.inc.php:178
+#: assets/includes/nav.inc.php:138 assets/includes/nav.inc.php:181
 msgid "Exit"
 msgstr "Saída"
 
-#: assets/includes/nav.inc.php:137 assets/includes/nav.inc.php:152
+#: assets/includes/nav.inc.php:140 assets/includes/nav.inc.php:155
 #: buddypress/members/register.php:208
 msgid "Sign in"
 msgstr "Acesse"
 
-#: assets/includes/nav.inc.php:149
+#: assets/includes/nav.inc.php:152
 msgid "Sign up"
 msgstr "Cadastre-se"
 
@@ -135,7 +137,7 @@ msgstr "Visite o cassino"
 
 #: assets/includes/reusable-htmls.inc.php:203
 #: assets/includes/reusable-htmls.inc.php:204 single-casinos.php:269
-#: single-casinos.php:444
+#: single-casinos.php:448
 msgid "Reputation details"
 msgstr "Detalhes da reputação"
 
@@ -146,7 +148,7 @@ msgstr "Análise"
 
 #: assets/includes/reusable-htmls.inc.php:213
 #: assets/includes/reusable-htmls.inc.php:289 single-casinos.php:131
-#: single-casinos.php:252 single-casinos.php:280 single-casinos.php:435
+#: single-casinos.php:252 single-casinos.php:280 single-casinos.php:439
 msgid "Visit"
 msgstr "Visita"
 
@@ -281,7 +283,7 @@ msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:18
 #: assets/includes/views/home.html.php:132
-#: assets/includes/views/home.html.php:158
+#: assets/includes/views/home.html.php:160
 msgid "/en/online-casinos/"
 msgstr "/pt-br/cassinos/"
 
@@ -303,7 +305,7 @@ msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:24
 #: assets/includes/views/home.html.php:118
-#: assets/includes/views/home.html.php:199
+#: assets/includes/views/home.html.php:201
 msgid "/en/games/"
 msgstr "/pt-br/jogos/"
 
@@ -311,7 +313,8 @@ msgstr "/pt-br/jogos/"
 msgid "Free play"
 msgstr "Jogar grátis"
 
-#: assets/includes/shortcodes/domore.inc.php:31 page-686.php:40
+#: assets/includes/shortcodes/domore.inc.php:31
+#: assets/includes/shortcodes/short-playertest.inc.php:35
 msgid "Player profile"
 msgstr "Perfil do jogador"
 
@@ -343,13 +346,441 @@ msgstr ""
 "Continue aprendendo a ganhar com esses artigos escritos por nossos "
 "especialistas no mundo dos cassinos."
 
-#: assets/includes/shortcodes/domore.inc.php:41 page-686.php:249
+#: assets/includes/shortcodes/domore.inc.php:41
+#: assets/includes/shortcodes/short-playertest.inc.php:244
 msgid "/en/articles/"
 msgstr "/pt-br/colunas/"
 
 #: assets/includes/shortcodes/domore.inc.php:41
 msgid "Read information"
 msgstr "Ler informação"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:37
+msgid "Do you know what type of player you are?"
+msgstr "Você sabe que tipo de jogador você é?"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:39
+msgid ""
+"Are you aware about what your skills and risks are when playing? <br> "
+"Knowing yourself you will avoid being scammed and you will be able to make "
+"the most of your time and money."
+msgstr ""
+"Você está ciente de quais são suas habilidades e riscos ao jogar? <br> "
+"Conhecendo a si mesmo, você evitará ser enganado e poderá aproveitar ao "
+"máximo seu tempo e dinheiro."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:104
+msgid "Get result"
+msgstr "Obter resultado"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:126
+msgid "You are one step away from being a better player!"
+msgstr "Você está a um passo de ser um jogador melhor!"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:129
+msgid ""
+"We are processing the results of the test you just completed. <br> We will "
+"send them to you by email shortly."
+msgstr ""
+"Estamos processando os resultados do teste que você acabou de concluir. <br> "
+"Em breve os enviaremos a você por e-mail."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:138
+msgid "You are already a better player!"
+msgstr "Você já é um jogador melhor!"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:140
+#: assets/includes/shortcodes/short-playertest.inc.php:174
+#: assets/includes/shortcodes/short-playertest.inc.php:201
+msgid "problematic"
+msgstr "problemático"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:153
+#: assets/includes/shortcodes/short-playertest.inc.php:219
+msgid "worrying"
+msgstr "preocupante"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:155
+#: assets/includes/shortcodes/short-playertest.inc.php:175
+msgid ""
+"Gambling when you are a minor is a problem, but not just because adults say "
+"so. <br><br><strong>WHY?</strong>"
+msgstr ""
+"Jogar quando você é menor de idade é um problema, mas não apenas porque os "
+"adultos dizem isso. <br> <br> <strong>POR QUE?</strong>"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:157
+msgid ""
+"<br><br> It is likely that to gamble as a minor you must have lied or spent "
+"money that you do not have. That's just what adults with gambling problems "
+"will do."
+msgstr ""
+"<br> <br> Provavelmente, para jogar como menor de idade, você deve ter "
+"mentido ou gastado o dinheiro que não possui. É exatamente o que os adultos "
+"com problemas de jogo fariam."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:158
+msgid ""
+"<br><br>Gambling in any of its forms, leads every year millions of people to "
+"economic ruin, to losing contact with their friends and families."
+msgstr ""
+"<br> <br> Jogar em qualquer uma de suas formas, leva todos os anos milhões "
+"de pessoas à ruína econômica, a perder contato com seus amigos e familiares."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:160
+msgid ""
+"<br><br>Games are made to make us think that we have a high chance of "
+"winning, when in fact the opposite usually occurs."
+msgstr ""
+"<br> <br> Os jogos são feitos para nos fazer pensar que temos grandes "
+"chances de ganhar, quando na verdade ocorre o contrário."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:162
+#: assets/includes/shortcodes/short-playertest.inc.php:179
+msgid "<br><br><strong>WHAT TO DO?</strong>"
+msgstr "<br> <br> <strong>O QUE FAZER?</strong>"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:163
+#: assets/includes/shortcodes/short-playertest.inc.php:184
+msgid ""
+"<br><br>It is possible to have fun on the Internet playing games that do not "
+"involve gambling. There are some interesting sites and lots of fun "
+"communities around them."
+msgstr ""
+"<br> <br> É possível se divertir na Internet jogando jogos que não envolvem "
+"jogos de azar. Existem sites interessantes e muitas comunidades divertidas "
+"ao seu redor."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:165
+msgid ""
+"<br><br>Our goal is to inform you, not to judge you. So we will always keep "
+"the reserve."
+msgstr ""
+"<br> <br> Nosso objetivo é informá-lo, não julgá-lo. Portanto, sempre "
+"manteremos a reserva."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:166
+msgid ""
+"<br><br>Find your tribe, play games according to your age. Write us and we "
+"will tell you how to really have fun."
+msgstr ""
+"<br> <br> Encontre sua tribo, jogue de acordo com a sua idade. Escreva-nos e "
+"nós lhe diremos como realmente se divertir."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:177
+msgid ""
+"<br>Slots and other games are designed to encourage us to keep playing, "
+"forgetting our friends or family. And unless you have the necessary "
+"knowledge, it is highly likely that you will be manipulated and harmed."
+msgstr ""
+"<br>Caça-níqueis e outros jogos são projetados para nos encorajar a "
+"continuar jogando, esquecendo nossos amigos ou familiares. E, a menos que "
+"você tenha o conhecimento necessário, é altamente provável que você seja "
+"manipulado e prejudicado."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:182
+msgid ""
+"<br>If you want to play less it is possible. There are techniques so you can "
+"do it without having to stop playing at all. We can help you."
+msgstr ""
+"<br> Se você quer jogar menos, é possível. Existem técnicas para que você "
+"possa fazer isso sem ter que parar de se divertir. Nós podemos ajudar você."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:186
+msgid ""
+"<br><br>Find your tribe, play games according to your age and have fun. An "
+"old seawolf have said."
+msgstr ""
+"<br> <br> Encontre sua tribo, jogue de acordo com a sua idade e divirta-se. "
+"Um velho lobo do mar disse."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:187
+msgid "<br><br>Write us and we will tell you how to do it right."
+msgstr "<br> <br> Escreva-nos e nós lhe diremos como fazê-lo corretamente."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:207
+msgid ""
+"Look, we have detected that you are a player with potential gambling "
+"problems. Do not worry. <br><strong>WE WOULD LIKE TO HELP YOU!</strong> "
+"Let's see what you need to know:"
+msgstr ""
+"Detectamos que você é um jogador com possíveis problemas de jogo. Não se "
+"preocupe. <br> <strong> Gostaríamos de ajudá-lo! </strong> Vamos ver o que "
+"você precisa saber:"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:208
+msgid "<br><br><strong> 1. YOU ARE NOT ALONE.</strong>"
+msgstr "<br> <br> <strong>1. VOCÊ NÃO ESTÁ SOZINHO.</strong>"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:209
+msgid ""
+"<br> In the world in which we live, bad habits derived from emotional "
+"problems are very common. Even public people and people who don't seem to, "
+"suffer in silence. You have already taken the first step. Don't stop now!"
+msgstr ""
+"<br> No mundo em que vivemos, maus hábitos derivados de problemas emocionais "
+"são muito comuns. Mesmo pessoas públicas e pessoas que parecem não sofrer, "
+"sofrem em silêncio. Você já deu o primeiro passo. Não pare agora!"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:211
+msgid "<br><br><strong>2. IT IS ALWAYS POSSIBLE TO IMPROVE.</strong>"
+msgstr "<br> <br> <strong>2. MELHORAR É SEMPRE POSSÍVEL.</strong>"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:212
+msgid ""
+"<br> The most complex step is to recognize the problem. It is the beginning "
+"of a path of greater individual freedom where you can leave behind a problem "
+"that in many cases takes over people's lives. It is not an easy path, but "
+"step by step, not only is it possible to improve, but if you allow yourself "
+"to start the process, improvement is inevitable."
+msgstr ""
+"<br> O passo mais complexo é reconhecer o problema. É o começo de um caminho "
+"de maior liberdade individual, onde você pode deixar para trás um problema "
+"que, em muitos casos, toma conta da vida das pessoas. Não é um caminho "
+"fácil, mas passo a passo, não só é possível melhorar, mas se você se "
+"permitir iniciar o processo, a melhoria é inevitável."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:214
+msgid "<br><br><strong>3. IT IS EASIER IF YOU GET HELP FROM SOMEONE.</strong>"
+msgstr ""
+"<br> <br> <strong>3. É MAIS FÁCIL SE VOCÊ RECEBER AJUDA DE ALGUÉM.</strong>"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:215
+msgid ""
+"<br>It is statistically more likely that you will not succeed if you try it "
+"alone. It can be the way you want, but you have to take the step of seeking "
+"help. Our mind is complex and intelligent, in these cases it is capable of "
+"deceiving ourselves that it is not necessary to expose our problem. "
+"Unfortunately this is not the case."
+msgstr ""
+"<br>É estatisticamente mais provável que você não tenha sucesso se tentar "
+"sozinho. Pode ser do jeito que você quiser, mas você precisa dar o passo de "
+"procurar ajuda. Nossa mente é complexa e inteligente; nesses casos, é capaz "
+"de enganar a nós mesmos que não é necessário expor nosso problema. "
+"Infelizmente, esse não é o caso."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:220
+msgid ""
+"<br><br>It is always possible to get out of debt with good planning, but "
+"first of all you should not continue accumulating it. Let us help you."
+msgstr ""
+"<br> <br>Sempre é possível sair da dívida com um bom planejamento, mas antes "
+"de tudo, você não deve continuar acumulando-a. Deixe-nos ajudá-lo."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:225
+msgid ""
+"<br><br>In order to control your gambling time it is necessary that you use "
+"certain tools that will help you to do so and choose those <a href='/en/"
+"online-casinos/'>online casinos</a> that have the good reputation of taking "
+"care of their clients."
+msgstr ""
+"<br> <br> Para controlar seu tempo de jogo, é necessário que você use certas "
+"ferramentas que o ajudarão a fazer isso e escolha os <a href=“/pt-br/"
+"cassinos/“> cassinos on-line</a> que tenham boa reputação em cuidar de seus "
+"clientes."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:231
+msgid ""
+"<br><br>One of the symptoms that you may have a gambling problem is to hide "
+"the fact that you bet on friends or family. As we have said this is a "
+"problem that you should not be ashamed of, it affects many people and "
+"recognizing it is the first step to improve."
+msgstr ""
+"<br><br>Um dos sintomas de que você pode ter um problema de jogo é esconder "
+"o fato de amigos ou familiares. Como dissemos, esse é um problema do qual "
+"você não deve se envergonhar; ele afeta muitas pessoas e reconhece que é o "
+"primeiro passo para melhorar."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:235
+msgid ""
+"<br><br>Another symptom of a gambling problem is having borrowed money to "
+"keep betting. This begins a process that inevitably leads to getting into "
+"debt or lying. It is possible to improve, but for this it is necessary to be "
+"accompanied in the process."
+msgstr ""
+"<br> <br> Outro sintoma de um problema no jogo é ter dinheiro emprestado "
+"para continuar apostando. Isso inicia um processo que inevitavelmente leva a "
+"dívidas ou mentiras. É possível melhorar, mas para isso é necessário estar "
+"acompanhado no processo."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:239
+msgid ""
+"<br><br>Betting should be fun. And without blame. A symptom that an activity "
+"has become obsessive, (whatever it is) is confirmed by the fact that you "
+"have tried to stop it and for whatever reason you were unable. If you are "
+"here, it is also the first guideline that you can stop it and control it. "
+"And for that you will have a much better chance of success if you seek help "
+"from reliable people. Let us help you!"
+msgstr ""
+"<br> <br> As apostas devem ser divertidas. E sem culpa. Um sintoma de que "
+"uma atividade se tornou obsessiva (seja ela qual for) é confirmado pelo fato "
+"de você ter tentado interrompê-la e por qualquer motivo que não conseguiu. "
+"Se você está aqui, também é a primeira diretriz que você pode detê-lo e "
+"controlá-lo. E para isso você terá uma chance muito maior de sucesso se "
+"procurar ajuda de pessoas confiáveis. Deixe-nos ajudá-lo!"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:243
+msgid ""
+"<br><br>Our goal is to <u>take care of you</u>. Write to us and we will "
+"campaign to help you contact professionals and have someone you trustworthy "
+"to talk to."
+msgstr ""
+"<br> <br> Nosso objetivo é <u>cuidar de você</u>. Escreva para nós e faremos "
+"uma campanha para ajudá-lo a entrar em contato com profissionais e ter "
+"alguém com quem você seja confiável para conversar."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:244
+msgid ""
+"<br>While we process your doubts with the utmost discretion, we recommend "
+"you read the read"
+msgstr ""
+"<br>Enquanto processamos suas dúvidas com a máxima discrição, recomendamos "
+"que você leia os"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:244
+msgid "articles on gambling"
+msgstr "artigos sobre jogos de azar"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:244
+msgid "written by our experts."
+msgstr "escritos por nossos especialistas."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:252
+#: assets/includes/shortcodes/short-playertest.inc.php:270
+msgid "healthy"
+msgstr "saudável"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:253
+msgid ""
+"<br><br>Gambling is fun and exciting. Unfortunately not all players who take "
+"this test see it this way."
+msgstr ""
+"<br> <br>Jogar é divertido e emocionante. Infelizmente, nem todos os "
+"jogadores que fazem esse teste o veem dessa maneira."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:254
+msgid ""
+"<br>You are among the select group of healthy players, looking for big "
+"emotions, money and fun."
+msgstr ""
+"<br>Você está entre o seleto grupo de jogadores saudáveis, procurando "
+"grandes emoções, dinheiro e diversão."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:255
+msgid "<br><br>Here are some quality recommendations."
+msgstr "<br> <br>Aqui estão algumas recomendações de qualidade."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:272
+msgid ""
+"<br><br>In Betizen it is possible to play, have fun and participate in the "
+"community without having to bet real money."
+msgstr ""
+"<br> <br>No Betizen é possível jogar, se divertir e participar da comunidade "
+"sem ter que apostar dinheiro real."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:273
+msgid "<br>And we promise to keep the site that way."
+msgstr "<br> E prometemos manter o site sempre dessa maneira."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:274
+msgid ""
+"<br><br>In order for you to do this we leave you this selection of the best "
+"Betizen games according to users votes. Remember that your votes have an "
+"influence over the rankings, so if you are a connoisseur leave your review "
+"in the games and earn points."
+msgstr ""
+"<br> <br> Para fazer isso, deixamos a você a seleção dos melhores jogos de "
+"acordo com os votos dos usuários. Lembre-se de que seus votos influenciam os "
+"rankings e listagens; portanto, se você é um conhecedor, deixe seu "
+"comentário nos jogos e ganhe pontos."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:275
+msgid ""
+"<br><br><h2>The 6 best rated slot machines in Betizen according to users</h2>"
+msgstr ""
+"<br> <br> <h2>As 6 máquinas caça-níqueis com melhor avaliação no Betizen, de "
+"acordo com os usuários</h2>"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:301
+msgid "/en/contact/"
+msgstr "/pt-br/contato/"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:301
+msgid "Get in touch (it's free)"
+msgstr "Entre em contato (é grátis)"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:317
+msgid "You took the player test the"
+msgstr "Você fez o teste de jogador o día"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:318
+msgid "And the result is"
+msgstr "E o resultado é"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:374
+msgid ""
+"Do you want to do this test again? Get in touch with us and we will help you."
+msgstr ""
+"Deseja fazer este teste novamente? Entre em contato conosco e nós o "
+"ajudaremos."
+
+#: assets/includes/shortcodes/short-playertest.inc.php:397
+msgid "Please complete an answer"
+msgstr "Por favor complete uma resposta"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:620
+#: assets/includes/shortcodes/short-playertest.inc.php:629
+#: assets/includes/shortcodes/short-playertest.inc.php:638
+#: assets/includes/shortcodes/short-playertest.inc.php:647
+#: assets/includes/shortcodes/short-playertest.inc.php:673
+#: assets/includes/shortcodes/short-playertest.inc.php:700
+#: assets/includes/shortcodes/short-playertest.inc.php:709
+#: assets/includes/shortcodes/short-playertest.inc.php:718
+#: single-juegos.php:402 single-juegos.php:412 single-juegos.php:420
+#: single-juegos.php:428 single-juegos.php:436 single-juegos.php:571
+#: single-juegos.php:581 single-juegos.php:589 single-juegos.php:597
+#: single-juegos.php:605
+msgid "Yes"
+msgstr "Sim"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:621
+#: assets/includes/shortcodes/short-playertest.inc.php:630
+#: assets/includes/shortcodes/short-playertest.inc.php:639
+#: assets/includes/shortcodes/short-playertest.inc.php:648
+#: assets/includes/shortcodes/short-playertest.inc.php:674
+#: assets/includes/shortcodes/short-playertest.inc.php:701
+#: assets/includes/shortcodes/short-playertest.inc.php:710
+#: assets/includes/shortcodes/short-playertest.inc.php:719
+#: single-juegos.php:404 single-juegos.php:411 single-juegos.php:419
+#: single-juegos.php:427 single-juegos.php:435 single-juegos.php:573
+#: single-juegos.php:580 single-juegos.php:588 single-juegos.php:596
+#: single-juegos.php:604
+msgid "No"
+msgstr "Não"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:663
+msgid "I'm interested in new games"
+msgstr "Estou interessado em novos jogos"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:664
+msgid "I'm interested in classic games"
+msgstr "Estou interessado em jogos clássicos"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:682
+msgid "I am interested in winning little and often"
+msgstr "Estou interessado em ganhar pouco e muitas vezes"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:683
+msgid "I'm interested in big prizes"
+msgstr "Estou interessado em grandes prêmios"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:691
+msgid "I prefer to play alone"
+msgstr "Eu prefiro jogar sozinho"
+
+#: assets/includes/shortcodes/short-playertest.inc.php:692
+msgid "I prefer to play with other people"
+msgstr "Eu prefiro brincar com outras pessoas"
 
 #: assets/includes/shortcodes/short-providers-list.inc.php:23
 #: category-blog.php:44
@@ -379,57 +810,39 @@ msgstr "imagem-do-provedor"
 msgid "View games"
 msgstr "Ver jogos"
 
-#: assets/includes/user-profile-test.inc.php:56
-#: assets/includes/user-profile-test.inc.php:65
-#: assets/includes/user-profile-test.inc.php:74
-#: assets/includes/user-profile-test.inc.php:83
-#: assets/includes/user-profile-test.inc.php:109
-#: assets/includes/user-profile-test.inc.php:136
-#: assets/includes/user-profile-test.inc.php:145
-#: assets/includes/user-profile-test.inc.php:154 single-juegos.php:402
-#: single-juegos.php:412 single-juegos.php:420 single-juegos.php:428
-#: single-juegos.php:436 single-juegos.php:571 single-juegos.php:581
-#: single-juegos.php:589 single-juegos.php:597 single-juegos.php:605
-msgid "Yes"
-msgstr "Sim"
+#: assets/includes/testimonials.inc.php:4
+msgid ""
+"Finally a place focused on Latin America where to find new reliable casinos"
+msgstr ""
+"Finalmente um lugar focado na América Latina, onde encontrar novos cassinos "
+"confiáveis"
 
-#: assets/includes/user-profile-test.inc.php:57
-#: assets/includes/user-profile-test.inc.php:66
-#: assets/includes/user-profile-test.inc.php:75
-#: assets/includes/user-profile-test.inc.php:84
-#: assets/includes/user-profile-test.inc.php:110
-#: assets/includes/user-profile-test.inc.php:137
-#: assets/includes/user-profile-test.inc.php:146
-#: assets/includes/user-profile-test.inc.php:155 single-juegos.php:404
-#: single-juegos.php:411 single-juegos.php:419 single-juegos.php:427
-#: single-juegos.php:435 single-juegos.php:573 single-juegos.php:580
-#: single-juegos.php:588 single-juegos.php:596 single-juegos.php:604
-msgid "No"
-msgstr "Não"
+#: assets/includes/testimonials.inc.php:5
+msgid ""
+"Thanks to automatic rankings Betizen is a fair site for casinos and users"
+msgstr ""
+"Graças ao rankings automáticos, o Betizen é um site justo para cassinos e "
+"usuários"
 
-#: assets/includes/user-profile-test.inc.php:99
-msgid "I'm interested in new games"
-msgstr "Estou interessado em novos jogos"
+#: assets/includes/testimonials.inc.php:6
+msgid ""
+"There was a need for a community to protect players from casino and "
+"fraudulent promotional sites"
+msgstr ""
+"Havia uma necessidade de uma comunidade para proteger jogadores de cassinos "
+"e sites promocionais fraudulentos"
 
-#: assets/includes/user-profile-test.inc.php:100
-msgid "I'm interested in classic games"
-msgstr "Estou interessado em jogos clássicos"
+#: assets/includes/testimonials.inc.php:17
+msgid "Online player"
+msgstr "Jogadora online"
 
-#: assets/includes/user-profile-test.inc.php:118
-msgid "I am interested in winning little and often"
-msgstr "Estou interessado em ganhar pouco e muitas vezes"
+#: assets/includes/testimonials.inc.php:26
+msgid "Marketing director"
+msgstr "Diretor de marketing"
 
-#: assets/includes/user-profile-test.inc.php:119
-msgid "I'm interested in big prizes"
-msgstr "Estou interessado em grandes prêmios"
-
-#: assets/includes/user-profile-test.inc.php:127
-msgid "I prefer to play alone"
-msgstr "Eu prefiro jogar sozinho"
-
-#: assets/includes/user-profile-test.inc.php:128
-msgid "I prefer to play with other people"
-msgstr "Eu prefiro brincar com outras pessoas"
+#: assets/includes/testimonials.inc.php:35
+msgid "Product developer"
+msgstr "Product developer"
 
 #: assets/includes/views/category.html.php:8
 msgid "Home"
@@ -459,36 +872,36 @@ msgstr "Usuários"
 msgid "Reviews"
 msgstr "Avaliações"
 
-#: assets/includes/views/home.html.php:120 functions.php:420 functions.php:425
+#: assets/includes/views/home.html.php:120 functions.php:499 functions.php:504
 msgid "Games"
 msgstr "Jogos"
 
 #: assets/includes/views/home.html.php:134
 msgid "Online Casinos"
-msgstr "Cassinos Online"
+msgstr "Cassinos"
 
-#: assets/includes/views/home.html.php:155
+#: assets/includes/views/home.html.php:157
 msgid "The best online casinos"
 msgstr "Os melhores cassinos online"
 
-#: assets/includes/views/home.html.php:156
+#: assets/includes/views/home.html.php:158
 msgid "According to other users. Vote now, free now, you decide!"
 msgstr "De acordo com outros usuários. Vote agora, grátis agora, você decide!"
 
-#: assets/includes/views/home.html.php:158
-#: assets/includes/views/home.html.php:199
+#: assets/includes/views/home.html.php:160
+#: assets/includes/views/home.html.php:201
 msgid "See all"
 msgstr "Ver tudo"
 
-#: assets/includes/views/home.html.php:185
+#: assets/includes/views/home.html.php:187
 msgid "View all casinos"
 msgstr "Veja todos os cassinos"
 
-#: assets/includes/views/home.html.php:196
+#: assets/includes/views/home.html.php:198
 msgid "Top ranked games"
 msgstr "Jogos melhor avaliados"
 
-#: assets/includes/views/home.html.php:197
+#: assets/includes/views/home.html.php:199
 msgid "These are the best games according to other users"
 msgstr "Estes são os melhores jogos de acordo com os usuários"
 
@@ -512,7 +925,7 @@ msgstr "Seguir cassino"
 msgid "Activity"
 msgstr "Atividade"
 
-#: buddypress/assets/emails/single-bp-email.php:468 functions.php:619
+#: buddypress/assets/emails/single-bp-email.php:468 functions.php:698
 msgid "The trusted community for learning to bet online"
 msgstr "A comunidade confiável para aprender a apostar online"
 
@@ -602,7 +1015,7 @@ msgstr "membro"
 #: buddypress/members/single/home.php:82
 #: buddypress/members/single/member-header.php:50 single-bonus.php:84
 #: single-bonus.php:185 single-bonus.php:274 single-casinos.php:87
-#: single-casinos.php:274 single-casinos.php:415 single-juegos.php:125
+#: single-casinos.php:274 single-casinos.php:419 single-juegos.php:125
 #: single-juegos.php:232 single-juegos.php:337 single-juegos.php:512
 msgid "/en/ranks/"
 msgstr "/pt-br/avaliacoes/"
@@ -751,7 +1164,7 @@ msgstr "Glossário"
 msgid "/en/glossary/"
 msgstr "/pt-br/glossario/"
 
-#: footer.php:33 functions.php:571
+#: footer.php:33 functions.php:650
 msgid "Providers"
 msgstr "Fornecedores"
 
@@ -775,540 +1188,194 @@ msgstr "Desenvolvido por"
 msgid "Terms & Conditions"
 msgstr "Termos e Condições"
 
-#: functions.php:421
+#: functions.php:500
 msgid "Game"
 msgstr "Jogo"
 
-#: functions.php:422 functions.php:454 functions.php:485
+#: functions.php:501 functions.php:533 functions.php:564
 msgid "Add new"
 msgstr "Adicionar novo"
 
-#: functions.php:424
+#: functions.php:503
 msgid "New game published"
 msgstr "Novo jogo publicado"
 
-#: functions.php:426
+#: functions.php:505
 msgid "%1$s posted a new <a href=\"%2$s\">game</a>"
 msgstr "%1$s compartilhou um novo <a href=“%2$s”>jogo</a>"
 
-#: functions.php:427
+#: functions.php:506
 msgid "%1$s posted a new <a href=\"%2$s\">game</a>, on the site %3$s"
 msgstr "%1$s compartilhou um novo <a href=“%2$s”>jogo</a>, no site %3$s"
 
-#: functions.php:428
+#: functions.php:507
 msgid "Comments about games"
 msgstr "Comentários sobre jogos"
 
-#: functions.php:429
+#: functions.php:508
 msgid "Games comments"
 msgstr "Comentários sobre jogos"
 
-#: functions.php:430
+#: functions.php:509
 msgid "%1$s commented on a <a href=\"%2$s\">game</a>"
 msgstr "%1$s comentou em um <a href=“%2$s”>jogo</a>"
 
-#: functions.php:431
+#: functions.php:510
 msgid "%1$s commented on a <a href=\"%2$s\">game</a>, on the site %3$s"
 msgstr "%1$s comentou em um <a href=“%2$s”>jogo</a>, no site %3$s"
 
-#: functions.php:452 functions.php:456
+#: functions.php:531 functions.php:535
 msgid "Casinos"
 msgstr "Cassinos"
 
-#: functions.php:453 functions.php:518 single-bonus.php:236
+#: functions.php:532 functions.php:597 single-bonus.php:236
 #: single-bonus.php:300
 msgid "Casino"
 msgstr "Cassino"
 
-#: functions.php:455
+#: functions.php:534
 msgid "New casino published"
 msgstr "Novo cassino publicado"
 
-#: functions.php:457
+#: functions.php:536
 msgid "%1$s posted a new <a href=\"%2$s\">casino</a>"
 msgstr "%1$s compartilhou um novo <a href=“%2$s”>cassino</a>"
 
-#: functions.php:458
+#: functions.php:537
 msgid "%1$s posted a new <a href=\"%2$s\">casino</a>, on the site %3$s"
 msgstr "%1$s compartilhou um novo <a href=“%2$s”>cassino</a>, no site %3$s"
 
-#: functions.php:459
+#: functions.php:538
 msgid "Comments about casinos"
 msgstr "Comentários sobre cassinos"
 
-#: functions.php:460
+#: functions.php:539
 msgid "Casinos comments"
 msgstr "Comentários sobre cassinos"
 
-#: functions.php:461
+#: functions.php:540
 msgid "%1$s commented on a <a href=\"%2$s\">casino</a>"
 msgstr "%1$s comentou em um <a href=“%2$s”>cassino</a>"
 
-#: functions.php:462
+#: functions.php:541
 msgid "%1$s commented on a <a href=\"%2$s\">casino</a>, on the site %3$s"
 msgstr "%1$s comentou em um <a href=“%2$s”>cassino</a>, no site %3$s"
 
-#: functions.php:483 functions.php:487
+#: functions.php:562 functions.php:566
 msgid "Bonuses"
 msgstr "Os bônus"
 
-#: functions.php:484
+#: functions.php:563
 msgid "Bonus"
 msgstr "Bônus"
 
-#: functions.php:486
+#: functions.php:565
 msgid "New bonus published"
 msgstr "Novo bônus publicado"
 
-#: functions.php:488
+#: functions.php:567
 msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>"
 msgstr "%1$s compartilhou um novo <a href=“%2$s”>bônus</a>"
 
-#: functions.php:489
+#: functions.php:568
 msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>, on the site %3$s"
 msgstr "%1$s compartilhou um novo <a href=“%2$s”>bônus</a>, no site %3$s"
 
-#: functions.php:490 functions.php:491
+#: functions.php:569 functions.php:570
 msgid "Comments about bonuses"
 msgstr "Comentários sobre bônus"
 
-#: functions.php:492
+#: functions.php:571
 msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>"
 msgstr "%1$s comentou sobre um <a href=“%2$s”>bônus</a>"
 
-#: functions.php:493
+#: functions.php:572
 msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>, on the site %3$s"
 msgstr "%1$s comentou sobre um <a href=“%2$s”>bônus</a>, no site %3$s"
 
-#: functions.php:529
+#: functions.php:608
 msgid "Lead Partner"
 msgstr "Lead Partner"
 
-#: functions.php:543
+#: functions.php:622
 msgid "Auxiliary sidebar"
 msgstr "Barra lateral auxiliar"
 
-#: functions.php:564 taxonomy-proveedores.php:26
+#: functions.php:643 taxonomy-proveedores.php:26
 msgid "All providers"
 msgstr "Todos os fornecedores"
 
-#: functions.php:615
+#: functions.php:694
 msgid "Betizen - The trusted community for learning to bet online"
 msgstr "Betizen - A comunidade confiável para aprender a ganhar online"
 
-#: functions.php:630
+#: functions.php:709
 msgid "Casino to casino"
 msgstr "Cassino para cassino"
 
-#: functions.php:634
+#: functions.php:713
 msgid "Casino post"
 msgstr "Artigo do cassino"
 
-#: functions.php:637
+#: functions.php:716
 msgid "Not linked to any casino"
 msgstr "Não está vinculado a nenhum cassino"
 
-#: functions.php:732
+#: functions.php:811
 msgid "Fair"
 msgstr "Justo"
 
-#: functions.php:733
+#: functions.php:812
 msgid "Acceptable"
 msgstr "Aceitável"
 
-#: functions.php:734
+#: functions.php:813
 msgid "Caution"
 msgstr "Cuidado"
 
-#: functions.php:735
+#: functions.php:814
 msgid "Dishonest"
 msgstr "Fraudulento"
 
-#: functions.php:736
+#: functions.php:815
 msgid "Dangerous"
 msgstr "Perigoso"
 
-#: functions.php:738
+#: functions.php:817
 msgid "Positive"
 msgstr "Positivo"
 
-#: functions.php:739
+#: functions.php:818
 msgid "Regular"
 msgstr "Regular"
 
-#: functions.php:740
+#: functions.php:819
 msgid "Negative"
 msgstr "Negativo"
 
-#: functions.php:796
+#: functions.php:823
+msgid "Low"
+msgstr "Baixa"
+
+#: functions.php:824
+msgid "Low/Medium"
+msgstr "Baixa/Média"
+
+#: functions.php:825
+msgid "Medium"
+msgstr "Média"
+
+#: functions.php:826
+msgid "Medium/High"
+msgstr "Média/Alta"
+
+#: functions.php:827
+msgid "High"
+msgstr "Alta"
+
+#: functions.php:883
 msgid "Copied!"
 msgstr "Copiado!"
-
-#: page-686.php:42
-msgid "Do you know what type of player you are?"
-msgstr "Você sabe que tipo de jogador você é?"
-
-#: page-686.php:44
-msgid ""
-"Are you aware about what your skills and risks are when playing? <br> "
-"Knowing yourself you will avoid being scammed and you will be able to make "
-"the most of your time and money."
-msgstr ""
-"Você está ciente de quais são suas habilidades e riscos ao jogar? <br> "
-"Conhecendo a si mesmo, você evitará ser enganado e poderá aproveitar ao "
-"máximo seu tempo e dinheiro."
-
-#: page-686.php:109
-msgid "Get result"
-msgstr "Obter resultado"
-
-#: page-686.php:131
-msgid "You are one step away from being a better player!"
-msgstr "Você está a um passo de ser um jogador melhor!"
-
-#: page-686.php:134
-msgid ""
-"We are processing the results of the test you just completed. <br> We will "
-"send them to you by email shortly."
-msgstr ""
-"Estamos processando os resultados do teste que você acabou de concluir. <br> "
-"Em breve os enviaremos a você por e-mail."
-
-#: page-686.php:143
-msgid "You are already a better player!"
-msgstr "Você já é um jogador melhor!"
-
-#: page-686.php:145 page-686.php:179 page-686.php:206
-msgid "problematic"
-msgstr "problemático"
-
-#: page-686.php:158 page-686.php:224
-msgid "worrying"
-msgstr "preocupante"
-
-#: page-686.php:160 page-686.php:180
-msgid ""
-"Gambling when you are a minor is a problem, but not just because adults say "
-"so. <br><br><strong>WHY?</strong>"
-msgstr ""
-"Jogar quando você é menor de idade é um problema, mas não apenas porque os "
-"adultos dizem isso. <br> <br> <strong>POR QUE?</strong>"
-
-#: page-686.php:162
-msgid ""
-"<br><br> It is likely that to gamble as a minor you must have lied or spent "
-"money that you do not have. That's just what adults with gambling problems "
-"will do."
-msgstr ""
-"<br> <br> Provavelmente, para jogar como menor de idade, você deve ter "
-"mentido ou gastado o dinheiro que não possui. É exatamente o que os adultos "
-"com problemas de jogo fariam."
-
-#: page-686.php:163
-msgid ""
-"<br><br>Gambling in any of its forms, leads every year millions of people to "
-"economic ruin, to losing contact with their friends and families."
-msgstr ""
-"<br> <br> Jogar em qualquer uma de suas formas, leva todos os anos milhões "
-"de pessoas à ruína econômica, a perder contato com seus amigos e familiares."
-
-#: page-686.php:165
-msgid ""
-"<br><br>Games are made to make us think that we have a high chance of "
-"winning, when in fact the opposite usually occurs."
-msgstr ""
-"<br> <br> Os jogos são feitos para nos fazer pensar que temos grandes "
-"chances de ganhar, quando na verdade ocorre o contrário."
-
-#: page-686.php:167 page-686.php:184
-msgid "<br><br><strong>WHAT TO DO?</strong>"
-msgstr "<br> <br> <strong>O QUE FAZER?</strong>"
-
-#: page-686.php:168 page-686.php:189
-msgid ""
-"<br><br>It is possible to have fun on the Internet playing games that do not "
-"involve gambling. There are some interesting sites and lots of fun "
-"communities around them."
-msgstr ""
-"<br> <br> É possível se divertir na Internet jogando jogos que não envolvem "
-"jogos de azar. Existem sites interessantes e muitas comunidades divertidas "
-"ao seu redor."
-
-#: page-686.php:170
-msgid ""
-"<br><br>Our goal is to inform you, not to judge you. So we will always keep "
-"the reserve."
-msgstr ""
-"<br> <br> Nosso objetivo é informá-lo, não julgá-lo. Portanto, sempre "
-"manteremos a reserva."
-
-#: page-686.php:171
-msgid ""
-"<br><br>Find your tribe, play games according to your age. Write us and we "
-"will tell you how to really have fun."
-msgstr ""
-"<br> <br> Encontre sua tribo, jogue de acordo com a sua idade. Escreva-nos e "
-"nós lhe diremos como realmente se divertir."
-
-#: page-686.php:182
-msgid ""
-"<br>Slots and other games are designed to encourage us to keep playing, "
-"forgetting our friends or family. And unless you have the necessary "
-"knowledge, it is highly likely that you will be manipulated and harmed."
-msgstr ""
-"<br>Caça-níqueis e outros jogos são projetados para nos encorajar a "
-"continuar jogando, esquecendo nossos amigos ou familiares. E, a menos que "
-"você tenha o conhecimento necessário, é altamente provável que você seja "
-"manipulado e prejudicado."
-
-#: page-686.php:187
-msgid ""
-"<br>If you want to play less it is possible. There are techniques so you can "
-"do it without having to stop playing at all. We can help you."
-msgstr ""
-"<br> Se você quer jogar menos, é possível. Existem técnicas para que você "
-"possa fazer isso sem ter que parar de se divertir. Nós podemos ajudar você."
-
-#: page-686.php:191
-msgid ""
-"<br><br>Find your tribe, play games according to your age and have fun. An "
-"old seawolf have said."
-msgstr ""
-"<br> <br> Encontre sua tribo, jogue de acordo com a sua idade e divirta-se. "
-"Um velho lobo do mar disse."
-
-#: page-686.php:192
-msgid "<br><br>Write us and we will tell you how to do it right."
-msgstr "<br> <br> Escreva-nos e nós lhe diremos como fazê-lo corretamente."
-
-#: page-686.php:212
-msgid ""
-"Look, we have detected that you are a player with potential gambling "
-"problems. Do not worry. <br><strong>WE WOULD LIKE TO HELP YOU!</strong> "
-"Let's see what you need to know:"
-msgstr ""
-"Detectamos que você é um jogador com possíveis problemas de jogo. Não se "
-"preocupe. <br> <strong> Gostaríamos de ajudá-lo! </strong> Vamos ver o que "
-"você precisa saber:"
-
-#: page-686.php:213
-msgid "<br><br><strong> 1. YOU ARE NOT ALONE.</strong>"
-msgstr "<br> <br> <strong>1. VOCÊ NÃO ESTÁ SOZINHO.</strong>"
-
-#: page-686.php:214
-msgid ""
-"<br> In the world in which we live, bad habits derived from emotional "
-"problems are very common. Even public people and people who don't seem to, "
-"suffer in silence. You have already taken the first step. Don't stop now!"
-msgstr ""
-"<br> No mundo em que vivemos, maus hábitos derivados de problemas emocionais "
-"são muito comuns. Mesmo pessoas públicas e pessoas que parecem não sofrer, "
-"sofrem em silêncio. Você já deu o primeiro passo. Não pare agora!"
-
-#: page-686.php:216
-msgid "<br><br><strong>2. IT IS ALWAYS POSSIBLE TO IMPROVE.</strong>"
-msgstr "<br> <br> <strong>2. MELHORAR É SEMPRE POSSÍVEL.</strong>"
-
-#: page-686.php:217
-msgid ""
-"<br> The most complex step is to recognize the problem. It is the beginning "
-"of a path of greater individual freedom where you can leave behind a problem "
-"that in many cases takes over people's lives. It is not an easy path, but "
-"step by step, not only is it possible to improve, but if you allow yourself "
-"to start the process, improvement is inevitable."
-msgstr ""
-"<br> O passo mais complexo é reconhecer o problema. É o começo de um caminho "
-"de maior liberdade individual, onde você pode deixar para trás um problema "
-"que, em muitos casos, toma conta da vida das pessoas. Não é um caminho "
-"fácil, mas passo a passo, não só é possível melhorar, mas se você se "
-"permitir iniciar o processo, a melhoria é inevitável."
-
-#: page-686.php:219
-msgid "<br><br><strong>3. IT IS EASIER IF YOU GET HELP FROM SOMEONE.</strong>"
-msgstr ""
-"<br> <br> <strong>3. É MAIS FÁCIL SE VOCÊ RECEBER AJUDA DE ALGUÉM.</strong>"
-
-#: page-686.php:220
-msgid ""
-"<br>It is statistically more likely that you will not succeed if you try it "
-"alone. It can be the way you want, but you have to take the step of seeking "
-"help. Our mind is complex and intelligent, in these cases it is capable of "
-"deceiving ourselves that it is not necessary to expose our problem. "
-"Unfortunately this is not the case."
-msgstr ""
-"<br>É estatisticamente mais provável que você não tenha sucesso se tentar "
-"sozinho. Pode ser do jeito que você quiser, mas você precisa dar o passo de "
-"procurar ajuda. Nossa mente é complexa e inteligente; nesses casos, é capaz "
-"de enganar a nós mesmos que não é necessário expor nosso problema. "
-"Infelizmente, esse não é o caso."
-
-#: page-686.php:225
-msgid ""
-"<br><br>It is always possible to get out of debt with good planning, but "
-"first of all you should not continue accumulating it. Let us help you."
-msgstr ""
-"<br> <br>Sempre é possível sair da dívida com um bom planejamento, mas antes "
-"de tudo, você não deve continuar acumulando-a. Deixe-nos ajudá-lo."
-
-#: page-686.php:230
-msgid ""
-"<br><br>In order to control your gambling time it is necessary that you use "
-"certain tools that will help you to do so and choose those <a href='/en/"
-"online-casinos/'>online casinos</a> that have the good reputation of taking "
-"care of their clients."
-msgstr ""
-"<br> <br> Para controlar seu tempo de jogo, é necessário que você use certas "
-"ferramentas que o ajudarão a fazer isso e escolha os <a href=“/pt-br/"
-"cassinos/“> cassinos on-line</a> que tenham boa reputação em cuidar de seus "
-"clientes."
-
-#: page-686.php:236
-msgid ""
-"<br><br>One of the symptoms that you may have a gambling problem is to hide "
-"the fact that you bet on friends or family. As we have said this is a "
-"problem that you should not be ashamed of, it affects many people and "
-"recognizing it is the first step to improve."
-msgstr ""
-"<br><br>Um dos sintomas de que você pode ter um problema de jogo é esconder "
-"o fato de amigos ou familiares. Como dissemos, esse é um problema do qual "
-"você não deve se envergonhar; ele afeta muitas pessoas e reconhece que é o "
-"primeiro passo para melhorar."
-
-#: page-686.php:240
-msgid ""
-"<br><br>Another symptom of a gambling problem is having borrowed money to "
-"keep betting. This begins a process that inevitably leads to getting into "
-"debt or lying. It is possible to improve, but for this it is necessary to be "
-"accompanied in the process."
-msgstr ""
-"<br> <br> Outro sintoma de um problema no jogo é ter dinheiro emprestado "
-"para continuar apostando. Isso inicia um processo que inevitavelmente leva a "
-"dívidas ou mentiras. É possível melhorar, mas para isso é necessário estar "
-"acompanhado no processo."
-
-#: page-686.php:244
-msgid ""
-"<br><br>Betting should be fun. And without blame. A symptom that an activity "
-"has become obsessive, (whatever it is) is confirmed by the fact that you "
-"have tried to stop it and for whatever reason you were unable. If you are "
-"here, it is also the first guideline that you can stop it and control it. "
-"And for that you will have a much better chance of success if you seek help "
-"from reliable people. Let us help you!"
-msgstr ""
-"<br> <br> As apostas devem ser divertidas. E sem culpa. Um sintoma de que "
-"uma atividade se tornou obsessiva (seja ela qual for) é confirmado pelo fato "
-"de você ter tentado interrompê-la e por qualquer motivo que não conseguiu. "
-"Se você está aqui, também é a primeira diretriz que você pode detê-lo e "
-"controlá-lo. E para isso você terá uma chance muito maior de sucesso se "
-"procurar ajuda de pessoas confiáveis. Deixe-nos ajudá-lo!"
-
-#: page-686.php:248
-msgid ""
-"<br><br>Our goal is to <u>take care of you</u>. Write to us and we will "
-"campaign to help you contact professionals and have someone you trustworthy "
-"to talk to."
-msgstr ""
-"<br> <br> Nosso objetivo é <u>cuidar de você</u>. Escreva para nós e faremos "
-"uma campanha para ajudá-lo a entrar em contato com profissionais e ter "
-"alguém com quem você seja confiável para conversar."
-
-#: page-686.php:249
-msgid ""
-"<br>While we process your doubts with the utmost discretion, we recommend "
-"you read the read"
-msgstr ""
-"<br>Enquanto processamos suas dúvidas com a máxima discrição, recomendamos "
-"que você leia os"
-
-#: page-686.php:249
-msgid "articles on gambling"
-msgstr "artigos sobre jogos de azar"
-
-#: page-686.php:249
-msgid "written by our experts."
-msgstr "escritos por nossos especialistas."
-
-#: page-686.php:257 page-686.php:275
-msgid "healthy"
-msgstr "saudável"
-
-#: page-686.php:258
-msgid ""
-"<br><br>Gambling is fun and exciting. Unfortunately not all players who take "
-"this test see it this way."
-msgstr ""
-"<br> <br>Jogar é divertido e emocionante. Infelizmente, nem todos os "
-"jogadores que fazem esse teste o veem dessa maneira."
-
-#: page-686.php:259
-msgid ""
-"<br>You are among the select group of healthy players, looking for big "
-"emotions, money and fun."
-msgstr ""
-"<br>Você está entre o seleto grupo de jogadores saudáveis, procurando "
-"grandes emoções, dinheiro e diversão."
-
-#: page-686.php:260
-msgid "<br><br>Here are some quality recommendations."
-msgstr "<br> <br>Aqui estão algumas recomendações de qualidade."
-
-#: page-686.php:277
-msgid ""
-"<br><br>In Betizen it is possible to play, have fun and participate in the "
-"community without having to bet real money."
-msgstr ""
-"<br> <br>No Betizen é possível jogar, se divertir e participar da comunidade "
-"sem ter que apostar dinheiro real."
-
-#: page-686.php:278
-msgid "<br>And we promise to keep the site that way."
-msgstr "<br> E prometemos manter o site sempre dessa maneira."
-
-#: page-686.php:279
-msgid ""
-"<br><br>In order for you to do this we leave you this selection of the best "
-"Betizen games according to users votes. Remember that your votes have an "
-"influence over the rankings, so if you are a connoisseur leave your review "
-"in the games and earn points."
-msgstr ""
-"<br> <br> Para fazer isso, deixamos a você a seleção dos melhores jogos de "
-"acordo com os votos dos usuários. Lembre-se de que seus votos influenciam os "
-"rankings e listagens; portanto, se você é um conhecedor, deixe seu "
-"comentário nos jogos e ganhe pontos."
-
-#: page-686.php:280
-msgid ""
-"<br><br><h2>The 6 best rated slot machines in Betizen according to users</h2>"
-msgstr ""
-"<br> <br> <h2>As 6 máquinas caça-níqueis com melhor avaliação no Betizen, de "
-"acordo com os usuários</h2>"
-
-#: page-686.php:306
-msgid "/en/contact/"
-msgstr "/pt-br/contato/"
-
-#: page-686.php:306
-msgid "Get in touch (it's free)"
-msgstr "Entre em contato (é grátis)"
-
-#: page-686.php:322
-msgid "You took the player test the"
-msgstr "Você fez o teste de jogador o día"
-
-#: page-686.php:323
-msgid "And the result is"
-msgstr "E o resultado é"
-
-#: page-686.php:379
-msgid ""
-"Do you want to do this test again? Get in touch with us and we will help you."
-msgstr ""
-"Deseja fazer este teste novamente? Entre em contato conosco e nós o "
-"ajudaremos."
-
-#: page-686.php:421
-msgid "Please complete an answer"
-msgstr "Por favor complete uma resposta"
 
 #. Template Name of the theme
 msgid "Search Page"
@@ -1360,16 +1427,16 @@ msgid "Published"
 msgstr "Publicados"
 
 #: single-bonus.php:239 single-bonus.php:303 single-casinos.php:329
-#: single-casinos.php:474 single-juegos.php:441 single-juegos.php:610
+#: single-casinos.php:478 single-juegos.php:441 single-juegos.php:610
 msgid "Questions?"
 msgstr "Perguntas?"
 
 #: single-bonus.php:239 single-bonus.php:303 single-casinos.php:329
-#: single-casinos.php:474 single-juegos.php:441 single-juegos.php:610
+#: single-casinos.php:478 single-juegos.php:441 single-juegos.php:610
 msgid "Contact us"
 msgstr "Contate-Nos"
 
-#: single-bonus.php:293 single-casinos.php:434 single-juegos.php:532
+#: single-bonus.php:293 single-casinos.php:438 single-juegos.php:532
 msgid "Write review"
 msgstr "Escrever avaliação"
 
@@ -1397,23 +1464,23 @@ msgstr "Retirada máxima"
 msgid "Min withdrawal"
 msgstr "Retirada mínima"
 
-#: single-casinos.php:267 single-casinos.php:443
+#: single-casinos.php:267 single-casinos.php:447
 msgid "Reputation"
 msgstr "Reputação"
 
-#: single-casinos.php:325 single-casinos.php:470
+#: single-casinos.php:325 single-casinos.php:474
 msgid "Founded"
 msgstr "Fundado"
 
-#: single-casinos.php:326 single-casinos.php:472
+#: single-casinos.php:326 single-casinos.php:476
 msgid "License(s)"
 msgstr "Licença(s)"
 
-#: single-casinos.php:327 single-casinos.php:473
+#: single-casinos.php:327 single-casinos.php:477
 msgid "Withdrawal times"
 msgstr "Tempos de retirada"
 
-#: single-casinos.php:364 single-juegos.php:473
+#: single-casinos.php:368 single-juegos.php:473
 msgid "Promotions"
 msgstr "Promoções"
 

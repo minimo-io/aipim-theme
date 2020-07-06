@@ -128,7 +128,7 @@ function aipim_loadmore_games_html($game){
   $html_loadmore .=                            '<a href="'.$provider["url"].'">'.$provider["name"].'</a>';
   $html_loadmore .=                        '</li>';
   $html_loadmore .=                        '<li style="color:#838E95;" title="'.__("Volatility", "aipim").'" data-toggle="tooltip" data-placement="top">';
-  $html_loadmore .=                          '<i class="fa '.$volatility_icon.'" aria-hidden="true"></i> '.$volatility;
+  $html_loadmore .=                          '<i class="fa '.$volatility_icon.'" aria-hidden="true"></i> '.aipim_volatility_label_translate($volatility);
   $html_loadmore .=                        '</li>';
   $html_loadmore .=                    '</ul>';
   $html_loadmore .=                '</p>';

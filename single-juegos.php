@@ -306,7 +306,7 @@
                                                                       <a href="<?php _e("/en/articles/what-does-volatility-in-slots-mean/", "aipim") ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>
                                                                     </h5>
                                                                     <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
-                                                                      <?php echo $f_volatilidad; ?>
+                                                                      <?php echo aipim_volatility_label_translate($f_volatilidad); ?>
                                                                     </p>
                                                                 </div>
                                                             </div>

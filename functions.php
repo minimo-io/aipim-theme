@@ -819,6 +819,14 @@ function aipim_reputation_label_translate($rep_val){
   if ($rep_val == "negativo") return __("Negative", "aipim");
 }
 
+function aipim_volatility_label_translate($v_val){
+  if ($v_val == "Baja") return __("Low", "aipim");
+  if ($v_val == "Baja/Media") return __("Low/Medium", "aipim");
+  if ($v_val == "Media") return __("Medium", "aipim");
+  if ($v_val == "Media/Alta") return __("Medium/High", "aipim");
+  if ($v_val == "Alta") return __("High", "aipim");
+}
+
 // disable Yoast rich snippets
 function bybe_remove_yoast_json($data){
     $data = array();

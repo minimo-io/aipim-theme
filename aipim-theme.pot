@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-05-27T16:54:20+00:00\n"
+"POT-Creation-Date: 2020-07-06T16:36:52+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.3.0\n"
+"X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: aipim\n"
 
 #. Theme Name of the theme
@@ -79,15 +79,15 @@ msgid "Total posts published"
 msgstr ""
 
 #: assets/includes/carrousel.inc.php:29
+#: assets/includes/shortcodes/short-playertest.inc.php:97
 #: category-blog.php:101
-#: page-686.php:102
 msgid "Previous"
 msgstr ""
 
 #: assets/includes/carrousel.inc.php:33
+#: assets/includes/shortcodes/short-playertest.inc.php:100
 #: category-blog.php:102
-#: functions.php:310
-#: page-686.php:105
+#: functions.php:389
 msgid "Next"
 msgstr ""
 
@@ -96,26 +96,27 @@ msgid "Join"
 msgstr ""
 
 #: assets/includes/nav.inc.php:36
-#: search.php:26
+#: search.php:25
+#: search.php:28
 msgid "Search"
 msgstr ""
 
-#: assets/includes/nav.inc.php:134
+#: assets/includes/nav.inc.php:137
 msgid "Profile"
 msgstr ""
 
-#: assets/includes/nav.inc.php:135
-#: assets/includes/nav.inc.php:178
+#: assets/includes/nav.inc.php:138
+#: assets/includes/nav.inc.php:181
 msgid "Exit"
 msgstr ""
 
-#: assets/includes/nav.inc.php:137
-#: assets/includes/nav.inc.php:152
+#: assets/includes/nav.inc.php:140
+#: assets/includes/nav.inc.php:155
 #: buddypress/members/register.php:208
 msgid "Sign in"
 msgstr ""
 
-#: assets/includes/nav.inc.php:149
+#: assets/includes/nav.inc.php:152
 msgid "Sign up"
 msgstr ""
 
@@ -140,7 +141,7 @@ msgstr ""
 #: assets/includes/reusable-htmls.inc.php:203
 #: assets/includes/reusable-htmls.inc.php:204
 #: single-casinos.php:269
-#: single-casinos.php:444
+#: single-casinos.php:448
 msgid "Reputation details"
 msgstr ""
 
@@ -154,7 +155,7 @@ msgstr ""
 #: single-casinos.php:131
 #: single-casinos.php:252
 #: single-casinos.php:280
-#: single-casinos.php:435
+#: single-casinos.php:439
 msgid "Visit"
 msgstr ""
 
@@ -268,7 +269,7 @@ msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:18
 #: assets/includes/views/home.html.php:132
-#: assets/includes/views/home.html.php:158
+#: assets/includes/views/home.html.php:160
 msgid "/en/online-casinos/"
 msgstr ""
 
@@ -286,7 +287,7 @@ msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:24
 #: assets/includes/views/home.html.php:118
-#: assets/includes/views/home.html.php:199
+#: assets/includes/views/home.html.php:201
 msgid "/en/games/"
 msgstr ""
 
@@ -296,7 +297,7 @@ msgid "Free play"
 msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:31
-#: page-686.php:40
+#: assets/includes/shortcodes/short-playertest.inc.php:35
 msgid "Player profile"
 msgstr ""
 
@@ -321,12 +322,285 @@ msgid "Keep learning how to win with these articles written by our experts on th
 msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:41
-#: page-686.php:249
+#: assets/includes/shortcodes/short-playertest.inc.php:244
 msgid "/en/articles/"
 msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:41
 msgid "Read information"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:37
+msgid "Do you know what type of player you are?"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:39
+msgid "Are you aware about what your skills and risks are when playing? <br> Knowing yourself you will avoid being scammed and you will be able to make the most of your time and money."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:104
+msgid "Get result"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:126
+msgid "You are one step away from being a better player!"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:129
+msgid "We are processing the results of the test you just completed. <br> We will send them to you by email shortly."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:138
+msgid "You are already a better player!"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:140
+#: assets/includes/shortcodes/short-playertest.inc.php:174
+#: assets/includes/shortcodes/short-playertest.inc.php:201
+msgid "problematic"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:153
+#: assets/includes/shortcodes/short-playertest.inc.php:219
+msgid "worrying"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:155
+#: assets/includes/shortcodes/short-playertest.inc.php:175
+msgid "Gambling when you are a minor is a problem, but not just because adults say so. <br><br><strong>WHY?</strong>"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:157
+msgid "<br><br> It is likely that to gamble as a minor you must have lied or spent money that you do not have. That's just what adults with gambling problems will do."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:158
+msgid "<br><br>Gambling in any of its forms, leads every year millions of people to economic ruin, to losing contact with their friends and families."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:160
+msgid "<br><br>Games are made to make us think that we have a high chance of winning, when in fact the opposite usually occurs."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:162
+#: assets/includes/shortcodes/short-playertest.inc.php:179
+msgid "<br><br><strong>WHAT TO DO?</strong>"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:163
+#: assets/includes/shortcodes/short-playertest.inc.php:184
+msgid "<br><br>It is possible to have fun on the Internet playing games that do not involve gambling. There are some interesting sites and lots of fun communities around them."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:165
+msgid "<br><br>Our goal is to inform you, not to judge you. So we will always keep the reserve."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:166
+msgid "<br><br>Find your tribe, play games according to your age. Write us and we will tell you how to really have fun."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:177
+msgid "<br>Slots and other games are designed to encourage us to keep playing, forgetting our friends or family. And unless you have the necessary knowledge, it is highly likely that you will be manipulated and harmed."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:182
+msgid "<br>If you want to play less it is possible. There are techniques so you can do it without having to stop playing at all. We can help you."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:186
+msgid "<br><br>Find your tribe, play games according to your age and have fun. An old seawolf have said."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:187
+msgid "<br><br>Write us and we will tell you how to do it right."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:207
+msgid "Look, we have detected that you are a player with potential gambling problems. Do not worry. <br><strong>WE WOULD LIKE TO HELP YOU!</strong> Let's see what you need to know:"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:208
+msgid "<br><br><strong> 1. YOU ARE NOT ALONE.</strong>"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:209
+msgid "<br> In the world in which we live, bad habits derived from emotional problems are very common. Even public people and people who don't seem to, suffer in silence. You have already taken the first step. Don't stop now!"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:211
+msgid "<br><br><strong>2. IT IS ALWAYS POSSIBLE TO IMPROVE.</strong>"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:212
+msgid "<br> The most complex step is to recognize the problem. It is the beginning of a path of greater individual freedom where you can leave behind a problem that in many cases takes over people's lives. It is not an easy path, but step by step, not only is it possible to improve, but if you allow yourself to start the process, improvement is inevitable."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:214
+msgid "<br><br><strong>3. IT IS EASIER IF YOU GET HELP FROM SOMEONE.</strong>"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:215
+msgid "<br>It is statistically more likely that you will not succeed if you try it alone. It can be the way you want, but you have to take the step of seeking help. Our mind is complex and intelligent, in these cases it is capable of deceiving ourselves that it is not necessary to expose our problem. Unfortunately this is not the case."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:220
+msgid "<br><br>It is always possible to get out of debt with good planning, but first of all you should not continue accumulating it. Let us help you."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:225
+msgid "<br><br>In order to control your gambling time it is necessary that you use certain tools that will help you to do so and choose those <a href='/en/online-casinos/'>online casinos</a> that have the good reputation of taking care of their clients."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:231
+msgid "<br><br>One of the symptoms that you may have a gambling problem is to hide the fact that you bet on friends or family. As we have said this is a problem that you should not be ashamed of, it affects many people and recognizing it is the first step to improve."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:235
+msgid "<br><br>Another symptom of a gambling problem is having borrowed money to keep betting. This begins a process that inevitably leads to getting into debt or lying. It is possible to improve, but for this it is necessary to be accompanied in the process."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:239
+msgid "<br><br>Betting should be fun. And without blame. A symptom that an activity has become obsessive, (whatever it is) is confirmed by the fact that you have tried to stop it and for whatever reason you were unable. If you are here, it is also the first guideline that you can stop it and control it. And for that you will have a much better chance of success if you seek help from reliable people. Let us help you!"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:243
+msgid "<br><br>Our goal is to <u>take care of you</u>. Write to us and we will campaign to help you contact professionals and have someone you trustworthy to talk to."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:244
+msgid "<br>While we process your doubts with the utmost discretion, we recommend you read the read"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:244
+msgid "articles on gambling"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:244
+msgid "written by our experts."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:252
+#: assets/includes/shortcodes/short-playertest.inc.php:270
+msgid "healthy"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:253
+msgid "<br><br>Gambling is fun and exciting. Unfortunately not all players who take this test see it this way."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:254
+msgid "<br>You are among the select group of healthy players, looking for big emotions, money and fun."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:255
+msgid "<br><br>Here are some quality recommendations."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:272
+msgid "<br><br>In Betizen it is possible to play, have fun and participate in the community without having to bet real money."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:273
+msgid "<br>And we promise to keep the site that way."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:274
+msgid "<br><br>In order for you to do this we leave you this selection of the best Betizen games according to users votes. Remember that your votes have an influence over the rankings, so if you are a connoisseur leave your review in the games and earn points."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:275
+msgid "<br><br><h2>The 6 best rated slot machines in Betizen according to users</h2>"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:301
+msgid "/en/contact/"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:301
+msgid "Get in touch (it's free)"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:317
+msgid "You took the player test the"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:318
+msgid "And the result is"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:374
+msgid "Do you want to do this test again? Get in touch with us and we will help you."
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:397
+msgid "Please complete an answer"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:620
+#: assets/includes/shortcodes/short-playertest.inc.php:629
+#: assets/includes/shortcodes/short-playertest.inc.php:638
+#: assets/includes/shortcodes/short-playertest.inc.php:647
+#: assets/includes/shortcodes/short-playertest.inc.php:673
+#: assets/includes/shortcodes/short-playertest.inc.php:700
+#: assets/includes/shortcodes/short-playertest.inc.php:709
+#: assets/includes/shortcodes/short-playertest.inc.php:718
+#: single-juegos.php:402
+#: single-juegos.php:412
+#: single-juegos.php:420
+#: single-juegos.php:428
+#: single-juegos.php:436
+#: single-juegos.php:571
+#: single-juegos.php:581
+#: single-juegos.php:589
+#: single-juegos.php:597
+#: single-juegos.php:605
+msgid "Yes"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:621
+#: assets/includes/shortcodes/short-playertest.inc.php:630
+#: assets/includes/shortcodes/short-playertest.inc.php:639
+#: assets/includes/shortcodes/short-playertest.inc.php:648
+#: assets/includes/shortcodes/short-playertest.inc.php:674
+#: assets/includes/shortcodes/short-playertest.inc.php:701
+#: assets/includes/shortcodes/short-playertest.inc.php:710
+#: assets/includes/shortcodes/short-playertest.inc.php:719
+#: single-juegos.php:404
+#: single-juegos.php:411
+#: single-juegos.php:419
+#: single-juegos.php:427
+#: single-juegos.php:435
+#: single-juegos.php:573
+#: single-juegos.php:580
+#: single-juegos.php:588
+#: single-juegos.php:596
+#: single-juegos.php:604
+msgid "No"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:663
+msgid "I'm interested in new games"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:664
+msgid "I'm interested in classic games"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:682
+msgid "I am interested in winning little and often"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:683
+msgid "I'm interested in big prizes"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:691
+msgid "I prefer to play alone"
+msgstr ""
+
+#: assets/includes/shortcodes/short-playertest.inc.php:692
+msgid "I prefer to play with other people"
 msgstr ""
 
 #: assets/includes/shortcodes/short-providers-list.inc.php:23
@@ -357,70 +631,28 @@ msgstr ""
 msgid "View games"
 msgstr ""
 
-#: assets/includes/user-profile-test.inc.php:56
-#: assets/includes/user-profile-test.inc.php:65
-#: assets/includes/user-profile-test.inc.php:74
-#: assets/includes/user-profile-test.inc.php:83
-#: assets/includes/user-profile-test.inc.php:109
-#: assets/includes/user-profile-test.inc.php:136
-#: assets/includes/user-profile-test.inc.php:145
-#: assets/includes/user-profile-test.inc.php:154
-#: single-juegos.php:402
-#: single-juegos.php:412
-#: single-juegos.php:420
-#: single-juegos.php:428
-#: single-juegos.php:436
-#: single-juegos.php:571
-#: single-juegos.php:581
-#: single-juegos.php:589
-#: single-juegos.php:597
-#: single-juegos.php:605
-msgid "Yes"
+#: assets/includes/testimonials.inc.php:4
+msgid "Finally a place focused on Latin America where to find new reliable casinos"
 msgstr ""
 
-#: assets/includes/user-profile-test.inc.php:57
-#: assets/includes/user-profile-test.inc.php:66
-#: assets/includes/user-profile-test.inc.php:75
-#: assets/includes/user-profile-test.inc.php:84
-#: assets/includes/user-profile-test.inc.php:110
-#: assets/includes/user-profile-test.inc.php:137
-#: assets/includes/user-profile-test.inc.php:146
-#: assets/includes/user-profile-test.inc.php:155
-#: single-juegos.php:404
-#: single-juegos.php:411
-#: single-juegos.php:419
-#: single-juegos.php:427
-#: single-juegos.php:435
-#: single-juegos.php:573
-#: single-juegos.php:580
-#: single-juegos.php:588
-#: single-juegos.php:596
-#: single-juegos.php:604
-msgid "No"
+#: assets/includes/testimonials.inc.php:5
+msgid "Thanks to automatic rankings Betizen is a fair site for casinos and users"
 msgstr ""
 
-#: assets/includes/user-profile-test.inc.php:99
-msgid "I'm interested in new games"
+#: assets/includes/testimonials.inc.php:6
+msgid "There was a need for a community to protect players from casino and fraudulent promotional sites"
 msgstr ""
 
-#: assets/includes/user-profile-test.inc.php:100
-msgid "I'm interested in classic games"
+#: assets/includes/testimonials.inc.php:17
+msgid "Online player"
 msgstr ""
 
-#: assets/includes/user-profile-test.inc.php:118
-msgid "I am interested in winning little and often"
+#: assets/includes/testimonials.inc.php:26
+msgid "Marketing director"
 msgstr ""
 
-#: assets/includes/user-profile-test.inc.php:119
-msgid "I'm interested in big prizes"
-msgstr ""
-
-#: assets/includes/user-profile-test.inc.php:127
-msgid "I prefer to play alone"
-msgstr ""
-
-#: assets/includes/user-profile-test.inc.php:128
-msgid "I prefer to play with other people"
+#: assets/includes/testimonials.inc.php:35
+msgid "Product developer"
 msgstr ""
 
 #: assets/includes/views/category.html.php:8
@@ -458,8 +690,8 @@ msgid "Reviews"
 msgstr ""
 
 #: assets/includes/views/home.html.php:120
-#: functions.php:420
-#: functions.php:425
+#: functions.php:499
+#: functions.php:504
 msgid "Games"
 msgstr ""
 
@@ -467,28 +699,28 @@ msgstr ""
 msgid "Online Casinos"
 msgstr ""
 
-#: assets/includes/views/home.html.php:155
+#: assets/includes/views/home.html.php:157
 msgid "The best online casinos"
 msgstr ""
 
-#: assets/includes/views/home.html.php:156
+#: assets/includes/views/home.html.php:158
 msgid "According to other users. Vote now, free now, you decide!"
 msgstr ""
 
-#: assets/includes/views/home.html.php:158
-#: assets/includes/views/home.html.php:199
+#: assets/includes/views/home.html.php:160
+#: assets/includes/views/home.html.php:201
 msgid "See all"
 msgstr ""
 
-#: assets/includes/views/home.html.php:185
+#: assets/includes/views/home.html.php:187
 msgid "View all casinos"
 msgstr ""
 
-#: assets/includes/views/home.html.php:196
+#: assets/includes/views/home.html.php:198
 msgid "Top ranked games"
 msgstr ""
 
-#: assets/includes/views/home.html.php:197
+#: assets/includes/views/home.html.php:199
 msgid "These are the best games according to other users"
 msgstr ""
 
@@ -517,7 +749,7 @@ msgid "Activity"
 msgstr ""
 
 #: buddypress/assets/emails/single-bp-email.php:468
-#: functions.php:619
+#: functions.php:698
 msgid "The trusted community for learning to bet online"
 msgstr ""
 
@@ -601,7 +833,7 @@ msgstr ""
 #: single-bonus.php:274
 #: single-casinos.php:87
 #: single-casinos.php:274
-#: single-casinos.php:415
+#: single-casinos.php:419
 #: single-juegos.php:125
 #: single-juegos.php:232
 #: single-juegos.php:337
@@ -759,7 +991,7 @@ msgid "/en/glossary/"
 msgstr ""
 
 #: footer.php:33
-#: functions.php:571
+#: functions.php:650
 msgid "Providers"
 msgstr ""
 
@@ -785,388 +1017,201 @@ msgstr ""
 msgid "Terms & Conditions"
 msgstr ""
 
-#: functions.php:421
+#: functions.php:500
 msgid "Game"
 msgstr ""
 
-#: functions.php:422
-#: functions.php:454
-#: functions.php:485
+#: functions.php:501
+#: functions.php:533
+#: functions.php:564
 msgid "Add new"
 msgstr ""
 
-#: functions.php:424
+#: functions.php:503
 msgid "New game published"
 msgstr ""
 
-#: functions.php:426
+#: functions.php:505
 msgid "%1$s posted a new <a href=\"%2$s\">game</a>"
 msgstr ""
 
-#: functions.php:427
+#: functions.php:506
 msgid "%1$s posted a new <a href=\"%2$s\">game</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:428
+#: functions.php:507
 msgid "Comments about games"
 msgstr ""
 
-#: functions.php:429
+#: functions.php:508
 msgid "Games comments"
 msgstr ""
 
-#: functions.php:430
+#: functions.php:509
 msgid "%1$s commented on a <a href=\"%2$s\">game</a>"
 msgstr ""
 
-#: functions.php:431
+#: functions.php:510
 msgid "%1$s commented on a <a href=\"%2$s\">game</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:452
-#: functions.php:456
+#: functions.php:531
+#: functions.php:535
 msgid "Casinos"
 msgstr ""
 
-#: functions.php:453
-#: functions.php:518
+#: functions.php:532
+#: functions.php:597
 #: single-bonus.php:236
 #: single-bonus.php:300
 msgid "Casino"
 msgstr ""
 
-#: functions.php:455
+#: functions.php:534
 msgid "New casino published"
 msgstr ""
 
-#: functions.php:457
+#: functions.php:536
 msgid "%1$s posted a new <a href=\"%2$s\">casino</a>"
 msgstr ""
 
-#: functions.php:458
+#: functions.php:537
 msgid "%1$s posted a new <a href=\"%2$s\">casino</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:459
+#: functions.php:538
 msgid "Comments about casinos"
 msgstr ""
 
-#: functions.php:460
+#: functions.php:539
 msgid "Casinos comments"
 msgstr ""
 
-#: functions.php:461
+#: functions.php:540
 msgid "%1$s commented on a <a href=\"%2$s\">casino</a>"
 msgstr ""
 
-#: functions.php:462
+#: functions.php:541
 msgid "%1$s commented on a <a href=\"%2$s\">casino</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:483
-#: functions.php:487
+#: functions.php:562
+#: functions.php:566
 msgid "Bonuses"
 msgstr ""
 
-#: functions.php:484
+#: functions.php:563
 msgid "Bonus"
 msgstr ""
 
-#: functions.php:486
+#: functions.php:565
 msgid "New bonus published"
 msgstr ""
 
-#: functions.php:488
+#: functions.php:567
 msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>"
 msgstr ""
 
-#: functions.php:489
+#: functions.php:568
 msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:490
-#: functions.php:491
+#: functions.php:569
+#: functions.php:570
 msgid "Comments about bonuses"
 msgstr ""
 
-#: functions.php:492
+#: functions.php:571
 msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>"
 msgstr ""
 
-#: functions.php:493
+#: functions.php:572
 msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:529
+#: functions.php:608
 msgid "Lead Partner"
 msgstr ""
 
-#: functions.php:543
+#: functions.php:622
 msgid "Auxiliary sidebar"
 msgstr ""
 
-#: functions.php:564
+#: functions.php:643
 #: taxonomy-proveedores.php:26
 msgid "All providers"
 msgstr ""
 
-#: functions.php:615
+#: functions.php:694
 msgid "Betizen - The trusted community for learning to bet online"
 msgstr ""
 
-#: functions.php:630
+#: functions.php:709
 msgid "Casino to casino"
 msgstr ""
 
-#: functions.php:634
+#: functions.php:713
 msgid "Casino post"
 msgstr ""
 
-#: functions.php:637
+#: functions.php:716
 msgid "Not linked to any casino"
 msgstr ""
 
-#: functions.php:732
+#: functions.php:811
 msgid "Fair"
 msgstr ""
 
-#: functions.php:733
+#: functions.php:812
 msgid "Acceptable"
 msgstr ""
 
-#: functions.php:734
+#: functions.php:813
 msgid "Caution"
 msgstr ""
 
-#: functions.php:735
+#: functions.php:814
 msgid "Dishonest"
 msgstr ""
 
-#: functions.php:736
+#: functions.php:815
 msgid "Dangerous"
 msgstr ""
 
-#: functions.php:738
+#: functions.php:817
 msgid "Positive"
 msgstr ""
 
-#: functions.php:739
+#: functions.php:818
 msgid "Regular"
 msgstr ""
 
-#: functions.php:740
+#: functions.php:819
 msgid "Negative"
 msgstr ""
 
-#: functions.php:796
+#: functions.php:823
+msgid "Low"
+msgstr ""
+
+#: functions.php:824
+msgid "Low/Medium"
+msgstr ""
+
+#: functions.php:825
+msgid "Medium"
+msgstr ""
+
+#: functions.php:826
+msgid "Medium/High"
+msgstr ""
+
+#: functions.php:827
+msgid "High"
+msgstr ""
+
+#: functions.php:883
 msgid "Copied!"
-msgstr ""
-
-#: page-686.php:42
-msgid "Do you know what type of player you are?"
-msgstr ""
-
-#: page-686.php:44
-msgid "Are you aware about what your skills and risks are when playing? <br> Knowing yourself you will avoid being scammed and you will be able to make the most of your time and money."
-msgstr ""
-
-#: page-686.php:109
-msgid "Get result"
-msgstr ""
-
-#: page-686.php:131
-msgid "You are one step away from being a better player!"
-msgstr ""
-
-#: page-686.php:134
-msgid "We are processing the results of the test you just completed. <br> We will send them to you by email shortly."
-msgstr ""
-
-#: page-686.php:143
-msgid "You are already a better player!"
-msgstr ""
-
-#: page-686.php:145
-#: page-686.php:179
-#: page-686.php:206
-msgid "problematic"
-msgstr ""
-
-#: page-686.php:158
-#: page-686.php:224
-msgid "worrying"
-msgstr ""
-
-#: page-686.php:160
-#: page-686.php:180
-msgid "Gambling when you are a minor is a problem, but not just because adults say so. <br><br><strong>WHY?</strong>"
-msgstr ""
-
-#: page-686.php:162
-msgid "<br><br> It is likely that to gamble as a minor you must have lied or spent money that you do not have. That's just what adults with gambling problems will do."
-msgstr ""
-
-#: page-686.php:163
-msgid "<br><br>Gambling in any of its forms, leads every year millions of people to economic ruin, to losing contact with their friends and families."
-msgstr ""
-
-#: page-686.php:165
-msgid "<br><br>Games are made to make us think that we have a high chance of winning, when in fact the opposite usually occurs."
-msgstr ""
-
-#: page-686.php:167
-#: page-686.php:184
-msgid "<br><br><strong>WHAT TO DO?</strong>"
-msgstr ""
-
-#: page-686.php:168
-#: page-686.php:189
-msgid "<br><br>It is possible to have fun on the Internet playing games that do not involve gambling. There are some interesting sites and lots of fun communities around them."
-msgstr ""
-
-#: page-686.php:170
-msgid "<br><br>Our goal is to inform you, not to judge you. So we will always keep the reserve."
-msgstr ""
-
-#: page-686.php:171
-msgid "<br><br>Find your tribe, play games according to your age. Write us and we will tell you how to really have fun."
-msgstr ""
-
-#: page-686.php:182
-msgid "<br>Slots and other games are designed to encourage us to keep playing, forgetting our friends or family. And unless you have the necessary knowledge, it is highly likely that you will be manipulated and harmed."
-msgstr ""
-
-#: page-686.php:187
-msgid "<br>If you want to play less it is possible. There are techniques so you can do it without having to stop playing at all. We can help you."
-msgstr ""
-
-#: page-686.php:191
-msgid "<br><br>Find your tribe, play games according to your age and have fun. An old seawolf have said."
-msgstr ""
-
-#: page-686.php:192
-msgid "<br><br>Write us and we will tell you how to do it right."
-msgstr ""
-
-#: page-686.php:212
-msgid "Look, we have detected that you are a player with potential gambling problems. Do not worry. <br><strong>WE WOULD LIKE TO HELP YOU!</strong> Let's see what you need to know:"
-msgstr ""
-
-#: page-686.php:213
-msgid "<br><br><strong> 1. YOU ARE NOT ALONE.</strong>"
-msgstr ""
-
-#: page-686.php:214
-msgid "<br> In the world in which we live, bad habits derived from emotional problems are very common. Even public people and people who don't seem to, suffer in silence. You have already taken the first step. Don't stop now!"
-msgstr ""
-
-#: page-686.php:216
-msgid "<br><br><strong>2. IT IS ALWAYS POSSIBLE TO IMPROVE.</strong>"
-msgstr ""
-
-#: page-686.php:217
-msgid "<br> The most complex step is to recognize the problem. It is the beginning of a path of greater individual freedom where you can leave behind a problem that in many cases takes over people's lives. It is not an easy path, but step by step, not only is it possible to improve, but if you allow yourself to start the process, improvement is inevitable."
-msgstr ""
-
-#: page-686.php:219
-msgid "<br><br><strong>3. IT IS EASIER IF YOU GET HELP FROM SOMEONE.</strong>"
-msgstr ""
-
-#: page-686.php:220
-msgid "<br>It is statistically more likely that you will not succeed if you try it alone. It can be the way you want, but you have to take the step of seeking help. Our mind is complex and intelligent, in these cases it is capable of deceiving ourselves that it is not necessary to expose our problem. Unfortunately this is not the case."
-msgstr ""
-
-#: page-686.php:225
-msgid "<br><br>It is always possible to get out of debt with good planning, but first of all you should not continue accumulating it. Let us help you."
-msgstr ""
-
-#: page-686.php:230
-msgid "<br><br>In order to control your gambling time it is necessary that you use certain tools that will help you to do so and choose those <a href='/en/online-casinos/'>online casinos</a> that have the good reputation of taking care of their clients."
-msgstr ""
-
-#: page-686.php:236
-msgid "<br><br>One of the symptoms that you may have a gambling problem is to hide the fact that you bet on friends or family. As we have said this is a problem that you should not be ashamed of, it affects many people and recognizing it is the first step to improve."
-msgstr ""
-
-#: page-686.php:240
-msgid "<br><br>Another symptom of a gambling problem is having borrowed money to keep betting. This begins a process that inevitably leads to getting into debt or lying. It is possible to improve, but for this it is necessary to be accompanied in the process."
-msgstr ""
-
-#: page-686.php:244
-msgid "<br><br>Betting should be fun. And without blame. A symptom that an activity has become obsessive, (whatever it is) is confirmed by the fact that you have tried to stop it and for whatever reason you were unable. If you are here, it is also the first guideline that you can stop it and control it. And for that you will have a much better chance of success if you seek help from reliable people. Let us help you!"
-msgstr ""
-
-#: page-686.php:248
-msgid "<br><br>Our goal is to <u>take care of you</u>. Write to us and we will campaign to help you contact professionals and have someone you trustworthy to talk to."
-msgstr ""
-
-#: page-686.php:249
-msgid "<br>While we process your doubts with the utmost discretion, we recommend you read the read"
-msgstr ""
-
-#: page-686.php:249
-msgid "articles on gambling"
-msgstr ""
-
-#: page-686.php:249
-msgid "written by our experts."
-msgstr ""
-
-#: page-686.php:257
-#: page-686.php:275
-msgid "healthy"
-msgstr ""
-
-#: page-686.php:258
-msgid "<br><br>Gambling is fun and exciting. Unfortunately not all players who take this test see it this way."
-msgstr ""
-
-#: page-686.php:259
-msgid "<br>You are among the select group of healthy players, looking for big emotions, money and fun."
-msgstr ""
-
-#: page-686.php:260
-msgid "<br><br>Here are some quality recommendations."
-msgstr ""
-
-#: page-686.php:277
-msgid "<br><br>In Betizen it is possible to play, have fun and participate in the community without having to bet real money."
-msgstr ""
-
-#: page-686.php:278
-msgid "<br>And we promise to keep the site that way."
-msgstr ""
-
-#: page-686.php:279
-msgid "<br><br>In order for you to do this we leave you this selection of the best Betizen games according to users votes. Remember that your votes have an influence over the rankings, so if you are a connoisseur leave your review in the games and earn points."
-msgstr ""
-
-#: page-686.php:280
-msgid "<br><br><h2>The 6 best rated slot machines in Betizen according to users</h2>"
-msgstr ""
-
-#: page-686.php:306
-msgid "/en/contact/"
-msgstr ""
-
-#: page-686.php:306
-msgid "Get in touch (it's free)"
-msgstr ""
-
-#: page-686.php:322
-msgid "You took the player test the"
-msgstr ""
-
-#: page-686.php:323
-msgid "And the result is"
-msgstr ""
-
-#: page-686.php:379
-msgid "Do you want to do this test again? Get in touch with us and we will help you."
-msgstr ""
-
-#: page-686.php:421
-msgid "Please complete an answer"
 msgstr ""
 
 #. Template Name of the theme
@@ -1228,7 +1273,7 @@ msgstr ""
 #: single-bonus.php:239
 #: single-bonus.php:303
 #: single-casinos.php:329
-#: single-casinos.php:474
+#: single-casinos.php:478
 #: single-juegos.php:441
 #: single-juegos.php:610
 msgid "Questions?"
@@ -1237,14 +1282,14 @@ msgstr ""
 #: single-bonus.php:239
 #: single-bonus.php:303
 #: single-casinos.php:329
-#: single-casinos.php:474
+#: single-casinos.php:478
 #: single-juegos.php:441
 #: single-juegos.php:610
 msgid "Contact us"
 msgstr ""
 
 #: single-bonus.php:293
-#: single-casinos.php:434
+#: single-casinos.php:438
 #: single-juegos.php:532
 msgid "Write review"
 msgstr ""
@@ -1276,26 +1321,26 @@ msgid "Min withdrawal"
 msgstr ""
 
 #: single-casinos.php:267
-#: single-casinos.php:443
+#: single-casinos.php:447
 msgid "Reputation"
 msgstr ""
 
 #: single-casinos.php:325
-#: single-casinos.php:470
+#: single-casinos.php:474
 msgid "Founded"
 msgstr ""
 
 #: single-casinos.php:326
-#: single-casinos.php:472
+#: single-casinos.php:476
 msgid "License(s)"
 msgstr ""
 
 #: single-casinos.php:327
-#: single-casinos.php:473
+#: single-casinos.php:477
 msgid "Withdrawal times"
 msgstr ""
 
-#: single-casinos.php:364
+#: single-casinos.php:368
 #: single-juegos.php:473
 msgid "Promotions"
 msgstr ""

@@ -104,7 +104,10 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
 
                             $a_categories[] = $str_cat;
                         }else{
-                            $a_categories[] = '<li id="term-id-'.$category->term_id.'" class="nav-item nav-item-spread d-none d-lg-block"><a class="nav-link" href="'.$category_url.'">'.$category->name.(get_field("show_count", $category) ? '<sup><span class="badge badge-bonus badge-pill badge-danger">'.wp_count_posts( 'bonus' )->publish.'</span></sup>' : "").'</a></li>';
+                            $bonus_count = aipim_wpml_count_posts("bonus");
+                            $bonus_count = $bonus_count["publish"][ICL_LANGUAGE_CODE];
+
+                            $a_categories[] = '<li id="term-id-'.$category->term_id.'" class="nav-item nav-item-spread d-none d-lg-block"><a class="nav-link" href="'.$category_url.'">'.$category->name.(get_field("show_count", $category) ? '<sup><span class="badge badge-bonus badge-pill badge-danger">'.$bonus_count.'</span></sup>' : "").'</a></li>';
                             $a_categories[] = '<li id="term-id-'.$category->term_id.'-mobile" class="nav-item Xnav-item-spread d-lg-none"><a class="mt-3 button button-brand btn-outline btn-sm button-join-small btn-block" href="'.$category_url.'">'.$category->name.'</a></li>';
                         }
                     }
