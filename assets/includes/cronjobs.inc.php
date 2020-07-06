@@ -21,126 +21,167 @@ function cronstarter_deactivate() {
 function am_ranking_calc() {
 
     global $post;
+    global $sitepress;
 
-    // casinos ranking ---------------------------------------------------
-    $the_query_casinos = get_posts( array(
-        'post_status' => Array('publish'),
-        'nopaging' => true,
-        'showposts' => -1,
-        'post_type' => Array('casinos'),
-        'no_found_rows' => true,
-        'suppress_filters' => false
-    ) );
 
-    $casinos_scores = Array();
-    foreach ($the_query_casinos as $casino){
-        $rating = get_wpcr_avg_rating($casino);
-        $votes_count = $rating["count"]; // comments count
-        $rating = $rating["value"]; // average rating
+            $sitepress->switch_lang( "es" );
 
-        $score_total = 0;
-        if ($rating != 0){
-            if ($votes_count != 0){
-                $score_total = ($votes_count * $votes_count);
-            }else{
-                $score_total = $votes_count;
+            // casinos ranking ---------------------------------------------------
+            $the_query_casinos = get_posts( array(
+                'post_status' => Array('publish'),
+                'nopaging' => true,
+                'showposts' => -1,
+                'post_type' => 'casinos',
+                'no_found_rows' => true,
+                'suppress_filters' => false
+            ) );
+
+            $casinos_scores = Array();
+
+
+
+            foreach ($the_query_casinos as $casino){
+
+                if (get_post_type( $casino->ID ) != "casinos") continue;
+
+                $rating = get_wpcr_avg_rating($casino);
+                $votes_count = $rating["count"]; // comments count
+                $rating = $rating["value"]; // average rating
+
+                $score_total = 0;
+                if ($rating != 0){
+                    if ($votes_count != 0){
+                        $score_total = ($votes_count * $votes_count);
+                    }else{
+                        $score_total = $votes_count;
+                    }
+                }else{
+                    $score_total = $votes_count;
+                }
+
+
+                $casinos_scores[$casino->ID] = $score_total;
             }
-        }else{
-            $score_total = $votes_count;
-        }
+            arsort($casinos_scores);
 
-        // echo $casino->post_title. ": ".$score_total."<br>";
-        $casinos_scores[$casino->ID] = $score_total;
-    }
-    arsort($casinos_scores);
-    $a_rank = 1;
-    foreach ($casinos_scores as $s_k => $s_v){
-        update_post_meta($s_k, "ranking", $a_rank);
-        $a_rank++;
-    }
-    wp_reset_postdata();
-    // end casinos ranking -----------------------------------------------
+            $a_rank = 1;
+            foreach ($casinos_scores as $s_k => $s_v){
 
+                $languages = apply_filters( 'wpml_active_languages', NULL, 'orderby=id&order=desc' );
 
-    // bonus ranking ---------------------------------------------------
-    $the_query_casinos = get_posts( array(
-        'post_status' => Array('publish'),
-        'nopaging' => true,
-        'showposts' => -1,
-        'post_type' => Array('bonus'),
-        'no_found_rows' => true,
-        'suppress_filters' => false
-    ) );
+                if ( !empty( $languages ) ) {
+                    // copy ranking value to all languages
+                    foreach( $languages as $l ) {
+                      $other_lang_id = icl_object_id($s_k, 'casinos', false, $l["code"]);
+                      update_post_meta($other_lang_id, "ranking", $a_rank);
+                      am_log( get_the_title($pt_br_id). " (".$l["code"]."): ".$a_rank);
+                    }
+                }
 
-    $casinos_scores = Array();
-    foreach ($the_query_casinos as $casino){
-        $rating = get_wpcr_avg_rating($casino);
-        $votes_count = $rating["count"]; // comments count
-        $rating = $rating["value"]; // average rating
-
-        $score_total = 0;
-        if ($rating != 0){
-            if ($votes_count != 0){
-                $score_total = ($votes_count * $votes_count);
-            }else{
-                $score_total = $votes_count;
+                $a_rank++;
             }
-        }else{
-            $score_total = $votes_count;
-        }
-
-        // echo $casino->post_title. ": ".$score_total."<br>";
-        $casinos_scores[$casino->ID] = $score_total;
-    }
-    arsort($casinos_scores);
-    $a_rank = 1;
-    foreach ($casinos_scores as $s_k => $s_v){
-        update_post_meta($s_k, "ranking", $a_rank);
-        $a_rank++;
-    }
-    wp_reset_postdata();
-    // end bonus ranking -----------------------------------------------
+            wp_reset_postdata();
+            // end casinos ranking -----------------------------------------------
 
 
+            // bonus ranking ---------------------------------------------------
+            $the_query_casinos = get_posts( array(
+                'post_status' => Array('publish'),
+                'nopaging' => true,
+                'showposts' => -1,
+                'post_type' => Array('bonus'),
+                'no_found_rows' => true,
+                'suppress_filters' => false
+            ) );
 
-    // games ranking ---------------------------------------------------
+            $casinos_scores = Array();
+            foreach ($the_query_casinos as $casino){
+                if (get_post_type( $casino->ID ) != "bonus") continue;
+                $rating = get_wpcr_avg_rating($casino);
+                $votes_count = $rating["count"]; // comments count
+                $rating = $rating["value"]; // average rating
 
-    $the_query_games = new WP_Query( array(
-        'post_status' => 'publish',
-        'post_type' => 'juegos',
-        'showposts' => -1,
-        'no_found_rows' => true,
-        'suppress_filters' => false
-    ) );
-    $games_scores = Array();
-    foreach ($the_query_games->posts as $game){
-        $rating = get_wpcr_avg_rating($game);
-        $votes_count = $rating["count"]; // comments count
-        $rating = $rating["value"]; // average rating
+                $score_total = 0;
+                if ($rating != 0){
+                    if ($votes_count != 0){
+                        $score_total = ($votes_count * $votes_count);
+                    }else{
+                        $score_total = $votes_count;
+                    }
+                }else{
+                    $score_total = $votes_count;
+                }
 
-        $score_total = 0;
-        if ($rating != 0){
-            if ($votes_count != 0){
-                $score_total = ($votes_count * $votes_count);
-            }else{
-                $score_total = $votes_count;
+
+                $casinos_scores[$casino->ID] = $score_total;
             }
-        }else{
-            $score_total = $votes_count;
-        }
+            arsort($casinos_scores);
+            $a_rank = 1;
+            foreach ($casinos_scores as $s_k => $s_v){
+              $languages = apply_filters( 'wpml_active_languages', NULL, 'orderby=id&order=desc' );
 
-        $games_scores[$game->ID] = $score_total;
-    }
+              foreach( $languages as $l ) {
+                $other_lang_id = icl_object_id($s_k, 'casinos', false, $l["code"]);
+                update_post_meta($other_lang_id, "ranking", $a_rank);
+                am_log( get_the_title($pt_br_id). " (".$l["code"]."): ".$a_rank);
+              }
+                $a_rank++;
+            }
+            wp_reset_postdata();
+            // end bonus ranking -----------------------------------------------
 
-    arsort($games_scores);
-    $a_rank = 1;
-    foreach ($games_scores as $s_k => $s_v){
-        update_post_meta($s_k, "ranking", $a_rank);
-        $a_rank++;
-    }
-    wp_reset_postdata();
 
-    // end games ranking -----------------------------------------------
+
+            // games ranking ---------------------------------------------------
+
+            $the_query_games = new WP_Query( array(
+                'post_status' => 'publish',
+                'post_type' => 'juegos',
+                'showposts' => -1,
+                'no_found_rows' => true,
+                'suppress_filters' => false
+            ) );
+            $games_scores = Array();
+            foreach ($the_query_games->posts as $game){
+                if (get_post_type( $casino->ID ) != "juegos") continue;
+                $rating = get_wpcr_avg_rating($game);
+                $votes_count = $rating["count"]; // comments count
+                $rating = $rating["value"]; // average rating
+
+                $score_total = 0;
+                if ($rating != 0){
+                    if ($votes_count != 0){
+                        $score_total = ($votes_count * $votes_count);
+                    }else{
+                        $score_total = $votes_count;
+                    }
+                }else{
+                    $score_total = $votes_count;
+                }
+
+                $games_scores[$game->ID] = $score_total;
+            }
+
+            arsort($games_scores);
+            $a_rank = 1;
+            foreach ($games_scores as $s_k => $s_v){
+              $languages = apply_filters( 'wpml_active_languages', NULL, 'orderby=id&order=desc' );
+
+              foreach( $languages as $l ) {
+                $other_lang_id = icl_object_id($s_k, 'casinos', false, $l["code"]);
+                update_post_meta($other_lang_id, "ranking", $a_rank);
+                am_log( get_the_title($pt_br_id). " (".$l["code"]."): ".$a_rank);
+              }
+                $a_rank++;
+            }
+            wp_reset_postdata();
+
+            // end games ranking -----------------------------------------------
+            am_log(" ");
+            am_log(" ");
+    //     }
+    // }
+
 
     return true;
 

@@ -17,7 +17,6 @@ function is_bonus(){
   return $ret;
 }
 
-
 // globals
 require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/admin.inc.php'); // aipim admin panel
 require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/reusable-htmls.inc.php'); // system wide reusable html outputs
@@ -405,18 +404,28 @@ function providers_page_games_only( $query ) { // not casinos
 
 function am_sort_arc($q) {
     // order by ranking only at 'casinos' category
-    if ($q->is_category() && $q->is_main_query() && stristr($q->query["category_name"], 'casinos') !== FALSE ){
+    if (
+        $q->is_category()
+        && $q->is_main_query()
+        && !is_admin()
+        &&
+        (
+          stristr($q->query["category_name"], 'casinos') !== FALSE
+          ||
+          stristr($q->query["category_name"], 'cassinos') !== FALSE
+          ||
+          stristr($q->query["category_name"], 'bonos') !== FALSE
+          ||
+          stristr($q->query["category_name"], 'promocoes') !== FALSE          
+        )
+
+      ){
         $q->set( 'meta_key', "ranking" );
-        $q->set('orderby', 'ranking');
-        add_filter('posts_orderby', 'am_custom_posts_orderby');
+        $q->set('orderby', 'meta_value_num title');
+        // $q->set('orderby', 'ranking');
+        $q->set('order', 'ASC');
     }
     return $q;
-}
-function am_custom_posts_orderby($orderby) {
-    global $wpdb;
-    //return $wpdb->postmeta . '.meta_value DESC, ' . $orderby;
-    $order = $wpdb->postmeta.".meta_value+0 ASC, ".$wpdb->posts .".post_title ASC";
-    return $order;
 }
 
 

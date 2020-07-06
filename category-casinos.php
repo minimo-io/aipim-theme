@@ -4,6 +4,7 @@
     <?php require_once("assets/includes/messages.inc.php");  ?>
     <?php
     global $post;
+
     $category = reset(get_the_category($post->ID));
     $category_id = $category->cat_ID;
     $category_url = get_category_link( $category_id );
