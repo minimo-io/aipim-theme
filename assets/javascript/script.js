@@ -243,31 +243,58 @@ jQuery(function($) {
         return (window.innerWidth < 600) ? 2 : (window.innerWidth < 900) ? 3 : 4;
     }
 
-    /*
-    $('.product-sliders').flexslider({
-        animation: "slide",
-        animationLoop: false,
-        itemWidth: 190,
-        itemMargin: 10,
-        controlNav: false,
-        minItems: getGridSize(),
-        maxItems: getGridSize()
-    });
+    $("#btn-minimo-readmore").click(function(){
 
-    $('body').on('added_to_cart wc_cart_button_updated', function( data ) {
-        var viewCartText = $('a.added_to_cart.wc-forward').text();
+      var $up = $(".minimo-read-more");
+      var $this = $(this);
+      var status = $this.data("status");
+      var mode = $this.data("mode");
+      var original_height = $this.data("original-height");
+      var speed_duration = 200;
 
-        $('i.fa-shopping-cart').removeClass('fa-spin');
-        $('a.added_to_cart.wc-forward').html('<i class="fa fa-eye" data-toggle="tooltip" data-placement="top" title="' + viewCartText + '" aria-hidden="true"></i>');
-        $('[data-toggle="tooltip"]').tooltip();
+      if (status == "off"){
 
-        $('.dokan-cart-amount-top > .amount').fadeOut( 'fast', function(){
-            $('.dokan-cart-amount-top > .amount').html(data.amount).fadeIn('fast');
+        if (original_height == "") {
+          $this.data("original-height", $up.height());
+        }
+
+        var total_height = 0;
+        if (mode && mode == "generalHeight"){
+          $up.css("height", "auto");
+          total_height = $(".general-description").height();
+
+        }else{
+          $(".minimo-read-more p, .minimo-read-more h2, .minimo-read-more ul, .minimo-read-more blockquote, .minimo-read-more div, .minimo-read-more ol").each(function(){
+              total_height += $(this).outerHeight(true);
+          });
+        }
+
+
+        $up.animate({
+          height: total_height
+        }, {
+          duration: speed_duration
+        }).addClass("read-more-full");
+
+        $this.text($this.data("text-less")).data("status", "on");
+
+
+      }else if (status == "on"){
+
+        $up.removeClass("read-more-full");
+        $("html, body").animate({ scrollTop: 0 }, 200, function(){
+          $up.animate({
+            height: original_height+"px"
+          },  speed_duration, function(){  });
         });
+
+
+        $this.text($this.data("text-more")).data("status", "off");
+
+      }
+
+
+      return false;
     });
 
-    $('body').on('adding_to_cart', function(e, button) {
-        $(button).children('i').addClass('fa-spin');
-    });
-    */
 });

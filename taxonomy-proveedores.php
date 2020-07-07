@@ -12,7 +12,6 @@
 
     $term = get_term_by('id', $category_id, 'proveedores');
     $term_image = get_field('imagen_del_proveedor', $term);
-
     ?>
     <main id="main" class="site-main main">
       <section class="section">
@@ -23,18 +22,20 @@
                 <div class="row align-items-end">
                     <div class="col-md-8">
 
-                      <a href="<?php _e("/en/providers/", "aipim"); ?>" class="link-back-providers"><i class="fa fa-reply" aria-hidden="true"></i> <?php _e("All providers", "aipim"); ?></a>
+                      <a href="<?php _e("/en/providers/", "aipim"); ?>" class="link-back-providers mb-2 d-block"><i class="fa fa-reply" aria-hidden="true"></i> <?php _e("All providers", "aipim"); ?></a>
 
                       <h1 class="page-title mb-2 mb-md-0 pt-2" style="color:#3c3c3c !important;font-weight:700;font-size:28px;">
                         <?php
-                        if (isset($term_image["url"])) echo '<img src="'.$term_image["url"].'" class="rounded" alt="logo-proveedor" width="100" />';
+                        if (isset($term_image["url"])) echo '<img src="'.$term_image["url"].'" class="rounded" alt="logo-proveedor" width="60" />';
                         ?>
                         <?php echo single_cat_title();  ?>
                       </h1>
-                      <div class="catalog-description mt-2 ml-1">
+
+
+                      <div class="catalog-description mt-2 ml-1 minimo-read-more">
                         <?php echo category_description( ); ?>
                       </div>
-
+                      <button id="btn-minimo-readmore" data-original-height="" data-status="off" data-text-more="Leer más" data-text-less="<?php _e("Read less", "aipim"); ?>" class="btn btn-light btn-sm btn-minimo-readmore mb-4 mb-md-0"><?php _e("Read more", "aipim"); ?></button>
                     </div>
                     <div class="col-md-4">
 

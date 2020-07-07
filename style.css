@@ -4,7 +4,7 @@ Author: Minimo
 Author URI: https://minimo.io/
 Text Domain: aipim
 Description: A community theme developed for Betizen.org based on themes.getbootstrap.com
-Version: 1.1
+Version: 1.2.01
 */
 
 
@@ -12797,7 +12797,7 @@ dt {
 .col-form-label{ padding-bottom:0; }
 
 .profile__description__title{ font-size:25px; }
-.box-did-u-know{ margin-bottom:20px; }
+.box-did-u-know{ margin-bottom:2.2rem; }
 /* .box-did-u-know .general-description{ */
 .general-description{
     color:#8c8e96;
@@ -13327,25 +13327,6 @@ h3.subtitle{
   margin-right:11px;
 }
 .casino-sidebar{ top:-113px; }
-.is-showmore {
-  position: relative;
-  overflow: hidden;
-
-}
-.height-120{
-  height: 120px;
-}
-.is-showmore:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  height: 60px;
-  background: linear-gradient(to top,#fff,rgba(255,255,255,0));
-  pointer-events: none;
-}
 .btn-claimbonus{ border-radius:20px; }
 .casino-reputation-box{ font-size:20px; }
 .casino-reputation-box button{
@@ -13355,35 +13336,14 @@ h3.subtitle{
 .casino-reputation-box span{
   line-height:40px;
 }
-.btn-showmore, .btn-showless{
-  text-transform: uppercase;
-  /* text-align:center; */
-  position:relative;
-  font-size:12px;
-  margin-top:11px;
-}
-.btn-showmore a, .btn-showless a{
-  color: #8c8e96;
-  border: 1px solid #8c8e96;
-  padding: 5px;
-  border-radius: 13px;
-  display: block;
-  height: 29px;
-}
+
 .single-games .btn-showmore a,
 .single-games .btn-showless a{
   display:inline;
 }
-.btn-showmore a:hover, .btn-showless a:hover{
-  background-color: #f2f5f4;
-  border-color:#f2f5f4;
-  color:#7a858f;
-}
 
 
-
-
- .navbar-main > .nav-link, {
+.navbar-main > .nav-link, {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -14082,6 +14042,34 @@ a.knowmore-icon-link:hover{
 }
 /* .acfml-not-migrated{ display:none !important; } */
 
+.minimo-read-more {
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+}
+.minimo-read-more p:first-of-type {
+  /* margin-bottom:0 !important; */
+}
+.minimo-read-more:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 120px;
+    background: linear-gradient(to top,#fff,rgba(255,255,255,0));
+    pointer-events: none;
+}
+.btn-minimo-readmore {
+  top: 8px;
+  position: relative;
+}
+.read-more-full:after {
+    background: none !important;
+}
+
+
 /* custom media */
 a.navbar-brand img{ width:130px;}
 a.button-join-small{ font-size: 17px !important; }
@@ -14092,6 +14080,7 @@ a.button-join-small{ font-size: 17px !important; }
   .general-description{ font-size:15px; }
 }
 @media (max-width: 576px) {
+  .box-did-u-know{ margin-bottom:1rem; }
   .dropdown-toggle:after{
     right: 1px;
     position: absolute;

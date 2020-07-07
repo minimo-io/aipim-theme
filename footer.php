@@ -36,7 +36,7 @@
                         <a title="<?php _e("Affiliates", "aipim"); ?>" href="<?php _e("/en/affiliates/", "aipim"); ?>"><?php _e("Affiliates", "aipim"); ?></a>
                     </li>
                 </ul>
-                <p class="hidden-sm-down d-none d-lg-block"><?php _e("Developed by", "aipim");  ?> <a class="maker-dot" href="https://minimo.io" target="_blank">Mínimo</a></p>
+                <p class="hidden-sm-down d-none d-lg-block">v<?php $theme_data = wp_get_theme(); echo $theme_data->get( 'Version' )."  / "; ?><?php _e("Developed by", "aipim");  ?> <a class="maker-dot" href="https://minimo.io" target="_blank">Mínimo</a></p>
             </div>
         </div>
     </div>

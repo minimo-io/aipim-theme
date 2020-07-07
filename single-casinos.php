@@ -114,60 +114,22 @@
                                                 <div class="row box-did-u-know">
                                                     <div class="container-fluid">
                                                         <div class="card border-0">
-                                                            <div class="card-body" >
+                                                            <div class="card-body">
                                                                 <h2 class="card-title"><?php _e("Conclusion about the casino","aipim");  ?> <?php the_title(); ?></h2>
-                                                                <div class="card-text general-description is-showmore height-120">
-                                                                  <?php echo get_the_excerpt();  ?>
-                                                                  <br><br>
+                                                                <div class="card-text general-description minimo-read-more">
+                                                                  <?php echo "<p class='mb-3'>".get_the_excerpt()."</p>";  ?>
                                                                   <?php the_content(); ?>
                                                                 </div>
-                                                                <div class="btn-showmore">
-                                                                  <div class="container">
-                                                                    <div class="row">
-                                                                      <div class="col col-auto mr-0 pr-0 pl-0">
-                                                                          <a href="#" class="do-showmore"><?php _e("Read more", "aipim"); ?></a>
-                                                                      </div>
-                                                                      <div class="col d-block d-lg-none pr-0 pl-2">
-                                                                        <a class="btn-customcolor text-white text-center btn-block" rel="nofollow" target="_blank" href="<?php echo am_link_external(get_field("link_default"), Array('type'=>'casino', 'id'=>get_the_ID())); ?>"><?php _e("Visit", "aipim"); ?></a>
-                                                                      </div>
-                                                                    </div>
-                                                                  </div>
 
-
-                                                                </div>
-                                                                <div class="btn-showless hidden">
-                                                                  <div class="container">
-                                                                    <div class="row">
-                                                                      <div class="col col-auto mr-0 pr-0 pl-0">
-                                                                        <a href="#" class="do-showless"><?php _e("Read less", "aipim"); ?></a>
-                                                                      </div>
+                                                                <div class="container">
+                                                                  <div class="row">
+                                                                    <button id="btn-minimo-readmore" data-original-height="" data-status="off" data-text-more="Leer más" data-text-less="<?php _e("Read less", "aipim"); ?>" class="btn btn-light btn-sm btn-minimo-readmore mb-4 mb-md-0"><?php _e("Read more", "aipim"); ?></button>
+                                                                    <div class="col d-block d-lg-none pr-0 pl-2 pt-2">
+                                                                      <a class="btn btn-sm btn-customcolor text-white text-center btn-block" rel="nofollow" target="_blank" href="<?php echo am_link_external(get_field("link_default"), Array('type'=>'casino', 'id'=>get_the_ID())); ?>"><?php _e("Visit", "aipim"); ?></a>
                                                                     </div>
                                                                   </div>
                                                                 </div>
-                                                                <script>
 
-                                                                $(".do-showless").click(function(){
-                                                                  $(".general-description").addClass("height-120 is-showmore");
-                                                                  // fade out read-more
-                                                                  $(".btn-showmore").fadeIn();
-                                                                  $(".btn-showless").fadeOut();
-                                                                  return false;
-                                                                });
-                                                                $(".do-showmore").click(function() {
-                                                                  var $up;
-
-                                                                  $up = $(".general-description");
-
-
-                                                                  $up.removeClass("height-120 is-showmore");
-                                                                  // fade out read-more
-                                                                  $(".btn-showmore").fadeOut();
-                                                                  $(".btn-showless").fadeIn();
-                                                                  // prevent jump-down
-                                                                  return false;
-
-                                                                });
-                                                                </script>
                                                             </div>
                                                         </div>
                                                     </div>

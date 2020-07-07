@@ -149,102 +149,34 @@
                                                 <div class="row box-did-u-know">
                                                     <div class="container-fluid">
                                                         <div class="card border-0">
-                                                            <div class="card-body" >
+                                                            <div class="card-body pb-0">
                                                                 <h2 class="card-title"><?php _e("Conclusion about the","aipim");  ?> <?php echo $single_category->slug; ?> <?php the_title(); ?></h2>
-                                                                <div class="card-text general-description is-showmore height-120">
-                                                                  <?php echo get_the_excerpt();  ?>
-                                                                  <br><br>
+                                                                <div class="card-text general-description minimo-read-more">
+                                                                  <p class="mb-3"><?php echo get_the_excerpt();  ?></p>
                                                                   <?php the_content(); ?>
                                                                 </div>
-                                                                <div class="btn-showmore">
-                                                                  <a href="#" class="do-showmore"><?php _e("Read more", "aipim"); ?></a>
-                                                                  <?php
-                                                                  $post_tags = get_the_tags();
-                                                                  if ( $post_tags ) {
-                                                                      echo __("Theme: ", "aipim");
-                                                                      foreach( $post_tags as $tag ) {
-                                                                        echo '<a href="'.get_tag_link($tag->term_id).'">'.$tag->name.'</a>';
-                                                                      }
-                                                                  }
-                                                                  ?>
-                                                                </div>
-                                                                <div class="btn-showless hidden">
-                                                                  <a href="#" class="do-showless"><?php _e("Read less", "aipim"); ?></a>
-                                                                </div>
-                                                                <script>
-
-                                                                $(".do-showless").click(function(){
-                                                                  $(".general-description").addClass("height-120 is-showmore");
-                                                                  // fade out read-more
-                                                                  $(".btn-showmore").fadeIn();
-                                                                  $(".btn-showless").fadeOut();
-                                                                  return false;
-                                                                });
-                                                                $(".do-showmore").click(function() {
-                                                                  var $up;
-
-                                                                  $up = $(".general-description");
-
-
-                                                                  $up.removeClass("height-120 is-showmore");
-                                                                  // fade out read-more
-                                                                  $(".btn-showmore").fadeOut();
-                                                                  $(".btn-showless").fadeIn();
-                                                                  // prevent jump-down
-                                                                  return false;
-
-                                                                });
-                                                                </script>
-                                                                <!-- <h2 class="mt-4"><?php echo __("The best casino to play ", "aipim"). get_the_title(); ?></h2> -->
-                                                                <?php
-                                                                foreach ($the_query_casinos->posts as $casino){
-
-                                                                    $o_bonus_welcome = aipim_get_bonus_object_for_casino($casino->ID, "first_welcome"); // welcome bonus for casino
-
-                                                                    $has_welcome_offer = true;
-                                                                    $bonus_link = get_field("link_default", $casino->ID);
-                                                                    // if (empty($o_bonus_welcome)) continue; // no welcome bonus for this casino, so do not show a welcome offer
-                                                                    if (empty($o_bonus_welcome)) $has_welcome_offer = false; // no welcome bonus for this casino, so do not show a welcome offer
-
-                                                                    if ($has_welcome_offer == true){
-                                                                      $bonus_custom_link = get_field("bonus_link", $o_bonus_welcome->ID);
-                                                                      if (!empty($bonus_custom_link)) $bonus_link = $bonus_custom_link; // bonuses can have no link, then use the casino default link
-                                                                      $bonus_title = get_field("bonus_title", $o_bonus_welcome->ID);
-                                                                    }
-
-                                                                    $casino_link = get_post_permalink($casino);
-
-                                                                    $casino_image = get_the_post_thumbnail($casino->ID, Array(400, 400), array( 'class' => 'profile-author__img', 'alt' => $casino->post_title ));
-
-
-
-                                                                    ?>
-                                                                    <div class="container mt-5">
-                                                                      <div class="row" style="border: 1px solid #eef1f1; border-radius:10px;">
-                                                                        <div class="col-sm-3 text-center game-casino-suggestion align-middle" style="background-color:#eef1f1;padding:2%;">
-                                                                          <?php echo $casino_image; ?>
-                                                                        </div>
-                                                                        <div class="col-sm" Xstyle="border-radius:0 10px 10px 0;">
-
-                                                                          <div class="card border-light card-promo">
-                                                                            <div class="card-body<?php echo (!$has_welcome_offer ? " mt-0 mt-lg-2" : ""); ?>">
-                                                                              <h5 class="card-title text-uppercase text-center"><?php echo __("Play", "aipim")." ".get_the_title()." ".__("en")." <a class='dotted-3 opacity-8' href='".$casino_link."'>".$casino->post_title;  ?></a></h5>
-                                                                              <h6 class="card-subtitle mb-2 text-muted text-center">Ranking<a href="<?php _e("/en/ranks/", "aipim"); ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>: #<?php the_field("ranking", $casino->ID);  ?></h6>
-                                                                              <p class="card-text"><?php echo $bonus_title; ?></p>
-                                                                              <a class="btn btn-light btn-block" href="<?php echo am_link_external($bonus_link, Array('type'=>'casino', 'id'=>$o_casino->ID));  ?>" rel="sponsored" role="button"><i class="fa fa-external-link" aria-hidden="true"></i>&nbsp;<?php _e("Play in the casino", "aipim"); ?></a>
-
-                                                                            </div>
-                                                                          </div>
-
-                                                                        </div>
-                                                                      </div>
+                                                                <div class="container">
+                                                                  <div class="row">
+                                                                    <div class="col-auto pl-0 pr-0">
+                                                                      <button id="btn-minimo-readmore" data-original-height="" data-mode="generalHeight" data-status="off" data-text-more="Leer más" data-text-less="<?php _e("Read less", "aipim"); ?>" class="btn btn-light btn-sm btn-minimo-readmore mb-4 mb-md-0"><?php _e("Read more", "aipim"); ?></button>
                                                                     </div>
-                                                                    <?php
-                                                                    break;
-                                                                }
-                                                                ?>
+                                                                    <div class="col d-block pr-0 pl-2">
+                                                                      <div class="mt-2">
+                                                                      <?php
+                                                                      $post_tags = get_the_tags();
+                                                                      if ( $post_tags ) {
+                                                                          echo __("Theme: ", "aipim");
+                                                                          foreach( $post_tags as $tag ) {
+                                                                            echo '<a class="btn btn-sm btn-secondary" role="button" href="'.get_tag_link($tag->term_id).'">'.$tag->name.'</a>';
+                                                                          }
+                                                                      }
+                                                                      ?>
+                                                                    </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
 
-                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -281,6 +213,58 @@
                                                     }
                                                     ?>
                                                 </div>
+
+                                                <div>
+
+                                                <?php
+                                                foreach ($the_query_casinos->posts as $casino){
+
+                                                    $o_bonus_welcome = aipim_get_bonus_object_for_casino($casino->ID, "first_welcome"); // welcome bonus for casino
+
+                                                    $has_welcome_offer = true;
+                                                    $bonus_link = get_field("link_default", $casino->ID);
+                                                    // if (empty($o_bonus_welcome)) continue; // no welcome bonus for this casino, so do not show a welcome offer
+                                                    if (empty($o_bonus_welcome)) $has_welcome_offer = false; // no welcome bonus for this casino, so do not show a welcome offer
+
+                                                    if ($has_welcome_offer == true){
+                                                      $bonus_custom_link = get_field("bonus_link", $o_bonus_welcome->ID);
+                                                      if (!empty($bonus_custom_link)) $bonus_link = $bonus_custom_link; // bonuses can have no link, then use the casino default link
+                                                      $bonus_title = get_field("bonus_title", $o_bonus_welcome->ID);
+                                                    }
+
+                                                    $casino_link = get_post_permalink($casino);
+
+                                                    $casino_image = get_the_post_thumbnail($casino->ID, Array(400, 400), array( 'class' => 'profile-author__img', 'alt' => $casino->post_title ));
+
+
+
+                                                    ?>
+                                                    <div class="container mt-4">
+                                                      <div class="row" style="border: 1px solid #eef1f1; border-radius:10px;">
+                                                        <div class="col-sm-3 text-center game-casino-suggestion align-middle" style="background-color:#eef1f1;padding:2%;">
+                                                          <?php echo $casino_image; ?>
+                                                        </div>
+                                                        <div class="col-sm" Xstyle="border-radius:0 10px 10px 0;">
+
+                                                          <div class="card border-light card-promo">
+                                                            <div class="card-body<?php echo (!$has_welcome_offer ? " mt-0 mt-lg-2" : ""); ?>">
+                                                              <h5 class="card-title text-uppercase text-center"><?php echo __("Play", "aipim")." ".get_the_title()." ".__("en")." <a class='dotted-3 opacity-8' href='".$casino_link."'>".$casino->post_title;  ?></a></h5>
+                                                              <h6 class="card-subtitle mb-2 text-muted text-center">Ranking<a href="<?php _e("/en/ranks/", "aipim"); ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>: #<?php the_field("ranking", $casino->ID);  ?></h6>
+                                                              <p class="card-text"><?php echo $bonus_title; ?></p>
+                                                              <a class="btn btn-light btn-block" href="<?php echo am_link_external($bonus_link, Array('type'=>'casino', 'id'=>$o_casino->ID));  ?>" rel="sponsored" role="button"><i class="fa fa-external-link" aria-hidden="true"></i>&nbsp;<?php _e("Play in the casino", "aipim"); ?></a>
+
+                                                            </div>
+                                                          </div>
+
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <?php
+                                                    break;
+                                                }
+                                                ?>
+
+                                              </div>
 
                                                 <div class="container casino-featured casino-single-featured" style="margin-top:5%;">
                                                   <?php $f_volatilidad = get_field("volatilidad"); ?>
