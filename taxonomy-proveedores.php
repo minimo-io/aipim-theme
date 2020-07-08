@@ -12,6 +12,9 @@
 
     $term = get_term_by('id', $category_id, 'proveedores');
     $term_image = get_field('imagen_del_proveedor', $term);
+
+
+    am_ranking_calc();
     ?>
     <main id="main" class="site-main main">
       <section class="section">
@@ -28,7 +31,7 @@
                         <?php
                         if (isset($term_image["url"])) echo '<img src="'.$term_image["url"].'" class="rounded" alt="logo-proveedor" width="60" />';
                         ?>
-                        <?php echo single_cat_title();  ?>
+                        <?php _e("Slots from", "aipim"); ?> <?php echo single_cat_title();  ?>
                       </h1>
 
 

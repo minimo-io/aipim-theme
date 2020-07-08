@@ -20,7 +20,6 @@ function cronstarter_deactivate() {
 // here's the function we'd like to call with our cron job
 function am_ranking_calc() {
 
-    global $post;
     global $sitepress;
 
 
@@ -74,7 +73,7 @@ function am_ranking_calc() {
                     foreach( $languages as $l ) {
                       $other_lang_id = icl_object_id($s_k, 'casinos', false, $l["code"]);
                       update_post_meta($other_lang_id, "ranking", $a_rank);
-                      am_log( get_the_title($pt_br_id). " (".$l["code"]."): ".$a_rank);
+                      // am_log( get_the_title($pt_br_id). " (".$l["code"]."): ".$a_rank);
                     }
                 }
 
@@ -121,9 +120,9 @@ function am_ranking_calc() {
               $languages = apply_filters( 'wpml_active_languages', NULL, 'orderby=id&order=desc' );
 
               foreach( $languages as $l ) {
-                $other_lang_id = icl_object_id($s_k, 'casinos', false, $l["code"]);
+                $other_lang_id = icl_object_id($s_k, 'bonus', false, $l["code"]);
                 update_post_meta($other_lang_id, "ranking", $a_rank);
-                am_log( get_the_title($pt_br_id). " (".$l["code"]."): ".$a_rank);
+                // am_log( get_the_title($pt_br_id). " (".$l["code"]."): ".$a_rank);
               }
                 $a_rank++;
             }
@@ -134,16 +133,19 @@ function am_ranking_calc() {
 
             // games ranking ---------------------------------------------------
 
-            $the_query_games = new WP_Query( array(
-                'post_status' => 'publish',
-                'post_type' => 'juegos',
+            $the_query_games = get_posts( array(
+                'post_status' => Array('publish'),
+                'nopaging' => true,
                 'showposts' => -1,
+                'post_type' => 'juegos',
                 'no_found_rows' => true,
                 'suppress_filters' => false
             ) );
             $games_scores = Array();
-            foreach ($the_query_games->posts as $game){
-                if (get_post_type( $casino->ID ) != "juegos") continue;
+
+            foreach ($the_query_games as $game){
+                if (get_post_type( $game->ID ) != "juegos") continue;
+
                 $rating = get_wpcr_avg_rating($game);
                 $votes_count = $rating["count"]; // comments count
                 $rating = $rating["value"]; // average rating
@@ -168,7 +170,7 @@ function am_ranking_calc() {
               $languages = apply_filters( 'wpml_active_languages', NULL, 'orderby=id&order=desc' );
 
               foreach( $languages as $l ) {
-                $other_lang_id = icl_object_id($s_k, 'casinos', false, $l["code"]);
+                $other_lang_id = icl_object_id($s_k, 'juegos', false, $l["code"]);
                 update_post_meta($other_lang_id, "ranking", $a_rank);
                 am_log( get_the_title($pt_br_id). " (".$l["code"]."): ".$a_rank);
               }
