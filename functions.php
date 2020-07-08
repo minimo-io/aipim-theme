@@ -416,7 +416,7 @@ function am_sort_arc($q) {
           ||
           stristr($q->query["category_name"], 'bonos') !== FALSE
           ||
-          stristr($q->query["category_name"], 'promocoes') !== FALSE          
+          stristr($q->query["category_name"], 'promocoes') !== FALSE
         )
 
       ){
@@ -430,7 +430,7 @@ function am_sort_arc($q) {
 
 
 function default_comments_on( $data ) {
-    if( $data['post_type'] == 'juegos' || $data['post_type'] == 'casinos' ) {
+    if( $data['post_type'] == 'juegos' || $data['post_type'] == 'casinos' || $data['post_type'] == 'bonus' ) {
         $data['comment_status'] = 1;
     }
 

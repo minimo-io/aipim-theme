@@ -114,7 +114,7 @@
                                     </div>
                                     <div class="profile__description">
                                             <h1 class="profile__description__title"><?php echo get_the_title();  ?></h1>
-                                            <p class="d-none d-sm-block"><?php echo __("Created by", "aipim")." <strong><a href='".$provider["url"]."'>".$provider["name"]; ?></a></strong> en el año <?php the_field("lanzamiento");  ?></p>
+                                            <p class="d-none d-sm-block"><?php echo __("Created by", "aipim")." <strong><a href='".$provider["url"]."'>".$provider["name"]; ?></a></strong> <?php _e("in the year", "aipim"); ?> <?php the_field("lanzamiento");  ?></p>
                                         </div>
                                 </div>
                             </div>

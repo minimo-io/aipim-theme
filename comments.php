@@ -15,6 +15,10 @@ if (!$comments){
 		echo '<div class="alert alert-info text-center mb-3" role="alert"><h4>'.__("Casinos are not allowed to comment, only reply.", "aipim").'</h4></div>';
 	}
 }
+
+
+$comments = array_reverse($comments); // reorder, newest first.
+
 ?>
 <div class="theme-review">
     <?php
@@ -226,7 +230,7 @@ if (!$comments){
 
 
 // rich snippets
-if ("juegos" == $post_type || "casinos" == $post_type){
+if ("juegos" == $post_type || "casinos" == $post_type || "bonus" == $post_type){
   if($sp_rating_count != 0){
     $sp_rating_result = $sp_rating_sum / $sp_rating_count;
     $sp_rating_result = round($sp_rating_result, 2);

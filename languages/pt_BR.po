@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
-"POT-Creation-Date: 2020-07-08T14:20:58+00:00\n"
-"PO-Revision-Date: 2020-07-08 11:22-0300\n"
+"POT-Creation-Date: 2020-07-08T15:30:22+00:00\n"
+"PO-Revision-Date: 2020-07-08 12:31-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -851,7 +851,7 @@ msgstr "Início"
 #: assets/includes/views/category.html.php:89
 #: assets/includes/views/page.html.php:11 category-bonos.php:100
 #: category-casinos.php:101 category.php:92 search.php:41 tag.php:59
-#: taxonomy-proveedores.php:73
+#: taxonomy-proveedores.php:76
 msgid "Sorry, no posts matched your criteria."
 msgstr "Desculpe, nenhum artigo corresponde aos seus critérios."
 
@@ -1033,11 +1033,11 @@ msgstr "Editando seu perfil"
 msgid "Public profile"
 msgstr "Perfil público"
 
-#: category-bonos.php:29 category.php:31 tag.php:31 taxonomy-proveedores.php:45
+#: category-bonos.php:29 category.php:31 tag.php:31 taxonomy-proveedores.php:48
 msgid "Order by date"
 msgstr "Ordem por data"
 
-#: category-bonos.php:30 category.php:32 tag.php:32 taxonomy-proveedores.php:46
+#: category-bonos.php:30 category.php:32 tag.php:32 taxonomy-proveedores.php:49
 msgid "Order by name"
 msgstr "Ordem por nome"
 
@@ -1168,7 +1168,7 @@ msgstr "/pt-br/glossario/"
 msgid "Providers"
 msgstr "Fornecedores"
 
-#: footer.php:33 taxonomy-proveedores.php:25
+#: footer.php:33 taxonomy-proveedores.php:28
 msgid "/en/providers/"
 msgstr "/pt-br/fornecedores/"
 
@@ -1301,7 +1301,7 @@ msgstr "Lead Partner"
 msgid "Auxiliary sidebar"
 msgstr "Barra lateral auxiliar"
 
-#: functions.php:652 taxonomy-proveedores.php:25
+#: functions.php:652 taxonomy-proveedores.php:28
 msgid "All providers"
 msgstr "Todos os fornecedores"
 
@@ -1448,11 +1448,11 @@ msgstr "Operado por"
 msgid "Conclusion about the casino"
 msgstr "Conclusão sobre o cassino"
 
-#: single-casinos.php:126 single-juegos.php:161 taxonomy-proveedores.php:38
+#: single-casinos.php:126 single-juegos.php:161 taxonomy-proveedores.php:41
 msgid "Read less"
 msgstr "Ler menos"
 
-#: single-casinos.php:126 single-juegos.php:161 taxonomy-proveedores.php:38
+#: single-casinos.php:126 single-juegos.php:161 taxonomy-proveedores.php:41
 msgid "Read more"
 msgstr "Ler mais"
 
@@ -1519,6 +1519,10 @@ msgstr "Teste realizado em"
 #: single-juegos.php:117
 msgid "Created by"
 msgstr "Criado por"
+
+#: single-juegos.php:117
+msgid "in the year"
+msgstr "no ano"
 
 #: single-juegos.php:153
 msgid "Conclusion about the"
@@ -1622,7 +1626,7 @@ msgstr "Tela cheia"
 msgid "By"
 msgstr "Por"
 
-#: taxonomy-proveedores.php:31
+#: taxonomy-proveedores.php:34
 msgid "Slots from"
 msgstr "Caça níqueis da"
 
