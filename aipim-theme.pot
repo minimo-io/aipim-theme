@@ -2,14 +2,14 @@
 # This file is distributed under the .
 msgid ""
 msgstr ""
-"Project-Id-Version: Aipim 1.2.03\n"
+"Project-Id-Version: Aipim 1.2.04\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-07-10T16:18:00+00:00\n"
+"POT-Creation-Date: 2020-07-10T18:35:25+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: aipim\n"
@@ -264,6 +264,7 @@ msgid "Index"
 msgstr ""
 
 #: assets/includes/shortcodes/contentIndex.inc.php:17
+#: assets/includes/shortcodes/contentIndex.inc.php:49
 #: assets/includes/views/home.html.php:120
 #: functions.php:509
 #: functions.php:514
@@ -271,14 +272,17 @@ msgid "Games"
 msgstr ""
 
 #: assets/includes/shortcodes/contentIndex.inc.php:21
+#: assets/includes/shortcodes/contentIndex.inc.php:52
 msgid "Bonus and promotions"
 msgstr ""
 
 #: assets/includes/shortcodes/contentIndex.inc.php:25
+#: assets/includes/shortcodes/contentIndex.inc.php:55
 msgid "Customer support"
 msgstr ""
 
 #: assets/includes/shortcodes/contentIndex.inc.php:29
+#: assets/includes/shortcodes/contentIndex.inc.php:58
 msgid "Usability"
 msgstr ""
 
@@ -1318,7 +1322,7 @@ msgid "Operated by"
 msgstr ""
 
 #: single-casinos.php:118
-msgid "Conclusion about the casino"
+msgid "Review of the casino"
 msgstr ""
 
 #: single-casinos.php:126

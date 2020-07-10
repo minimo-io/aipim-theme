@@ -36,6 +36,30 @@ function aipim_contentIndex_shortcode( $atts ) {
 
 	return $ret;
 }
+function aipim_contentIndexTitles_shortcode($atts){
+  $ret = "";
+
+  $atts = shortcode_atts( array(
+		'section' => 'games',
+    'title' => ''
+	), $atts, 'short_alert' );
+
+
+  if ($atts["section"] == "games"){
+    return '<h2 id="juegos">'.(!empty($atts["title"]) ? $atts["title"] : __("Games", "aipim") ).'</h2>';
+  }
+  if ($atts["section"] == "promotions"){
+    return '<h2 id="bonos">'.(!empty($atts["title"]) ? $atts["title"] : __("Bonus and promotions", "aipim") ).'</h2>';
+  }
+  if ($atts["section"] == "support"){
+    return '<h2 id="atencion-al-cliente">'.(!empty($atts["title"]) ? $atts["title"] : __("Customer support", "aipim") ).'</h2>';
+  }
+  if ($atts["section"] == "usability"){
+    return '<h2 id="usabilidad">'.(!empty($atts["title"]) ? $atts["title"] : __("Usability", "aipim") ).'</h2>';
+  }
+	return $ret;
+}
+
 function get_score_style($score){
   if ($score == "-"){
     return '';
@@ -52,5 +76,6 @@ function get_score_style($score){
 }
 
 add_shortcode( 'contentIndex', 'aipim_contentIndex_shortcode' );
+add_shortcode( 'contentIndexTitle', 'aipim_contentIndexTitles_shortcode' );
 
 ?>

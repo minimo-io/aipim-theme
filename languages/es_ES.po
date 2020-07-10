@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
-"POT-Creation-Date: 2020-07-10T16:18:00+00:00\n"
-"PO-Revision-Date: 2020-07-10 13:20-0300\n"
+"POT-Creation-Date: 2020-07-10T18:35:25+00:00\n"
+"PO-Revision-Date: 2020-07-10 15:36-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -277,19 +277,23 @@ msgid "Index"
 msgstr "Índice"
 
 #: assets/includes/shortcodes/contentIndex.inc.php:17
+#: assets/includes/shortcodes/contentIndex.inc.php:49
 #: assets/includes/views/home.html.php:120 functions.php:509 functions.php:514
 msgid "Games"
 msgstr "Juegos"
 
 #: assets/includes/shortcodes/contentIndex.inc.php:21
+#: assets/includes/shortcodes/contentIndex.inc.php:52
 msgid "Bonus and promotions"
 msgstr "Bonos y promociones"
 
 #: assets/includes/shortcodes/contentIndex.inc.php:25
+#: assets/includes/shortcodes/contentIndex.inc.php:55
 msgid "Customer support"
 msgstr "Atención al cliente"
 
 #: assets/includes/shortcodes/contentIndex.inc.php:29
+#: assets/includes/shortcodes/contentIndex.inc.php:58
 msgid "Usability"
 msgstr "Usabilidad"
 
@@ -1472,8 +1476,8 @@ msgid "Operated by"
 msgstr "Operado por"
 
 #: single-casinos.php:118
-msgid "Conclusion about the casino"
-msgstr "Conclusión sobre el casino"
+msgid "Review of the casino"
+msgstr "Reseña del casino"
 
 #: single-casinos.php:126 single-juegos.php:161 taxonomy-proveedores.php:40
 msgid "Read less"
@@ -1656,6 +1660,9 @@ msgstr "Por"
 #: taxonomy-proveedores.php:33
 msgid "Slots from"
 msgstr "Tragamonedas de"
+
+#~ msgid "Conclusion about the casino"
+#~ msgstr "Conclusión sobre el casino"
 
 #~ msgid "The best casino to play "
 #~ msgstr "El mejor casino para jugar "
