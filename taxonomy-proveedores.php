@@ -14,7 +14,6 @@
     $term_image = get_field('imagen_del_proveedor', $term);
 
 
-    am_ranking_calc();
     ?>
     <main id="main" class="site-main main">
       <section class="section">

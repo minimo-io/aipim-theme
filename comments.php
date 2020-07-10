@@ -277,6 +277,9 @@ if ("juegos" == $post_type || "casinos" == $post_type || "bonus" == $post_type){
   $(function(){
     $(".acf-input:eq(0)").addClass("positive");
     $(".acf-input:eq(1)").addClass("negative");
+
+		  $(".positive textarea").attr('placeholder', '<?php _e("What do you like?", "aipim"); ?>');
+		  $(".negative textarea").attr('placeholder', '<?php _e("What do you dislike?", "aipim"); ?>');
     <?php
     if ($is_casino){
       ?>

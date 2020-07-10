@@ -2,14 +2,14 @@
 # This file is distributed under the .
 msgid ""
 msgstr ""
-"Project-Id-Version: Aipim 1.2.02\n"
+"Project-Id-Version: Aipim 1.2.03\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-07-08T15:30:22+00:00\n"
+"POT-Creation-Date: 2020-07-10T16:18:00+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: aipim\n"
@@ -87,7 +87,7 @@ msgstr ""
 #: assets/includes/carrousel.inc.php:33
 #: assets/includes/shortcodes/short-playertest.inc.php:100
 #: category-blog.php:102
-#: functions.php:388
+#: functions.php:389
 msgid "Next"
 msgstr ""
 
@@ -257,6 +257,29 @@ msgstr ""
 
 #: assets/includes/shortcodes/askpros.inc.php:144
 msgid ", it's free!"
+msgstr ""
+
+#: assets/includes/shortcodes/contentIndex.inc.php:13
+msgid "Index"
+msgstr ""
+
+#: assets/includes/shortcodes/contentIndex.inc.php:17
+#: assets/includes/views/home.html.php:120
+#: functions.php:509
+#: functions.php:514
+msgid "Games"
+msgstr ""
+
+#: assets/includes/shortcodes/contentIndex.inc.php:21
+msgid "Bonus and promotions"
+msgstr ""
+
+#: assets/includes/shortcodes/contentIndex.inc.php:25
+msgid "Customer support"
+msgstr ""
+
+#: assets/includes/shortcodes/contentIndex.inc.php:29
+msgid "Usability"
 msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:16
@@ -666,7 +689,7 @@ msgstr ""
 #: category.php:92
 #: search.php:41
 #: tag.php:59
-#: taxonomy-proveedores.php:76
+#: taxonomy-proveedores.php:75
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
@@ -687,12 +710,6 @@ msgstr ""
 #: single-casinos.php:320
 #: single-juegos.php:456
 msgid "Reviews"
-msgstr ""
-
-#: assets/includes/views/home.html.php:120
-#: functions.php:508
-#: functions.php:513
-msgid "Games"
 msgstr ""
 
 #: assets/includes/views/home.html.php:134
@@ -749,7 +766,7 @@ msgid "Activity"
 msgstr ""
 
 #: buddypress/assets/emails/single-bp-email.php:468
-#: functions.php:707
+#: functions.php:708
 msgid "The trusted community for learning to bet online"
 msgstr ""
 
@@ -857,14 +874,14 @@ msgstr ""
 #: category-bonos.php:29
 #: category.php:31
 #: tag.php:31
-#: taxonomy-proveedores.php:48
+#: taxonomy-proveedores.php:47
 msgid "Order by date"
 msgstr ""
 
 #: category-bonos.php:30
 #: category.php:32
 #: tag.php:32
-#: taxonomy-proveedores.php:49
+#: taxonomy-proveedores.php:48
 msgid "Order by name"
 msgstr ""
 
@@ -897,72 +914,74 @@ msgstr ""
 msgid "Casinos are not allowed to comment, only reply."
 msgstr ""
 
-#: comments.php:51
-#: comments.php:156
+#: comments.php:55
+#: comments.php:160
 msgid "What do you think about "
 msgstr ""
 
-#: comments.php:51
+#: comments.php:55
 msgid "<strong><u>Your opinions help the community grow stronger</u></strong>. Share it so everybody so we can all benefit!"
 msgstr ""
 
-#: comments.php:52
+#: comments.php:56
 msgid "Opinion"
 msgstr ""
 
-#: comments.php:82
+#: comments.php:86
 msgid "Thanks for your comment!"
 msgstr ""
 
-#: comments.php:83
+#: comments.php:87
 msgid "This will determine the position of"
 msgstr ""
 
-#: comments.php:85
+#: comments.php:89
 msgid "in the rankings."
 msgstr ""
 
-#: comments.php:90
+#: comments.php:94
 msgid "Comments are closed for the moment."
 msgstr ""
 
-#: comments.php:95
+#: comments.php:99
 msgid "You must be registered to leave an opinion."
 msgstr ""
 
-#: comments.php:97
+#: comments.php:101
 msgid "If you already have an account"
 msgstr ""
 
-#: comments.php:98
+#: comments.php:102
 msgid "access with your username"
 msgstr ""
 
-#: comments.php:99
+#: comments.php:103
 msgid "to share your opinion."
 msgstr ""
 
-#: comments.php:133
+#: comments.php:137
 msgid "Your comment"
 msgstr ""
 
-#: comments.php:136
+#: comments.php:140
 msgid "Edit"
 msgstr ""
 
-#: comments.php:137
+#: comments.php:141
 msgid "Cancel"
 msgstr ""
 
-#: comments.php:184
+#: comments.php:188
+#: comments.php:281
 msgid "What do you like?"
 msgstr ""
 
-#: comments.php:188
+#: comments.php:192
+#: comments.php:282
 msgid "What do you dislike?"
 msgstr ""
 
-#: comments.php:192
+#: comments.php:196
 msgid "Edit comment"
 msgstr ""
 
@@ -991,12 +1010,12 @@ msgid "/en/glossary/"
 msgstr ""
 
 #: footer.php:33
-#: functions.php:659
+#: functions.php:660
 msgid "Providers"
 msgstr ""
 
 #: footer.php:33
-#: taxonomy-proveedores.php:28
+#: taxonomy-proveedores.php:27
 msgid "/en/providers/"
 msgstr ""
 
@@ -1017,200 +1036,200 @@ msgstr ""
 msgid "Terms & Conditions"
 msgstr ""
 
-#: functions.php:509
+#: functions.php:510
 msgid "Game"
 msgstr ""
 
-#: functions.php:510
-#: functions.php:542
-#: functions.php:573
+#: functions.php:511
+#: functions.php:543
+#: functions.php:574
 msgid "Add new"
 msgstr ""
 
-#: functions.php:512
+#: functions.php:513
 msgid "New game published"
 msgstr ""
 
-#: functions.php:514
+#: functions.php:515
 msgid "%1$s posted a new <a href=\"%2$s\">game</a>"
 msgstr ""
 
-#: functions.php:515
+#: functions.php:516
 msgid "%1$s posted a new <a href=\"%2$s\">game</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:516
+#: functions.php:517
 msgid "Comments about games"
 msgstr ""
 
-#: functions.php:517
+#: functions.php:518
 msgid "Games comments"
 msgstr ""
 
-#: functions.php:518
+#: functions.php:519
 msgid "%1$s commented on a <a href=\"%2$s\">game</a>"
 msgstr ""
 
-#: functions.php:519
+#: functions.php:520
 msgid "%1$s commented on a <a href=\"%2$s\">game</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:540
-#: functions.php:544
+#: functions.php:541
+#: functions.php:545
 msgid "Casinos"
 msgstr ""
 
-#: functions.php:541
-#: functions.php:606
+#: functions.php:542
+#: functions.php:607
 #: single-bonus.php:236
 #: single-bonus.php:300
 msgid "Casino"
 msgstr ""
 
-#: functions.php:543
+#: functions.php:544
 msgid "New casino published"
 msgstr ""
 
-#: functions.php:545
+#: functions.php:546
 msgid "%1$s posted a new <a href=\"%2$s\">casino</a>"
 msgstr ""
 
-#: functions.php:546
+#: functions.php:547
 msgid "%1$s posted a new <a href=\"%2$s\">casino</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:547
+#: functions.php:548
 msgid "Comments about casinos"
 msgstr ""
 
-#: functions.php:548
+#: functions.php:549
 msgid "Casinos comments"
 msgstr ""
 
-#: functions.php:549
+#: functions.php:550
 msgid "%1$s commented on a <a href=\"%2$s\">casino</a>"
 msgstr ""
 
-#: functions.php:550
+#: functions.php:551
 msgid "%1$s commented on a <a href=\"%2$s\">casino</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:571
-#: functions.php:575
+#: functions.php:572
+#: functions.php:576
 msgid "Bonuses"
 msgstr ""
 
-#: functions.php:572
+#: functions.php:573
 msgid "Bonus"
 msgstr ""
 
-#: functions.php:574
+#: functions.php:575
 msgid "New bonus published"
 msgstr ""
 
-#: functions.php:576
+#: functions.php:577
 msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>"
 msgstr ""
 
-#: functions.php:577
+#: functions.php:578
 msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:578
 #: functions.php:579
+#: functions.php:580
 msgid "Comments about bonuses"
 msgstr ""
 
-#: functions.php:580
+#: functions.php:581
 msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>"
 msgstr ""
 
-#: functions.php:581
+#: functions.php:582
 msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:617
+#: functions.php:618
 msgid "Lead Partner"
 msgstr ""
 
-#: functions.php:631
+#: functions.php:632
 msgid "Auxiliary sidebar"
 msgstr ""
 
-#: functions.php:652
-#: taxonomy-proveedores.php:28
+#: functions.php:653
+#: taxonomy-proveedores.php:27
 msgid "All providers"
 msgstr ""
 
-#: functions.php:703
+#: functions.php:704
 msgid "Betizen - The trusted community for learning to bet online"
 msgstr ""
 
-#: functions.php:718
+#: functions.php:719
 msgid "Casino to casino"
 msgstr ""
 
-#: functions.php:722
+#: functions.php:723
 msgid "Casino post"
 msgstr ""
 
-#: functions.php:725
+#: functions.php:726
 msgid "Not linked to any casino"
 msgstr ""
 
-#: functions.php:820
+#: functions.php:821
 msgid "Fair"
 msgstr ""
 
-#: functions.php:821
+#: functions.php:822
 msgid "Acceptable"
 msgstr ""
 
-#: functions.php:822
+#: functions.php:823
 msgid "Caution"
 msgstr ""
 
-#: functions.php:823
+#: functions.php:824
 msgid "Dishonest"
 msgstr ""
 
-#: functions.php:824
+#: functions.php:825
 msgid "Dangerous"
 msgstr ""
 
-#: functions.php:826
+#: functions.php:827
 msgid "Positive"
 msgstr ""
 
-#: functions.php:827
+#: functions.php:828
 msgid "Regular"
 msgstr ""
 
-#: functions.php:828
+#: functions.php:829
 msgid "Negative"
 msgstr ""
 
-#: functions.php:832
+#: functions.php:834
 msgid "Low"
 msgstr ""
 
-#: functions.php:833
+#: functions.php:835
 msgid "Low/Medium"
 msgstr ""
 
-#: functions.php:834
+#: functions.php:836
 msgid "Medium"
 msgstr ""
 
-#: functions.php:835
+#: functions.php:837
 msgid "Medium/High"
 msgstr ""
 
-#: functions.php:836
+#: functions.php:838
 msgid "High"
 msgstr ""
 
-#: functions.php:892
+#: functions.php:894
 msgid "Copied!"
 msgstr ""
 
@@ -1304,13 +1323,13 @@ msgstr ""
 
 #: single-casinos.php:126
 #: single-juegos.php:161
-#: taxonomy-proveedores.php:41
+#: taxonomy-proveedores.php:40
 msgid "Read less"
 msgstr ""
 
 #: single-casinos.php:126
 #: single-juegos.php:161
-#: taxonomy-proveedores.php:41
+#: taxonomy-proveedores.php:40
 msgid "Read more"
 msgstr ""
 
@@ -1497,6 +1516,6 @@ msgstr ""
 msgid "By"
 msgstr ""
 
-#: taxonomy-proveedores.php:34
+#: taxonomy-proveedores.php:33
 msgid "Slots from"
 msgstr ""

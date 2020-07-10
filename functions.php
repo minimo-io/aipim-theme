@@ -27,6 +27,7 @@ require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/domore.
 require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/top-rtp.inc.php');
 require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/alerts.inc.php');
 require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/short-playertest.inc.php');
+require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/contentIndex.inc.php');
 // extra functionalities
 require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/user-ip-on-signup.inc.php');
 // xhr / ajax calls
@@ -829,6 +830,7 @@ function aipim_reputation_label_translate($rep_val){
 }
 
 function aipim_volatility_label_translate($v_val){
+  if ($v_val == "-") return "-";
   if ($v_val == "Baja") return __("Low", "aipim");
   if ($v_val == "Baja/Media") return __("Low/Medium", "aipim");
   if ($v_val == "Media") return __("Medium", "aipim");

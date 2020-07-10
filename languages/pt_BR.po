@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
-"POT-Creation-Date: 2020-07-08T15:30:22+00:00\n"
-"PO-Revision-Date: 2020-07-08 12:31-0300\n"
+"POT-Creation-Date: 2020-07-10T16:18:00+00:00\n"
+"PO-Revision-Date: 2020-07-10 13:21-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -89,7 +89,7 @@ msgstr "Anterior"
 
 #: assets/includes/carrousel.inc.php:33
 #: assets/includes/shortcodes/short-playertest.inc.php:100
-#: category-blog.php:102 functions.php:388
+#: category-blog.php:102 functions.php:389
 msgid "Next"
 msgstr "Próximo"
 
@@ -268,6 +268,27 @@ msgstr "cadastre-se agora"
 #: assets/includes/shortcodes/askpros.inc.php:144
 msgid ", it's free!"
 msgstr ", é grátis!"
+
+#: assets/includes/shortcodes/contentIndex.inc.php:13
+msgid "Index"
+msgstr "Índice"
+
+#: assets/includes/shortcodes/contentIndex.inc.php:17
+#: assets/includes/views/home.html.php:120 functions.php:509 functions.php:514
+msgid "Games"
+msgstr "Jogos"
+
+#: assets/includes/shortcodes/contentIndex.inc.php:21
+msgid "Bonus and promotions"
+msgstr "Bônus e promoções"
+
+#: assets/includes/shortcodes/contentIndex.inc.php:25
+msgid "Customer support"
+msgstr "Suporte ao cliente"
+
+#: assets/includes/shortcodes/contentIndex.inc.php:29
+msgid "Usability"
+msgstr "Usabilidade"
 
 #: assets/includes/shortcodes/domore.inc.php:16
 msgid "List of trustworthy casinos"
@@ -851,7 +872,7 @@ msgstr "Início"
 #: assets/includes/views/category.html.php:89
 #: assets/includes/views/page.html.php:11 category-bonos.php:100
 #: category-casinos.php:101 category.php:92 search.php:41 tag.php:59
-#: taxonomy-proveedores.php:76
+#: taxonomy-proveedores.php:75
 msgid "Sorry, no posts matched your criteria."
 msgstr "Desculpe, nenhum artigo corresponde aos seus critérios."
 
@@ -871,10 +892,6 @@ msgstr "Usuários"
 #: single-casinos.php:320 single-juegos.php:456
 msgid "Reviews"
 msgstr "Avaliações"
-
-#: assets/includes/views/home.html.php:120 functions.php:508 functions.php:513
-msgid "Games"
-msgstr "Jogos"
 
 #: assets/includes/views/home.html.php:134
 msgid "Online Casinos"
@@ -925,7 +942,7 @@ msgstr "Seguir cassino"
 msgid "Activity"
 msgstr "Atividade"
 
-#: buddypress/assets/emails/single-bp-email.php:468 functions.php:707
+#: buddypress/assets/emails/single-bp-email.php:468 functions.php:708
 msgid "The trusted community for learning to bet online"
 msgstr "A comunidade confiável para aprender a apostar online"
 
@@ -1033,11 +1050,11 @@ msgstr "Editando seu perfil"
 msgid "Public profile"
 msgstr "Perfil público"
 
-#: category-bonos.php:29 category.php:31 tag.php:31 taxonomy-proveedores.php:48
+#: category-bonos.php:29 category.php:31 tag.php:31 taxonomy-proveedores.php:47
 msgid "Order by date"
 msgstr "Ordem por data"
 
-#: category-bonos.php:30 category.php:32 tag.php:32 taxonomy-proveedores.php:49
+#: category-bonos.php:30 category.php:32 tag.php:32 taxonomy-proveedores.php:48
 msgid "Order by name"
 msgstr "Ordem por nome"
 
@@ -1065,11 +1082,11 @@ msgstr "Ainda não há comentários. Seja o primeiro e ganhe pontos de prestígi
 msgid "Casinos are not allowed to comment, only reply."
 msgstr "Os cassinos não podem comentar, apenas responder."
 
-#: comments.php:51 comments.php:156
+#: comments.php:55 comments.php:160
 msgid "What do you think about "
 msgstr "O que você pensa sobre "
 
-#: comments.php:51
+#: comments.php:55
 msgid ""
 "<strong><u>Your opinions help the community grow stronger</u></strong>. "
 "Share it so everybody so we can all benefit!"
@@ -1077,63 +1094,63 @@ msgstr ""
 "<strong><u>Suas opiniões ajudam a comunidade a se fortalecer</u></strong>. "
 "Compartilhe para que todos possam se beneficiar!"
 
-#: comments.php:52
+#: comments.php:56
 msgid "Opinion"
 msgstr "Opinião"
 
-#: comments.php:82
+#: comments.php:86
 msgid "Thanks for your comment!"
 msgstr "Obrigado por seu comentário!"
 
-#: comments.php:83
+#: comments.php:87
 msgid "This will determine the position of"
 msgstr "Isso determinará a posição de"
 
-#: comments.php:85
+#: comments.php:89
 msgid "in the rankings."
 msgstr "nas listagens."
 
-#: comments.php:90
+#: comments.php:94
 msgid "Comments are closed for the moment."
 msgstr "Os comentários estão fechados no momento."
 
-#: comments.php:95
+#: comments.php:99
 msgid "You must be registered to leave an opinion."
 msgstr "Você deve estar cadastrado para deixar uma opinião."
 
-#: comments.php:97
+#: comments.php:101
 msgid "If you already have an account"
 msgstr "Se você já possui uma conta"
 
-#: comments.php:98
+#: comments.php:102
 msgid "access with your username"
 msgstr "acesse com seu nome de usuário"
 
-#: comments.php:99
+#: comments.php:103
 msgid "to share your opinion."
 msgstr "para compartilhar uma opinião."
 
-#: comments.php:133
+#: comments.php:137
 msgid "Your comment"
 msgstr "Seu comentário"
 
-#: comments.php:136
+#: comments.php:140
 msgid "Edit"
 msgstr "Editar"
 
-#: comments.php:137
+#: comments.php:141
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: comments.php:184
+#: comments.php:188 comments.php:281
 msgid "What do you like?"
 msgstr "O que você gosta?"
 
-#: comments.php:188
+#: comments.php:192 comments.php:282
 msgid "What do you dislike?"
 msgstr "O que você não gosta?"
 
-#: comments.php:192
+#: comments.php:196
 msgid "Edit comment"
 msgstr "Editar comentário"
 
@@ -1164,11 +1181,11 @@ msgstr "Glossário"
 msgid "/en/glossary/"
 msgstr "/pt-br/glossario/"
 
-#: footer.php:33 functions.php:659
+#: footer.php:33 functions.php:660
 msgid "Providers"
 msgstr "Fornecedores"
 
-#: footer.php:33 taxonomy-proveedores.php:28
+#: footer.php:33 taxonomy-proveedores.php:27
 msgid "/en/providers/"
 msgstr "/pt-br/fornecedores/"
 
@@ -1188,192 +1205,192 @@ msgstr "Desenvolvido por"
 msgid "Terms & Conditions"
 msgstr "Termos e Condições"
 
-#: functions.php:509
+#: functions.php:510
 msgid "Game"
 msgstr "Jogo"
 
-#: functions.php:510 functions.php:542 functions.php:573
+#: functions.php:511 functions.php:543 functions.php:574
 msgid "Add new"
 msgstr "Adicionar novo"
 
-#: functions.php:512
+#: functions.php:513
 msgid "New game published"
 msgstr "Novo jogo publicado"
 
-#: functions.php:514
+#: functions.php:515
 msgid "%1$s posted a new <a href=\"%2$s\">game</a>"
 msgstr "%1$s compartilhou um novo <a href=“%2$s”>jogo</a>"
 
-#: functions.php:515
+#: functions.php:516
 msgid "%1$s posted a new <a href=\"%2$s\">game</a>, on the site %3$s"
 msgstr "%1$s compartilhou um novo <a href=“%2$s”>jogo</a>, no site %3$s"
 
-#: functions.php:516
+#: functions.php:517
 msgid "Comments about games"
 msgstr "Comentários sobre jogos"
 
-#: functions.php:517
+#: functions.php:518
 msgid "Games comments"
 msgstr "Comentários sobre jogos"
 
-#: functions.php:518
+#: functions.php:519
 msgid "%1$s commented on a <a href=\"%2$s\">game</a>"
 msgstr "%1$s comentou em um <a href=“%2$s”>jogo</a>"
 
-#: functions.php:519
+#: functions.php:520
 msgid "%1$s commented on a <a href=\"%2$s\">game</a>, on the site %3$s"
 msgstr "%1$s comentou em um <a href=“%2$s”>jogo</a>, no site %3$s"
 
-#: functions.php:540 functions.php:544
+#: functions.php:541 functions.php:545
 msgid "Casinos"
 msgstr "Cassinos"
 
-#: functions.php:541 functions.php:606 single-bonus.php:236
+#: functions.php:542 functions.php:607 single-bonus.php:236
 #: single-bonus.php:300
 msgid "Casino"
 msgstr "Cassino"
 
-#: functions.php:543
+#: functions.php:544
 msgid "New casino published"
 msgstr "Novo cassino publicado"
 
-#: functions.php:545
+#: functions.php:546
 msgid "%1$s posted a new <a href=\"%2$s\">casino</a>"
 msgstr "%1$s compartilhou um novo <a href=“%2$s”>cassino</a>"
 
-#: functions.php:546
+#: functions.php:547
 msgid "%1$s posted a new <a href=\"%2$s\">casino</a>, on the site %3$s"
 msgstr "%1$s compartilhou um novo <a href=“%2$s”>cassino</a>, no site %3$s"
 
-#: functions.php:547
+#: functions.php:548
 msgid "Comments about casinos"
 msgstr "Comentários sobre cassinos"
 
-#: functions.php:548
+#: functions.php:549
 msgid "Casinos comments"
 msgstr "Comentários sobre cassinos"
 
-#: functions.php:549
+#: functions.php:550
 msgid "%1$s commented on a <a href=\"%2$s\">casino</a>"
 msgstr "%1$s comentou em um <a href=“%2$s”>cassino</a>"
 
-#: functions.php:550
+#: functions.php:551
 msgid "%1$s commented on a <a href=\"%2$s\">casino</a>, on the site %3$s"
 msgstr "%1$s comentou em um <a href=“%2$s”>cassino</a>, no site %3$s"
 
-#: functions.php:571 functions.php:575
+#: functions.php:572 functions.php:576
 msgid "Bonuses"
 msgstr "Os bônus"
 
-#: functions.php:572
+#: functions.php:573
 msgid "Bonus"
 msgstr "Bônus"
 
-#: functions.php:574
+#: functions.php:575
 msgid "New bonus published"
 msgstr "Novo bônus publicado"
 
-#: functions.php:576
+#: functions.php:577
 msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>"
 msgstr "%1$s compartilhou um novo <a href=“%2$s”>bônus</a>"
 
-#: functions.php:577
+#: functions.php:578
 msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>, on the site %3$s"
 msgstr "%1$s compartilhou um novo <a href=“%2$s”>bônus</a>, no site %3$s"
 
-#: functions.php:578 functions.php:579
+#: functions.php:579 functions.php:580
 msgid "Comments about bonuses"
 msgstr "Comentários sobre bônus"
 
-#: functions.php:580
+#: functions.php:581
 msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>"
 msgstr "%1$s comentou sobre um <a href=“%2$s”>bônus</a>"
 
-#: functions.php:581
+#: functions.php:582
 msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>, on the site %3$s"
 msgstr "%1$s comentou sobre um <a href=“%2$s”>bônus</a>, no site %3$s"
 
-#: functions.php:617
+#: functions.php:618
 msgid "Lead Partner"
 msgstr "Lead Partner"
 
-#: functions.php:631
+#: functions.php:632
 msgid "Auxiliary sidebar"
 msgstr "Barra lateral auxiliar"
 
-#: functions.php:652 taxonomy-proveedores.php:28
+#: functions.php:653 taxonomy-proveedores.php:27
 msgid "All providers"
 msgstr "Todos os fornecedores"
 
-#: functions.php:703
+#: functions.php:704
 msgid "Betizen - The trusted community for learning to bet online"
 msgstr "Betizen - A comunidade confiável para aprender a ganhar online"
 
-#: functions.php:718
+#: functions.php:719
 msgid "Casino to casino"
 msgstr "Cassino para cassino"
 
-#: functions.php:722
+#: functions.php:723
 msgid "Casino post"
 msgstr "Artigo do cassino"
 
-#: functions.php:725
+#: functions.php:726
 msgid "Not linked to any casino"
 msgstr "Não está vinculado a nenhum cassino"
 
-#: functions.php:820
+#: functions.php:821
 msgid "Fair"
 msgstr "Justo"
 
-#: functions.php:821
+#: functions.php:822
 msgid "Acceptable"
 msgstr "Aceitável"
 
-#: functions.php:822
+#: functions.php:823
 msgid "Caution"
 msgstr "Cuidado"
 
-#: functions.php:823
+#: functions.php:824
 msgid "Dishonest"
 msgstr "Fraudulento"
 
-#: functions.php:824
+#: functions.php:825
 msgid "Dangerous"
 msgstr "Perigoso"
 
-#: functions.php:826
+#: functions.php:827
 msgid "Positive"
 msgstr "Positivo"
 
-#: functions.php:827
+#: functions.php:828
 msgid "Regular"
 msgstr "Regular"
 
-#: functions.php:828
+#: functions.php:829
 msgid "Negative"
 msgstr "Negativo"
 
-#: functions.php:832
+#: functions.php:834
 msgid "Low"
 msgstr "Baixa"
 
-#: functions.php:833
+#: functions.php:835
 msgid "Low/Medium"
 msgstr "Baixa/Média"
 
-#: functions.php:834
+#: functions.php:836
 msgid "Medium"
 msgstr "Média"
 
-#: functions.php:835
+#: functions.php:837
 msgid "Medium/High"
 msgstr "Média/Alta"
 
-#: functions.php:836
+#: functions.php:838
 msgid "High"
 msgstr "Alta"
 
-#: functions.php:892
+#: functions.php:894
 msgid "Copied!"
 msgstr "Copiado!"
 
@@ -1448,11 +1465,11 @@ msgstr "Operado por"
 msgid "Conclusion about the casino"
 msgstr "Conclusão sobre o cassino"
 
-#: single-casinos.php:126 single-juegos.php:161 taxonomy-proveedores.php:41
+#: single-casinos.php:126 single-juegos.php:161 taxonomy-proveedores.php:40
 msgid "Read less"
 msgstr "Ler menos"
 
-#: single-casinos.php:126 single-juegos.php:161 taxonomy-proveedores.php:41
+#: single-casinos.php:126 single-juegos.php:161 taxonomy-proveedores.php:40
 msgid "Read more"
 msgstr "Ler mais"
 
@@ -1626,7 +1643,7 @@ msgstr "Tela cheia"
 msgid "By"
 msgstr "Por"
 
-#: taxonomy-proveedores.php:34
+#: taxonomy-proveedores.php:33
 msgid "Slots from"
 msgstr "Caça níqueis da"
 
