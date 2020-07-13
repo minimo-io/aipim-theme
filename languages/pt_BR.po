@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
-"POT-Creation-Date: 2020-07-10T18:35:25+00:00\n"
-"PO-Revision-Date: 2020-07-10 16:10-0300\n"
+"POT-Creation-Date: 2020-07-13T16:15:02+00:00\n"
+"PO-Revision-Date: 2020-07-13 13:17-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -274,25 +274,40 @@ msgid "Index"
 msgstr "Índice"
 
 #: assets/includes/shortcodes/contentIndex.inc.php:17
-#: assets/includes/shortcodes/contentIndex.inc.php:49
+#: assets/includes/shortcodes/contentIndex.inc.php:69
 #: assets/includes/views/home.html.php:120 functions.php:509 functions.php:514
 msgid "Games"
 msgstr "Jogos"
 
 #: assets/includes/shortcodes/contentIndex.inc.php:21
-#: assets/includes/shortcodes/contentIndex.inc.php:52
+#: assets/includes/shortcodes/contentIndex.inc.php:72
 msgid "Bonus and promotions"
 msgstr "Bônus e promoções"
 
 #: assets/includes/shortcodes/contentIndex.inc.php:25
-#: assets/includes/shortcodes/contentIndex.inc.php:55
+#: assets/includes/shortcodes/contentIndex.inc.php:75
 msgid "Customer support"
 msgstr "Atendimento ao cliente"
 
 #: assets/includes/shortcodes/contentIndex.inc.php:29
-#: assets/includes/shortcodes/contentIndex.inc.php:58
+#: assets/includes/shortcodes/contentIndex.inc.php:78
 msgid "Usability"
 msgstr "Usabilidade"
+
+#: assets/includes/shortcodes/contentIndex.inc.php:41
+#: assets/includes/shortcodes/contentIndex.inc.php:83
+msgid "Prizes, RTP and Volatility"
+msgstr "Prêmios, RTP e volatilidade"
+
+#: assets/includes/shortcodes/contentIndex.inc.php:45
+#: assets/includes/shortcodes/contentIndex.inc.php:86
+msgid "Functions and Mechanics"
+msgstr "Funções e mecânica"
+
+#: assets/includes/shortcodes/contentIndex.inc.php:49
+#: assets/includes/shortcodes/contentIndex.inc.php:89
+msgid "Theme and Design"
+msgstr "Tema e design"
 
 #: assets/includes/shortcodes/domore.inc.php:16
 msgid "List of trustworthy casinos"

@@ -34,6 +34,26 @@ function aipim_contentIndex_shortcode( $atts ) {
 
   }
 
+  if ($atts["type"] == "game"){
+    $ret .= '
+            <div class="list-index list-group mt-4 mb-4">
+              <a href="#premios" class="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">
+                '.__("Prizes, RTP and Volatility", "aipim").'
+                '.get_score_style(get_field("prizes_score")).'
+              </a>
+              <a href="#funciones-y-mecanica" class="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">
+                '.__("Functions and Mechanics", "aipim").'
+                '.get_score_style(get_field("functions_score")).'
+              </a>
+              <a href="#tematica" class="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">
+                '.__("Theme and Design", "aipim").'
+                '.get_score_style(get_field("theme_score")).'
+              </a>
+            </div>
+    ';
+
+  }
+
 	return $ret;
 }
 function aipim_contentIndexTitles_shortcode($atts){
@@ -44,7 +64,7 @@ function aipim_contentIndexTitles_shortcode($atts){
     'title' => ''
 	), $atts, 'short_alert' );
 
-
+  // for casinos
   if ($atts["section"] == "games"){
     return '<h2 id="juegos">'.(!empty($atts["title"]) ? $atts["title"] : __("Games", "aipim") ).'</h2>';
   }
@@ -56,6 +76,17 @@ function aipim_contentIndexTitles_shortcode($atts){
   }
   if ($atts["section"] == "usability"){
     return '<h2 id="usabilidad">'.(!empty($atts["title"]) ? $atts["title"] : __("Usability", "aipim") ).'</h2>';
+  }
+
+  // for games
+  if ($atts["section"] == "prizes"){
+    return '<h2 id="premios">'.(!empty($atts["title"]) ? $atts["title"] : __("Prizes, RTP and Volatility", "aipim") ).'</h2>';
+  }
+  if ($atts["section"] == "functions"){
+    return '<h2 id="funciones-y-mecanica">'.(!empty($atts["title"]) ? $atts["title"] : __("Functions and Mechanics", "aipim") ).'</h2>';
+  }
+  if ($atts["section"] == "theme"){
+    return '<h2 id="tematica">'.(!empty($atts["title"]) ? $atts["title"] : __("Theme and Design", "aipim") ).'</h2>';
   }
 	return $ret;
 }
