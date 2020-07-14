@@ -12,9 +12,14 @@
 
     $term = get_term_by('id', $category_id, 'proveedores');
     $term_image = get_field('imagen_del_proveedor', $term);
-
-
     ?>
+    <style>
+    .minimo-read-more {
+      height: 120px;
+      position: relative;
+      overflow: hidden;
+    }
+    </style>
     <main id="main" class="site-main main">
       <section class="section">
           <div class="container">

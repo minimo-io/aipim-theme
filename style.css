@@ -14079,6 +14079,23 @@ a.knowmore-icon-link:hover{
 .read-more-full:after {
     background: none !important;
 }
+.featured-provider .featured-text{
+  color: white;
+  background-color: red;
+  border-radius: 15px;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  padding-left: .3rem;
+  padding-right: .3rem;
+  font-size: .7rem;
+  margin: 0;
+  line-height: 1rem;
+  opacity: .8;
+  position: absolute;
+  top: 5px;
+  right: 4px;
+  z-index: 100;
+}
 
 
 /* custom media */
