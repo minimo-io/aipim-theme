@@ -152,6 +152,7 @@
                                                             <div class="card-body pb-0">
                                                                 <h2 class="card-title"><?php _e("Conclusion about the","aipim");  ?> <?php echo $single_category->slug; ?> <?php the_title(); ?></h2>
                                                                 <div class="card-text general-description minimo-read-more">
+                                                                  <?php echo do_shortcode('[contentIndex type="game"]'); ?>
                                                                   <p class="mb-3"><?php echo get_the_excerpt();  ?></p>
                                                                   <?php the_content(); ?>
                                                                 </div>
@@ -181,6 +182,49 @@
                                                     </div>
                                                 </div>
 
+                                                <div class="container casino-featured casino-single-featured" style="margin-top:5%;">
+                                                  <?php $f_volatilidad = get_field("volatilidad"); ?>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="card">
+                                                                <div class="card-body text-center">
+                                                                    <h5 class="card-title">
+                                                                      <?php _e("RTP","aipim");  ?>
+                                                                      <a href="<?php _e("/en/articles/what-is-the-rtp-in-slots/", "aipim") ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>
+                                                                    </h5>
+                                                                    <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
+                                                                        <?php echo $rtp_value;  ?>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="card">
+                                                                <div class="card-body text-center">
+                                                                    <h5 class="card-title">
+                                                                      <?php _e("Volatility","aipim");  ?>
+                                                                      <a href="<?php _e("/en/articles/what-does-volatility-in-slots-mean/", "aipim") ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>
+                                                                    </h5>
+                                                                    <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
+                                                                      <?php echo aipim_volatility_label_translate($f_volatilidad); ?>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4 mt-3 mt-sm-0">
+                                                            <div class="card">
+                                                                <div class="card-body text-center">
+                                                                    <h5 class="card-title"><?php _e("Paylines","aipim");  ?></h5>
+                                                                    <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
+                                                                        <?php the_field("lineas_de_pago"); ?>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
 
 
                                                 <div class="feature-screenshot">
@@ -266,49 +310,6 @@
 
                                               </div>
 
-                                                <div class="container casino-featured casino-single-featured" style="margin-top:5%;">
-                                                  <?php $f_volatilidad = get_field("volatilidad"); ?>
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <div class="card">
-                                                                <div class="card-body text-center">
-                                                                    <h5 class="card-title">
-                                                                      <?php _e("RTP","aipim");  ?>
-                                                                      <a href="<?php _e("/en/articles/what-is-the-rtp-in-slots/", "aipim") ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>
-                                                                    </h5>
-                                                                    <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
-                                                                        <?php echo $rtp_value;  ?>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col">
-                                                            <div class="card">
-                                                                <div class="card-body text-center">
-                                                                    <h5 class="card-title">
-                                                                      <?php _e("Volatility","aipim");  ?>
-                                                                      <a href="<?php _e("/en/articles/what-does-volatility-in-slots-mean/", "aipim") ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>
-                                                                    </h5>
-                                                                    <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
-                                                                      <?php echo aipim_volatility_label_translate($f_volatilidad); ?>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-4 mt-3 mt-sm-0">
-                                                            <div class="card">
-                                                                <div class="card-body text-center">
-                                                                    <h5 class="card-title"><?php _e("Paylines","aipim");  ?></h5>
-                                                                    <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
-                                                                        <?php the_field("lineas_de_pago"); ?>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
 
                                                 <!-- Responsive sidebar put below the theme -->
                                                 <div class="d-lg-none">

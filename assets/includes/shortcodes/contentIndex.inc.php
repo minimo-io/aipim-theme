@@ -10,7 +10,7 @@ function aipim_contentIndex_shortcode( $atts ) {
 
 
   if ($atts["type"] == "casino"){
-    $ret .= '<h2 class="card-title catalog-blog-title post-title hero-h1 bd-text-purple-bright display-4" style="font-weight:bold;">'.__("Index", "aipim").'</h2>';
+    // $ret .= '<h2 class="card-title catalog-blog-title post-title hero-h1 bd-text-purple-bright display-4" style="font-weight:bold;">'.__("Index", "aipim").'</h2>';
     $ret .= '
             <div class="list-index list-group mt-4 mb-4">
               <a href="#juegos" class="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">

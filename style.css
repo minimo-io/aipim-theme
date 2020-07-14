@@ -14054,7 +14054,7 @@ a.knowmore-icon-link:hover{
 /* .acfml-not-migrated{ display:none !important; } */
 
 .minimo-read-more {
-  height: 120px;
+  height: 300px;
   position: relative;
   overflow: hidden;
 }
@@ -14068,7 +14068,7 @@ a.knowmore-icon-link:hover{
     bottom: 0;
     right: 0;
     left: 0;
-    height: 120px;
+    height: 70px;
     background: linear-gradient(to top,#fff,rgba(255,255,255,0));
     pointer-events: none;
 }

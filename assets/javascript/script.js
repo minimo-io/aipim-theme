@@ -33,9 +33,33 @@ $(document).on('click', 'a[href^="#"]', function (event) {
     if (elem_href == "#promotions-tab"
     || elem_href == "#reviews-tab" ) return;
 
-    $('html, body').animate({
-        scrollTop: $(elem_href).offset().top - 70
-    }, 500);
+    var fn_animatescroll = function(){
+      $('html, body').animate({
+          scrollTop: $(elem_href).offset().top - 70
+      }, 500);
+    }
+
+    if (
+      elem_href == "#premios"
+      || elem_href == "#funciones-y-mecanica"
+      || elem_href == "#tematica"
+      || elem_href == "#juegos"
+      || elem_href == "#bonos"
+      || elem_href == "#atencion-al-cliente"
+      || elem_href == "#usabilidad"
+    ){
+
+      if ($("#btn-minimo-readmore").attr("data-status") == "off"){
+        do_readmore(function(){
+          fn_animatescroll();
+        });
+      }else{
+        fn_animatescroll();
+      }
+    }else{
+      fn_animatescroll();
+    }
+
 });
 $(document).ready(function () {
 
@@ -194,6 +218,62 @@ $(document).ready(function () {
 
 });
 
+var do_readmore = function(callback){
+  var $up = $(".minimo-read-more");
+  var $this = $("#btn-minimo-readmore");
+  var status = $this.data("status");
+
+  var mode = $this.data("mode");
+  var original_height = $this.data("original-height");
+  var speed_duration = 200;
+
+  if (status == "off"){
+
+    if (original_height == "") {
+      $this.data("original-height", $up.height());
+    }
+
+    var total_height = 0;
+    if (mode && mode == "generalHeight"){
+      $up.css("height", "auto");
+      total_height = $(".general-description").height();
+
+    }else{
+      $(".minimo-read-more p, .minimo-read-more h2, .minimo-read-more ul, .minimo-read-more blockquote, .minimo-read-more div, .minimo-read-more ol").each(function(){
+          total_height += $(this).outerHeight(true);
+      });
+    }
+
+
+    $up.animate({
+      height: total_height
+    }, speed_duration, function(){
+      if (callback) callback();
+      $this.text($this.data("text-less")).data("status", "on");
+      $this.attr("data-status", "on");
+    }
+    ).addClass("read-more-full");
+
+
+
+  }else if (status == "on"){
+
+    $up.removeClass("read-more-full");
+    $("html, body").animate({ scrollTop: 0 }, 200, function(){
+      $up.animate({
+        height: original_height+"px"
+      },  speed_duration, function(){
+        $this.text($this.data("text-more")).data("status", "off");
+        $this.attr("data-status", "off");
+        if (callback) callback();
+
+      });
+    });
+
+
+
+  }
+}
 
 jQuery(function($) {
 
@@ -245,54 +325,8 @@ jQuery(function($) {
 
     $("#btn-minimo-readmore").click(function(){
 
-      var $up = $(".minimo-read-more");
-      var $this = $(this);
-      var status = $this.data("status");
-      var mode = $this.data("mode");
-      var original_height = $this.data("original-height");
-      var speed_duration = 200;
 
-      if (status == "off"){
-
-        if (original_height == "") {
-          $this.data("original-height", $up.height());
-        }
-
-        var total_height = 0;
-        if (mode && mode == "generalHeight"){
-          $up.css("height", "auto");
-          total_height = $(".general-description").height();
-
-        }else{
-          $(".minimo-read-more p, .minimo-read-more h2, .minimo-read-more ul, .minimo-read-more blockquote, .minimo-read-more div, .minimo-read-more ol").each(function(){
-              total_height += $(this).outerHeight(true);
-          });
-        }
-
-
-        $up.animate({
-          height: total_height
-        }, {
-          duration: speed_duration
-        }).addClass("read-more-full");
-
-        $this.text($this.data("text-less")).data("status", "on");
-
-
-      }else if (status == "on"){
-
-        $up.removeClass("read-more-full");
-        $("html, body").animate({ scrollTop: 0 }, 200, function(){
-          $up.animate({
-            height: original_height+"px"
-          },  speed_duration, function(){  });
-        });
-
-
-        $this.text($this.data("text-more")).data("status", "off");
-
-      }
-
+      do_readmore();
 
       return false;
     });
