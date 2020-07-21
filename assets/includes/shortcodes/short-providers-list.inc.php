@@ -29,6 +29,13 @@ function short_providers_list( $atts ) {
       'taxonomy' => "proveedores",
       'hide_empty' => false,
 			'meta_key' => 'is_featured',
+			'meta_query' => array(
+	         array(
+	            'key'       => 'is_featured',
+	            'value'     => true,
+	            'compare'   => '='
+	         )
+	    ),
 			'orderby' => 'meta_value title',
 			'order' => 'ASC',
   ]);

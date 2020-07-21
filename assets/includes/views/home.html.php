@@ -184,7 +184,7 @@
                 <button class="btn btn-light btn-loadmore loadmore-casinos-button btn-block"><i class="fa fa-plus fa-2x fa-fw"></i></button>
             </div>
 
-            <a class="btn btn-brand btn-block d-md-none" href="<?php echo site_url().__("/en/online-casinos/");  ?>"><?php _e("View all casinos", "aipim");  ?></a>
+            <a class="btn btn-brand btn-block d-md-none" href="<?php echo site_url().__("/en/online-casinos/", "aipim");  ?>"><?php _e("View all casinos", "aipim");  ?></a>
         </div>
 
 
