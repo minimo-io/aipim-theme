@@ -5,8 +5,23 @@ function aipim_provider_list_html($term, $class=''){
   $term_link = get_term_link($term->term_id);
   $term_image = get_field('imagen_del_proveedor', $term);
 
+
+  $games = get_posts(array(
+    'post_type' => 'juegos',
+    'numberposts' => -1,
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'proveedores',
+        'field' => 'term_id',
+        'terms' => $term->term_id, /// Where term_id of Term 1 is "1".
+        'include_children' => false
+      )
+    )
+  ));
+  $gamesCount = count($games);
+  if ($gamesCount == 0) return;
   $ret = '';
-  $ret .= '<li class="col-md-4 galleryview-item'.(!empty($class) ? " ".$class : "").'" data-gamescount="'.($term->count).' '.__("games", "aipim").'" data-image="'.esc_url($term_image["url"]).'" data-title="'.$term->name.'" data-url="'.esc_url($term_link).'">';
+  $ret .= '<li class="col-md-4 galleryview-item'.(!empty($class) ? " ".$class : "").'" data-gamescount="'.$gamesCount.' '.__("games", "aipim").'" data-image="'.esc_url($term_image["url"]).'" data-title="'.$term->name.'" data-url="'.esc_url($term_link).'">';
   $ret .= '  <div class="theme-card">';
   if (!empty($class)) $ret .= "<span class='featured-text'>".__("featured", "aipim")."</span>";
   $ret .= '    <div class="theme-card__body">';
@@ -24,7 +39,8 @@ function aipim_provider_list_html($term, $class=''){
   $ret .= '        <p class="theme-card__info"></p>';
   $ret .= '        <ul class="prod_cats_list">';
   $ret .= '          <li>';
-  $ret .= '            <a href="#">'.($term->count).' '.__("games", "aipim").'</a>';
+  // $ret .= '            <a href="#">'.($term->count).' '.__("games", "aipim").'</a>';
+  $ret .= '            <a href="#">'.$gamesCount.' '.__("games", "aipim").'</a>';
   $ret .= '          </li>';
   // $ret .= '          <li style="color:#838E95;" title="" data-toggle="tooltip" data-placement="top" data-original-title="'.__("Volatility", "aipim").'">';
   // $ret .= '            <i class="fa fa-thermometer-full" aria-hidden="true"></i> Alta';

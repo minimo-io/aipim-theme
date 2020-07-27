@@ -27,7 +27,7 @@ function short_providers_list( $atts ) {
 	$a_featured = Array();
   $terms = get_terms([
       'taxonomy' => "proveedores",
-      'hide_empty' => false,
+      'hide_empty' => true,
 			'meta_key' => 'is_featured',
 			'meta_query' => array(
 	         array(
@@ -49,7 +49,7 @@ function short_providers_list( $atts ) {
 	// get all not featured
 	$terms = get_terms([
       'taxonomy' => "proveedores",
-      'hide_empty' => false,
+      'hide_empty' => true,
 			'orderby' => 'count',
 			'order' => 'DESC',
 			'exclude' => $a_featured
@@ -60,6 +60,7 @@ function short_providers_list( $atts ) {
   foreach ($terms as $term){
     // var_dump($term);
 		$providers_html .= aipim_provider_list_html($term);
+
 
   }
 
