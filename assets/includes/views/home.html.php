@@ -49,7 +49,7 @@
         <div class="col-lg-8 text-center text-lg-left pr-lg-5 order-lg-1" Xstyle="border:1px solid blue;">
           <h1 class="hero-h1 mb-3 bd-text-purple-bright display-4">
             <?php
-            echo get_option( "am_home_title", 'La comunidad confiable <br> para <span class="highlight-word">aprender a ganar online</span>' );
+            echo get_option( "am_home_title", 'La comunidad confiable <br> para <span class="highlight-word">aprender a jugar online</span>' );
             // <!-- La comunidad confiable <br> para <span class="highlight-word">aprender a jugar online</span> -->
             ?>
           </h1>

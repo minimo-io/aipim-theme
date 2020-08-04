@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-07-14T23:40:00+00:00\n"
+"POT-Creation-Date: 2020-08-04T14:10:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: aipim\n"
@@ -87,7 +87,7 @@ msgstr ""
 #: assets/includes/carrousel.inc.php:33
 #: assets/includes/shortcodes/short-playertest.inc.php:100
 #: category-blog.php:102
-#: functions.php:389
+#: functions.php:394
 msgid "Next"
 msgstr ""
 
@@ -96,6 +96,8 @@ msgid "Join"
 msgstr ""
 
 #: assets/includes/nav.inc.php:36
+#: assets/includes/shortcodes/startRightHere.inc.php:54
+#: assets/includes/shortcodes/startRightHere.inc.php:57
 #: search.php:25
 #: search.php:28
 msgid "Search"
@@ -120,100 +122,164 @@ msgstr ""
 msgid "Sign up"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:9
-#: assets/includes/reusable-htmls.inc.php:27
+#: assets/includes/reusable-htmls.inc.php:24
+#: assets/includes/reusable-htmls.inc.php:43
+#: assets/includes/shortcodes/startRightHere.inc.php:27
 msgid "games"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:11
+#: assets/includes/reusable-htmls.inc.php:26
 msgid "featured"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:15
+#: assets/includes/reusable-htmls.inc.php:30
 msgid "provider-image"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:18
+#: assets/includes/reusable-htmls.inc.php:33
 msgid "View games"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:98
+#: assets/includes/reusable-htmls.inc.php:114
 msgid "More"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:162
+#: assets/includes/reusable-htmls.inc.php:178
+#: assets/includes/shortcodes/startRightHere.inc.php:36
 #: assets/includes/views/category.html.php:46
 msgid "Play for free"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:173
+#: assets/includes/reusable-htmls.inc.php:189
 #: single-juegos.php:205
 msgid "Volatility"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:195
+#: assets/includes/reusable-htmls.inc.php:211
 msgid "Visit casino"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:246
-#: assets/includes/reusable-htmls.inc.php:247
-#: single-casinos.php:232
-#: single-casinos.php:411
+#: assets/includes/reusable-htmls.inc.php:262
+#: assets/includes/reusable-htmls.inc.php:263
+#: single-casinos.php:233
+#: single-casinos.php:412
 msgid "Reputation details"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:252
-#: assets/includes/reusable-htmls.inc.php:329
+#: assets/includes/reusable-htmls.inc.php:268
+#: assets/includes/reusable-htmls.inc.php:345
 msgid "Analysis"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:256
-#: assets/includes/reusable-htmls.inc.php:332
-#: single-casinos.php:129
-#: single-casinos.php:215
-#: single-casinos.php:243
-#: single-casinos.php:402
+#: assets/includes/reusable-htmls.inc.php:272
+#: assets/includes/reusable-htmls.inc.php:348
+#: single-casinos.php:130
+#: single-casinos.php:216
+#: single-casinos.php:244
+#: single-casinos.php:403
 msgid "Visit"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:340
-#: assets/includes/reusable-htmls.inc.php:490
+#: assets/includes/reusable-htmls.inc.php:356
+#: assets/includes/reusable-htmls.inc.php:506
 msgid "active"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:340
-#: assets/includes/reusable-htmls.inc.php:490
+#: assets/includes/reusable-htmls.inc.php:356
+#: assets/includes/reusable-htmls.inc.php:506
 msgid "inactive"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:345
+#: assets/includes/reusable-htmls.inc.php:361
 msgid "bonus-image"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:346
+#: assets/includes/reusable-htmls.inc.php:362
+#: assets/includes/shortcodes/startRightHere.inc.php:78
 msgid "More info"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:354
-#: assets/includes/reusable-htmls.inc.php:537
+#: assets/includes/reusable-htmls.inc.php:370
+#: assets/includes/reusable-htmls.inc.php:553
 #: single-bonus.php:294
 msgid "Get bonus"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:417
+#: assets/includes/reusable-htmls.inc.php:433
 msgid "official response"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:442
+#: assets/includes/reusable-htmls.inc.php:458
 msgid "reply"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:443
+#: assets/includes/reusable-htmls.inc.php:459
 msgid "login to reply"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:544
+#: assets/includes/reusable-htmls.inc.php:560
 msgid "This bonus is <b><u>inactive</u></b>."
+msgstr ""
+
+#: assets/includes/shortcodes/aipimFigures.inc.php:20
+#: assets/includes/shortcodes/domore.inc.php:18
+#: assets/includes/shortcodes/siteFigures.inc.php:20
+#: assets/includes/shortcodes/startRightHere.inc.php:26
+#: assets/includes/shortcodes/startRightHere.inc.php:37
+#: assets/includes/shortcodes/startRightHere.inc.php:69
+#: assets/includes/views/home.html.php:91
+#: assets/includes/views/home.html.php:118
+msgid "/en/online-casinos/"
+msgstr ""
+
+#: assets/includes/shortcodes/aipimFigures.inc.php:22
+#: assets/includes/shortcodes/siteFigures.inc.php:22
+msgid "Online Casinos"
+msgstr ""
+
+#: assets/includes/shortcodes/aipimFigures.inc.php:35
+#: assets/includes/shortcodes/siteFigures.inc.php:35
+msgid "Users"
+msgstr ""
+
+#: assets/includes/shortcodes/aipimFigures.inc.php:46
+#: assets/includes/shortcodes/siteFigures.inc.php:46
+#: assets/includes/shortcodes/startRightHere.inc.php:29
+msgid "/en/bonuses/"
+msgstr ""
+
+#: assets/includes/shortcodes/aipimFigures.inc.php:49
+#: assets/includes/shortcodes/siteFigures.inc.php:49
+#: functions.php:577
+#: functions.php:581
+msgid "Bonuses"
+msgstr ""
+
+#: assets/includes/shortcodes/aipimFigures.inc.php:59
+#: assets/includes/shortcodes/domore.inc.php:24
+#: assets/includes/shortcodes/siteFigures.inc.php:59
+#: assets/includes/shortcodes/startRightHere.inc.php:27
+#: assets/includes/shortcodes/startRightHere.inc.php:36
+#: assets/includes/shortcodes/startRightHere.inc.php:99
+#: assets/includes/views/home.html.php:132
+msgid "/en/games/"
+msgstr ""
+
+#: assets/includes/shortcodes/aipimFigures.inc.php:61
+#: assets/includes/shortcodes/contentIndex.inc.php:17
+#: assets/includes/shortcodes/contentIndex.inc.php:69
+#: assets/includes/shortcodes/siteFigures.inc.php:61
+#: functions.php:514
+#: functions.php:519
+msgid "Games"
+msgstr ""
+
+#: assets/includes/shortcodes/aipimFigures.inc.php:73
+#: assets/includes/shortcodes/siteFigures.inc.php:73
+#: single-bonus.php:246
+#: single-casinos.php:322
+#: single-juegos.php:457
+msgid "Reviews"
 msgstr ""
 
 #: assets/includes/shortcodes/alerts.inc.php:19
@@ -276,14 +342,6 @@ msgstr ""
 msgid ", it's free!"
 msgstr ""
 
-#: assets/includes/shortcodes/contentIndex.inc.php:17
-#: assets/includes/shortcodes/contentIndex.inc.php:69
-#: assets/includes/views/home.html.php:120
-#: functions.php:509
-#: functions.php:514
-msgid "Games"
-msgstr ""
-
 #: assets/includes/shortcodes/contentIndex.inc.php:21
 #: assets/includes/shortcodes/contentIndex.inc.php:72
 msgid "Bonus and promotions"
@@ -323,12 +381,7 @@ msgid "Avoid being scammed. Find out about the list of casinos that have the bes
 msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:18
-#: assets/includes/views/home.html.php:132
-#: assets/includes/views/home.html.php:160
-msgid "/en/online-casinos/"
-msgstr ""
-
-#: assets/includes/shortcodes/domore.inc.php:18
+#: assets/includes/shortcodes/startRightHere.inc.php:69
 msgid "See rankings"
 msgstr ""
 
@@ -338,12 +391,6 @@ msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:23
 msgid "Before betting online it is good to familiarize yourself with the games and the tests we carry out to see how they pay."
-msgstr ""
-
-#: assets/includes/shortcodes/domore.inc.php:24
-#: assets/includes/views/home.html.php:118
-#: assets/includes/views/home.html.php:201
-msgid "/en/games/"
 msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:24
@@ -361,6 +408,7 @@ msgid "Use this free tool to discover which games, casinos and bonuses are best 
 msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:33
+#: assets/includes/shortcodes/startRightHere.inc.php:85
 msgid "/en/player-profile/"
 msgstr ""
 
@@ -378,6 +426,7 @@ msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:41
 #: assets/includes/shortcodes/short-playertest.inc.php:244
+#: assets/includes/shortcodes/startRightHere.inc.php:92
 msgid "/en/articles/"
 msgstr ""
 
@@ -673,6 +722,116 @@ msgstr ""
 msgid "List view"
 msgstr ""
 
+#: assets/includes/shortcodes/startRightHere.inc.php:21
+msgid "What is Betizen and what does it offers?"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:24
+msgid "We are the first iGaming community with rankings"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:24
+#: buddypress/members/single/home.php:82
+#: buddypress/members/single/member-header.php:50
+#: single-bonus.php:84
+#: single-bonus.php:185
+#: single-bonus.php:274
+#: single-casinos.php:87
+#: single-casinos.php:238
+#: single-casinos.php:383
+#: single-juegos.php:125
+#: single-juegos.php:296
+#: single-juegos.php:322
+#: single-juegos.php:497
+msgid "/en/ranks/"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:24
+msgid "based on users votes and a place to where you can earn benefits when you share your experience."
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:25
+msgid "We offer impartial reviews of "
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:26
+msgid "casinos"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:29
+msgid "bonuses"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:30
+msgid " and "
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:31
+#: footer.php:36
+msgid "/en/affiliates/"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:31
+msgid "affiliate programs"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:32
+msgid "More?"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:37
+msgid "Check casinos"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:55
+msgid "Search game or casino or bonus"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:67
+msgid "<strong class=\"startHere-itemTitle\">Reliable and auditable rankings</strong> and reviews based on your ratings on casinos, games, bonuses and affiliate programs that are a reference and allow fair play. Betizen does NOT accept money to improve the position in our listings! It is the users who define them with their opinions."
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:70
+msgid "Sign up and leave your opinion"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:77
+msgid "<strong class=\"startHere-itemTitle\">Get benefits.</strong> Write reviews, follow casinos and game providers, collaborate by sharing your gaming experience and receive PRESTIGE points with which you can access exclusive benefits, special site functions such as removing advertising, and joining the Betizen VIP Club."
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:84
+msgid "<strong class=\"startHere-itemTitle\">Player Profile.</strong> Use this free tool to discover your player profile and find out what kind of games, casinos and bonuses best suit your natural abilities. Know your risks and opportunities, and avoid being scammed, obtaining a better benefit for your money. You will also get a more personalized Betizen experience."
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:85
+msgid "Take free test"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:91
+msgid "<strong class=\"startHere-itemTitle\">Expert information</strong> that lets you learn how to play. With accessible explanations on the most important topics for online gambling like volatility and RTP of games and slots, the operation of casino, players and operators interviews and much more."
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:92
+msgid "Learn to win"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:98
+msgid "<strong class=\"startHere-itemTitle\">Free games with information.</strong> We publish the best games and slots; with emphasis on those that have more interesting money return values, and that are properly audited and controlled. Subscribe to our newsletter to be alerted when we have news of fraudulent games."
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:99
+msgid "Start playing for free"
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:103
+msgid "Join the community that wants to change the world of online betting <u>for the better</u>."
+msgstr ""
+
+#: assets/includes/shortcodes/startRightHere.inc.php:104
+#: buddypress/members/register.php:80
+msgid "Join for free"
+msgstr ""
+
 #: assets/includes/testimonials.inc.php:4
 msgid "Finally a place focused on Latin America where to find new reliable casinos"
 msgstr ""
@@ -712,51 +871,36 @@ msgstr ""
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
-#: assets/includes/views/home.html.php:66
+#: assets/includes/views/home.html.php:64
 msgid "Join free"
 msgstr ""
 
-#: assets/includes/views/home.html.php:68
+#: assets/includes/views/home.html.php:66
 msgid "It's free"
 msgstr ""
 
-#: assets/includes/views/home.html.php:89
-msgid "Users"
-msgstr ""
-
-#: assets/includes/views/home.html.php:105
-#: single-bonus.php:246
-#: single-casinos.php:321
-#: single-juegos.php:457
-msgid "Reviews"
-msgstr ""
-
-#: assets/includes/views/home.html.php:134
-msgid "Online Casinos"
-msgstr ""
-
-#: assets/includes/views/home.html.php:157
+#: assets/includes/views/home.html.php:88
 msgid "The best online casinos"
 msgstr ""
 
-#: assets/includes/views/home.html.php:158
+#: assets/includes/views/home.html.php:89
 msgid "According to other users. Vote now, free now, you decide!"
 msgstr ""
 
-#: assets/includes/views/home.html.php:160
-#: assets/includes/views/home.html.php:201
+#: assets/includes/views/home.html.php:91
+#: assets/includes/views/home.html.php:132
 msgid "See all"
 msgstr ""
 
-#: assets/includes/views/home.html.php:187
+#: assets/includes/views/home.html.php:118
 msgid "View all casinos"
 msgstr ""
 
-#: assets/includes/views/home.html.php:198
+#: assets/includes/views/home.html.php:129
 msgid "Top ranked games"
 msgstr ""
 
-#: assets/includes/views/home.html.php:199
+#: assets/includes/views/home.html.php:130
 msgid "These are the best games according to other users"
 msgstr ""
 
@@ -785,7 +929,7 @@ msgid "Activity"
 msgstr ""
 
 #: buddypress/assets/emails/single-bp-email.php:468
-#: functions.php:708
+#: functions.php:713
 msgid "The trusted community for learning to bet online"
 msgstr ""
 
@@ -838,10 +982,6 @@ msgstr ""
 msgid "seconds"
 msgstr ""
 
-#: buddypress/members/register.php:80
-msgid "Join for free"
-msgstr ""
-
 #: buddypress/members/register.php:87
 msgid "Check your email"
 msgstr ""
@@ -860,21 +1000,6 @@ msgstr ""
 
 #: buddypress/members/single/home.php:67
 msgid "member"
-msgstr ""
-
-#: buddypress/members/single/home.php:82
-#: buddypress/members/single/member-header.php:50
-#: single-bonus.php:84
-#: single-bonus.php:185
-#: single-bonus.php:274
-#: single-casinos.php:87
-#: single-casinos.php:237
-#: single-casinos.php:382
-#: single-juegos.php:125
-#: single-juegos.php:296
-#: single-juegos.php:322
-#: single-juegos.php:497
-msgid "/en/ranks/"
 msgstr ""
 
 #: buddypress/members/single/notifications/notifications-loop.php:18
@@ -1029,7 +1154,7 @@ msgid "/en/glossary/"
 msgstr ""
 
 #: footer.php:33
-#: functions.php:660
+#: functions.php:665
 msgid "Providers"
 msgstr ""
 
@@ -1042,10 +1167,6 @@ msgstr ""
 msgid "Affiliates"
 msgstr ""
 
-#: footer.php:36
-msgid "/en/affiliates/"
-msgstr ""
-
 #: footer.php:39
 msgid "Developed by"
 msgstr ""
@@ -1055,200 +1176,195 @@ msgstr ""
 msgid "Terms & Conditions"
 msgstr ""
 
-#: functions.php:510
+#: functions.php:515
 msgid "Game"
 msgstr ""
 
-#: functions.php:511
-#: functions.php:543
-#: functions.php:574
+#: functions.php:516
+#: functions.php:548
+#: functions.php:579
 msgid "Add new"
 msgstr ""
 
-#: functions.php:513
+#: functions.php:518
 msgid "New game published"
 msgstr ""
 
-#: functions.php:515
+#: functions.php:520
 msgid "%1$s posted a new <a href=\"%2$s\">game</a>"
 msgstr ""
 
-#: functions.php:516
+#: functions.php:521
 msgid "%1$s posted a new <a href=\"%2$s\">game</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:517
+#: functions.php:522
 msgid "Comments about games"
 msgstr ""
 
-#: functions.php:518
+#: functions.php:523
 msgid "Games comments"
 msgstr ""
 
-#: functions.php:519
+#: functions.php:524
 msgid "%1$s commented on a <a href=\"%2$s\">game</a>"
 msgstr ""
 
-#: functions.php:520
+#: functions.php:525
 msgid "%1$s commented on a <a href=\"%2$s\">game</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:541
-#: functions.php:545
+#: functions.php:546
+#: functions.php:550
 msgid "Casinos"
 msgstr ""
 
-#: functions.php:542
-#: functions.php:607
+#: functions.php:547
+#: functions.php:612
 #: single-bonus.php:236
 #: single-bonus.php:300
 msgid "Casino"
 msgstr ""
 
-#: functions.php:544
+#: functions.php:549
 msgid "New casino published"
 msgstr ""
 
-#: functions.php:546
+#: functions.php:551
 msgid "%1$s posted a new <a href=\"%2$s\">casino</a>"
 msgstr ""
 
-#: functions.php:547
+#: functions.php:552
 msgid "%1$s posted a new <a href=\"%2$s\">casino</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:548
+#: functions.php:553
 msgid "Comments about casinos"
 msgstr ""
 
-#: functions.php:549
+#: functions.php:554
 msgid "Casinos comments"
 msgstr ""
 
-#: functions.php:550
+#: functions.php:555
 msgid "%1$s commented on a <a href=\"%2$s\">casino</a>"
 msgstr ""
 
-#: functions.php:551
+#: functions.php:556
 msgid "%1$s commented on a <a href=\"%2$s\">casino</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:572
-#: functions.php:576
-msgid "Bonuses"
-msgstr ""
-
-#: functions.php:573
+#: functions.php:578
 msgid "Bonus"
 msgstr ""
 
-#: functions.php:575
+#: functions.php:580
 msgid "New bonus published"
 msgstr ""
 
-#: functions.php:577
+#: functions.php:582
 msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>"
 msgstr ""
 
-#: functions.php:578
+#: functions.php:583
 msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:579
-#: functions.php:580
+#: functions.php:584
+#: functions.php:585
 msgid "Comments about bonuses"
 msgstr ""
 
-#: functions.php:581
+#: functions.php:586
 msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>"
 msgstr ""
 
-#: functions.php:582
+#: functions.php:587
 msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>, on the site %3$s"
 msgstr ""
 
-#: functions.php:618
+#: functions.php:623
 msgid "Lead Partner"
 msgstr ""
 
-#: functions.php:632
+#: functions.php:637
 msgid "Auxiliary sidebar"
 msgstr ""
 
-#: functions.php:653
+#: functions.php:658
 #: taxonomy-proveedores.php:32
 msgid "All providers"
 msgstr ""
 
-#: functions.php:704
+#: functions.php:709
 msgid "Betizen - The trusted community for learning to bet online"
 msgstr ""
 
-#: functions.php:719
+#: functions.php:724
 msgid "Casino to casino"
 msgstr ""
 
-#: functions.php:723
+#: functions.php:728
 msgid "Casino post"
 msgstr ""
 
-#: functions.php:726
+#: functions.php:731
 msgid "Not linked to any casino"
 msgstr ""
 
-#: functions.php:821
+#: functions.php:826
 msgid "Fair"
 msgstr ""
 
-#: functions.php:822
+#: functions.php:827
 msgid "Acceptable"
 msgstr ""
 
-#: functions.php:823
+#: functions.php:828
 msgid "Caution"
 msgstr ""
 
-#: functions.php:824
+#: functions.php:829
 msgid "Dishonest"
 msgstr ""
 
-#: functions.php:825
+#: functions.php:830
 msgid "Dangerous"
 msgstr ""
 
-#: functions.php:827
+#: functions.php:832
 msgid "Positive"
 msgstr ""
 
-#: functions.php:828
+#: functions.php:833
 msgid "Regular"
 msgstr ""
 
-#: functions.php:829
+#: functions.php:834
 msgid "Negative"
 msgstr ""
 
-#: functions.php:834
+#: functions.php:839
 msgid "Low"
 msgstr ""
 
-#: functions.php:835
+#: functions.php:840
 msgid "Low/Medium"
 msgstr ""
 
-#: functions.php:836
+#: functions.php:841
 msgid "Medium"
 msgstr ""
 
-#: functions.php:837
+#: functions.php:842
 msgid "Medium/High"
 msgstr ""
 
-#: functions.php:838
+#: functions.php:843
 msgid "High"
 msgstr ""
 
-#: functions.php:894
+#: functions.php:899
 msgid "Copied!"
 msgstr ""
 
@@ -1267,7 +1383,7 @@ msgstr ""
 #: single-bonus.php:81
 #: single-bonus.php:189
 #: single-casinos.php:84
-#: single-casinos.php:241
+#: single-casinos.php:242
 #: single-juegos.php:122
 #: single-juegos.php:326
 msgid "Review"
@@ -1282,7 +1398,7 @@ msgid "https://www.betizen.org/en/articles/what-is-the-rollover-of-bonuses/"
 msgstr ""
 
 #: single-bonus.php:142
-#: single-casinos.php:159
+#: single-casinos.php:160
 msgid "Minimum deposit"
 msgstr ""
 
@@ -1310,8 +1426,8 @@ msgstr ""
 
 #: single-bonus.php:239
 #: single-bonus.php:303
-#: single-casinos.php:292
-#: single-casinos.php:441
+#: single-casinos.php:293
+#: single-casinos.php:442
 #: single-juegos.php:426
 #: single-juegos.php:595
 msgid "Questions?"
@@ -1319,15 +1435,15 @@ msgstr ""
 
 #: single-bonus.php:239
 #: single-bonus.php:303
-#: single-casinos.php:292
-#: single-casinos.php:441
+#: single-casinos.php:293
+#: single-casinos.php:442
 #: single-juegos.php:426
 #: single-juegos.php:595
 msgid "Contact us"
 msgstr ""
 
 #: single-bonus.php:293
-#: single-casinos.php:401
+#: single-casinos.php:402
 #: single-juegos.php:517
 msgid "Write review"
 msgstr ""
@@ -1340,47 +1456,47 @@ msgstr ""
 msgid "Review of the casino"
 msgstr ""
 
-#: single-casinos.php:127
+#: single-casinos.php:128
 #: single-juegos.php:162
 #: taxonomy-proveedores.php:45
 msgid "Read less"
 msgstr ""
 
-#: single-casinos.php:127
+#: single-casinos.php:128
 #: single-juegos.php:162
 #: taxonomy-proveedores.php:45
 msgid "Read more"
 msgstr ""
 
-#: single-casinos.php:146
+#: single-casinos.php:147
 msgid "Max withdrawal"
 msgstr ""
 
-#: single-casinos.php:171
+#: single-casinos.php:172
 msgid "Min withdrawal"
 msgstr ""
 
-#: single-casinos.php:230
-#: single-casinos.php:410
+#: single-casinos.php:231
+#: single-casinos.php:411
 msgid "Reputation"
 msgstr ""
 
-#: single-casinos.php:288
-#: single-casinos.php:437
-msgid "Founded"
-msgstr ""
-
 #: single-casinos.php:289
-#: single-casinos.php:439
-msgid "License(s)"
+#: single-casinos.php:438
+msgid "Founded"
 msgstr ""
 
 #: single-casinos.php:290
 #: single-casinos.php:440
+msgid "License(s)"
+msgstr ""
+
+#: single-casinos.php:291
+#: single-casinos.php:441
 msgid "Withdrawal times"
 msgstr ""
 
-#: single-casinos.php:331
+#: single-casinos.php:332
 #: single-juegos.php:458
 msgid "Promotions"
 msgstr ""

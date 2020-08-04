@@ -60,10 +60,10 @@
 <?php get_footer();  ?>
 
 <style>
- .page-303 > .section{
+ .page-303 > .section, .page-1731 > .section{
    padding:0 !important;
  }
- .page-303 > .section ~ .section {
+ .page-303 > .section ~ .section, , .page-1731 > .section  ~ .section {
      padding:inherit !important;
  }
 .hero h1, .hero h4{

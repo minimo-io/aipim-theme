@@ -14097,7 +14097,11 @@ a.knowmore-icon-link:hover{
   right: 4px;
   z-index: 100;
 }
-
+.btn-startHere{ font-size:1.2rem; }
+.startHere-itemTitle{
+  color: #000;
+  font-size: 22px;
+}
 
 /* custom media */
 a.navbar-brand img{ width:130px;}
@@ -14129,7 +14133,7 @@ a.button-join-small{ font-size: 17px !important; }
   #player-test-next-btn,
   #player-test-prev-btn,
   #player-test-get-result-btn{ font-size:12px !important; }
-  .hero .display-2{ line-height:normal; font-size:25px; }
+  .hero .display-2{ line-height:normal; font-size:30px; }
   .hero h4{ font-size:16px; }
   .betizen-features p{
     line-height: 23px;
@@ -14191,6 +14195,7 @@ a.button-join-small{ font-size: 17px !important; }
   .table-bonus-title .badge{
     font-size:.7rem;
   }
+  .btn-startHere{ font-size:1rem; }
 }
 @media (max-width: 450px) {
   .knowledge-base h4{ font-size:1.05rem; }

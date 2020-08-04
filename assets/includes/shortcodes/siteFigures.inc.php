@@ -67,7 +67,7 @@ function short_aipimFigures( $atts ) {
             </a>
         </div>
         <div class="col-6 col-sm mt-3 mt-sm-0">
-            <a href="'.site_url()."/".$bp->activity->root_slug.'/" class="card">
+            <a href="#figures" class="card">
                 <div class="card-body text-center">
                     <h5 class="card-title">
                       '.__("Reviews", "aipim").'
