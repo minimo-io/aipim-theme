@@ -50,7 +50,7 @@ $(document).on('click', 'a[href^="#"]', function (event) {
     ){
 
       if ($("#btn-minimo-readmore").attr("data-status") == "off"){
-        do_readmore(function(){
+          do_readmore(function(){
           fn_animatescroll();
         });
       }else{
@@ -245,8 +245,9 @@ var do_readmore = function(callback){
     }
 
 
+
     $up.animate({
-      height: total_height
+      height: total_height+"px"
     }, speed_duration, function(){
       if (callback) callback();
       $this.text($this.data("text-less")).data("status", "on");
@@ -325,8 +326,15 @@ jQuery(function($) {
 
     $("#btn-minimo-readmore").click(function(){
 
+      // the callback is an ugly hack
+      do_readmore(function(){
+        if ($(".general-description").length){
+          $('html, body').animate({
+              scrollTop: $(".list-index").offset().top - 70
+          }, 500);
+        }
 
-      do_readmore();
+      });
 
       return false;
     });

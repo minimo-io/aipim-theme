@@ -9,7 +9,7 @@
         <body class="product-template-default single single-product postid-1745 woocommerce woocommerce-page dokan-theme-dokan">
             <?php require_once(get_template_directory()."/assets/includes/nav.inc.php");  ?>
             <?php require_once("assets/includes/messages.inc.php");  ?>
-            <main id="main" class="site-main main">
+            <main id="main" class="site-main main page-<?php the_ID(); ?>">
                 <section class="section">
                     <div class="container">
                         <div class="row">
@@ -59,7 +59,36 @@
 <?php endif; ?>
 <?php get_footer();  ?>
 
+<style>
+ .page-303 > .section{
+   padding:0 !important;
+ }
+ .page-303 > .section ~ .section {
+     padding:inherit !important;
+ }
+.hero h1, .hero h4{
+   color:white !important;
+  /* text-shadow: 2px 2px #000000; */
+}
+ .hero{
+   position:relative;
+   /* top:-242px; */
 
+ }
+ .profile__hero{
+   position:relative;
+   /* top:-242px; */
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: block !important;
+   width: 100%;
+   min-height:400px !important;
+   filter: brightness(.7);
+   background-image: url(https://www.betizen.org/wp-content/uploads/2020/08/hero-example-2.jpg);
+
+ }
+</style>
 <script>
  $(document).ready(function(){
      hash = window.location.hash;

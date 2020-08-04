@@ -116,8 +116,9 @@
                                                         <div class="card border-0">
                                                             <div class="card-body">
                                                                 <h2 class="card-title"><?php _e("Review of the casino","aipim");  ?> <?php the_title(); ?></h2>
-                                                                <div class="card-text general-description minimo-read-more">
-                                                                  <?php echo do_shortcode('[contentIndex type="casino"]'); ?>
+                                                                <?php echo do_shortcode('[contentIndex type="casino"]'); ?>
+                                                                <div class="card-text general-description minimo-read-more minimo-read-more-short">
+
                                                                   <?php echo "<p class='mb-3'>".get_the_excerpt()."</p>";  ?>
                                                                   <?php the_content(); ?>
                                                                 </div>

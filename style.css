@@ -14058,6 +14058,7 @@ a.knowmore-icon-link:hover{
   position: relative;
   overflow: hidden;
 }
+.minimo-read-more-short{  height: 200px; }
 .minimo-read-more p:first-of-type {
   /* margin-bottom:0 !important; */
 }

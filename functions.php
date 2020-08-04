@@ -18,27 +18,31 @@ function is_bonus(){
 }
 
 // globals
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/admin.inc.php'); // aipim admin panel
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/reusable-htmls.inc.php'); // system wide reusable html outputs
+require_once(  get_template_directory() . '/assets/includes/admin.inc.php'); // aipim admin panel
+require_once(  get_template_directory() . '/assets/includes/reusable-htmls.inc.php'); // system wide reusable html outputs
 // shortcodes
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/askpros.inc.php');
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/short-providers-list.inc.php');
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/domore.inc.php');
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/top-rtp.inc.php');
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/alerts.inc.php');
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/short-playertest.inc.php');
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/shortcodes/contentIndex.inc.php');
+// require_once(  get_template_directory() . '/assets/includes/shortcodes/askpros.inc.php');
+require_once(  get_template_directory() . '/assets/includes/shortcodes/short-providers-list.inc.php');
+require_once(  get_template_directory() . '/assets/includes/shortcodes/domore.inc.php');
+require_once(  get_template_directory() . '/assets/includes/shortcodes/top-rtp.inc.php');
+require_once(  get_template_directory() . '/assets/includes/shortcodes/alerts.inc.php');
+require_once(  get_template_directory() . '/assets/includes/shortcodes/short-playertest.inc.php');
+require_once(  get_template_directory() . '/assets/includes/shortcodes/contentIndex.inc.php');
+require_once(  get_template_directory() . '/assets/includes/shortcodes/siteFigures.inc.php');
+require_once(  get_template_directory() . '/assets/includes/shortcodes/startRightHere.inc.php');
 // extra functionalities
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/user-ip-on-signup.inc.php');
+require_once(  get_template_directory() . '/assets/includes/user-ip-on-signup.inc.php');
 // xhr / ajax calls
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/xhr/favs.xhr.php'); // favs
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/xhr/user-profile-test.xhr.php'); // user profile test
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/xhr/loadmore.xhr.php'); // ajax casinos load more
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/xhr/comment-edit.xhr.php'); // edit comment xhr
+require_once(  get_template_directory() . '/assets/includes/xhr/favs.xhr.php'); // favs
+require_once(  get_template_directory() . '/assets/includes/xhr/user-profile-test.xhr.php'); // user profile test
+require_once(  get_template_directory() . '/assets/includes/xhr/loadmore.xhr.php'); // ajax casinos load more
+require_once(  get_template_directory() . '/assets/includes/xhr/comment-edit.xhr.php'); // edit comment xhr
 // cron jobs
-require_once(  plugin_dir_path( __FILE__ ) . 'assets/includes/cronjobs.inc.php'); // favs
+require_once(  get_template_directory() . '/assets/includes/cronjobs.inc.php'); // favs
+// redirects
+require_once(  get_template_directory() . '/assets/includes/redirects.inc.php'); // redirects
 
-require_once( plugin_dir_path( __FILE__ ) . "assets/libs/geoip2.phar");
+require_once( get_template_directory() . "/assets/libs/geoip2.phar");
 use GeoIp2\Database\Reader;
 
 
@@ -54,6 +58,7 @@ add_action( 'widgets_init', 'am_widgets_init' );
 add_filter('duplicate_comment_id', '__return_false'); // allow diplicate comments (we are NOT using this field ya boy)
 add_filter('pre_get_posts', 'am_sort_arc');
 add_filter('pre_get_posts','providers_page_games_only');
+
 
 function aipim_wpml_count_posts( $post_type ) {
   global $wpdb;
@@ -450,7 +455,7 @@ function removeHeadLinks() {
     remove_action( 'wp_print_styles', 'print_emoji_styles' );
     add_filter( 'emoji_svg_url', '__return_false' );
 
-
+    //var_dump( get_template_directory() );
 }
 
 

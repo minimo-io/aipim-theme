@@ -1,8 +1,6 @@
 <section class="hero">
     <div class="container">
 
-
-
       <div class="row align-items-center">
 
         <div class="col-4 col-lg-4 mx-auto order-lg-2">
@@ -79,76 +77,9 @@
 
 <section class="section">
     <div class="container">
-
-        <div class="container-fluid casino-featured home-numbers">
-            <div class="row">
-                <div class="col-6 col-sm mt-3 mt-sm-0">
-                    <a href="<?php echo site_url()."/".$bp->members->root_slug; ?>/" class="card">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">
-                                <?php _e("Users", "aipim");  ?>
-                            </h5>
-                            <p class="card-text display-4">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <?php
-                                $u_count = count_users();
-                                echo $u_count['total_users'];
-                                ?>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-sm mt-3 mt-sm-0">
-                    <a href="<?php echo site_url()."/".$bp->activity->root_slug; ?>/" class="card">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">
-                                <?php _e("Reviews", "aipim");  ?>
-                            </h5>
-                            <p class="card-text display-4">
-                                <i class="fa fa-comment" aria-hidden="true"></i>
-                                <?php
-                                $count = wp_count_comments();
-                                echo $count->total_comments;
-                                ?>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-sm mt-3 mt-sm-0">
-                    <a href="<?php echo site_url().__("/en/games/", "aipim"); ?>" class="card">
-                        <div class="card-body text-center">
-                            <h5 class="card-title"><?php _e("Games", "aipim");  ?></h5>
-                            <p class="card-text display-4">
-                                <i class="fa fa-gamepad" aria-hidden="true"></i>
-                                <?php
-                                $count = aipim_wpml_count_posts("juegos");
-                                echo (isset($count["publish"]) ? $count["publish"][ICL_LANGUAGE_CODE] : "");
-                                ?>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-6 col-sm mt-3 mt-sm-0">
-                    <a href="<?php echo site_url().__("/en/online-casinos/","aipim"); ?>" class="card">
-                        <div class="card-body text-center">
-                            <h5 class="card-title"><?php _e("Online Casinos","aipim");  ?></h5>
-                            <p class="card-text display-4">
-                                <i class="fa fa-bullseye" aria-hidden="true"></i>
-                                <?php
-                                // $count = wp_count_posts("casinos");
-                                // echo $count->publish;
-                                $count = aipim_wpml_count_posts("casinos");
-                                echo (isset($count["publish"]) ? $count["publish"][ICL_LANGUAGE_CODE] : "");
-                                ?>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-
-        </div>
-
+      <?php
+      echo do_shortcode("[sitefigures]")
+      ?>
         <br>
 
         <div class="theme-cards-holder">

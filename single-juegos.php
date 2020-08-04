@@ -151,15 +151,15 @@
                                                         <div class="card border-0">
                                                             <div class="card-body pb-0">
                                                                 <h2 class="card-title"><?php _e("Conclusion about the","aipim");  ?> <?php echo $single_category->slug; ?> <?php the_title(); ?></h2>
+                                                                <?php echo do_shortcode('[contentIndex type="game"]'); ?>
                                                                 <div class="card-text general-description minimo-read-more">
-                                                                  <?php echo do_shortcode('[contentIndex type="game"]'); ?>
                                                                   <p class="mb-3"><?php echo get_the_excerpt();  ?></p>
                                                                   <?php the_content(); ?>
                                                                 </div>
                                                                 <div class="container">
                                                                   <div class="row">
                                                                     <div class="col-auto pl-0 pr-0">
-                                                                      <button id="btn-minimo-readmore" data-original-height="" data-mode="generalHeight" data-status="off" data-text-more="Leer más" data-text-less="<?php _e("Read less", "aipim"); ?>" class="btn btn-light btn-sm btn-minimo-readmore mb-4 mb-md-0"><?php _e("Read more", "aipim"); ?></button>
+                                                                      <button id="btn-minimo-readmore" data-original-height="" data-status="off" data-text-more="Leer más" data-text-less="<?php _e("Read less", "aipim"); ?>" class="btn btn-light btn-sm btn-minimo-readmore mb-4 mb-md-0"><?php _e("Read more", "aipim"); ?></button>
                                                                     </div>
                                                                     <div class="col d-block pr-0 pl-2">
                                                                       <div class="mt-2">

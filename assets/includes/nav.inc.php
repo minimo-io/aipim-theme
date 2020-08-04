@@ -23,7 +23,7 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
               </li>
             <?php }else{ ?>
               <li class="nav-item mr-2">
-                <a class="button button-brand btn-sm button-join-small" href="<?php echo wp_registration_url(); ?>"><i class="fa fa-user-plus mr-1" aria-hidden="true"></i><?php _e("Join", "aipim"); ?></a>
+                <a class="button button-brand btn-sm button-join-small" href="<?php echo wp_registration_url(); ?>"><?php _e("Join", "aipim"); ?></a>
               </li>
             <?php } ?>
           </ul>
@@ -149,7 +149,7 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
             <?php if ( !is_user_logged_in() ) {  ?>
                 <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
                   <li class="nav-item">
-                    <a class="button button-brand btn-lg mb-5 mb-lg-2 btn-round mt-2" href="<?php echo wp_registration_url(); ?>"><i class="fa fa-user-plus mr-1" aria-hidden="true"></i><?php _e("Sign up", "aipim");  ?></a>
+                    <a class="button button-brand btn-lg mb-5 mb-lg-2 btn-round mt-2" href="<?php echo wp_registration_url(); ?>"><?php _e("Sign up", "aipim");  ?></a>
                   </li>
                     <li class="nav-item margin-secondary-btn">
                       <a class="button btn-outline btn-lg mb-5 mb-lg-2 btn-round mt-2" href="<?php echo $login_url; ?>"><?php _e("Sign in", "aipim");  ?></a>
