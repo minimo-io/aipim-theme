@@ -587,7 +587,7 @@ function create_post_types() {
                                 'bp_activity_new_comment_ms'        => __( '%1$s commented on a <a href="%2$s">bonus</a>, on the site %3$s', 'aipim' )
                             ),
                             'public' => true,
-                            'has_archive' => true,
+                            'has_archive' => false,
                             'supports' => array( 'title', 'editor', 'custom-fields','thumbnail','comments', 'excerpt', 'buddypress-activity' ),
                             'taxonomies'  => array( 'category', 'post_tag' ),
                             // 'rewrite' => array( 'slug' => 'bono' ),

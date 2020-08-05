@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
-"POT-Creation-Date: 2020-08-04T14:10:27+00:00\n"
-"PO-Revision-Date: 2020-08-04 11:42-0300\n"
+"POT-Creation-Date: 2020-08-05T19:27:16+00:00\n"
+"PO-Revision-Date: 2020-08-05 16:29-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -164,53 +164,56 @@ msgid "Reputation details"
 msgstr "Detalhes da reputação"
 
 #: assets/includes/reusable-htmls.inc.php:268
-#: assets/includes/reusable-htmls.inc.php:345
 msgid "Analysis"
 msgstr "Análise"
 
-#: assets/includes/reusable-htmls.inc.php:272
-#: assets/includes/reusable-htmls.inc.php:348 single-casinos.php:130
+#: assets/includes/reusable-htmls.inc.php:272 single-casinos.php:130
 #: single-casinos.php:216 single-casinos.php:244 single-casinos.php:403
 msgid "Visit"
 msgstr "Visita"
 
-#: assets/includes/reusable-htmls.inc.php:356
-#: assets/includes/reusable-htmls.inc.php:506
+#: assets/includes/reusable-htmls.inc.php:347
+#: assets/includes/reusable-htmls.inc.php:382
+#: assets/includes/reusable-htmls.inc.php:536
 msgid "active"
 msgstr "ativo"
 
-#: assets/includes/reusable-htmls.inc.php:356
-#: assets/includes/reusable-htmls.inc.php:506
+#: assets/includes/reusable-htmls.inc.php:347
+#: assets/includes/reusable-htmls.inc.php:382
+#: assets/includes/reusable-htmls.inc.php:536
 msgid "inactive"
 msgstr "inativo"
 
-#: assets/includes/reusable-htmls.inc.php:361
+#: assets/includes/reusable-htmls.inc.php:356
+#: assets/includes/reusable-htmls.inc.php:387
 msgid "bonus-image"
 msgstr "imagem-bonus"
 
-#: assets/includes/reusable-htmls.inc.php:362
+#: assets/includes/reusable-htmls.inc.php:357
+#: assets/includes/reusable-htmls.inc.php:388
 #: assets/includes/shortcodes/startRightHere.inc.php:78
 msgid "More info"
 msgstr "Mais info"
 
-#: assets/includes/reusable-htmls.inc.php:370
-#: assets/includes/reusable-htmls.inc.php:553 single-bonus.php:294
+#: assets/includes/reusable-htmls.inc.php:367
+#: assets/includes/reusable-htmls.inc.php:396
+#: assets/includes/reusable-htmls.inc.php:583 single-bonus.php:294
 msgid "Get bonus"
 msgstr "Obter bônus"
 
-#: assets/includes/reusable-htmls.inc.php:433
+#: assets/includes/reusable-htmls.inc.php:463
 msgid "official response"
 msgstr "resposta oficial"
 
-#: assets/includes/reusable-htmls.inc.php:458
+#: assets/includes/reusable-htmls.inc.php:488
 msgid "reply"
 msgstr "resposta"
 
-#: assets/includes/reusable-htmls.inc.php:459
+#: assets/includes/reusable-htmls.inc.php:489
 msgid "login to reply"
 msgstr "entre para responder"
 
-#: assets/includes/reusable-htmls.inc.php:560
+#: assets/includes/reusable-htmls.inc.php:590
 msgid "This bonus is <b><u>inactive</u></b>."
 msgstr "Este bônus é <b><u>inativo</u></b>."
 
@@ -1096,7 +1099,7 @@ msgid "Home"
 msgstr "Início"
 
 #: assets/includes/views/category.html.php:89
-#: assets/includes/views/page.html.php:11 category-bonos.php:100
+#: assets/includes/views/page.html.php:11 category-bonos.php:105
 #: category-casinos.php:101 category.php:92 search.php:41 tag.php:59
 #: taxonomy-proveedores.php:80
 msgid "Sorry, no posts matched your criteria."
@@ -1259,15 +1262,27 @@ msgstr "Ordem por data"
 msgid "Order by name"
 msgstr "Ordem por nome"
 
-#: category-bonos.php:62 category-casinos.php:41
+#: category-bonos.php:63
+msgid "What exclusive bonuses and good news?"
+msgstr "Quais bônus exclusivos e boas notícias?"
+
+#: category-bonos.php:66
+msgid "Join Whatsapp"
+msgstr "Entre no Whatsapp"
+
+#: category-bonos.php:67
+msgid "Join the newsletter"
+msgstr "Inscreva-se na newsletter"
+
+#: category-casinos.php:41
 msgid "Before placing a bet learn to choose!"
 msgstr "Antes de fazer uma aposta, aprenda a escolher!"
 
-#: category-bonos.php:64 category-casinos.php:43 category.php:63
+#: category-casinos.php:43 category.php:63
 msgid "Read quick guide (5 min.)"
 msgstr "Leia o guia rápido (5 min.)"
 
-#: category-bonos.php:65 category-casinos.php:44 category.php:64
+#: category-casinos.php:44 category.php:64
 msgid "Read mega guide (30 min.)"
 msgstr "Leia o mega-guia (30 min.)"
 

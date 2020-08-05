@@ -4,7 +4,7 @@ Author: Minimo
 Author URI: https://minimo.io/
 Text Domain: aipim
 Description: A community theme developed for Betizen.org based on themes.getbootstrap.com
-Version: 1.2.04
+Version: 1.2.11
 */
 
 
@@ -12808,7 +12808,7 @@ dt {
 }
 .general-description li{
   /* font-size:18px; */
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 .general-description img{
   border-radius: 0.25rem !important;
@@ -13800,6 +13800,15 @@ a.post-preview-link:focus > .catalog-blog-title, a.post-preview-link:hover > .ca
   background: #d6c20f;
   color: #856404;
 }
+.btn-knowledge-green{
+  background-color:#00e45b;
+  /* color:#006127; */
+  color:#f7f7f7;
+}
+.btn-knowledge-green:hover{
+  background-color:#00ab44;
+  color:#f7f7f7;
+}
 .catalog-description p, .catalog-description li{
   color: #838E95;
 }
@@ -13997,6 +14006,15 @@ a.maker-dot:hover{
   border-radius:8px;
 }
 .card-bonus h5{ color:white;font-weight: bold; font-size:1.8rem; }
+.card-tablebonus{ margin-top:1.1rem !important; }
+.card-tablebonus h5, .card-tablebonus .card-text{ color:white;font-weight: bold; }
+.card-tablebonus .card-text{ font-weight: normal;}
+.card-tablebonus .bonus-excerpt{
+  font-size:.8rem;
+}
+.card-tablebonus .btn-bonus{
+  font-size:12px;
+}
 .card-bonus .card-body{
   position:relative; z-index:20;
   background: linear-gradient(to top left, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
@@ -14024,6 +14042,7 @@ a.card-bonus-moreinfo{
   top:1px;
   right:5px;
   font-size:2rem;
+  z-index:10;
 }
 a.knowmore-icon-main{
   font-size:1.5rem;
@@ -14058,7 +14077,7 @@ a.knowmore-icon-link:hover{
   position: relative;
   overflow: hidden;
 }
-.minimo-read-more-short{  height: 200px; }
+.minimo-read-more-short{  height: 120px; }
 .minimo-read-more p:first-of-type {
   /* margin-bottom:0 !important; */
 }

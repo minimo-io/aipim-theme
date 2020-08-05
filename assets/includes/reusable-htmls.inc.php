@@ -315,40 +315,66 @@ function aipim_loadmore_bonus_html($o_bonus, $layout = "table"){
 
   if ($layout == "table"){
 
-    $html_loadmore .= '<tr>';
-    $html_loadmore .=    '<th scope="row" class="table-ranking-ner">';
-    $html_loadmore .=        '#'.get_field("ranking", $o_bonus->ID);
-    $html_loadmore .=    '</th>';
-    $html_loadmore .=   '<td>';
-    $html_loadmore .=        '<a class="casino-table-image" href="'.$casino_url.'">';
-    $html_loadmore .=            $casino_thumb;
-    $html_loadmore .=        '</a>';
-    $html_loadmore .=    '</td>';
-    $html_loadmore .=    '<td class="text-left table-bonus-title">
-                              '.$post_title.'
-                              <br>
-                              <i class="d-block d-sm-block d-md-none" data-toggle="tooltip" data-placement="top" title="'.$bonus_title.'">+'.$bonus_short_title.'</i><i class="d-none d-md-block">'.$bonus_title.'</i>
-
-                              '.aipim_bonus_status_html(get_the_ID()).'
-                          </td>';
-    $html_loadmore .=    '<td class="table-rating d-none d-md-table-cell">';
-    $html_loadmore .=       do_shortcode("[wppr_avg_rating size='20' hide_count='0' post_id='".$o_bonus->ID."']");
-    $html_loadmore .=    '</td>';
+    // $html_loadmore .= '<tr>';
+    // $html_loadmore .=    '<th scope="row" class="table-ranking-ner">';
+    // $html_loadmore .=        '#'.get_field("ranking", $o_bonus->ID);
+    // $html_loadmore .=    '</th>';
+    // $html_loadmore .=   '<td>';
+    // $html_loadmore .=        '<a class="casino-table-image" href="'.$casino_url.'">';
+    // $html_loadmore .=            $casino_thumb;
+    // $html_loadmore .=        '</a>';
+    // $html_loadmore .=    '</td>';
+    // $html_loadmore .=    '<td class="text-left table-bonus-title">
+    //                           '.$post_title.'
+    //                           <br>
+    //                           <i class="d-block d-sm-block d-md-none" data-toggle="tooltip" data-placement="top" title="'.$bonus_title.'">+'.$bonus_short_title.'</i><i class="d-none d-md-block">'.$bonus_title.'</i>
+    //
+    //                           '.aipim_bonus_status_html(get_the_ID()).'
+    //                       </td>';
+    // $html_loadmore .=    '<td class="table-rating d-none d-md-table-cell">';
+    // $html_loadmore .=       do_shortcode("[wppr_avg_rating size='20' hide_count='0' post_id='".$o_bonus->ID."']");
+    // $html_loadmore .=    '</td>';
     // $html_loadmore .=    '<td>';
-    // $html_loadmore .=        '<div class="table-comments">';
-    // $html_loadmore .= '          <button data-target="#tc-modal" data-toggle="modal" data-hasbutton="0" data-title="'.__("Reputation details", "aipim").'" data-content="'.$casino_rep_content.'" type="button" class="btn btn-'.aipim_reputation_color(get_field("sensacion_de_reputacion", $o_casino->ID)).' text-uppercase btn-casino-reputation d-none d-md-block">'.$reputation_label.'</button>';
-    // $html_loadmore .= '          <button data-target="#tc-modal" data-toggle="modal" data-hasbutton="0" data-title="'.__("Reputation details", "aipim").'" data-content="'.$casino_rep_content.'" type="button" class="btn btn-'.aipim_reputation_color(get_field("sensacion_de_reputacion", $o_casino->ID)).' text-uppercase btn-casino-reputation d-md-none"><i class="fa fa-bullhorn" aria-hidden="true" style="font-size:16px;"></i></button>';
-    // $html_loadmore .=        '</div>';
-    // $html_loadmore .=   '</td>';
-    $html_loadmore .=    '<td>';
-    if (false == $redirect_to_bonus){
-      $html_loadmore .=        '<a class="btn btn-brand btn-bg btn-table-more" href="'.$bonus_url.'"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;'.__("Analysis", "aipim").'</a>';
-    }else{
-
-      $html_loadmore .=        '<a class="btn btn-brand btn-bg btn-table-more" href="'.$bonus_promo_code.'" rel="sponsored" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>&nbsp;'.__("Visit", "aipim").'</a>';
+    // if (false == $redirect_to_bonus){
+    //   $html_loadmore .=        '<a class="btn btn-brand btn-bg btn-table-more" href="'.$bonus_url.'"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;'.__("Analysis", "aipim").'</a>';
+    // }else{
+    //
+    //   $html_loadmore .=        '<a class="btn btn-brand btn-bg btn-table-more" href="'.$bonus_promo_code.'" rel="sponsored" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>&nbsp;'.__("Visit", "aipim").'</a>';
+    // }
+    // $html_loadmore .=    '</td>';
+    // $html_loadmore .= '</tr>';
+    $bonus_image = get_the_post_thumbnail_url($o_bonus->ID, 'am-casino-400');
+    $bonus_status = (get_field("is_active", $o_bonus->ID) == 1 ? '<span class="badge badge-success">'.__("active", "aipim").'</span>' : '<span class="badge badge-secondary">'.__("inactive", "aipim").'</span>');
+    $bonusExcerpt = $o_bonus->post_excerpt;
+    if (strlen($bonusExcerpt) > 156){
+      $bonusExcerpt = substr($bonusExcerpt, 0, 150)."...";
     }
-    $html_loadmore .=    '</td>';
-    $html_loadmore .= '</tr>';
+
+    $html_loadmore .= '<div class="col-sm-4 m-0 mt-2 mt-sm-0 p-1">';
+      $html_loadmore .= '<div class="card card-tablebonus card-multibonus">';
+      $html_loadmore .= '  <div>';
+      $html_loadmore .= '    <img src="'.$bonus_image.'" class="card-img-top" alt="'.__("bonus-image", "aipim").'">';
+      $html_loadmore .= '    <a href="'.$bonus_url.'" data-toggle="tooltip" data-placement="top" title="'.__("More info", "aipim").'" class="card-bonus-moreinfo knowmore-icon-link"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>';
+      $html_loadmore .= '  </div>';
+      $html_loadmore .= '  <div class="card-img-overlay" style="background:linear-gradient(to top left,transparent 0%,rgba(0,0,0,0.6) 100%);">';
+      $html_loadmore .= '  <div class="card-body p-0">';
+      $html_loadmore .= '   <h5 class="card-title text-center text-nowrap">'.$o_bonus->post_title.'</h5>';
+      $html_loadmore .= '    <p class="card-text text-center">'.get_field("bonus_title", $o_bonus->ID).'</p>';
+      $html_loadmore .= '    <p class="card-text text-center bonus-excerpt">'.$bonusExcerpt.'</p>';
+      $html_loadmore .= '
+                              <a rel="nofollow" target="_blank" role="button" href="'.$bonus_promo_code.'" class="btn btn-bonus btn-brand btn-block mb-1 ml-0 Xbtn-customcolor-outline text-uppercase">
+                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                '.__("Get bonus", "aipim").'
+                              </a>
+      ';
+      $html_loadmore .= '  </div>';
+      $html_loadmore .= '  </div>';
+      // $html_loadmore .= '   <div class="card-footer">';
+      // $html_loadmore .= '     <small class="text-muted">'.$bonus_status.'</small>';
+      // $html_loadmore .= '   </div>';
+      $html_loadmore .= '</div>';
+    $html_loadmore .= '</div>';
+
   }
   //  cards layout for casino tabs
   if ($layout == "cards"){
@@ -362,8 +388,8 @@ function aipim_loadmore_bonus_html($o_bonus, $layout = "table"){
         $html_loadmore .= '    <a href="'.$bonus_url.'" data-toggle="tooltip" data-placement="top" title="'.__("More info", "aipim").'" class="card-bonus-moreinfo knowmore-icon-link"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>';
         $html_loadmore .= '  </div>';
         $html_loadmore .= '  <div class="card-body">';
-        $html_loadmore .= '   <h5 class="card-title">'.$o_bonus->post_title.'&nbsp;'.$bonus_status.'</h5>';
-        $html_loadmore .= '    <p class="card-text">'.get_field("bonus_title", $o_bonus->ID).'</p>';
+        $html_loadmore .= '   <h5 class="card-title">'.$o_bonus->post_title.'</h5>';
+        $html_loadmore .= '    <p class="card-text">'.get_field("bonus_title", $o_bonus->ID).'&nbsp;'.$bonus_status.'</p>';
         $html_loadmore .= '
                                 <a rel="nofollow" target="_blank" role="button" href="'.$bonus_promo_code.'" class="btn btn-bonus btn-outline-brand btn-block mb-1 ml-0 btn-customcolor-outline text-uppercase">
                                   <i class="fa fa-thumbs-up" aria-hidden="true"></i>
@@ -371,8 +397,12 @@ function aipim_loadmore_bonus_html($o_bonus, $layout = "table"){
                                 </a>
         ';
         $html_loadmore .= '  </div>';
+        // $html_loadmore .= '   <div class="card-footer">';
+        // $html_loadmore .= '     <small class="text-muted">'.$bonus_status.'</small>';
+        // $html_loadmore .= '   </div>';
         $html_loadmore .= '</div>';
       $html_loadmore .= '</div>';
+
 
   }
 

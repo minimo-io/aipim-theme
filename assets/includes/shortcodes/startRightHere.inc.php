@@ -101,7 +101,7 @@ function short_startHere( $atts ) {
       </div>
       <p>&nbsp;</p>
       <h2 class="text-gray-soft text-center" style="margin-top: 13px; font-weight: 300;">'.__('Join the community that wants to change the world of online betting <u>for the better</u>.', 'aipim').'</h2>
-      <center><a class="button button-brand btn-lg mb-5 mb-lg-2 hero-button text-center text-uppercase" style="font-size: 40px !important; margin-top: 30px;" href="'.wp_registration_url().'">'.__("Join for free", "aipim").'</a></center>&nbsp;
+      <center><a class="button button-brand btn-lg mb-5 mb-lg-2 hero-button text-center text-uppercase" style="font-size: 27px !important; margin-top: 30px;" href="'.wp_registration_url().'">'.__("Join for free", "aipim").'</a></center>&nbsp;
     </div>
     <p><style type="text/css">.mb-3:first-child{display:none;} .betizen-features img{max-width:85%;}</style></p>
 

@@ -2,14 +2,14 @@
 # This file is distributed under the .
 msgid ""
 msgstr ""
-"Project-Id-Version: Aipim 1.2.04\n"
+"Project-Id-Version: Aipim 1.2.11\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-08-04T14:10:27+00:00\n"
+"POT-Creation-Date: 2020-08-05T19:27:16+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: aipim\n"
@@ -167,12 +167,10 @@ msgid "Reputation details"
 msgstr ""
 
 #: assets/includes/reusable-htmls.inc.php:268
-#: assets/includes/reusable-htmls.inc.php:345
 msgid "Analysis"
 msgstr ""
 
 #: assets/includes/reusable-htmls.inc.php:272
-#: assets/includes/reusable-htmls.inc.php:348
 #: single-casinos.php:130
 #: single-casinos.php:216
 #: single-casinos.php:244
@@ -180,44 +178,49 @@ msgstr ""
 msgid "Visit"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:356
-#: assets/includes/reusable-htmls.inc.php:506
+#: assets/includes/reusable-htmls.inc.php:347
+#: assets/includes/reusable-htmls.inc.php:382
+#: assets/includes/reusable-htmls.inc.php:536
 msgid "active"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:356
-#: assets/includes/reusable-htmls.inc.php:506
+#: assets/includes/reusable-htmls.inc.php:347
+#: assets/includes/reusable-htmls.inc.php:382
+#: assets/includes/reusable-htmls.inc.php:536
 msgid "inactive"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:361
+#: assets/includes/reusable-htmls.inc.php:356
+#: assets/includes/reusable-htmls.inc.php:387
 msgid "bonus-image"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:362
+#: assets/includes/reusable-htmls.inc.php:357
+#: assets/includes/reusable-htmls.inc.php:388
 #: assets/includes/shortcodes/startRightHere.inc.php:78
 msgid "More info"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:370
-#: assets/includes/reusable-htmls.inc.php:553
+#: assets/includes/reusable-htmls.inc.php:367
+#: assets/includes/reusable-htmls.inc.php:396
+#: assets/includes/reusable-htmls.inc.php:583
 #: single-bonus.php:294
 msgid "Get bonus"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:433
+#: assets/includes/reusable-htmls.inc.php:463
 msgid "official response"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:458
+#: assets/includes/reusable-htmls.inc.php:488
 msgid "reply"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:459
+#: assets/includes/reusable-htmls.inc.php:489
 msgid "login to reply"
 msgstr ""
 
-#: assets/includes/reusable-htmls.inc.php:560
+#: assets/includes/reusable-htmls.inc.php:590
 msgid "This bonus is <b><u>inactive</u></b>."
 msgstr ""
 
@@ -862,7 +865,7 @@ msgstr ""
 
 #: assets/includes/views/category.html.php:89
 #: assets/includes/views/page.html.php:11
-#: category-bonos.php:100
+#: category-bonos.php:105
 #: category-casinos.php:101
 #: category.php:92
 #: search.php:41
@@ -1029,18 +1032,27 @@ msgstr ""
 msgid "Order by name"
 msgstr ""
 
-#: category-bonos.php:62
+#: category-bonos.php:63
+msgid "What exclusive bonuses and good news?"
+msgstr ""
+
+#: category-bonos.php:66
+msgid "Join Whatsapp"
+msgstr ""
+
+#: category-bonos.php:67
+msgid "Join the newsletter"
+msgstr ""
+
 #: category-casinos.php:41
 msgid "Before placing a bet learn to choose!"
 msgstr ""
 
-#: category-bonos.php:64
 #: category-casinos.php:43
 #: category.php:63
 msgid "Read quick guide (5 min.)"
 msgstr ""
 
-#: category-bonos.php:65
 #: category-casinos.php:44
 #: category.php:64
 msgid "Read mega guide (30 min.)"

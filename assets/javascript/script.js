@@ -66,8 +66,8 @@ $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 
     animateCSS(".badge-bonus", "flash");
-    setInterval(function(){
-      animateCSS(".card-bonus", "shake");
+    setTimeout(function(){
+      animateCSS(".card-bonus", "bounce");
       // animateCSS(".badge-bonus", "flash");
     }, (1000 * 5));
 
