@@ -13923,6 +13923,18 @@ blockquote::before {
     text-transform: uppercase;
     margin-bottom: 0 !important;
 }
+.bonus-rank{
+  width:30px;
+  height:30px;
+  z-index:10;
+  box-shadow:none;
+  top:-15px;
+  left:-7px;
+}
+.bonus-rank h6{
+  line-height: 1.9rem;
+  font-size:.9rem !important;
+}
 .link-back-providers{
   font-size:12px;
 }
@@ -14007,6 +14019,19 @@ a.maker-dot:hover{
 }
 .card-bonus h5{ color:white;font-weight: bold; font-size:1.8rem; }
 .card-tablebonus{ margin-top:1.1rem !important; }
+.card-tablebonus-top{
+  font-size: 1.5rem;
+  font-weight: bold !important;
+}
+.card-tablebonus-top .card-img-top{
+  max-height: 200px;
+}
+.card-tablebonus-top .bonus-rank{
+  border-radius:unset;
+  width:auto;
+  padding:.5rem;
+}
+.card-tablebonus-top .bonus-rank h6{ line-height: 1rem;}
 .card-tablebonus h5, .card-tablebonus .card-text{ color:white;font-weight: bold; }
 .card-tablebonus .card-text{ font-weight: normal;}
 .card-tablebonus .bonus-excerpt{
@@ -14215,6 +14240,9 @@ a.button-join-small{ font-size: 17px !important; }
     font-size:.7rem;
   }
   .btn-startHere{ font-size:1rem; }
+  .card-tablebonus-top{
+    font-size:1.2rem;
+  }
 }
 @media (max-width: 450px) {
   .knowledge-base h4{ font-size:1.05rem; }

@@ -4,15 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
-"POT-Creation-Date: 2020-08-05T19:27:16+00:00\n"
-"PO-Revision-Date: 2020-08-05 16:31-0300\n"
+"POT-Creation-Date: 2020-08-06T22:20:00+00:00\n"
+"PO-Revision-Date: 2020-08-06 19:21-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4\n"
 "X-Domain: aipim\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -98,7 +98,6 @@ msgid "Join"
 msgstr "Unirme"
 
 #: assets/includes/nav.inc.php:36
-#: assets/includes/shortcodes/startRightHere.inc.php:54
 #: assets/includes/shortcodes/startRightHere.inc.php:57 search.php:25
 #: search.php:28
 msgid "Search"
@@ -164,6 +163,7 @@ msgid "Reputation details"
 msgstr "Detalles de la reputación"
 
 #: assets/includes/reusable-htmls.inc.php:268
+#: assets/includes/shortcodes/siteFigures.inc.php:180
 msgid "Analysis"
 msgstr "Análisis"
 
@@ -173,47 +173,56 @@ msgid "Visit"
 msgstr "Visitar"
 
 #: assets/includes/reusable-htmls.inc.php:347
-#: assets/includes/reusable-htmls.inc.php:382
-#: assets/includes/reusable-htmls.inc.php:536
+#: assets/includes/reusable-htmls.inc.php:384
+#: assets/includes/reusable-htmls.inc.php:538
+#: assets/includes/shortcodes/siteFigures.inc.php:121
 msgid "active"
 msgstr "activo"
 
 #: assets/includes/reusable-htmls.inc.php:347
-#: assets/includes/reusable-htmls.inc.php:382
-#: assets/includes/reusable-htmls.inc.php:536
+#: assets/includes/reusable-htmls.inc.php:384
+#: assets/includes/reusable-htmls.inc.php:538
+#: assets/includes/shortcodes/siteFigures.inc.php:121
 msgid "inactive"
 msgstr "inactivo"
 
 #: assets/includes/reusable-htmls.inc.php:356
-#: assets/includes/reusable-htmls.inc.php:387
+#: assets/includes/reusable-htmls.inc.php:389
+#: assets/includes/shortcodes/siteFigures.inc.php:129
+#: assets/includes/shortcodes/siteFigures.inc.php:174
+#: assets/includes/shortcodes/siteFigures.inc.php:208
 msgid "bonus-image"
 msgstr "imagen-de-bono"
 
 #: assets/includes/reusable-htmls.inc.php:357
-#: assets/includes/reusable-htmls.inc.php:388
+#: assets/includes/reusable-htmls.inc.php:390
+#: assets/includes/shortcodes/siteFigures.inc.php:130
+#: assets/includes/shortcodes/siteFigures.inc.php:168
+#: assets/includes/shortcodes/siteFigures.inc.php:209
 #: assets/includes/shortcodes/startRightHere.inc.php:78
 msgid "More info"
 msgstr "Más información"
 
-#: assets/includes/reusable-htmls.inc.php:367
-#: assets/includes/reusable-htmls.inc.php:396
-#: assets/includes/reusable-htmls.inc.php:583 single-bonus.php:294
+#: assets/includes/reusable-htmls.inc.php:369
+#: assets/includes/reusable-htmls.inc.php:398
+#: assets/includes/reusable-htmls.inc.php:585
+#: assets/includes/shortcodes/siteFigures.inc.php:143 single-bonus.php:294
 msgid "Get bonus"
 msgstr "Obtener bono"
 
-#: assets/includes/reusable-htmls.inc.php:463
+#: assets/includes/reusable-htmls.inc.php:465
 msgid "official response"
 msgstr "respuesta oficial"
 
-#: assets/includes/reusable-htmls.inc.php:488
+#: assets/includes/reusable-htmls.inc.php:490
 msgid "reply"
 msgstr "responder"
 
-#: assets/includes/reusable-htmls.inc.php:489
+#: assets/includes/reusable-htmls.inc.php:491
 msgid "login to reply"
 msgstr "ingresa para responder"
 
-#: assets/includes/reusable-htmls.inc.php:590
+#: assets/includes/reusable-htmls.inc.php:592
 msgid "This bonus is <b><u>inactive</u></b>."
 msgstr "Este bono está <b><u>inactivo</u></b>."
 
@@ -908,6 +917,22 @@ msgstr "Vista de galería"
 #: category-blog.php:46
 msgid "List view"
 msgstr "Vista de lista"
+
+#: assets/includes/shortcodes/siteFigures.inc.php:131
+msgid "Best bonus"
+msgstr "Mejor bono"
+
+#: assets/includes/shortcodes/siteFigures.inc.php:169
+msgid "Best casino"
+msgstr "Mejor casino"
+
+#: assets/includes/shortcodes/siteFigures.inc.php:210
+msgid "Best game"
+msgstr "Mejor juego"
+
+#: assets/includes/shortcodes/siteFigures.inc.php:221
+msgid "Play game"
+msgstr "Jugar ahora"
 
 #: assets/includes/shortcodes/startRightHere.inc.php:21
 msgid "What is Betizen and what does it offers?"

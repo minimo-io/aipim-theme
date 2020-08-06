@@ -346,8 +346,8 @@ function aipim_loadmore_bonus_html($o_bonus, $layout = "table"){
     $bonus_image = get_the_post_thumbnail_url($o_bonus->ID, 'am-casino-400');
     $bonus_status = (get_field("is_active", $o_bonus->ID) == 1 ? '<span class="badge badge-success">'.__("active", "aipim").'</span>' : '<span class="badge badge-secondary">'.__("inactive", "aipim").'</span>');
     $bonusExcerpt = $o_bonus->post_excerpt;
-    if (strlen($bonusExcerpt) > 156){
-      $bonusExcerpt = substr($bonusExcerpt, 0, 150)."...";
+    if (strlen($bonusExcerpt) > 128){
+      $bonusExcerpt = substr($bonusExcerpt, 0, 125)."...";
     }
 
     $html_loadmore .= '<div class="col-sm-4 m-0 mt-2 mt-sm-0 p-1">';
@@ -355,6 +355,8 @@ function aipim_loadmore_bonus_html($o_bonus, $layout = "table"){
       $html_loadmore .= '  <div>';
       $html_loadmore .= '    <img src="'.$bonus_image.'" class="card-img-top" alt="'.__("bonus-image", "aipim").'">';
       $html_loadmore .= '    <a href="'.$bonus_url.'" data-toggle="tooltip" data-placement="top" title="'.__("More info", "aipim").'" class="card-bonus-moreinfo knowmore-icon-link"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>';
+      // $html_loadmore .= '    <span class="card-bonus-moreinfo knowmore-icon-link">#'.get_field("ranking", $o_bonus->ID).'</span>';
+      $html_loadmore .= '    <div class="bonus-rank rtp-content"><h6>#'.get_field("ranking", $o_bonus->ID).'</h6></div> ';
       $html_loadmore .= '  </div>';
       $html_loadmore .= '  <div class="card-img-overlay" style="background:linear-gradient(to top left,transparent 0%,rgba(0,0,0,0.6) 100%);">';
       $html_loadmore .= '  <div class="card-body p-0">';

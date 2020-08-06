@@ -16,7 +16,7 @@ function short_startHere( $atts ) {
 <div style="min-height:400px;position:relative;display:block;">
   <section class="profile__hero profile__hero_game" alt="about-us-header"></section>
 
-  <section class="hero hero--xs w-100 pt-0 pt-5" style="margin-bottom: 5%;">
+  <section class="hero hero--xs w-100 pt-0 pt-4" style="margin-bottom: 5%;">
     <div class="container">
       <h1 class="display-2 text-bold" style="margin-top: 5%;">'.__("What is Betizen and what does it offers?", "aipim").'</h1>
       <h4 class="text-gray-soft text-regular">
@@ -47,18 +47,18 @@ function short_startHere( $atts ) {
           <div class="row">
               <div id="container">
                   <div id="content" role="main">
-
-                  '.do_shortcode("[sitefigures]").'
+                  '.do_shortcode("[sitefigures type='topOfEach']").'
+									<!--
                   <form method="GET" id="searchform" class="Xform-inline" action="'.aipim_search_url().'">
                     <div class="form-group mb-5">
-                      <!-- <label for="s">'.__("Search", "aipim").'</label> -->
+
                       <input placeholder="'.__("Search game or casino or bonus", "aipim").'" type="text" onClick="this.select();" id="s" name="s" class="form-control form-control-lg" value="'.get_search_query().'">
                     </div>
                     <button type="submit" class="btn btn-primary hidden">'.__("Search", "aipim").'</button>
                     <script>$(function(){ $("#s").select(); });</script>
 
                   </form>
-
+									-->
     <p>&nbsp;</p>
     <div class="betizen-features">
       <div class="row align-items-center justify-content-between pb-0 pb-lg-4">
