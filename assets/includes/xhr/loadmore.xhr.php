@@ -45,9 +45,9 @@ function aipim_loadmore() {
     if ($loadmore_action == "load-top-casinos"){
 
         $the_query_casinos = new WP_Query( array(
-            'showposts' => 10,
+            'showposts' => 5,
             'post_type' => 'casinos',
-            'posts_per_page' => 10,
+            'posts_per_page' => 5,
             'paged' => $loadmore_count,
             'meta_key' => 'ranking',
             'orderby' => 'meta_value_num',

@@ -278,7 +278,7 @@ function aipim_loadmore_casinos_html($o_casino, $redirect_to_casino = false){
 
 }
 
-function aipim_loadmore_bonus_html($o_bonus, $layout = "table"){
+function aipim_loadmore_bonus_html($o_bonus, $layout = "table", $type="complex"){
   $html_loadmore = "";
 
   $casino_id = get_field( 'casino_id', $o_bonus->ID);
@@ -350,21 +350,38 @@ function aipim_loadmore_bonus_html($o_bonus, $layout = "table"){
       $bonusExcerpt = substr($bonusExcerpt, 0, 125)."...";
     }
 
+    $contentBox = '
+
+    ';
+
+   $contentBox = '<div class="card-text text-center">'.get_field("bonus_title", $o_bonus->ID).'</div>';
+
+    if ($type == "simple"){
+      $contentBox = '
+      <div class="card-text text-center" style="padding-top:10px;font-size: 1.3rem;font-weight: bold;">
+        <div class="row p-0 m-0 mb-3 mb-sm-4">
+          <div class="col-4">'.$casino_thumb.'</div>
+          <div class="col p-0 m-0 pt-0 pt-sm-2">'.get_field("bonus_title", $o_bonus->ID).'</div>
+        </div>
+      </div>';
+
+    }
+
     $html_loadmore .= '<div class="col-sm-4 m-0 mt-2 mt-sm-0 p-1">';
       $html_loadmore .= '<div class="card card-tablebonus card-multibonus">';
       $html_loadmore .= '  <div>';
       $html_loadmore .= '    <img src="'.$bonus_image.'" class="card-img-top" alt="'.__("bonus-image", "aipim").'">';
       $html_loadmore .= '    <a href="'.$bonus_url.'" data-toggle="tooltip" data-placement="top" title="'.__("More info", "aipim").'" class="card-bonus-moreinfo knowmore-icon-link"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>';
       // $html_loadmore .= '    <span class="card-bonus-moreinfo knowmore-icon-link">#'.get_field("ranking", $o_bonus->ID).'</span>';
-      $html_loadmore .= '    <div class="bonus-rank rtp-content"><h6>#'.get_field("ranking", $o_bonus->ID).'</h6></div> ';
+      // $html_loadmore .= '    <div class="bonus-rank rtp-content"><h6>#'.get_field("ranking", $o_bonus->ID).'</h6></div> ';
       $html_loadmore .= '  </div>';
-      $html_loadmore .= '  <div class="card-img-overlay" style="background:linear-gradient(to top left,transparent 0%,rgba(0,0,0,0.6) 100%);">';
+      $html_loadmore .= '  <div class="card-img-overlay" style="background:linear-gradient(to top left,transparent 0%,rgba(0,0,0,1) 100%);">';
       $html_loadmore .= '  <div class="card-body p-0">';
-      $html_loadmore .= '   <h5 class="card-title text-center text-nowrap">'.$o_bonus->post_title.'</h5>';
-      $html_loadmore .= '    <p class="card-text text-center">'.get_field("bonus_title", $o_bonus->ID).'</p>';
-      $html_loadmore .= '    <p class="card-text text-center bonus-excerpt">'.$bonusExcerpt.'</p>';
+      $html_loadmore .= '   <h5 class="card-title text-center text-nowrap font-weight-normal"><strong>(#'.get_field("ranking", $o_bonus->ID).')</strong> '.$o_bonus->post_title.'</h5>';
+      $html_loadmore .= $contentBox;
+      if ($type == "complex") $html_loadmore .= '    <p class="card-text text-center bonus-excerpt">'.$bonusExcerpt.'</p>';
       $html_loadmore .= '
-                              <a rel="nofollow" target="_blank" role="button" href="'.$bonus_promo_code.'" class="btn btn-bonus btn-brand btn-block mb-1 ml-0 Xbtn-customcolor-outline text-uppercase">
+                              <a rel="nofollow" target="_blank" role="button" href="'.$bonus_promo_code.'" class="btn btn-outline-brand btn-sm btn-block btn-bonusbox text-uppercase">
                                 <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                                 '.__("Get bonus", "aipim").'
                               </a>

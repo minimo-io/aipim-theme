@@ -7,6 +7,11 @@ Description: A community theme developed for Betizen.org based on themes.getboot
 Version: 1.2.11
 */
 
+/* ::root {
+  --main-color: #7952B3;
+  --secondary-violet:#c29ef7;
+} */
+
 
 @charset "UTF-8";
 
@@ -14028,10 +14033,21 @@ a.maker-dot:hover{
 }
 .card-tablebonus-top .bonus-rank{
   border-radius:unset;
-  width:auto;
-  padding:.5rem;
+  width: auto;
+  padding: .5rem;
+  background-color: #ffffff;
+  border: 1px solid rgb(213, 220, 229);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  max-width: 145px;
 }
-.card-tablebonus-top .bonus-rank h6{ line-height: 1rem;}
+.card-tablebonus-top .bonus-rank h6{ line-height: .9rem; color:#99a2ad;}
+.card-tablebonus-top .avg-inline{ opacity:.5; color:#000 !important; vertical-align: top;}
+.smallCasinoFigure .avg-inline{ display:none;}
 .card-tablebonus h5, .card-tablebonus .card-text{ color:white;font-weight: bold; }
 .card-tablebonus .card-text{ font-weight: normal;}
 .card-tablebonus .bonus-excerpt{
@@ -14146,12 +14162,24 @@ a.knowmore-icon-link:hover{
   color: #000;
   font-size: 22px;
 }
+.btn-bonusbox{
+  background-color:white !important;
+  border:none;
+  opacity:.6;
+}
+.btn-bonusbox:hover{
+  color:var(--main-color) !important;
+  opacity:1;
+}
+.home-titles{ font-size:1.8rem; color:rgb(44, 44, 44); }
+
 
 /* custom media */
 a.navbar-brand img{ width:130px;}
 a.button-join-small{ font-size: 17px !important; }
 @media (max-width: 992px) {
   #casinos-table .rating-display{ display:none; }
+  .card-tablebonus-top .rating-display{ display:block !important; }
 }
 @media (max-width: 768px) {
   .general-description{ font-size:15px; }
@@ -14243,6 +14271,8 @@ a.button-join-small{ font-size: 17px !important; }
   .card-tablebonus-top{
     font-size:1.2rem;
   }
+  .home-titles{ font-size:1.4rem; text-align:center; }
+  .home-subtitles{ text-align:center; }
 }
 @media (max-width: 450px) {
   .knowledge-base h4{ font-size:1.05rem; }

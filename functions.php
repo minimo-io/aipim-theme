@@ -30,6 +30,7 @@ require_once(  get_template_directory() . '/assets/includes/shortcodes/short-pla
 require_once(  get_template_directory() . '/assets/includes/shortcodes/contentIndex.inc.php');
 require_once(  get_template_directory() . '/assets/includes/shortcodes/siteFigures.inc.php');
 require_once(  get_template_directory() . '/assets/includes/shortcodes/startRightHere.inc.php');
+require_once(  get_template_directory() . '/assets/includes/shortcodes/topBonuses.inc.php');
 // extra functionalities
 require_once(  get_template_directory() . '/assets/includes/user-ip-on-signup.inc.php');
 // xhr / ajax calls

@@ -3,7 +3,8 @@
 
 function short_aipimFigures( $atts ) {
 	$atts = shortcode_atts( array(
-		'type' => 'siteFigures'
+		'type' => 'siteFigures',
+		'small' => 'no'
 	), $atts, 'sitefigures' );
 
 	// site figures for each vertical
@@ -128,21 +129,28 @@ function short_aipimFigures( $atts ) {
 	      $ret .= '  <div>';
 	      $ret .= '    <img src="'.$bonus_image.'" class="card-img-top" alt="'.__("bonus-image", "aipim").'">';
 	      $ret .= '    <a href="'.$bonus_url.'" data-toggle="tooltip" data-placement="top" title="'.__("More info", "aipim").'" class="card-bonus-moreinfo knowmore-icon-link"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>';
-	      $ret .= '    <div class="bonus-rank rtp-content"><h6>'.__("Best bonus", "aipim").'</h6></div> ';
+	      $ret .= '    <div class="bonus-rank rtp-content rounded"><h6>'.__("Best bonus", "aipim").'</h6></div> ';
 	      $ret .= '  </div>';
 	      $ret .= '  <div class="card-img-overlay" style="background:linear-gradient(to top left,transparent 0%,rgba(0,0,0,0.6) 100%);">';
 		      $ret .= '  <div class="card-body p-0">';
-		      $ret .= '   <h5 class="card-title text-center text-nowrap">'.$o_bonus->post_title.'</h5>';
-		      $ret .= '    <p class="card-text text-center" style="padding-top:25px;font-size: 1.5rem;font-weight: bold;">'.get_field("bonus_title", $o_bonus->ID).'</p>';
-		      // $ret .= '    <p class="card-text text-center bonus-excerpt">'.$bonusExcerpt.'</p>';
+		      $ret .= '   <h5 class="card-title text-center text-nowrap font-weight-normal">'.$o_bonus->post_title.'</h5>';
+					$ret .= '
+								      <div class="card-text text-center" style="font-size: 1.3rem;font-weight: bold;">
+								        <div class="row p-0 m-0 mb-3 mb-sm-4" style="display:flex;">
+								          <div class="col-4">'.$casino_thumb.'</div>
+								          <div class="col p-0 m-0 pt-0 pt-sm-2">'.get_field("bonus_title", $o_bonus->ID).'</div>
+								        </div>
+								      </div>
+					';
+					$ret .= '
+														<a rel="nofollow" target="_blank" role="button" href="'.$bonus_promo_code.'" style="z-index:10;" class="btn btn-outline-brand btn-sm btn-block btn-bonusbox text-uppercase">
+															<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+															'.__("Get bonus", "aipim").'
+														</a>
+					';
 		      $ret .= '  </div>';
 	      $ret .= '  </div>';
-				$ret .= '
-													<a rel="nofollow" target="_blank" role="button" href="'.$bonus_promo_code.'" style="z-index:10;" class="btn btn-bonus btn-brand btn-block mb-0 ml-0 Xbtn-customcolor-outline text-uppercase">
-														<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-														'.__("Get bonus", "aipim").'
-													</a>
-				';
+
 	      $ret .= '</div>';
 	    $ret .= '</div>';
 		}
@@ -162,28 +170,29 @@ function short_aipimFigures( $atts ) {
 		foreach ($the_top_query->posts as $o_bonus){
 
 			$ret .= '<div class="col-sm-4 m-0 mt-2 mt-sm-0 p-1">';
-	      $ret .= '<div class="card card-tablebonus card-tablebonus-top">';
+	      $ret .= '<div class="card card-tablebonus card-tablebonus-top '.($atts["small"] == 'yes' ? "smallCasinoFigure" : "" ).'">';
 	      $ret .= '  <div>';
 	      // $ret .= '    <img src="'.get_the_post_thumbnail_url($o_bonus->ID, 'am-180').'" class="card-img-top" alt="'.__("bonus-image", "aipim").'">';
 	      $ret .= '    <a href="#" data-toggle="tooltip" data-placement="top" title="'.__("More info", "aipim").'" class="card-bonus-moreinfo knowmore-icon-link"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>';
-	      $ret .= '    <div class="bonus-rank rtp-content"><h6>'.__("Best casino", "aipim").'</h6></div> ';
+	      $ret .= '    <div class="bonus-rank rtp-content rounded"><h6>'.__("Best casino", "aipim").'</h6></div> ';
 	      $ret .= '  </div>';
 	      // $ret .= '  <div class="card-img-overlay" style="background:linear-gradient(to top left,transparent 0%,rgba(0,0,0,0.6) 100%);">';
 	      $ret .= '  <div class="card-body p-0">';
 	      // $ret .= '   <h5 class="card-title text-center text-nowrap">'.__("The best casino", "aipim").'</h5>';
-	      $ret .= '    <p class="card-text text-center my-3" style="margin-top:25px !important;margin-bottom:25px !important;"><img width="150" src="'.get_the_post_thumbnail_url($o_bonus->ID, 'am-300').'" alt="'.__("bonus-image", "aipim").'"></p>';
-	      $ret .= '    <p class="card-text text-center">'.get_field("bonus_title", $o_bonus->ID).'</p>';
-	      // $ret .= '    <p class="card-text text-center bonus-excerpt">'.$bonusExcerpt.'</p>';
+	      $ret .= '    <div class="card-text text-center my-3" style="margin-top:25px !important;margin-bottom:10px !important;">
+												<a href="'.get_permalink($o_bonus->ID).'">
+													<img class="mb-2" width="'.($atts["small"] == 'yes' ? "100" : "120" ).'" src="'.get_the_post_thumbnail_url($o_bonus->ID, 'am-300').'" alt="'.__("bonus-image", "aipim").'">
+													</a>
+												<center>'. do_shortcode("[wppr_avg_rating size='".($atts["small"] == 'yes' ? "25" : "28" )."' hide_count='0' post_id='".$o_bonus->ID."']").'</center>
+											</div>';
+	      // $ret .= '    '.get_field("bonus_title", $o_bonus->ID).''.$atts["small"];
 	      $ret .= '
-	                        <a role="button" href="'.get_permalink($o_bonus->ID).'" class="btn btn-bonus btn-brand btn-block mb-0 ml-0 Xbtn-customcolor-outline text-uppercase">
+	                        <a role="button" href="'.get_permalink($o_bonus->ID).'" class="btn btn-outline-brand btn-sm btn-block btn-bonusbox text-uppercase pt-0">
 	                          <i class="fa fa-info-circle" aria-hidden="true"></i>
 	                          '.__("Analysis", "aipim").'
 	                        </a>
 	      ';
 	      $ret .= '  </div>';
-	      // $ret .= '   <div class="card-footer">';
-	      // $ret .= '     <small class="text-muted">'.$bonus_status.'</small>';
-	      // $ret .= '   </div>';
 	      $ret .= '</div>';
 	    $ret .= '</div>';
 		}
@@ -202,32 +211,40 @@ function short_aipimFigures( $atts ) {
 		) );
 		foreach ($the_top_query->posts as $o_bonus){
 
+			$terms = get_the_terms( $o_bonus->ID, 'proveedores' );
+			$term = array_pop($terms);
+			$termImage = get_field('imagen_del_proveedor', $term);
+			$termImage = '<img width="80" src="'.$termImage["sizes"]["thumbnail"].'" class="theme-card__img wp-post-image rounded-circle" alt="provider-image" />';
+
 			$ret .= '<div class="col-sm-4 m-0 mt-2 mt-sm-0 p-1">';
 	      $ret .= '<div class="card card-tablebonus card-tablebonus-top">';
 	      $ret .= '  <div>';
 	      $ret .= '    <img src="'.get_the_post_thumbnail_url($o_bonus->ID, 'am-180').'" class="card-img-top" alt="'.__("bonus-image", "aipim").'">';
-	      $ret .= '    <a href="#" data-toggle="tooltip" data-placement="top" title="'.__("More info", "aipim").'" class="card-bonus-moreinfo knowmore-icon-link"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>';
-	      $ret .= '    <div class="bonus-rank rtp-content"><h6>'.__("Best game", "aipim").'</h6></div> ';
+	      $ret .= '    <a href="'.$bonus_url.'" data-toggle="tooltip" data-placement="top" title="'.__("More info", "aipim").'" class="card-bonus-moreinfo knowmore-icon-link"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>';
+	      $ret .= '    <div class="bonus-rank rtp-content rounded"><h6>'.__("Best game", "aipim").'</h6></div> ';
 	      $ret .= '  </div>';
-	      // $ret .= '  <div class="card-img-overlay" style="background:linear-gradient(to top left,transparent 0%,rgba(0,0,0,0.6) 100%);">';
-	      $ret .= '  <div class="card-body p-0">';
-	      // $ret .= '   <h5 class="card-title text-center text-nowrap">'.__("The best casino", "aipim").'</h5>';
-	      // $ret .= '    <p class="card-text text-center my-3"><img width="150" src="'.get_the_post_thumbnail_url($o_bonus->ID, 'am-300').'" alt="'.__("bonus-image", "aipim").'"></p>';
-	      // $ret .= '    <p class="card-text text-center">'.get_field("bonus_title", $o_bonus->ID).'</p>';
-	      // $ret .= '    <p class="card-text text-center bonus-excerpt">'.$bonusExcerpt.'</p>';
-	      $ret .= '
-	                        <a role="button" href="'.get_permalink($o_bonus->ID).'" class="btn btn-bonus btn-brand btn-block mb-0 ml-0 Xbtn-customcolor-outline text-uppercase">
-	                          <i class="fa fa-play" aria-hidden="true"></i>
-	                          '.__("Play game", "aipim").'
-	                        </a>
-	      ';
+	      $ret .= '  <div class="card-img-overlay" style="background:linear-gradient(to top left,transparent 0%,rgba(0,0,0,0.6) 100%);">';
+		      $ret .= '  <div class="card-body p-0">';
+		      $ret .= '   <h5 class="card-title text-center text-nowrap font-weight-normal">'.$o_bonus->post_title.'</h5>';
+					$ret .= '
+								      <div class="card-text text-center" style="font-size: 1.3rem;font-weight: bold;">
+								        <div class="row p-0 m-0 mb-3 mb-sm-4" style="display:flex;">
+								          <div class="col-12 text-center">'.$termImage.'</div>
+								        </div>
+								      </div>
+					';
+					$ret .= '
+											<a role="button" href="'.get_permalink($o_bonus->ID).'" style="z-index:10;" class="btn btn-outline-brand btn-sm btn-block btn-bonusbox text-uppercase">
+												<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+												'.__("Play game", "aipim").'
+											</a>
+					';
+		      $ret .= '  </div>';
 	      $ret .= '  </div>';
-	      $ret .= '  </div>';
-	      // $ret .= '   <div class="card-footer">';
-	      // $ret .= '     <small class="text-muted">'.$bonus_status.'</small>';
-	      // $ret .= '   </div>';
+
 	      $ret .= '</div>';
 	    $ret .= '</div>';
+
 		}
 
 		wp_reset_postdata();

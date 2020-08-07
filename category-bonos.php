@@ -96,7 +96,7 @@
                         $html_casinos_table = "";
                         if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                             <?php
-                            $html_casinos_table .= aipim_loadmore_bonus_html($post, "table");
+                            $html_casinos_table .= aipim_loadmore_bonus_html($post, "table", "simple");
                             $c_casinos++;
                         endwhile; else :
                         ?>

@@ -77,28 +77,27 @@
 
 <section class="section">
     <div class="container">
-      <?php
-      echo do_shortcode("[sitefigures]")
-      ?>
-        <br>
+      <?php echo do_shortcode("[sitefigures]"); ?>
+      <!-- <br> -->
+      <br><br>
 
         <div class="theme-cards-holder">
             <div class="theme-cards__heading">
                 <div>
-                    <h5 id="top-casinos" class="theme-cards__title"><?php _e("The best online casinos", "aipim"); ?></h5>
-                    <p class="text-gray-soft"><?php _e("According to other users. Vote now, free now, you decide!", "aipim"); ?></p>
+                    <h5 id="top-casinos" class="home-titles theme-cards__title"><?php _e("The best online casinos", "aipim"); ?></h5>
+                    <p class="home-subtitles text-gray-soft"><?php _e("According to other users. Vote now, free now, you decide!", "aipim"); ?></p>
                 </div>
                 <a class="theme-cards__heading__button btn btn-outline-brand btn-sm" href="<?php echo site_url().__("/en/online-casinos/", "aipim"); ?>"><?php _e("See all", "aipim");  ?></a>
             </div>
-            <div id="casinos-table" class="row">
+            <div id="casinos-table" class="row pt-0">
 
                 <table class="table table-striped">
                     <tbody class="casinos-table-body">
                         <?php
                         $the_query_casinos = new WP_Query( array(
-                            'showposts' => 10,
+                            'showposts' => 5,
                             'post_type' => 'casinos',
-                            'posts_per_page' => 10,
+                            'posts_per_page' => 5,
                             'meta_key' => 'ranking',
                             'orderby' => 'meta_value_num',
                             'order' => 'ASC',
@@ -119,15 +118,35 @@
         </div>
 
 
+
+        <!-- TOP BONUSES SECTION -->
+        <div class="theme-cards-holder">
+            <div class="theme-cards__heading mb-0">
+                <div>
+                    <h5 id="top-bonuses" class="home-titles theme-cards__title"><?php _e("The best casino bonuses", "aipim"); ?></h5>
+                    <p class="home-subtitles text-gray-soft"><?php _e("According to other users. Vote now, free now, you decide!", "aipim"); ?></p>
+                </div>
+                <a class="theme-cards__heading__button btn btn-outline-brand btn-sm" href="<?php echo site_url().__("/en/bonuses/", "aipim"); ?>"><?php _e("See all", "aipim");  ?></a>
+            </div>
+            <?php
+            echo do_shortcode("[topbonuses]");
+            ?>
+          <a class="btn btn-brand btn-block d-md-none mt-3" href="<?php echo site_url().__("/en/bonuses/", "aipim");  ?>"><?php _e("View all bonuses", "aipim");  ?></a>
+        </div>
+
+
+
+
+
         <?php require_once(get_template_directory()."/assets/includes/testimonials.inc.php"); ?>
 
         <hr class="thick-hr" />
 
         <div class="theme-cards-holder" style="border-bottom:0;">
-            <div class="theme-cards__heading">
+            <div class="theme-cards__heading mt-4">
                 <div>
-                    <h5 id="top-games" class="theme-cards__title"><?php _e("Top ranked games", "aipim");  ?></h5>
-                    <p class="text-gray-soft"><?php _e("These are the best games according to other users", "aipim"); ?></p>
+                    <h5 id="top-games" class="home-titles theme-cards__title"><?php _e("Top ranked games", "aipim");  ?></h5>
+                    <p class="home-subtitles text-gray-soft"><?php _e("These are the best games according to other users", "aipim"); ?></p>
                 </div>
                 <a class="theme-cards__heading__button btn btn-outline-brand btn-sm" href="<?php echo site_url().__("/en/games/", "aipim"); ?>"><?php _e("See all", "aipim");  ?></a>
             </div>
