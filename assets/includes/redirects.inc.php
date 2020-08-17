@@ -8,6 +8,7 @@ function aipim_site_redirect(){
       wp_safe_redirect( $url, 301 );
       exit();
   }
+
   if ( aipim_current_page() == 'https://www.betizen.org:443/pt-br/bonus/' ) {
       $url = site_url( '/pt-br/promocoes/' );
       wp_safe_redirect( $url, 301 );
@@ -24,7 +25,18 @@ function aipim_site_redirect(){
     wp_safe_redirect( $url, 301 );
     exit();
   }
+  // others
+  if ( aipim_current_page() == 'https://www.betizen.org:443/casino/' ) {
+      $url = site_url( '/casinos/' );
+      wp_safe_redirect( $url, 301 );
+      exit();
+  }
 
+  if ( aipim_current_page() == 'https://www.betizen.org:443/juego/' ) {
+      $url = site_url( '/juegos/' );
+      wp_safe_redirect( $url, 301 );
+      exit();
+  }
 }
 add_action( 'template_redirect', 'aipim_site_redirect' );
 

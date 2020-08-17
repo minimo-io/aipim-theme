@@ -398,9 +398,8 @@
 
 
                                           </div>
-
-                                            <button id="btn-opinion-right" type="button" class="btn btn-brand btn-block btn-checkout up btn-customcolor" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true"> <span class="btn-text"><?php _e("Write review", "aipim");  ?></span></button>
-                                            <a href="<?php echo am_link_external(get_field("link_default"), Array('type'=>'casino', 'id'=>get_the_ID()));  ?>" rel="nofollow" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline"><?php _e("Visit", "aipim");  ?></a>
+                                            <a href="<?php echo am_link_external(get_field("link_default"), Array('type'=>'casino', 'id'=>get_the_ID()));  ?>" rel="nofollow" class="btn btn-brand btn-block btn-checkout up btn-customcolor"><?php _e("Visit", "aipim");  ?></a>
+                                            <button id="btn-opinion-right" type="button" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true"> <span class="btn-text"><?php _e("Write review", "aipim");  ?></span></button>
                                             <button data-favs-action="<?php echo $fav_action; ?>" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline favs-button"><i class="fa <?php echo $fav_icon; ?>" aria-hidden="true"></i>&nbsp;<?php echo $fav_text; ?></button>
 
 

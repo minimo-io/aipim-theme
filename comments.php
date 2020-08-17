@@ -246,7 +246,7 @@ if ("juegos" == $post_type || "casinos" == $post_type || "bonus" == $post_type){
 
 
   $sp_rating_name = get_the_title();
-  $sp_rating_description = addslashes(get_the_excerpt());
+  $sp_rating_description = addslashes( str_replace(Array('"', "'", "\t", "\r", "\n"), " ",  strip_tags(get_the_excerpt())  ));
   $sp_rating_image = get_the_post_thumbnail_url();
 
   if ($sp_rating_count == 0) $sp_rating_count = 1;

@@ -14172,8 +14172,24 @@ a.knowmore-icon-link:hover{
   opacity:1;
 }
 .home-titles{ font-size:1.8rem; color:rgb(44, 44, 44); }
-
-
+.newCasinoTR{
+  opacity:.9;
+  transition: opacity .2s ease-in-out;
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(41deg, rgba(255,255,255,0.2903536414565826) 0%, rgba(121,82,179,1) 100%);
+  background: -webkit-linear-gradient(41deg, rgba(255,255,255,0.2903536414565826) 0%, rgba(121,82,179,1) 100%);
+  background: linear-gradient(41deg, rgba(255,255,255,0.2903536414565826) 0%, rgba(121,82,179,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#7952b3",GradientType=1);
+}
+.newCasinoTR td, .newCasinoTR th, .newCasinoTR .fa-star{ color:white !important; }
+.newCasinoTR .badge{ font-size:1.2rem; }
+.newCasinoTR:hover{
+  opacity:1;
+}
+.newCasinoTR .btn-table-more:nth-child(2){
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
 /* custom media */
 a.navbar-brand img{ width:130px;}
 a.button-join-small{ font-size: 17px !important; }
@@ -14273,6 +14289,8 @@ a.button-join-small{ font-size: 17px !important; }
   }
   .home-titles{ font-size:1.4rem; text-align:center; }
   .home-subtitles{ text-align:center; }
+
+  .newCasinoTR .badge{ font-size:.8rem; }
 }
 @media (max-width: 450px) {
   .knowledge-base h4{ font-size:1.05rem; }

@@ -94,8 +94,25 @@
                 <table class="table table-striped">
                     <tbody class="casinos-table-body">
                         <?php
+                        // get latest casino
+                        $the_query_casinos = new WP_Query( array(
+                            'showposts' => 1,
+                            'post_type' => 'casinos',
+                            'posts_per_page' => 1,
+                            'orderby' => 'date',
+                            'order' => 'DESC',
+                            'post_status' => 'publish'
+                        ) );
+                        $exclude_latest = 0;
+                        foreach ($the_query_casinos->posts as $casino){
+                          $exclude_latest = $casino->ID;
+                          echo aipim_loadmore_casinos_html($casino, false, "new");
+                        }
+
+                        wp_reset_postdata();
                         $the_query_casinos = new WP_Query( array(
                             'showposts' => 5,
+                            // 'post__not_in' => array($exclude_latest),
                             'post_type' => 'casinos',
                             'posts_per_page' => 5,
                             'meta_key' => 'ranking',

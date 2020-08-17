@@ -228,7 +228,7 @@ function aipim_casino_reputation_html($casino_thumb, $reputation_label, $o_casin
   return $casino_rep_content;
 }
 
-function aipim_loadmore_casinos_html($o_casino, $redirect_to_casino = false){
+function aipim_loadmore_casinos_html($o_casino, $redirect_to_casino = false, $type = "normal"){
 
   $html_loadmore = "";
 
@@ -244,9 +244,11 @@ function aipim_loadmore_casinos_html($o_casino, $redirect_to_casino = false){
 
   $casino_link_external = am_link_external(get_field("link_default", $o_casino->ID), Array('type'=>'casino', 'id'=>$o_casino->ID));
 
-  $html_loadmore .= '<tr>';
+  if ($type == "normal") $html_loadmore .= '<tr>';
+  if ($type == "new") $html_loadmore .= '<tr class="newCasinoTR">';
   $html_loadmore .=    '<th scope="row" class="table-ranking-ner">';
-  $html_loadmore .=        '#'.get_field("ranking", $o_casino->ID);
+  if ($type == "normal") $html_loadmore .=        '#'.get_field("ranking", $o_casino->ID);
+  if ($type == "new") $html_loadmore .=        '<span class="badge badge-pill badge-danger animated infinite pulse"><i class="fa fa-bell mr-1" aria-hidden="true"></i>'.__("New!", "aipim").'</span>';
   $html_loadmore .=    '</th>';
   $html_loadmore .=   '<td>';
   $html_loadmore .=        '<a class="casino-table-image" href="'.$casino_url.'">';
@@ -266,7 +268,8 @@ function aipim_loadmore_casinos_html($o_casino, $redirect_to_casino = false){
   $html_loadmore .=    '<td>';
   if (false == $redirect_to_casino){
     $html_loadmore .=        '<a href="'.$casino_url.'" class="btn btn-brand btn-bg btn-table-more"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;'.__("Analysis", "aipim").'</a>';
-    $html_loadmore .=        '<a href="'.$casino_link_external.'" rel="sponsored" target="_blank" class="ml-1 btn btn-outline-brand btn-bg btn-table-more btn-table-link d-none d-sm-inline-block d-md-none d-lg-inline-block"><i class="fa fa-external-link" aria-hidden="true"></i></a>';
+    if ($type == "normal") $html_loadmore .=        '<a href="'.$casino_link_external.'" rel="sponsored" target="_blank" class="ml-1 btn btn-outline-brand btn-bg btn-table-more btn-table-link d-none d-sm-inline-block d-md-none d-lg-inline-block"><i class="fa fa-external-link" aria-hidden="true"></i></a>';
+    if ($type == "new") $html_loadmore .=        '<a href="'.$casino_link_external.'" rel="sponsored" target="_blank" class="ml-1 btn btn-brand btn-bg btn-table-more d-none d-sm-inline-block d-md-none d-lg-inline-block"><i class="fa fa-external-link" aria-hidden="true"></i></a>';
   }else{
     $casino_promo_code = am_link_external(get_field("link_default", $o_casino->ID), Array('type'=>'casino', 'id'=>$o_casino->ID));
     $html_loadmore .=        '<a class="btn btn-brand btn-bg btn-table-more" href="'.$casino_promo_code.'" rel="sponsored" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>&nbsp;'.__("Visit", "aipim").'</a>';
