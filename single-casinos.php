@@ -377,69 +377,72 @@
                                         </div>
                                         <div class="col-lg-4 d-none d-lg-block pl-xs-0 pl-lg-5 casino-sidebar">
                                           <!-- SIDEBAR  -->
+                                          <div class="sidebar-lg">
+                                            <div class="theme-purchases">
+                                                <div class="text-center Xd-flex Xjustify-content-between align-items-center mb-1">
+                                                    <h2 class="Xd-flex align-items-center"><span class="woocommerce-Price-amount amount ranking-big"><span class="woocommerce-Price-currencySymbol"></span>#<?php echo get_field("ranking"); ?></span><a class="knowmore-icon-main" href="<?php _e("/en/ranks/", "aipim"); ?>"><i class="fa fa-info-circle" aria-hidden="true"></i></a></h2>
 
-                                          <div class="theme-purchases">
-                                              <div class="text-center Xd-flex Xjustify-content-between align-items-center mb-1">
-                                                  <h2 class="Xd-flex align-items-center"><span class="woocommerce-Price-amount amount ranking-big"><span class="woocommerce-Price-currencySymbol"></span>#<?php echo get_field("ranking"); ?></span><a class="knowmore-icon-main" href="<?php _e("/en/ranks/", "aipim"); ?>"><i class="fa fa-info-circle" aria-hidden="true"></i></a></h2>
-
-                                              </div>
-                                              <div class="theme-purchases__item" style="border-top:0;">
-                                                  <a class="theme-purchases__item__inner text-center pt-0" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true">
-                                                      <?php
-                                                      // echo gdrts_posts_render_rating();
-                                                      echo do_shortcode("[wppr_avg_rating size='35']");
-                                                      ?>
-                                                  </a>
-                                                  <div class="theme-purchases__item__inner text-center am-favorite" style="display:none;">
-                                                      <?php //the_favorites_button(get_the_ID(), NULL, "games"); ?>
-                                                      <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url(get_permalink());  ?>" rel="nofollow" target="_blank"><i class="fa fa-facebook-square fa-4x" aria-hidden="true"></i></a>
-                                                  </div>
-                                              </div>
-
-
-                                          </div>
-                                            <a href="<?php echo am_link_external(get_field("link_default"), Array('type'=>'casino', 'id'=>get_the_ID()));  ?>" rel="nofollow" class="btn btn-brand btn-block btn-checkout up btn-customcolor"><?php _e("Visit", "aipim");  ?></a>
-                                            <button id="btn-opinion-right" type="button" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true"> <span class="btn-text"><?php _e("Write review", "aipim");  ?></span></button>
-                                            <button data-favs-action="<?php echo $fav_action; ?>" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline favs-button"><i class="fa <?php echo $fav_icon; ?>" aria-hidden="true"></i>&nbsp;<?php echo $fav_text; ?></button>
-
-
-
-                                            <div class="theme-description__list pt-2">
-
-                                                <div class="theme-description__list__item casino-reputation-box" style="font-size:20px;padding-bottom:26px;">
-                                                  <span class="theme-description__item__title"><?php _e("Reputation", "aipim");  ?></span>
-                                                  <button data-target="#tc-modal" data-toggle="modal" data-hasbutton="0" data-title="<?php _e("Reputation details", "aipim"); ?>" data-content="<?php echo $casino_rep_content; ?>" type="button" class="btn btn-<?php echo aipim_reputation_color(get_field("sensacion_de_reputacion")); ?> text-uppercase btn-casino-reputation"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;<?php echo $reputation_label; ?></button>
                                                 </div>
-                                                <?php
-                                                $en_contra = get_field("en_contra");
-                                                if (!empty($en_contra)){
-                                                ?>
-                                                  <div class="theme-description__list__item">
-                                                      <ul class="casino-cons-box theme-purchases">
-                                                        <?php echo $en_contra; ?>
-                                                      </ul>
-                                                  </div>
-                                                <?php
-                                                }
-                                                ?>
-                                                <?php
-                                                $a_favor = get_field("a_favor");
-                                                if (!empty($a_favor)){
-                                                ?>
-                                                  <div class="theme-description__list__item">
-                                                      <ul class="casino-pros-box theme-purchases">
-                                                        <?php echo $a_favor; ?>
-                                                      </ul>
-                                                  </div>
-                                                <?php
-                                                }
-                                                ?>
-                                                <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Founded", "aipim");  ?></span><span><?php the_field("fundado");  ?></span></div>
+                                                <div class="theme-purchases__item" style="border-top:0;">
+                                                    <a class="theme-purchases__item__inner text-center pt-0" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true">
+                                                        <?php
+                                                        // echo gdrts_posts_render_rating();
+                                                        echo do_shortcode("[wppr_avg_rating size='35']");
+                                                        ?>
+                                                    </a>
+                                                    <div class="theme-purchases__item__inner text-center am-favorite" style="display:none;">
+                                                        <?php //the_favorites_button(get_the_ID(), NULL, "games"); ?>
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url(get_permalink());  ?>" rel="nofollow" target="_blank"><i class="fa fa-facebook-square fa-4x" aria-hidden="true"></i></a>
+                                                    </div>
+                                                </div>
 
-                                                <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("License(s)", "aipim");  ?></span><span><?php the_field("licencias"); ?></span></div>
-                                                <?php if (!empty(get_field("tiempo_de_retiro"))){ ?><div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Withdrawal times", "aipim");  ?></span><span><?php echo str_replace(";", "<br>",get_field("tiempo_de_retiro")); ?></span></div><?php } ?>
-                                                <div class="theme-description__list__item align-items-center"><span class="theme-description__item__title"><?php _e("Questions?", "aipim");  ?></span><a class="btn btn-xs btn-outline-brand btn-customcolor-outline" href="mailto:<?php echo AM_CONTACT_TO;  ?>"><?php _e("Contact us", "aipim");  ?></a></div>
+
                                             </div>
+                                              <a href="<?php echo am_link_external(get_field("link_default"), Array('type'=>'casino', 'id'=>get_the_ID()));  ?>" rel="nofollow" class="btn btn-brand btn-block btn-checkout up btn-customcolor"><?php _e("Visit", "aipim");  ?></a>
+                                              <button id="btn-opinion-right" type="button" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true"> <span class="btn-text"><?php _e("Write review", "aipim");  ?></span></button>
+                                              <button data-favs-action="<?php echo $fav_action; ?>" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline favs-button"><i class="fa <?php echo $fav_icon; ?>" aria-hidden="true"></i>&nbsp;<?php echo $fav_text; ?></button>
+
+
+
+                                              <div class="theme-description__list pt-2">
+
+                                                  <div class="theme-description__list__item casino-reputation-box" style="font-size:20px;padding-bottom:26px;">
+                                                    <span class="theme-description__item__title"><?php _e("Reputation", "aipim");  ?></span>
+                                                    <button data-target="#tc-modal" data-toggle="modal" data-hasbutton="0" data-title="<?php _e("Reputation details", "aipim"); ?>" data-content="<?php echo $casino_rep_content; ?>" type="button" class="btn btn-<?php echo aipim_reputation_color(get_field("sensacion_de_reputacion")); ?> text-uppercase btn-casino-reputation"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;<?php echo $reputation_label; ?></button>
+                                                  </div>
+                                                  <?php
+                                                  $en_contra = get_field("en_contra");
+                                                  if (!empty($en_contra)){
+                                                  ?>
+                                                    <div class="theme-description__list__item">
+                                                        <ul class="casino-cons-box theme-purchases">
+                                                          <?php echo $en_contra; ?>
+                                                        </ul>
+                                                    </div>
+                                                  <?php
+                                                  }
+                                                  ?>
+                                                  <?php
+                                                  $a_favor = get_field("a_favor");
+                                                  if (!empty($a_favor)){
+                                                  ?>
+                                                    <div class="theme-description__list__item">
+                                                        <ul class="casino-pros-box theme-purchases">
+                                                          <?php echo $a_favor; ?>
+                                                        </ul>
+                                                    </div>
+                                                  <?php
+                                                  }
+                                                  ?>
+                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Founded", "aipim");  ?></span><span><?php the_field("fundado");  ?></span></div>
+
+                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("License(s)", "aipim");  ?></span><span><?php the_field("licencias"); ?></span></div>
+                                                  <?php if (!empty(get_field("tiempo_de_retiro"))){ ?><div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Withdrawal times", "aipim");  ?></span><span><?php echo str_replace(";", "<br>",get_field("tiempo_de_retiro")); ?></span></div><?php } ?>
+                                                  <div class="theme-description__list__item align-items-center"><span class="theme-description__item__title"><?php _e("Questions?", "aipim");  ?></span><a class="btn btn-xs btn-outline-brand btn-customcolor-outline" href="mailto:<?php echo AM_CONTACT_TO;  ?>"><?php _e("Contact us", "aipim");  ?></a></div>
+                                              </div>
+                                          </div>
+
+
                                         </div>
                                     </div>
                                 </div>

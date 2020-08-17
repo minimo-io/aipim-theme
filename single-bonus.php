@@ -268,40 +268,46 @@
                                         </div>
                                         <div class="col-lg-4 d-none d-lg-block pl-xs-0 pl-lg-5 casino-sidebar">
                                           <!-- SIDEBAR  -->
+                                          <div class="sidebar-lg">
+                                            <div class="theme-purchases">
+                                                <div class="text-center Xd-flex Xjustify-content-between align-items-center mb-1">
+                                                    <h2 class="Xd-flex align-items-center"><span class="woocommerce-Price-amount amount ranking-big"><span class="woocommerce-Price-currencySymbol"></span>#<?php echo get_field("ranking"); ?></span><a class="knowmore-icon-main" href="<?php _e("/en/ranks/", "aipim"); ?>"><i class="fa fa-info-circle" aria-hidden="true"></i></a></h2>
 
-                                          <div class="theme-purchases">
-                                              <div class="text-center Xd-flex Xjustify-content-between align-items-center mb-1">
-                                                  <h2 class="Xd-flex align-items-center"><span class="woocommerce-Price-amount amount ranking-big"><span class="woocommerce-Price-currencySymbol"></span>#<?php echo get_field("ranking"); ?></span><a class="knowmore-icon-main" href="<?php _e("/en/ranks/", "aipim"); ?>"><i class="fa fa-info-circle" aria-hidden="true"></i></a></h2>
+                                                </div>
+                                                <div class="theme-purchases__item" style="border-top:0;">
+                                                    <a class="theme-purchases__item__inner text-center pt-0" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true">
+                                                        <?php
+                                                        // echo gdrts_posts_render_rating();
+                                                        echo do_shortcode("[wppr_avg_rating size='35']");
+                                                        ?>
+                                                    </a>
+                                                    <div class="theme-purchases__item__inner text-center am-favorite" style="display:none;">
+                                                        <?php //the_favorites_button(get_the_ID(), NULL, "games"); ?>
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url(get_permalink());  ?>" rel="nofollow" target="_blank"><i class="fa fa-facebook-square fa-4x" aria-hidden="true"></i></a>
+                                                    </div>
+                                                </div>
 
-                                              </div>
-                                              <div class="theme-purchases__item" style="border-top:0;">
-                                                  <a class="theme-purchases__item__inner text-center pt-0" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true">
-                                                      <?php
-                                                      // echo gdrts_posts_render_rating();
-                                                      echo do_shortcode("[wppr_avg_rating size='35']");
-                                                      ?>
-                                                  </a>
-                                                  <div class="theme-purchases__item__inner text-center am-favorite" style="display:none;">
-                                                      <?php //the_favorites_button(get_the_ID(), NULL, "games"); ?>
-                                                      <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url(get_permalink());  ?>" rel="nofollow" target="_blank"><i class="fa fa-facebook-square fa-4x" aria-hidden="true"></i></a>
-                                                  </div>
+
+                                            </div>
+
+                                              <button id="btn-opinion-right" type="button" class="btn btn-brand btn-block btn-checkout up btn-customcolor" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true"> <span class="btn-text"><?php _e("Write review", "aipim");  ?></span></button>
+                                              <a href="<?php echo $bonus_external_link;  ?>" target="_blank" rel="nofollow" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline"><?php _e("Get bonus", "aipim");  ?></a>
+
+
+
+                                              <div class="theme-description__list pt-2">
+
+                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Casino", "aipim");  ?></span><span><a href="<?php echo $casino_url; ?>"><?php echo $casino_title;  ?></a></span></div>
+
+                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Published", "aipim");  ?></span><span><?php echo human_time_diff( get_post_time(), current_time('timestamp') ); ?></span></div>
+                                                  <div class="theme-description__list__item align-items-center"><span class="theme-description__item__title"><?php _e("Questions?", "aipim");  ?></span><a class="btn btn-xs btn-outline-brand btn-customcolor-outline" href="mailto:<?php echo AM_CONTACT_TO;  ?>"><?php _e("Contact us", "aipim");  ?></a></div>
                                               </div>
 
 
                                           </div>
 
-                                            <button id="btn-opinion-right" type="button" class="btn btn-brand btn-block btn-checkout up btn-customcolor" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true"> <span class="btn-text"><?php _e("Write review", "aipim");  ?></span></button>
-                                            <a href="<?php echo $bonus_external_link;  ?>" target="_blank" rel="nofollow" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline"><?php _e("Get bonus", "aipim");  ?></a>
 
 
-
-                                            <div class="theme-description__list pt-2">
-
-                                                <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Casino", "aipim");  ?></span><span><a href="<?php echo $casino_url; ?>"><?php echo $casino_title;  ?></a></span></div>
-
-                                                <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Published", "aipim");  ?></span><span><?php echo human_time_diff( get_post_time(), current_time('timestamp') ); ?></span></div>
-                                                <div class="theme-description__list__item align-items-center"><span class="theme-description__item__title"><?php _e("Questions?", "aipim");  ?></span><a class="btn btn-xs btn-outline-brand btn-customcolor-outline" href="mailto:<?php echo AM_CONTACT_TO;  ?>"><?php _e("Contact us", "aipim");  ?></a></div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>

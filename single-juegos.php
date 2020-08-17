@@ -491,132 +491,136 @@
                                         </div>
                                         <div class="col-lg-4 d-none d-lg-block pl-xs-0 pl-lg-5 casino-sidebar">
                                           <!-- SIDEBAR  -->
+                                          <div class="sidebar-lg">
 
-                                          <div class="theme-purchases">
-                                              <div class="text-center Xd-flex Xjustify-content-between align-items-center mb-1">
-                                                  <h2 class="Xd-flex align-items-center"><span class="woocommerce-Price-amount amount ranking-big"><span class="woocommerce-Price-currencySymbol"></span>#<?php echo get_field("ranking"); ?></span><a class="knowmore-icon-main" href="<?php _e("/en/ranks/", "aipim"); ?>"><i class="fa fa-info-circle" aria-hidden="true"></i></a></h2>
+                                            <div class="theme-purchases">
+                                                <div class="text-center Xd-flex Xjustify-content-between align-items-center mb-1">
+                                                    <h2 class="Xd-flex align-items-center"><span class="woocommerce-Price-amount amount ranking-big"><span class="woocommerce-Price-currencySymbol"></span>#<?php echo get_field("ranking"); ?></span><a class="knowmore-icon-main" href="<?php _e("/en/ranks/", "aipim"); ?>"><i class="fa fa-info-circle" aria-hidden="true"></i></a></h2>
 
-                                              </div>
-                                              <div class="theme-purchases__item" style="border-top:0;">
-                                                  <a class="theme-purchases__item__inner text-center pt-0" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true">
+                                                </div>
+                                                <div class="theme-purchases__item" style="border-top:0;">
+                                                    <a class="theme-purchases__item__inner text-center pt-0" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true">
+                                                        <?php
+                                                        // echo gdrts_posts_render_rating();
+                                                        echo do_shortcode("[wppr_avg_rating size='35']");
+                                                        ?>
+                                                    </a>
+                                                    <div class="theme-purchases__item__inner text-center am-favorite" style="display:none;">
+                                                        <?php //the_favorites_button(get_the_ID(), NULL, "games"); ?>
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url(get_permalink());  ?>" rel="nofollow" target="_blank"><i class="fa fa-facebook-square fa-4x" aria-hidden="true"></i></a>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                              <button id="btn-opinion-right" type="button" <?php echo ($is_offline == true ? "disabled" : ""); ?> class="btn btn-brand btn-block btn-checkout up btn-customcolor" data-toggle="modal" data-target="#game-modal"> <span class="btn-text"><?php echo ($is_offline == 1 ? "OFFLINE" : __("Free play", "aipim")); ?></span></button>
+                                              <a data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline"><?php _e("Write review", "aipim");  ?></a>
+
+                                              <button data-favs-action="<?php echo $fav_action; ?>" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline favs-button"><i class="fa <?php echo $fav_icon; ?>" aria-hidden="true"></i>&nbsp;<?php echo $fav_text; ?></button>
+                                              <?php
+                                              if (!empty($youtube_video)) echo '<div class="video-container mt-2"><div id="_youtube-iframe" data-youtubeurl="'.$youtube_video.'"></div></div>';
+                                              ?>
+                                              <div class="theme-description__list pt-2">
+                                                  <?php
+                                                  if (!empty($monedas_result)){
+                                                  ?>
+
+                                                    <div class="theme-description__list__item"><span class="theme-description__item__title" style="text-align:center;width:100%;"><?php _e("Tests carried out", "aipim"); ?></span></div>
+                                                    <div class="theme-description__list__item casino-reputation-box" style="font-size:20px;padding-bottom:26px;">
+                                                      <span class="theme-description__item__title"><?php _e("500 spins", "aipim");  ?></span>
+                                                      <button data-target="#tc-modal" data-toggle="modal" data-hasbutton="0" data-title="<?php _e("500 Spin Test Result", "aipim"); ?>" data-content="<?php echo str_replace(Array("\\n", "\\r"), "" , esc_js(__("<p>To see the detail and to know what is the <strong>500 spins test</strong> visit <a target=\"_blank\" href=\"/en/articles/500-spins-test\">this page</a>.</p>", "aipim").$test_500_spins_details)); ?>" type="button" class="btn btn-<?php echo aipim_reputation_color(get_field("500_giros")); ?> text-uppercase btn-casino-reputation"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;<?php echo $test_500_spins_title; ?></button>
+                                                    </div>
+                                                  <?php
+                                                  }
+                                                  ?>
+                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Category", "aipim"); ?></span>
                                                       <?php
-                                                      // echo gdrts_posts_render_rating();
-                                                      echo do_shortcode("[wppr_avg_rating size='35']");
+                                                      foreach ($game_categories as $category){
+                                                          $category_link = get_category_link( $category->term_id );
+                                                          echo '<a href="'.$category_link.'">'.$category->name.'</a>';
+                                                      }
                                                       ?>
-                                                  </a>
-                                                  <div class="theme-purchases__item__inner text-center am-favorite" style="display:none;">
-                                                      <?php //the_favorites_button(get_the_ID(), NULL, "games"); ?>
-                                                      <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url(get_permalink());  ?>" rel="nofollow" target="_blank"><i class="fa fa-facebook-square fa-4x" aria-hidden="true"></i></a>
+
                                                   </div>
+                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Reels", "aipim"); ?></span>
+                                                    <span><?php echo get_field("rieles"); ?></span>
+                                                  </div>
+                                                  <?php if (!empty(get_field("jackpot"))){ ?>
+                                                    <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Jackpot (max.)", "aipim"); ?></span><span><?php the_field("jackpot");  ?></span></div>
+                                                  <?php } ?>
+
+                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Bonus game", "aipim"); ?></span><span>
+                                                    <?php
+                                                     $bonus = get_field("bonus");
+                                                     if (!empty($bonus) && $bonus != "0"){
+                                                         echo __("Yes", "aipim");
+                                                     }else{
+                                                         echo __("No", "aipim");
+                                                     }
+                                                     ?></span>
+                                                  </div>
+                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Free spins", "aipim"); ?></span><span>
+                                                    <?php
+                                                     $giros_gratis = get_field("giros_gratis");
+                                                     $bool_show = __("No", "aipim");
+                                                     if ( $bool_show == true) $bool_show = __("Yes", "aipim");
+                                                     echo $bool_show;
+                                                     ?></span>
+                                                  </div>
+                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Multiplier", "aipim"); ?></span><span>
+                                                    <?php
+                                                     $giros_gratis = get_field("multiplicador");
+                                                     $bool_show = __("No", "aipim");
+                                                     if ( $bool_show == true) $bool_show = __("Yes", "aipim");
+                                                     echo $bool_show;
+                                                     ?></span>
+                                                  </div>
+                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Wilds", "aipim"); ?></span><span>
+                                                    <?php
+                                                     $giros_gratis = get_field("comodin");
+                                                     $bool_show = __("No", "aipim");
+                                                     if ( $bool_show == true) $bool_show = __("Yes", "aipim");
+                                                     echo $bool_show;
+                                                     ?></span>
+                                                  </div>
+                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Scatter", "aipim"); ?></span><span>
+                                                    <?php
+                                                     $giros_gratis = get_field("scatter");
+                                                     $bool_show = __("No", "aipim");
+                                                     if ( $bool_show == true) $bool_show = __("Yes", "aipim");
+                                                     echo $bool_show;
+                                                     ?></span>
+                                                  </div>
+
+                                                  <div class="theme-description__list__item align-items-center"><span class="theme-description__item__title"><?php _e("Questions?", "aipim");  ?></span><a class="btn btn-xs btn-outline-brand btn-customcolor-outline" href="mailto:<?php echo AM_CONTACT_TO;  ?>"><?php _e("Contact us", "aipim");  ?></a></div>
+
+                                                  <?php
+                                                  $c = 0;
+                                                  // first index (0) is for main promo box, second index (1) is for little box
+                                                  if (isset($the_query_casinos->posts[1])){
+                                                    $casino_image = get_the_post_thumbnail($the_query_casinos->posts[1]->ID, Array(400, 400), array( 'class' => 'profile-author__img', 'alt' => $the_query_casinos->posts[1]->post_title ));
+                                                    $casino_link = get_post_permalink($the_query_casinos->posts[1]);
+                                                    ?>
+                                                      <div class="theme-description__list__item">
+                                                          <a class="profile-author" href="<?php echo esc_attr($casino_link); ?>">
+                                                            <div class="profile-author__logo">
+                                                                <?php echo $casino_image;  ?>
+                                                            </div>
+                                                            <div class="profile-author__author__description">
+                                                                <p><?php echo ($c==0 ? "Este juego aparece en" : "Aparece también en" ); ?></p>
+                                                                <h6 class="profile-logo__author__title"><?php echo $casino->post_title;  ?></h6>
+                                                            </div>
+                                                          </a>
+                                                        </div>
+                                                      <?php
+                                                      $c++;
+                                                  }
+                                                  ?>
                                               </div>
-
-
                                           </div>
 
-                                            <button id="btn-opinion-right" type="button" <?php echo ($is_offline == true ? "disabled" : ""); ?> class="btn btn-brand btn-block btn-checkout up btn-customcolor" data-toggle="modal" data-target="#game-modal"> <span class="btn-text"><?php echo ($is_offline == 1 ? "OFFLINE" : __("Free play", "aipim")); ?></span></button>
-                                            <a data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline"><?php _e("Write review", "aipim");  ?></a>
 
-                                            <button data-favs-action="<?php echo $fav_action; ?>" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline favs-button"><i class="fa <?php echo $fav_icon; ?>" aria-hidden="true"></i>&nbsp;<?php echo $fav_text; ?></button>
-                                            <?php
-                                            if (!empty($youtube_video)) echo '<div class="video-container mt-2"><div id="_youtube-iframe" data-youtubeurl="'.$youtube_video.'"></div></div>';
-                                            ?>
-                                            <div class="theme-description__list pt-2">
-                                                <?php
-                                                if (!empty($monedas_result)){
-                                                ?>
-
-                                                  <div class="theme-description__list__item"><span class="theme-description__item__title" style="text-align:center;width:100%;"><?php _e("Tests carried out", "aipim"); ?></span></div>
-                                                  <div class="theme-description__list__item casino-reputation-box" style="font-size:20px;padding-bottom:26px;">
-                                                    <span class="theme-description__item__title"><?php _e("500 spins", "aipim");  ?></span>
-                                                    <button data-target="#tc-modal" data-toggle="modal" data-hasbutton="0" data-title="<?php _e("500 Spin Test Result", "aipim"); ?>" data-content="<?php echo str_replace(Array("\\n", "\\r"), "" , esc_js(__("<p>To see the detail and to know what is the <strong>500 spins test</strong> visit <a target=\"_blank\" href=\"/en/articles/500-spins-test\">this page</a>.</p>", "aipim").$test_500_spins_details)); ?>" type="button" class="btn btn-<?php echo aipim_reputation_color(get_field("500_giros")); ?> text-uppercase btn-casino-reputation"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;<?php echo $test_500_spins_title; ?></button>
-                                                  </div>
-                                                <?php
-                                                }
-                                                ?>
-                                                <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Category", "aipim"); ?></span>
-                                                    <?php
-                                                    foreach ($game_categories as $category){
-                                                        $category_link = get_category_link( $category->term_id );
-                                                        echo '<a href="'.$category_link.'">'.$category->name.'</a>';
-                                                    }
-                                                    ?>
-
-                                                </div>
-                                                <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Reels", "aipim"); ?></span>
-                                                  <span><?php echo get_field("rieles"); ?></span>
-                                                </div>
-                                                <?php if (!empty(get_field("jackpot"))){ ?>
-                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Jackpot (max.)", "aipim"); ?></span><span><?php the_field("jackpot");  ?></span></div>
-                                                <?php } ?>
-
-                                                <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Bonus game", "aipim"); ?></span><span>
-                                                  <?php
-                                                   $bonus = get_field("bonus");
-                                                   if (!empty($bonus) && $bonus != "0"){
-                                                       echo __("Yes", "aipim");
-                                                   }else{
-                                                       echo __("No", "aipim");
-                                                   }
-                                                   ?></span>
-                                                </div>
-                                                <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Free spins", "aipim"); ?></span><span>
-                                                  <?php
-                                                   $giros_gratis = get_field("giros_gratis");
-                                                   $bool_show = __("No", "aipim");
-                                                   if ( $bool_show == true) $bool_show = __("Yes", "aipim");
-                                                   echo $bool_show;
-                                                   ?></span>
-                                                </div>
-                                                <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Multiplier", "aipim"); ?></span><span>
-                                                  <?php
-                                                   $giros_gratis = get_field("multiplicador");
-                                                   $bool_show = __("No", "aipim");
-                                                   if ( $bool_show == true) $bool_show = __("Yes", "aipim");
-                                                   echo $bool_show;
-                                                   ?></span>
-                                                </div>
-                                                <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Wilds", "aipim"); ?></span><span>
-                                                  <?php
-                                                   $giros_gratis = get_field("comodin");
-                                                   $bool_show = __("No", "aipim");
-                                                   if ( $bool_show == true) $bool_show = __("Yes", "aipim");
-                                                   echo $bool_show;
-                                                   ?></span>
-                                                </div>
-                                                <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Scatter", "aipim"); ?></span><span>
-                                                  <?php
-                                                   $giros_gratis = get_field("scatter");
-                                                   $bool_show = __("No", "aipim");
-                                                   if ( $bool_show == true) $bool_show = __("Yes", "aipim");
-                                                   echo $bool_show;
-                                                   ?></span>
-                                                </div>
-
-                                                <div class="theme-description__list__item align-items-center"><span class="theme-description__item__title"><?php _e("Questions?", "aipim");  ?></span><a class="btn btn-xs btn-outline-brand btn-customcolor-outline" href="mailto:<?php echo AM_CONTACT_TO;  ?>"><?php _e("Contact us", "aipim");  ?></a></div>
-
-                                                <?php
-                                                $c = 0;
-                                                // first index (0) is for main promo box, second index (1) is for little box
-                                                if (isset($the_query_casinos->posts[1])){
-                                                  $casino_image = get_the_post_thumbnail($the_query_casinos->posts[1]->ID, Array(400, 400), array( 'class' => 'profile-author__img', 'alt' => $the_query_casinos->posts[1]->post_title ));
-                                                  $casino_link = get_post_permalink($the_query_casinos->posts[1]);
-                                                  ?>
-                                                    <div class="theme-description__list__item">
-                                                        <a class="profile-author" href="<?php echo esc_attr($casino_link); ?>">
-                                                          <div class="profile-author__logo">
-                                                              <?php echo $casino_image;  ?>
-                                                          </div>
-                                                          <div class="profile-author__author__description">
-                                                              <p><?php echo ($c==0 ? "Este juego aparece en" : "Aparece también en" ); ?></p>
-                                                              <h6 class="profile-logo__author__title"><?php echo $casino->post_title;  ?></h6>
-                                                          </div>
-                                                        </a>
-                                                      </div>
-                                                    <?php
-                                                    $c++;
-                                                }
-                                                ?>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
