@@ -75,11 +75,27 @@ function aipim_loadmore() {
           'post_type' => 'juegos',
           'posts_per_page' => 9,
           'showposts' => 9,
-          'meta_key' => 'ranking',
-          'orderby' => 'meta_value_num',
-          'order' => 'ASC',
-          'paged' => $loadmore_count,
-          'post_status' => 'publish'
+          'meta_query' => array(
+              'relation' => 'OR',
+
+              'query_one' => array(
+                  'key' => 'ranking',
+                  'type' => 'numeric'
+              ),
+              'query_two' => array(
+                  'key' => 'is_featured',
+                  'value' => true, // Optional
+                  'compare'   => '=',
+                    'type' => 'numeric'
+              ),
+          ),
+          'orderby' => array(
+              'query_two' => 'ASC',
+              'query_one' => 'ASC',
+
+          ),
+          'post_status' => 'publish',
+          'paged' => $loadmore_count
         ) );
         $html_loadmore = "";
         foreach ($the_query_games->posts as $game){

@@ -108,8 +108,8 @@
                           $exclude_latest = $casino->ID;
                           echo aipim_loadmore_casinos_html($casino, false, "new");
                         }
-
                         wp_reset_postdata();
+
                         $the_query_casinos = new WP_Query( array(
                             'showposts' => 5,
                             // 'post__not_in' => array($exclude_latest),
@@ -169,13 +169,40 @@
             </div>
             <ul class="row games-table-body mb-0">
                 <?php
+                // $the_query_games = new WP_Query( array(
+                //     'post_type' => 'juegos',
+                //     'post__not_in' => array($exclude_featured),
+                //     'posts_per_page' => 9,
+                //     'showposts' => 9,
+                //     'meta_key' => 'ranking',
+                //     'orderby' => 'meta_value_num',
+                //     'order' => 'ASC',
+                //     'post_status' => 'publish'
+                // ) );
                 $the_query_games = new WP_Query( array(
                     'post_type' => 'juegos',
+
                     'posts_per_page' => 9,
                     'showposts' => 9,
-                    'meta_key' => 'ranking',
-                    'orderby' => 'meta_value_num',
-                    'order' => 'ASC',
+                    'meta_query' => array(
+                        'relation' => 'OR',
+
+                        'query_one' => array(
+                            'key' => 'ranking',
+                            'type' => 'numeric'
+                        ),
+                        'query_two' => array(
+                            'key' => 'is_featured',
+                            'value' => true, // Optional
+              	            'compare'   => '=',
+                              'type' => 'numeric'
+                        ),
+                    ),
+                    'orderby' => array(
+                        'query_two' => 'ASC',
+                        'query_one' => 'ASC',
+
+                    ),
                     'post_status' => 'publish'
                 ) );
                 foreach ($the_query_games->posts as $game){

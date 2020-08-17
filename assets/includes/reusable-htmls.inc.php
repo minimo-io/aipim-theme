@@ -23,7 +23,7 @@ function aipim_provider_list_html($term, $class=''){
   $ret = '';
   $ret .= '<li class="col-md-4 galleryview-item'.(!empty($class) ? " ".$class : "").'" data-gamescount="'.$gamesCount.' '.__("games", "aipim").'" data-image="'.esc_url($term_image["url"]).'" data-title="'.$term->name.'" data-url="'.esc_url($term_link).'">';
   $ret .= '  <div class="theme-card">';
-  if (!empty($class)) $ret .= "<span class='featured-text'>".__("featured", "aipim")."</span>";
+  if (!empty($class)) $ret .= "<span class='featured-text'><i class='fa fa-bell mr-1' aria-hidden='true'></i>".__("featured", "aipim")."</span>";
   $ret .= '    <div class="theme-card__body">';
   $ret .= '      <a class="d-block" href="'.$term_link.'">';
   if (isset($term_image["url"])){
@@ -148,6 +148,7 @@ function aipim_loadmore_games_html($game){
       $provider["url"] = get_term_link($a_provider[0]->term_id);
   }
 
+  $isFeatured = get_field("is_featured", $game->ID);
 
   $volatility = get_field("volatilidad", $game->ID);
   $volatility_icon = "fa-thermometer-empty";
@@ -158,8 +159,9 @@ function aipim_loadmore_games_html($game){
 
   $html_loadmore = '';
   $html_loadmore .= '<li class="col-md-4">';
-  $html_loadmore .=    '<div class="theme-card">';
+  $html_loadmore .=    '<div class="theme-card'.($isFeatured ? " gameListFeatured" : "").'">';
   $html_loadmore .=        '<div class="theme-card__body">';
+  if ($isFeatured) $html_loadmore .= '<span class="featured-text animated infinite pulse"><i class="fa fa-bell mr-1" aria-hidden="true"></i>'.__("featured", "aipim").'</span>';
   $html_loadmore .=            '<a class="d-block" href="'.esc_url( get_permalink($game->ID) ).'">';
   $html_loadmore .=                '<img width="400"';
   $html_loadmore .=                     'height="300"';
