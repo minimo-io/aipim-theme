@@ -14,7 +14,7 @@
         <section class="section casinos">
             <div class="container">
 
-              <div class="archive-title clearfix">
+              <div class="archive-title mb-0 pb-0 clearfix" style="border-bottom:0;">
                       <div class="row align-items-end">
                           <div class="col Xcol-md-8">
                             <h1 class="page-title mb-2 mb-md-0"><?php echo single_cat_title();  ?> <span class="badge badge-dark"><?php echo $category->category_count; ?></span></h1>
@@ -58,26 +58,46 @@
 
                       <?php
                       }
-
-
-                      // $args = array(
-                      //         'type' => 'casino',
-                      //         'orderby' => 'name',
-                      //         'order' => 'ASC'
-                      // );
-                      // $tags = get_tags($args);
-                      //
-                      // echo '<div class="btn-showmore">';
-                      // foreach($tags as $tag) {
-                      //   $tag_link = get_tag_link( $tag->term_id );
-                      //   echo '
-                      //     <a href="'.$tag_link.'" class="do-showmore mt-1" style="display:inline-block;  ">
-                      //       '.$tag->name.'
-                      //     </a>
-                      //   ';
-                      // }
-                      // echo '</div>';
                       ?>
+
+                      <div class="categoryCasinosFilters text-center my-2">
+                        <?php
+                        $casinoTypes = get_terms([
+                            'taxonomy' => "casinos_types",
+                            'hide_empty' => false,
+                            'orderby' => 'name',
+                            'order' => 'DESC'
+                        ]);
+                        ?>
+                        <div class="card bg-light d-none d-lg-block">
+                          <div class="card-body">
+                            <?php
+                            echo '<button type="button" class="btn btn-outline-info active" >'.__("All", "aipim").'</button>';
+                            foreach($casinoTypes as $tag) {
+                              $tag_link = get_tag_link( $tag->term_id );
+                              $faIcon = get_field("font_awesome_icon", $tag);
+                              if ($faIcon) $faIcon = '<i class="'.$faIcon.' mr-1" aria-hidden="true"></i>';
+                              echo '<button onclick="aipim_notification({ text: \'Soon!\' });" type="button" class="btn btn-outline-info">'.$faIcon.$tag->name.' <span class="badge badge-info badge-pill">'.$tag->count.'</span></button>';
+                            }
+                            ?>
+                          </div>
+                        </div>
+                        <div class="card bg-light d-block d-sm-none">
+                          <div class="card-body">
+                            <div class="d-flex justify-content-md-end">
+                              <select id="category_order_by" name="orderby" class="form-control text-gray-soft" onChange="aipim_notification({ text: 'Soon!' });return;">
+                                <?php
+                                echo '<option value="0">'.__("All", "aipim").'</option>';
+                                foreach($casinoTypes as $tag) {
+                                  $tag_link = get_tag_link( $tag->term_id );
+                                  echo '<option value="0">'.$tag->name.' ('.$tag->count.')</option>';
+                                }
+                                ?>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
 
 
