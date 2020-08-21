@@ -48,8 +48,8 @@ use GeoIp2\Database\Reader;
 
 
 add_action('init', 'removeHeadLinks');
-add_action( 'init', 'create_providers_hierarchical_taxonomy', 0 );
 add_action( 'init', 'create_post_types' );
+add_action( 'init', 'create_taxonomies', 0 );
 add_action('init','aipim_hide_dashboard');
 add_filter( 'pre_get_posts', 'themeprefix_show_cpt_archives' );
 add_action( 'after_setup_theme', 'am_setup' );
@@ -559,7 +559,7 @@ function create_post_types() {
                             'public' => true,
                             'has_archive' => true,
                             'supports' => array( 'title', 'editor', 'custom-fields','thumbnail','comments', 'excerpt', 'buddypress-activity' ),
-                            'taxonomies'  => array( 'category', 'post_tag' ),
+                            'taxonomies'  => array( 'category', 'casinos_types' ),
                             'rewrite' => array( 'slug' => 'casino' ),
                             'show_in_rest' => true,
                             'bp_activity' => array(
@@ -647,7 +647,7 @@ function am_widgets_init() {
 
 // providers taxonomy
 
-function create_providers_hierarchical_taxonomy() {
+function create_taxonomies() {
 
     // Add new taxonomy, make it hierarchical like categories
     //first do the translations part for GUI
@@ -678,6 +678,36 @@ function create_providers_hierarchical_taxonomy() {
         'rewrite' => array( 'slug' => 'proveedor' ),
         'show_in_rest' => true
     ));
+
+
+    // register casinos_categories taxonomy: Bingo, Cypto, Etc
+    $labels = array(
+        'name' => _x( 'Types', 'taxonomy general name' ),
+        'singular_name' => _x( 'Casino type', 'taxonomy singular name' ),
+        'search_items' =>  __( 'Search casino type', "aipim" ),
+        'all_items' => __( 'All types of casinos', 'aipim' ),
+        'parent_item' => __( 'Parent casino type' ),
+        'parent_item_colon' => __( 'Parent casino type:' ),
+        'edit_item' => __( 'Edit casino type' ),
+        'update_item' => __( 'Update casino type' ),
+        'add_new_item' => __( 'Add casino type' ),
+        'new_item_name' => __( 'Casino type name' ),
+        'menu_name' => __( 'Casino types', "aipim" )
+
+    );
+    register_taxonomy(
+         'casinos_types',
+         array('casinos'),
+         array(
+             'hierarchical' => true,
+             'labels' => $labels,
+             'query_var' => true,
+             'show_ui' => true,
+             'show_admin_column' => true,
+             'rewrite' => array( 'slug' => 'casino-type' ),
+             'show_in_rest' => true
+         )
+     );
 
 }
 

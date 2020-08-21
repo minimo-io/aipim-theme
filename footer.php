@@ -57,7 +57,7 @@ outline: #1e8cbe solid;
 <script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/assets/javascript/script.js'></script>
 
 <!-- Modal -->
-<div class="modal fade" id="tc-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal modal-main fade" id="tc-modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
           <div class="modal-header">

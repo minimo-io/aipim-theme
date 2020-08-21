@@ -47,6 +47,7 @@ $(document).on('click', 'a[href^="#"]', function (event) {
       || elem_href == "#bonos"
       || elem_href == "#atencion-al-cliente"
       || elem_href == "#usabilidad"
+      || elem_href == "#licenses"
     ){
 
       if ($("#btn-minimo-readmore").attr("data-status") == "off"){
@@ -239,7 +240,7 @@ var do_readmore = function(callback){
       total_height = $(".general-description").height();
 
     }else{
-      $(".minimo-read-more p, .minimo-read-more h2, .minimo-read-more ul, .minimo-read-more blockquote, .minimo-read-more div, .minimo-read-more ol").each(function(){
+      $(".minimo-read-more p, .minimo-read-more h2, .minimo-read-more h3, .minimo-read-more ul, .minimo-read-more blockquote, .minimo-read-more div, .minimo-read-more ol").each(function(){
           total_height += $(this).outerHeight(true);
       });
     }
@@ -262,7 +263,8 @@ var do_readmore = function(callback){
     $up.removeClass("read-more-full");
     $("html, body").animate({ scrollTop: 0 }, 200, function(){
       $up.animate({
-        height: original_height+"px"
+        height: (original_height)+"px"
+        // height: "70px"
       },  speed_duration, function(){
         $this.text($this.data("text-more")).data("status", "off");
         $this.attr("data-status", "off");

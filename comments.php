@@ -9,7 +9,7 @@ if ( post_password_required() ) {
 }
 if (!$comments){
 	if (!$is_casino){
-		echo '<div class="alert alert-secondary text-center mb-3" role="alert"><h4>'.__("There are no comments yet. Be the first and earn prestige points!", "aipim").'</h4></div>';
+		echo '<div class="alert alert-secondary alert-noComments text-center mb-3 mt-3" role="alert"><h4>'.__("There are no comments yet. Be the first and earn prestige points!", "aipim").'</h4></div>';
 	}else{
 
 		echo '<div class="alert alert-info text-center mb-3" role="alert"><h4>'.__("Casinos are not allowed to comment, only reply.", "aipim").'</h4></div>';

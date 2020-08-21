@@ -4,7 +4,7 @@ Author: Minimo
 Author URI: https://minimo.io/
 Text Domain: aipim
 Description: A community theme developed for Betizen.org based on themes.getbootstrap.com
-Version: 1.2.31
+Version: 0.7.01
 */
 
 /* ::root {
@@ -12803,6 +12803,8 @@ dt {
 
 .profile__description__title{ font-size:25px; }
 .box-did-u-know{ margin-bottom:2.2rem; }
+.box-did-u-know h5, .box-did-u-know h2{ color:#515151; font-size:19px; }
+
 /* .box-did-u-know .general-description{ */
 .general-description{
     /* color:#8c8e96; */
@@ -12811,6 +12813,7 @@ dt {
     font-size:16px;
     font-weight:100;
 }
+.general-description strong{ color:#838E95; }
 .general-description li{
   /* font-size:18px; */
   /* font-weight: bold; */
@@ -12818,9 +12821,11 @@ dt {
 .general-description img{
   border-radius: 0.25rem !important;
 }
-.general-description h2{ font-size: 18px !important; color: #515151 !important; }
-
-.box-did-u-know h5, .box-did-u-know h2{ color:#515151 !important; font-size:18px !important; }
+.general-description h2, .general-description h3, .general-description h4{
+  color: #515151;
+}
+.general-description h2{ font-size: 19px; color:#515151; }
+.general-description h3{ font-size: 17px; }
 
 .up{ text-transform:uppercase; }
 .terms_conds{ justify-content:center !important; }
@@ -14200,6 +14205,9 @@ a.knowmore-icon-link:hover{
   position:sticky;
   top:4rem;
 }
+.list-index-yt i{ color:#dc3545; }
+.modal-main .modal-body{ color: #838E95; }
+/* h2.contentIndexTitle{color:#2c2c2c;} */
 
 
 /* custom media */
@@ -14266,8 +14274,11 @@ a.button-join-small{ font-size: 17px !important; }
   .form-control, .input-text, #user_login, #user_pass{ height:32px; }
   #signup_div_wrapper label{font-size:13px;}
   .game-casino-suggestion img{ max-width:100px; }
-  .box-did-u-know h5, .box-did-u-know h2{ font-size:15px !important; }
-  .card-promo .card-text{ font-size:1.3rem; }
+  .box-did-u-know h5, .box-did-u-know h2{ font-size:15px; }
+  .general-description h2{ font-size: 18px; }
+  .general-description h3{ font-size: 16px; }
+  .modal-main .modal-body{ font-size: 13px; text-align: justify; color: #838E95; }
+  .card-promo .card-text{ font-size:1.3rem; color: #2c2c2c; }
   .card-promo .btn{ font-size:13px; }
   ul.games-table-body .theme-card__footer:last-child{ padding-bottom:0; }
   .comment-own h3{ font-size: 18px; }
@@ -14303,6 +14314,8 @@ a.button-join-small{ font-size: 17px !important; }
   .home-subtitles{ text-align:center; }
 
   .newCasinoTR .badge{ font-size:.8rem; }
+
+  .alert-noComments h4{ font-size: 1.1rem; }
 }
 @media (max-width: 450px) {
   .knowledge-base h4{ font-size:1.05rem; }

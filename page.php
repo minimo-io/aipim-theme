@@ -66,7 +66,7 @@
  .page-303 > .section ~ .section, , .page-1731 > .section  ~ .section {
      padding:inherit !important;
  }
-.page-303 .hero h1, .page-303 .hero h4{
+.page-303 .hero h1, .page-303 .hero h4, .page-1731 .hero h1, .page-1731 .hero h4{
    color:white !important;
   /* text-shadow: 2px 2px #000000; */
 }

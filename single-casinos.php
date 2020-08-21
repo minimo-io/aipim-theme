@@ -23,6 +23,7 @@
         $reputation_label = aipim_reputation_label_translate($o_reputation['value']);
 
 
+        $youtube_video = get_field("youtube");
 
         $casino_thumb = '<img src="'.get_the_post_thumbnail_url(get_the_ID(), 'am-casino-180').'" alt="'.str_replace(" ", "-", get_the_title()).'" width="100">';
         $casino_rep_content = aipim_casino_reputation_html($casino_thumb, $reputation_label, $post);
@@ -115,9 +116,9 @@
                                                     <div class="container-fluid">
                                                         <div class="card border-0">
                                                             <div class="card-body">
-                                                                <h2 class="card-title"><?php _e("Review of the casino","aipim");  ?> <?php the_title(); ?></h2>
+                                                                <h2 class="card-title ml-1"><?php _e("Review of the casino","aipim");  ?> <?php the_title(); ?></h2>
                                                                 <?php echo do_shortcode('[contentIndex type="casino"]'); ?>
-                                                                <div class="card-text general-description minimo-read-more minimo-read-more-short">
+                                                                <div class="card-text general-description minimo-read-more minimo-read-more-short px-1">
 
                                                                   <?php echo "<p class='mb-3'>".get_the_excerpt()."</p>";  ?>
                                                                   <?php the_content(); ?>
@@ -402,7 +403,9 @@
                                               <button id="btn-opinion-right" type="button" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true"> <span class="btn-text"><?php _e("Write review", "aipim");  ?></span></button>
                                               <button data-favs-action="<?php echo $fav_action; ?>" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline favs-button"><i class="fa <?php echo $fav_icon; ?>" aria-hidden="true"></i>&nbsp;<?php echo $fav_text; ?></button>
 
-
+                                              <?php
+                                              if (!empty($youtube_video)) echo '<div class="video-container mt-2"><div id="_youtube-iframe" data-youtubeurl="'.$youtube_video.'"></div></div>';
+                                              ?>
 
                                               <div class="theme-description__list pt-2">
 
@@ -488,5 +491,8 @@
      }
  });
 </script>
+<?php
+if (!empty($youtube_video)) aipim_youtube_apiInit_html($youtube_video);
+?>
         </body>
 </html>
