@@ -896,7 +896,19 @@ function aipim_add_google_analytics() {
   }
 }
 
-
+// Remove pagination on leadership index page
+function aipim_no_nopaging_for_casinos($query) {
+    if (
+      is_main_query()
+      &&
+      (
+        is_category('casinos')
+        || is_category('cassinos')   
+      )
+    ){
+        $query->set('nopaging', 1);
+    }
+}
 function aipim_pagination(){
 
   // load more posts
@@ -937,6 +949,8 @@ add_action( 'show_user_profile', 'casino_profile_fields' );
 add_action( 'edit_user_profile', 'casino_profile_fields' );
 add_action( 'personal_options_update', 'save_casino_profile_fields' );
 add_action( 'edit_user_profile_update', 'save_casino_profile_fields' );
+add_action('parse_query', 'aipim_no_nopaging_for_casinos'); // remove pagination for casinos page
+
 
 // login
 add_filter( 'login_message', 'the_login_message' );

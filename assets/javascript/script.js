@@ -4,11 +4,11 @@ function aipim_notification(o_not){
 function game_play(){
 
 }
-function animateCSS(element, animationName, callback) {
+function animateCSS(element, animationName, callback, faster) {
     const node = document.querySelector(element)
     if (!node) return;
     node.classList.add('animated', animationName)
-
+    if (faster) node.classList.add('faster')
     function handleAnimationEnd() {
         node.classList.remove('animated', animationName)
         node.removeEventListener('animationend', handleAnimationEnd)
@@ -341,4 +341,36 @@ jQuery(function($) {
       return false;
     });
 
+    // casino filters --------------------
+    $(".categoryCasinosFilters button").click(function(){
+
+      var oButton = $(this);
+      var buttonCasinoTypeId = oButton.data( "casinotype" );
+      $(".categoryCasinosFilters button").removeClass("active");
+      animateCSS(".btnType-"+buttonCasinoTypeId, "flash", null, true);
+      oButton.addClass("active");
+
+      if (buttonCasinoTypeId != 0){
+        $("#casinos-table tr").hide();
+        $("#casinos-table .ctype-"+buttonCasinoTypeId).show();
+      }else{
+        $("#casinos-table tr").show();
+      }
+    });
+    $(".categoryCasinosFilters select").change(function(){
+
+      var oSelect = $(this);
+      var selectCasinoTypeId = oSelect.val();
+      var oButton = $(".categoryCasinosFilters .btnType-"+selectCasinoTypeId)
+      $(".categoryCasinosFilters button").removeClass("active");
+      oButton.addClass("active");
+
+      if (selectCasinoTypeId != 0){
+        $("#casinos-table tr").hide();
+        $("#casinos-table .ctype-"+selectCasinoTypeId).show();
+      }else{
+        $("#casinos-table tr").show();
+      }
+    });
+    // end casino filters -------------------
 });

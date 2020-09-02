@@ -1,4 +1,48 @@
 <?php
+
+function aipim_casinoTypeFilterForm(){
+  ?>
+  <div class="categoryCasinosFilters text-center my-2">
+    <?php
+    $casinoTypes = get_terms([
+        'taxonomy' => "casinos_types",
+        'hide_empty' => false,
+        'orderby' => 'name',
+        'order' => 'DESC'
+    ]);
+    ?>
+    <div class="card bg-light d-none d-lg-block">
+      <div class="card-body">
+        <?php
+        echo '<button data-casinotype="0" type="button" class="btn btn-outline-info btnType-0 active" >'.__("All", "aipim").'</button>';
+        foreach($casinoTypes as $tag) {
+          $tag_link = get_tag_link( $tag->term_id );
+          $faIcon = get_field("font_awesome_icon", $tag);
+          if ($faIcon) $faIcon = '<i class="'.$faIcon.' mr-1" aria-hidden="true"></i>';
+          if ($tag->count > 0) echo '<button data-casinotype="'.$tag->term_id.'" type="button" class="btn btn-outline-info btnType-'.$tag->term_id.'">'.$faIcon.$tag->name.' <span class="badge badge-info badge-pill">'.$tag->count.'</span></button>';
+        }
+        ?>
+      </div>
+    </div>
+    <div class="card bg-light d-block d-sm-none">
+      <div class="card-body">
+        <div class="d-flex justify-content-md-end">
+          <select id="category_order_by" name="orderby" class="form-control text-gray-soft">
+            <?php
+            echo '<option value="0">'.__("All", "aipim").'</option>';
+            foreach($casinoTypes as $tag) {
+              $tag_link = get_tag_link( $tag->term_id );
+              if ($tag->count > 0) echo '<option value="'.$tag->term_id.'">'.$tag->name.' ('.$tag->count.')</option>';
+            }
+            ?>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php
+}
+
 // init api for youtube video displayed on lg viewports for games & casinos
 function aipim_youtube_apiInit_html($ytvideo){
   ?>
@@ -290,8 +334,13 @@ function aipim_loadmore_casinos_html($o_casino, $redirect_to_casino = false, $ty
 
   $reputation_label = get_field( 'sensacion_de_reputacion', $o_casino->ID);
   if ('dudoso' == $reputation_label) $reputation_label = "precaución";
-
   $reputation_label = aipim_reputation_label_translate(get_field("sensacion_de_reputacion", $o_casino->ID));
+  // get casino types
+  $casinoTypesStr = "";
+  $terms = get_the_terms( $o_casino->ID, 'casinos_types' );
+  foreach($terms as $term) {
+    $casinoTypesStr .= " ctype-".$term->term_id;
+  }
 
   $casino_thumb = '<img width="100" src="'.get_the_post_thumbnail_url($o_casino->ID, 'am-180').'" class="theme-card__img wp-post-image" alt="'.str_replace(" ", "-", $o_casino->post_title).'" />';
   $casino_url = esc_url( get_permalink($o_casino->ID) );
@@ -300,8 +349,8 @@ function aipim_loadmore_casinos_html($o_casino, $redirect_to_casino = false, $ty
 
   $casino_link_external = am_link_external(get_field("link_default", $o_casino->ID), Array('type'=>'casino', 'id'=>$o_casino->ID));
 
-  if ($type == "normal") $html_loadmore .= '<tr>';
-  if ($type == "new") $html_loadmore .= '<tr class="newCasinoTR">';
+  if ($type == "normal") $html_loadmore .= '<tr class="'.$casinoTypesStr.'">';
+  if ($type == "new") $html_loadmore .= '<tr class="newCasinoTR'.$casinoTypesStr.'">';
   $html_loadmore .=    '<th scope="row" class="table-ranking-ner">';
   if ($type == "normal") $html_loadmore .=        '#'.get_field("ranking", $o_casino->ID);
   if ($type == "new") $html_loadmore .=        '<span class="badge badge-pill badge-danger animated infinite pulse"><i class="fa fa-bell mr-1" aria-hidden="true"></i>'.__("New!", "aipim").'</span>';

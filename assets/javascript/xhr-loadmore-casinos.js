@@ -35,6 +35,9 @@ jQuery(document).ready(function($){
                   button.hide();
                 }
 
+                // re-apply the filters
+                $(".categoryCasinosFilters button.active").trigger('click');
+
               }
 
             }
