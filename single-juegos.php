@@ -231,7 +231,7 @@
                                                     <div data-columns="4" style="opacity: 1; transition: opacity .25s ease-in-out;">
 
                                                         <div data-thumb="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'am-1200'); ?>" style="opacity:.5;">
-                                                            <a <?php echo ($is_offline == true ? '' : 'href="#" data-toggle="modal" data-target="#game-modal"' ) ?>>
+                                                            <a <?php echo ($is_offline == true ? '' : 'href="#" data-toggle="modal" data-target="#gameWideModal"' ) ?>>
                                                                 <img width="1200" height="900"
                                                                      src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'am-1200'); ?>"
                                                                      class="attachment-large_crop size-large_crop"
@@ -253,7 +253,7 @@
                                                     </div>
                                                     <?php
                                                     if (! $is_offline){
-                                                      echo '<a class="game-play-button" data-toggle="modal" data-target="#game-modal"><span></span></a>';
+                                                      echo '<a class="game-play-button" data-toggle="modal" data-target="#gameWideModal"><span></span></a>';
                                                     }
                                                     ?>
                                                 </div>
@@ -325,7 +325,7 @@
 
                                                       <a class="btn btn-brand btn-block up btn-customcolor"  -toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true"><?php _e("Review", "aipim");  ?></a>
                                                       <form action="" method="POST" class="d-block w-100">
-                                                          <a class="btn btn-brand btn-block btn-checkout mt-0 ml-1 up btn-customcolor-outline <?php echo ($is_offline == true ? "disabled" : ""); ?>"  target="_blank" rel="nofollow" href="<?php the_field("enlace_mobile");  ?>"> <span class="btn-text"><?php echo ($is_offline == true ? "OFFLINE" : __("Play", "aipim") ); ?></span></a>
+                                                          <a class="btn btn-brand btn-block btn-checkout mt-0 ml-1 up btn-customcolor-outline <?php echo ($is_offline == true ? "disabled" : ""); ?>"  target="_blank" rel="nofollow" data-toggle="modal" href="#" data-target="#gameWideModal"> <span class="btn-text"><?php echo ($is_offline == true ? "OFFLINE" : __("Play", "aipim") ); ?></span></a>
                                                       </form>
                                                     </div>
                                                     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -514,7 +514,7 @@
 
                                             </div>
 
-                                              <button id="btn-opinion-right" type="button" <?php echo ($is_offline == true ? "disabled" : ""); ?> class="btn btn-brand btn-block btn-checkout up btn-customcolor" data-toggle="modal" data-target="#game-modal"> <span class="btn-text"><?php echo ($is_offline == 1 ? "OFFLINE" : __("Free play", "aipim")); ?></span></button>
+                                              <button id="btn-opinion-right" type="button" <?php echo ($is_offline == true ? "disabled" : ""); ?> class="btn btn-brand btn-block btn-checkout up btn-customcolor" data-toggle="modal" <?php echo (isset($_GET["dev"]) ? 'data-target="#gameWideModal"' : 'data-target="#gameWideModal"'); ?>> <span class="btn-text"><?php echo ($is_offline == 1 ? "OFFLINE" : __("Free play", "aipim")); ?></span></button>
                                               <a data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline"><?php _e("Write review", "aipim");  ?></a>
 
                                               <button data-favs-action="<?php echo $fav_action; ?>" class="btn btn-outline-brand btn-block mb-1 ml-0 up btn-customcolor-outline favs-button"><i class="fa <?php echo $fav_icon; ?>" aria-hidden="true"></i>&nbsp;<?php echo $fav_text; ?></button>
@@ -608,7 +608,7 @@
                                                                 <?php echo $casino_image;  ?>
                                                             </div>
                                                             <div class="profile-author__author__description">
-                                                                <p><?php echo ($c==0 ? "Este juego aparece en" : "Aparece también en" ); ?></p>
+                                                                <p><?php echo ($c==0 ? __("This game appears in", "aipim") : __("It also appears in", "aipim") ); ?></p>
                                                                 <h6 class="profile-logo__author__title"><?php echo $casino->post_title;  ?></h6>
                                                             </div>
                                                           </a>
@@ -650,7 +650,7 @@
      max-width:830px;
  }
 </style>
-<!-- Modal -->
+<!-- Game Modal -->
 <script>
  var game_code = '<?php echo str_replace("'", '"',get_field("codigo"));  ?>';
  $(document).ready(function(){
@@ -678,6 +678,85 @@
   </div>
 </div>
 <!-- /Game Modal -->
+
+<!-- Game Wide Modal -->
+<style>
+@media (max-width: 576px){
+  .modal-xl #gameWideScreen, .modal-xl .modalWideFooterGame{ display:none !important; }
+  .modal-xl .gameMobileOptions, .modal-xl .modalWideFooterOptions{ display:block; }
+}
+</style>
+<script>
+ var game_code = '<?php echo str_replace("'", '"',get_field("codigo"));  ?>';
+ $(document).ready(function(){
+     $('#gameWideModal').on('show.bs.modal', function (e) {
+         // if (!data) return e.preventDefault(); // stops modal from being shown
+         $("#gameWideScreen").html(game_code);
+     });
+     $('#gameWideModal').on('hidden.bs.modal', function () {
+         $("#gameWideScreen").html("");
+     })
+ });
+</script>
+<div class="modal fade" id="gameWideModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl " role="document">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+          <div id="gameWideScreen"></div>
+          <div class="gameMobileOptions">
+            <?php
+            //
+            foreach ($the_query_casinos->posts as $casino){
+              $casino_image = get_the_post_thumbnail($casino->ID, Array(200, 200), array( 'class' => 'mt-3', 'alt' => $casino->post_title ));
+              $casino_link = get_post_permalink($casino);
+
+              $o_bonus_welcome = aipim_get_bonus_object_for_casino($casino->ID, "first_welcome"); // welcome bonus for casino
+
+              $has_welcome_offer = true;
+              $bonus_link = get_field("link_default", $casino->ID);
+              if (empty($o_bonus_welcome)) $has_welcome_offer = false; // no welcome bonus for this casino, so do not show a welcome offer
+
+              if ($has_welcome_offer == true){
+                $bonus_custom_link = get_field("bonus_link", $o_bonus_welcome->ID);
+                if (!empty($bonus_custom_link)) $bonus_link = $bonus_custom_link; // bonuses can have no link, then use the casino default link
+              }
+
+              ?>
+                <div class="card">
+                  <div class="card-body">
+                      <div class="text-center">
+                          <?php _e("To play this game on mobile", "aipim"); ?>
+                          <br>
+                          <?php _e("we recommend visiting", "aipim"); ?>
+                          <br>
+                          <?php echo $casino_image;  ?>
+                          <br><br>
+                          <p class="mobileGamesDisclaimer text-left">
+                            <i class="fa fa-info-circle mr-1" aria-hidden="true"></i><?php _e("Some games are NOT available to play on mobile due to restrictions from game providers. Not much we can do at the moment more that recommending the best casino where can find them to play for free or money.", "aipim"); ?>
+                          </p>
+                      </div>
+                  </div>
+                </div>
+              <?php
+              break;
+            }
+            ?>
+
+          </div>
+      </div>
+      <div class="modal-footer modalWideFooterGame">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="<?php _e("Close", "aipim");  ?>"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <button type="button" class="btn btn-brand btn-sm btnWideFullscreen"><i class="fa fa-expand" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="<?php _e("Fullscreen", "aipim");  ?>"></i></button>
+      </div>
+      <div class="modal-footer modalWideFooterOptions">
+        <a href="<?php echo am_link_external($bonus_link, Array('type'=>'casino', 'id'=>$o_casino->ID)); ?>" rel="sponsored" class="btn btn-brand btn-bg btn-block btn-table-more btn-sm"><i class="fa fa-external-link mr-1" aria-hidden="true"></i><?php _e("Let's do it!", "aipim"); ?></a>
+        <center><a data-dismiss="modal" aria-hidden="true" class="modalWideFooterOptionsClose mt-3"><?php _e("Close", "aipim"); ?></a></center>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Game Wide Modal -->
+
 <!-- TC Modal -->
 <div class="modal fade" id="tc-modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">

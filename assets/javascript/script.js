@@ -124,6 +124,20 @@ $(document).ready(function () {
         } else if (elem.webkitRequestFullscreen) {
             elem.webkitRequestFullscreen();
         }
+
+    });
+
+    $(".btnWideFullscreen").click(function(){
+      var elem = document.getElementById("gameWideScreen");
+      if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+          elem.msRequestFullscreen();
+      } else if (elem.mozRequestFullScreen) {
+          elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) {
+          elem.webkitRequestFullscreen();
+      }
     });
 
     $('#tc-modal').on('show.bs.modal', function (event) {
