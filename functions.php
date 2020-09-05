@@ -527,7 +527,7 @@ function create_post_types() {
                             ),
                             'public' => true,
                             'has_archive' => true,
-                            'supports' => array( 'title', 'editor', 'custom-fields','thumbnail', 'comments', 'excerpt', 'buddypress-activity' ),
+                            'supports' => array( 'title', 'editor', 'author', 'custom-fields','thumbnail', 'comments', 'excerpt', 'buddypress-activity' ),
                             'taxonomies'  => array( 'category', 'post_tag' ),
                             'rewrite' => array( 'slug' => 'juego' ),
                             'show_in_rest' => true,
@@ -558,7 +558,7 @@ function create_post_types() {
                             ),
                             'public' => true,
                             'has_archive' => true,
-                            'supports' => array( 'title', 'editor', 'custom-fields','thumbnail','comments', 'excerpt', 'buddypress-activity' ),
+                            'supports' => array( 'title', 'editor', 'author', 'custom-fields','thumbnail','comments', 'excerpt', 'buddypress-activity' ),
                             'taxonomies'  => array( 'category', 'casinos_types' ),
                             'rewrite' => array( 'slug' => 'casino' ),
                             'show_in_rest' => true,
@@ -606,6 +606,7 @@ function create_post_types() {
     add_post_type_support( 'juegos', 'buddypress-activity' );
     add_post_type_support( 'casinos', 'buddypress-activity' );
     add_post_type_support( 'bonus', 'buddypress-activity' );
+    add_post_type_support( 'juegos', 'author' );
 
     // add casino user role
     add_role(
@@ -903,7 +904,7 @@ function aipim_no_nopaging_for_casinos($query) {
       &&
       (
         is_category('casinos')
-        || is_category('cassinos')   
+        || is_category('cassinos')
       )
     ){
         $query->set('nopaging', 1);

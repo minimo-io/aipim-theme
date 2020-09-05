@@ -14217,6 +14217,17 @@ body.modal-open #main, body.modal-open #nav-header{
     filter: url("https://gist.githubusercontent.com/amitabhaghosh197/b7865b409e835b5a43b5/raw/1a255b551091924971e7dee8935fd38a7fdf7311/blur".svg#blur);
     filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
 }
+.game-play-box-mobile{ display:none; }
+.game-play-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
 /* game modal  */
 #gameWideScreen{ width:100%;height:600px; }
 #gameWideScreen iframe{ width:100%;height:100%; border:0; }
@@ -14236,6 +14247,7 @@ body.modal-open #main, body.modal-open #nav-header{
 
 .gameMobileOptions, .modalWideFooterOptions{ display:none; }
 .gameMobileOptions img{ max-width:150px; }
+.modalWideFooterOptionsClose{ display:block; }
 .mobileGamesDisclaimer, .modalWideFooterOptionsClose{ font-size:11px;color:#838E95; }
 @media (min-width: 576px){
   .modal-xl {
@@ -14363,6 +14375,9 @@ a.button-join-small{ font-size: 17px !important; }
   .newCasinoTR .badge{ font-size:.8rem; }
 
   .alert-noComments h4{ font-size: 1.1rem; }
+
+  .game-play-box-desktop{ display:none; }
+  .game-play-box-mobile{ display:block; }
 }
 @media (max-width: 450px) {
   .knowledge-base h4{ font-size:1.05rem; }

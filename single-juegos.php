@@ -44,6 +44,13 @@
         $test_500_spins_details .= "</p>";
         $test_500_spins_details .= "<p><i><small>".__("Test carried out on", "aipim")." ".get_field("500_giros_fecha")."</small></i></p>";
 
+        // enlace mobile
+        $mobileUrl = get_field("enlace_mobile");
+        $mobileLink = 'href="#" data-toggle="modal" data-target="#gameWideModal"';
+        if (!empty($mobileUrl)) $mobileLink = 'href="'.$mobileUrl.'" target="_blank" rel="nofollow"';
+
+
+
         // online or no
         $is_offline = get_field("is_offline");
 
@@ -155,27 +162,28 @@
                                                                 <div class="card-text general-description minimo-read-more minimo-read-more-short">
                                                                   <p class="mb-3"><?php echo get_the_excerpt();  ?></p>
                                                                   <?php the_content(); ?>
+                                                                  <div class="mt-1">
+                                                                    <?php
+                                                                    $post_tags = get_the_tags();
+                                                                    if ( $post_tags ) {
+                                                                        foreach( $post_tags as $tag ) {
+                                                                          echo '<a class="btn btn-sm btn-secondary" role="button" href="'.get_tag_link($tag->term_id).'">'.$tag->name.'</a>';
+                                                                        }
+                                                                    }
+                                                                    ?>
+                                                                  </div>
                                                                 </div>
                                                                 <div class="container">
                                                                   <div class="row">
-                                                                    <div class="col-auto pl-0 pr-0">
-                                                                      <button id="btn-minimo-readmore" data-original-height="" data-status="off" data-text-more="Leer más" data-text-less="<?php _e("Read less", "aipim"); ?>" class="btn btn-light btn-sm btn-minimo-readmore mb-4 mb-md-0"><?php _e("Read more", "aipim"); ?></button>
-                                                                    </div>
-                                                                    <div class="col d-block pr-0 pl-2">
-                                                                      <div class="mt-2">
-                                                                      <?php
-                                                                      $post_tags = get_the_tags();
-                                                                      if ( $post_tags ) {
-                                                                          echo __("Theme: ", "aipim");
-                                                                          foreach( $post_tags as $tag ) {
-                                                                            echo '<a class="btn btn-sm btn-secondary" role="button" href="'.get_tag_link($tag->term_id).'">'.$tag->name.'</a>';
-                                                                          }
-                                                                      }
-                                                                      ?>
-                                                                    </div>
+                                                                    <button id="btn-minimo-readmore" data-original-height="" data-status="off" data-text-more="Leer más" data-text-less="<?php _e("Read less", "aipim"); ?>" class="btn btn-light btn-sm btn-minimo-readmore mb-4 mb-md-0"><?php _e("Read more", "aipim"); ?></button>
+                                                                    <div class="col d-block d-lg-none pr-0 pl-2 pt-2">
+                                                                      <a class="btn btn-brand btn-block btn-sm btn-customcolor-outline text-center btn-block" <?php echo ($is_offline == true ? "disabled" : ""); ?>  <?php echo $mobileLink; ?>><?php _e("Play", "aipim"); ?></a>
                                                                     </div>
                                                                   </div>
                                                                 </div>
+
+
+
                                                               </div>
 
                                                         </div>
@@ -231,7 +239,10 @@
                                                     <div data-columns="4" style="opacity: 1; transition: opacity .25s ease-in-out;">
 
                                                         <div data-thumb="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'am-1200'); ?>" style="opacity:.5;">
-                                                            <a <?php echo ($is_offline == true ? '' : 'href="#" data-toggle="modal" data-target="#gameWideModal"' ) ?>>
+                                                            <?php
+                                                            // echo '<a '.($is_offline == true ? '' : $mobileLink ).'>';
+                                                            ?>
+
                                                                 <img width="1200" height="900"
                                                                      src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'am-1200'); ?>"
                                                                      class="attachment-large_crop size-large_crop"
@@ -248,12 +259,13 @@
                                                                              <?php echo get_the_post_thumbnail_url(get_the_ID(), 'am-400'); ?> 400w,
                                                                              <?php echo get_the_post_thumbnail_url(get_the_ID(), 'am-600'); ?> 600w"
                                                                      sizes="(max-width: 1200px) 100vw, 1200px" />
-                                                            </a>
+                                                            <!-- </a> -->
                                                         </div>
                                                     </div>
                                                     <?php
                                                     if (! $is_offline){
-                                                      echo '<a class="game-play-button" data-toggle="modal" data-target="#gameWideModal"><span></span></a>';
+                                                      echo '<a class="game-play-box game-play-box-desktop" href="#" data-toggle="modal" data-target="#gameWideModal"><div class="game-play-button"><span></span></div></a>';
+                                                      echo '<a class="game-play-box game-play-box-mobile" '.$mobileLink.'><div class="game-play-button"><span></span></div></a>';
                                                     }
                                                     ?>
                                                 </div>
@@ -325,7 +337,7 @@
 
                                                       <a class="btn btn-brand btn-block up btn-customcolor"  -toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true"><?php _e("Review", "aipim");  ?></a>
                                                       <form action="" method="POST" class="d-block w-100">
-                                                          <a class="btn btn-brand btn-block btn-checkout mt-0 ml-1 up btn-customcolor-outline <?php echo ($is_offline == true ? "disabled" : ""); ?>"  target="_blank" rel="nofollow" data-toggle="modal" href="#" data-target="#gameWideModal"> <span class="btn-text"><?php echo ($is_offline == true ? "OFFLINE" : __("Play", "aipim") ); ?></span></a>
+                                                          <a class="btn btn-brand btn-block btn-checkout mt-0 ml-1 up btn-customcolor-outline <?php echo ($is_offline == true ? "disabled" : ""); ?>"  <?php echo $mobileLink; ?>> <span class="btn-text"><?php echo ($is_offline == true ? "OFFLINE" : __("Play", "aipim") ); ?></span></a>
                                                       </form>
                                                     </div>
                                                     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -726,7 +738,7 @@
                   <div class="card-body">
                       <div class="text-center">
                           <?php _e("To play this game on mobile", "aipim"); ?>
-                          <br>
+
                           <?php _e("we recommend visiting", "aipim"); ?>
                           <br>
                           <?php echo $casino_image;  ?>
