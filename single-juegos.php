@@ -49,8 +49,11 @@
         $mobileLink = 'href="#" data-toggle="modal" data-target="#gameWideModal"';
         if (!empty($mobileUrl)) $mobileLink = 'href="'.$mobileUrl.'" target="_blank" rel="nofollow"';
 
-
-
+        // max win
+        $maxWin = get_field("max_exposition");
+        // original title (when we use locale specific name)
+        $originalTitle = get_field("original_title");
+        if ($originalTitle == get_the_title()) $originalTitle = "";
         // online or no
         $is_offline = get_field("is_offline");
 
@@ -121,7 +124,9 @@
                                     </div>
                                     <div class="profile__description">
                                             <h1 class="profile__description__title"><?php echo get_the_title();  ?></h1>
-                                            <p class="d-none d-sm-block"><?php echo __("Created by", "aipim")." <strong><a href='".$provider["url"]."'>".$provider["name"]; ?></a></strong> <?php _e("in the year", "aipim"); ?> <?php the_field("lanzamiento");  ?></p>
+
+                                            <p <?php echo (!empty($originalTitle) ? 'class="mb-0"' : ''); ?>><?php echo __("Created by", "aipim")." <strong><a href='".$provider["url"]."'>".$provider["name"]; ?></a></strong> <?php _e("in the year", "aipim"); ?> <?php the_field("lanzamiento");  ?></p>
+                                            <?php echo (!empty($originalTitle) ? '<p>'.__("Originally", "aipim").' &#171;'.$originalTitle.'&#187;</p>' : ''); ?>
                                         </div>
                                 </div>
                             </div>
@@ -193,7 +198,8 @@
                                                 <div class="container casino-featured casino-single-featured" style="margin-top:5%;">
                                                   <?php $f_volatilidad = get_field("volatilidad"); ?>
                                                     <div class="row">
-                                                        <div class="col">
+
+                                                        <div class="col-6 col-sm">
                                                             <div class="card">
                                                                 <div class="card-body text-center">
                                                                     <h5 class="card-title">
@@ -206,7 +212,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col">
+                                                        <div class="col-6 col-sm">
                                                             <div class="card">
                                                                 <div class="card-body text-center">
                                                                     <h5 class="card-title">
@@ -219,7 +225,11 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-4 mt-3 mt-sm-0">
+                                                        <?php
+                                                        $thirdClass = "col-6 col-sm";
+                                                        if (empty($maxWin)) $thirdClass = "col-sm-4";
+                                                        ?>
+                                                        <div class="<?php echo $thirdClass; ?> mt-3 mt-sm-0">
                                                             <div class="card">
                                                                 <div class="card-body text-center">
                                                                     <h5 class="card-title"><?php _e("Paylines","aipim");  ?></h5>
@@ -229,6 +239,24 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <?php
+
+                                                        if (!empty($maxWin)){
+                                                          ?>
+                                                          <div class="col-6 col-sm-12 mt-sm-0">
+                                                              <div class="card mt-3 mt-md-3">
+                                                                  <div class="card-body text-center">
+                                                                      <h5 class="card-title"><?php _e("Max Win","aipim");  ?></h5>
+                                                                      <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
+                                                                          x<?php echo $maxWin; ?>
+                                                                      </p>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <?php
+                                                        }
+                                                        ?>
+
                                                     </div>
 
 
@@ -757,6 +785,7 @@
           </div>
       </div>
       <div class="modal-footer modalWideFooterGame">
+        <button type="button" class="btn btn-brand btn-sm" onclick="aipimOpenContactBox();"><?php _e("¿Broken?", "aipim");  ?></button>
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="<?php _e("Close", "aipim");  ?>"><i class="fa fa-times" aria-hidden="true"></i></button>
         <button type="button" class="btn btn-brand btn-sm btnWideFullscreen"><i class="fa fa-expand" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="<?php _e("Fullscreen", "aipim");  ?>"></i></button>
       </div>

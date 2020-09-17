@@ -4,6 +4,15 @@ function aipim_notification(o_not){
 function game_play(){
 
 }
+function aipimOpenContactBox(){
+  $(function(){
+    if (Tawk_API){
+      Tawk_API.toggle();
+    }else{
+      alert("Ups! Error. Sorry, please contact the administrator.");
+    }
+  });
+}
 function animateCSS(element, animationName, callback, faster) {
     const node = document.querySelector(element)
     if (!node) return;
