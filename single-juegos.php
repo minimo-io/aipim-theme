@@ -786,8 +786,8 @@
       </div>
       <div class="modal-footer modalWideFooterGame">
         <button type="button" class="btn btn-brand btn-sm" onclick="aipimOpenContactBox();"><?php _e("¿Broken?", "aipim");  ?></button>
-        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="<?php _e("Close", "aipim");  ?>"><i class="fa fa-times" aria-hidden="true"></i></button>
         <button type="button" class="btn btn-brand btn-sm btnWideFullscreen"><i class="fa fa-expand" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="<?php _e("Fullscreen", "aipim");  ?>"></i></button>
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="<?php _e("Close", "aipim");  ?>"><i class="fa fa-times" aria-hidden="true"></i></button>
       </div>
       <div class="modal-footer modalWideFooterOptions">
         <a href="<?php echo am_link_external($bonus_link, Array('type'=>'casino', 'id'=>$o_casino->ID)); ?>" rel="sponsored" class="btn btn-brand btn-bg btn-block btn-table-more btn-sm"><i class="fa fa-external-link mr-1" aria-hidden="true"></i><?php _e("Let's do it!", "aipim"); ?></a>
