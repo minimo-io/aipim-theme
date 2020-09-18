@@ -31,7 +31,7 @@
 
                       <a href="<?php _e("/en/providers/", "aipim"); ?>" class="link-back-providers mb-2 d-block"><i class="fa fa-reply" aria-hidden="true"></i> <?php _e("All providers", "aipim"); ?></a>
 
-                      <h1 class="page-title mb-2 mb-md-0 pt-2" style="color:#3c3c3c !important;font-weight:700;font-size:28px;">
+                      <h1 class="provider-title page-title mb-2 mb-md-0 pt-2">
                         <?php
                         if (isset($term_image["url"])) echo '<img src="'.$term_image["url"].'" class="rounded" alt="logo-proveedor" width="60" />';
                         ?>

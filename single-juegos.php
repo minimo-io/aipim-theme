@@ -738,11 +738,43 @@
      })
  });
 </script>
-<div class="modal fade" id="gameWideModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="gameWideModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl " role="document">
-    <div class="modal-content">
+    <div id="gameWideFullscreen" class="modal-content">
       <div class="modal-body p-0">
-          <div id="gameWideScreen"></div>
+
+
+
+          <div class="row">
+            <div class="col-12 gameWideGamebox">
+              <div id="gameWideScreen"></div>
+            </div>
+            <div class="col-2 gameWideSidebar d-none px-0 mx-0">
+              <center>
+
+
+                <?php
+                $the_query_games = new WP_Query( array(
+                    'post_type' => 'juegos',
+
+                    'posts_per_page' => 4,
+                    'showposts' => 4,
+                    'orderby'        => 'rand',
+                    'post_status' => 'publish'
+                ) );
+                foreach ($the_query_games->posts as $game){
+                   echo aipim_loadmore_games_html($game);
+                }
+                /* Restore original Post Data */
+                wp_reset_postdata();
+                ?>
+
+              </center>
+            </div>
+          </div>
+
+
+
           <div class="gameMobileOptions">
             <?php
             //
@@ -785,7 +817,8 @@
           </div>
       </div>
       <div class="modal-footer modalWideFooterGame">
-        <button type="button" class="btn btn-brand btn-sm" onclick="aipimOpenContactBox();"><?php _e("¿Broken?", "aipim");  ?></button>
+        <button type="button" class="btn btn-brand btn-sm btn-gameSidebar"><i class="fa fa-plus mr-1" aria-hidden="true"></i><?php _e("Games", "aipim");  ?></button>
+        <button type="button" class="btn btn-brand btn-sm" onclick="aipimOpenContactBox();"><?php _e("Broken?", "aipim");  ?></button>
         <button type="button" class="btn btn-brand btn-sm btnWideFullscreen"><i class="fa fa-expand" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="<?php _e("Fullscreen", "aipim");  ?>"></i></button>
         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="<?php _e("Close", "aipim");  ?>"><i class="fa fa-times" aria-hidden="true"></i></button>
       </div>

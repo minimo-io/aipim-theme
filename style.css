@@ -14226,6 +14226,11 @@ body.modal-open #main, body.modal-open #nav-header{
   width: 100%;
   height: 100%;
 }
+.provider-title{
+  color:#3c3c3c !important;
+  font-weight:700;
+  font-size:28px;
+}
 
 
 
@@ -14386,6 +14391,9 @@ a.button-join-small{ font-size: 17px !important; }
   }
   .profile__description p{
     font-size:12px;
+  }
+  .provider-title{
+    font-size:20px;
   }
 }
 @media (max-width: 450px) {
