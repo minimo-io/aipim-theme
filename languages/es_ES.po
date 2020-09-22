@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
 "POT-Creation-Date: 2020-09-18T15:26:33+00:00\n"
-"PO-Revision-Date: 2020-09-18 12:29-0300\n"
+"PO-Revision-Date: 2020-09-18 16:59-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -979,8 +979,8 @@ msgid ""
 "based on users votes and a place to where you can earn benefits when you "
 "share your experience."
 msgstr ""
-"basados en los votos de los usuarios y un lugar donde ganar beneficios "
-"cuando compartes tu experiencia."
+"basados en los votos de los usuarios y un lugar con foco en la transparencia "
+"donde ganar beneficios cuando compartes tu experiencia."
 
 #: assets/includes/shortcodes/startRightHere.inc.php:25
 msgid "We offer impartial reviews of "
@@ -1963,7 +1963,7 @@ msgstr ""
 
 #: single-juegos.php:789
 msgid "Broken?"
-msgstr "¿Roto?"
+msgstr "¿No funciona?"
 
 #: single-juegos.php:794
 msgid "Let's do it!"

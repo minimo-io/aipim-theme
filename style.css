@@ -4,7 +4,7 @@ Author: Minimo
 Author URI: https://minimo.io/
 Text Domain: aipim
 Description: A community theme developed for Betizen.org based on themes.getbootstrap.com
-Version: 0.7.40
+Version: 0.7.45
 */
 
 /* ::root {
@@ -14231,8 +14231,6 @@ body.modal-open #main, body.modal-open #nav-header{
   font-weight:700;
   font-size:28px;
 }
-
-
 
 /* game modal  */
 #gameWideScreen{ width:100%;height:600px; }

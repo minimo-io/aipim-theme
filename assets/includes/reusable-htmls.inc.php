@@ -236,7 +236,7 @@ function aipim_loadmore_general_html($game){
   return $html_loadmore;
 }
 
-function aipim_loadmore_games_html($game){
+function aipim_loadmore_games_html($game, $type = "catalog"){
 
   $a_provider = get_the_terms($game->ID, "proveedores");
 
@@ -256,48 +256,83 @@ function aipim_loadmore_games_html($game){
   if ($volatility == "Alta") $volatility_icon = "fa-thermometer-full";
 
   $html_loadmore = '';
-  $html_loadmore .= '<li class="col-md-4">';
-  $html_loadmore .=    '<div class="theme-card'.($isFeatured ? " gameListFeatured" : "").'">';
-  $html_loadmore .=        '<div class="theme-card__body">';
-  if ($isFeatured) $html_loadmore .= '<span class="featured-text animated infinite pulse"><i class="fa fa-bell mr-1" aria-hidden="true"></i>'.__("featured", "aipim").'</span>';
-  $html_loadmore .=            '<a class="d-block" href="'.esc_url( get_permalink($game->ID) ).'">';
-  $html_loadmore .=                '<img width="400"';
-  $html_loadmore .=                     'height="300"';
-  $html_loadmore .=                     'src="'.get_the_post_thumbnail_url($game->ID, 'am-400').'"';
-  $html_loadmore .=                     'class="theme-card__img wp-post-image"';
-  $html_loadmore .=                     'alt=""';
-  $html_loadmore .=                     'srcset="'.get_the_post_thumbnail_url($game->ID, 'am-400').' 400w,';
-  $html_loadmore .=                             get_the_post_thumbnail_url($game->ID, 'am-300').' 300w,';
-  $html_loadmore .=                             get_the_post_thumbnail_url($game->ID, 'am-768').' 768w,';
-  $html_loadmore .=                             get_the_post_thumbnail_url($game->ID, 'am-1024').' 1024w,';
-  $html_loadmore .=                             get_the_post_thumbnail_url($game->ID, 'am-200').' 200w,';
-  $html_loadmore .=                             get_the_post_thumbnail_url($game->ID, 'am-600').' 600w,';
-  $html_loadmore .=                             get_the_post_thumbnail_url($game->ID, 'am-1200').' 1200w"';
-  $html_loadmore .=                     'sizes="(max-width: 400px) 100vw, 400px" />';
-  $html_loadmore .=            '</a>';
-  $html_loadmore .=            '<a class="theme-card__body__overlay btn btn-brand btn-sm" href="'.esc_url( get_permalink($game->ID) ).'">'.__("Play for free", "aipim").'</a>';
-  $html_loadmore .=            '<div class="rtp-content"><p>RTP</p><h6>'.get_field("rtp", $game->ID).'%</h6></div>';
-  $html_loadmore .=        '</div>';
-  $html_loadmore .=        '<div class="theme-card__footer">';
-  $html_loadmore .=            '<div class="theme-card__footer__item">';
-  $html_loadmore .=                '<a class="theme-card__title mr-1" href="'.esc_url( get_permalink($game->ID) ).'">'.get_the_title($game->ID).'</a>';
-  $html_loadmore .=                '<p class="theme-card__info">';
-  $html_loadmore .=                    '<ul class="prod_cats_list">';
-  $html_loadmore .=                        '<li>';
-  $html_loadmore .=                            '<a href="'.$provider["url"].'">'.$provider["name"].'</a>';
-  $html_loadmore .=                        '</li>';
-  $html_loadmore .=                        '<li style="color:#838E95;" title="'.__("Volatility", "aipim").'" data-toggle="tooltip" data-placement="top">';
-  $html_loadmore .=                          '<i class="fa '.$volatility_icon.'" aria-hidden="true"></i> '.aipim_volatility_label_translate($volatility);
-  $html_loadmore .=                        '</li>';
-  $html_loadmore .=                    '</ul>';
-  $html_loadmore .=                '</p>';
-  $html_loadmore .=            '</div>';
-  $html_loadmore .=            '<div class="theme-card__footer__item">';
-  $html_loadmore .=                '<p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">#</span>'.get_field("ranking", $game->ID).'</span></p>';
-  $html_loadmore .=            '</div>';
-  $html_loadmore .=        '</div>';
-  $html_loadmore .=    '</div>';
-  $html_loadmore .= '</li>';
+
+  if ($type == "catalog"){
+    if ($type == "catalog") $html_loadmore .= '<li class="col-md-4">';
+    if ($type == "catalog") $html_loadmore .=    '<div class="theme-card'.($isFeatured ? " gameListFeatured" : "").'">';
+
+    $html_loadmore .=        '<div class="theme-card__body">';
+    if ($isFeatured) $html_loadmore .= '<span class="featured-text animated infinite pulse"><i class="fa fa-bell mr-1" aria-hidden="true"></i>'.__("featured", "aipim").'</span>';
+    $html_loadmore .=            '<a class="d-block" href="'.esc_url( get_permalink($game->ID) ).'">';
+    $html_loadmore .=                '<img width="400"';
+    $html_loadmore .=                     'height="300"';
+    $html_loadmore .=                     'src="'.get_the_post_thumbnail_url($game->ID, 'am-400').'"';
+    $html_loadmore .=                     'class="theme-card__img wp-post-image"';
+    $html_loadmore .=                     'alt=""';
+    $html_loadmore .=                     'srcset="'.get_the_post_thumbnail_url($game->ID, 'am-400').' 400w,';
+    $html_loadmore .=                             get_the_post_thumbnail_url($game->ID, 'am-300').' 300w,';
+    $html_loadmore .=                             get_the_post_thumbnail_url($game->ID, 'am-768').' 768w,';
+    $html_loadmore .=                             get_the_post_thumbnail_url($game->ID, 'am-1024').' 1024w,';
+    $html_loadmore .=                             get_the_post_thumbnail_url($game->ID, 'am-200').' 200w,';
+    $html_loadmore .=                             get_the_post_thumbnail_url($game->ID, 'am-600').' 600w,';
+    $html_loadmore .=                             get_the_post_thumbnail_url($game->ID, 'am-1200').' 1200w"';
+    $html_loadmore .=                     'sizes="(max-width: 400px) 100vw, 400px" />';
+    $html_loadmore .=            '</a>';
+    $html_loadmore .=            '<a class="theme-card__body__overlay btn btn-brand btn-sm" href="'.esc_url( get_permalink($game->ID) ).'">'.__("Play for free", "aipim").'</a>';
+    $html_loadmore .=            '<div class="rtp-content"><p>RTP</p><h6>'.get_field("rtp", $game->ID).'%</h6></div>';
+    $html_loadmore .=        '</div>';
+
+    $html_loadmore .=        '<div class="theme-card__footer">';
+    $html_loadmore .=            '<div class="theme-card__footer__item">';
+    $html_loadmore .=                '<a class="theme-card__title mr-1" href="'.esc_url( get_permalink($game->ID) ).'">'.get_the_title($game->ID).'</a>';
+    $html_loadmore .=                '<p class="theme-card__info">';
+    $html_loadmore .=                    '<ul class="prod_cats_list">';
+    $html_loadmore .=                        '<li>';
+    $html_loadmore .=                            '<a href="'.$provider["url"].'">'.$provider["name"].'</a>';
+    $html_loadmore .=                        '</li>';
+    $html_loadmore .=                        '<li style="color:#838E95;" title="'.__("Volatility", "aipim").'" data-toggle="tooltip" data-placement="top">';
+    $html_loadmore .=                          '<i class="fa '.$volatility_icon.'" aria-hidden="true"></i> '.aipim_volatility_label_translate($volatility);
+    $html_loadmore .=                        '</li>';
+    $html_loadmore .=                    '</ul>';
+    $html_loadmore .=                '</p>';
+    $html_loadmore .=            '</div>';
+    $html_loadmore .=            '<div class="theme-card__footer__item">';
+    $html_loadmore .=                '<p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">#</span>'.get_field("ranking", $game->ID).'</span></p>';
+    $html_loadmore .=            '</div>';
+    $html_loadmore .=        '</div>';
+
+
+    $html_loadmore .=    '</div>';
+    $html_loadmore .= '</li>';
+  }
+
+
+  // game sidebar
+  if ($type == "sidebar"){
+    $game_box_square = get_field('imagen_juego_square', $game->ID);
+
+    $html_loadmore .= '<li class="col-12 mt-2 pl-0">';
+    $html_loadmore .=    '<div class="mb-1'.($isFeatured ? " gameListFeatured" : "").'">';
+    // var_dump($game_box_square);
+    $html_loadmore .=        '<div>';
+    if ($isFeatured) $html_loadmore .= '<span class="featured-text animated infinite pulse"><i class="fa fa-bell mr-1" aria-hidden="true"></i>'.__("featured", "aipim").'</span>';
+    $html_loadmore .=            '<a data-toggle="tooltip" data-placement="top" title="'.get_the_title($game->ID).'" class="d-block" href="'.esc_url( get_permalink($game->ID) ).'">';
+    $html_loadmore .=                '<img width="100"';
+    // $html_loadmore .=                     'height="300"';
+    $html_loadmore .=                     'src="'.$game_box_square["sizes"]["thumbnail"].'"';
+    $html_loadmore .=                     'class="theme-card__img rounded-circle wp-post-image"';
+    $html_loadmore .=                     'alt=""/>';
+    $html_loadmore .=            '</a>';
+    $html_loadmore .=        '</div>';
+
+
+    $html_loadmore .=    '</div>';
+    $html_loadmore .= '</li>';
+  }
+
+
+
+
 
   return $html_loadmore;
 }

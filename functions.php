@@ -942,6 +942,13 @@ function am_enqueue_scripts() {
     wp_enqueue_script('clipboard-js', get_template_directory_uri().'/assets/javascript/clipboard.min.js', array('jquery'),false, true);
     wp_add_inline_script( 'clipboard-js', 'var clipboard = new ClipboardJS(".btn"); clipboard.on("success", function(e) { aipim_notification({text: "'.__("Copied!", "aipim").'"}); }); ' );
   }
+
+  if (is_game()){
+
+
+
+  }
+
 }
 
 add_filter('wpseo_json_ld_output', 'bybe_remove_yoast_json', 10, 1);

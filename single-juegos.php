@@ -722,7 +722,7 @@
 <!-- Game Wide Modal -->
 <style>
 @media (max-width: 576px){
-  .modal-xl #gameWideScreen, .modal-xl .modalWideFooterGame{ display:none !important; }
+  .modal-xl .gameDesktopOptions, .modal-xl .modalWideFooterGame{ display:none !important; }
   .modal-xl .gameMobileOptions, .modal-xl .modalWideFooterOptions{ display:block; }
 }
 </style>
@@ -745,35 +745,62 @@
 
 
 
-          <div class="row">
-            <div class="col-12 gameWideGamebox">
+          <div class="row gameDesktopOptions">
+            <div class="col-10 pr-0 gameWideGamebox">
               <div id="gameWideScreen"></div>
             </div>
-            <div class="col-2 gameWideSidebar d-none px-0 mx-0">
+            <div class="col-2 gameWideSidebar px-0 mx-0 pt-3">
               <center>
+            		<ul class="row mb-0">
+                  <?php
 
-
-                <?php
-                $the_query_games = new WP_Query( array(
+                  $the_query_games = new WP_Query( array(
                     'post_type' => 'juegos',
 
-                    'posts_per_page' => 4,
-                    'showposts' => 4,
-                    'orderby'        => 'rand',
-                    'post_status' => 'publish'
-                ) );
-                foreach ($the_query_games->posts as $game){
-                   echo aipim_loadmore_games_html($game);
-                }
-                /* Restore original Post Data */
-                wp_reset_postdata();
-                ?>
+                    'posts_per_page' => 2,
+                    'showposts' => 2,
+                    'meta_query' => array(
+                        'relation' => 'OR',
 
+                        'query_two' => array(
+                            'key' => 'is_featured',
+                            'value' => true, // Optional
+              	            'compare'   => '=',
+                              'type' => 'numeric'
+                        ),
+                    ),
+                    'orderby' => 'rand',
+                    'post_status' => 'publish'
+                  ) );
+
+                  /* Restore original Post Data */
+                  wp_reset_postdata();
+                  $excludeFeatured = Array();
+                  foreach ($the_query_games->posts as $game){
+                    $excludeFeatured[] = $game->ID;
+                     echo aipim_loadmore_games_html($game, "sidebar");
+                  }
+
+                  $the_query_games = new WP_Query( array(
+                      'post_type' => 'juegos',
+                      'post__not_in' => $excludeFeatured,
+                      'posts_per_page' => 3,
+                      'showposts' => 3,
+                      'orderby'        => 'rand',
+                      'post_status' => 'publish'
+                  ) );
+                  foreach ($the_query_games->posts as $game){
+                     echo aipim_loadmore_games_html($game, "sidebar");
+                  }
+
+                  /* Restore original Post Data */
+                  wp_reset_postdata();
+
+                  ?>
+            		</ul>
               </center>
             </div>
           </div>
-
-
 
           <div class="gameMobileOptions">
             <?php
@@ -817,10 +844,10 @@
           </div>
       </div>
       <div class="modal-footer modalWideFooterGame">
-        <button type="button" class="btn btn-brand btn-sm btn-gameSidebar"><i class="fa fa-plus mr-1" aria-hidden="true"></i><?php _e("Games", "aipim");  ?></button>
+        <button type="button" class="btn btn-brand btn-sm btnWideFullscreen"><i class="fa fa-expand" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="<?php _e("Fullscreen", "aipim");  ?>"></i></button>
+        <button type="button" class="btn btn-brand btn-sm btn-gameSidebar" data-toggle="tooltip" data-placement="bottom" title="<?php _e("Toogle sidebar", "aipim"); ?>"><i class="fa fa-bars" aria-hidden="true"></i></button>
         <button type="button" class="btn btn-brand btn-sm" onclick="aipimOpenContactBox();"><?php _e("Broken?", "aipim");  ?></button>
-        <button type="button" class="btn btn-brand btn-sm btnWideFullscreen"><i class="fa fa-expand" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="<?php _e("Fullscreen", "aipim");  ?>"></i></button>
-        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="<?php _e("Close", "aipim");  ?>"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times mr-1" aria-hidden="true"></i><?php _e("Close", "aipim");  ?></button>
       </div>
       <div class="modal-footer modalWideFooterOptions">
         <a href="<?php echo am_link_external($bonus_link, Array('type'=>'casino', 'id'=>$o_casino->ID)); ?>" rel="sponsored" class="btn btn-brand btn-bg btn-block btn-table-more btn-sm"><i class="fa fa-external-link mr-1" aria-hidden="true"></i><?php _e("Let's do it!", "aipim"); ?></a>

@@ -152,18 +152,17 @@ $(document).ready(function () {
     $(".btn-gameSidebar").click(function(){
 
       if ($(".gameWideGamebox").hasClass("col-10")){
-        $(".gameWideGamebox").removeClass("col-10").addClass("col-12");
+        $(".gameWideGamebox").removeClass("col-10 pr-0").addClass("col-12");
         $(".gameWideSidebar").addClass("d-none");
         return;
       }else{
-        $(".gameWideGamebox").removeClass("col-12").addClass("col-10");
+        $(".gameWideGamebox").removeClass("col-12").addClass("col-10 pr-0");
         $(".gameWideSidebar").removeClass("d-none");
         return;
       }
 
-
-
     });
+
 
     $('#tc-modal').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget) // Button that triggered the modal
