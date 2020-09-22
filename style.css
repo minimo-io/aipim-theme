@@ -12804,7 +12804,7 @@ dt {
 
 .profile__description__title{  }
 .box-did-u-know{ margin-bottom:2.2rem; }
-.box-did-u-know h5, .box-did-u-know h2{ color:#515151; font-size:19px; }
+.box-did-u-know h5, .box-did-u-know h2, .globalH2{ color:#515151; font-size:19px; }
 
 /* .box-did-u-know .general-description{ */
 .general-description{
@@ -14231,6 +14231,7 @@ body.modal-open #main, body.modal-open #nav-header{
   font-weight:700;
   font-size:28px;
 }
+.relatedGamesBox .active{ font-weight: bold;}
 
 /* game modal  */
 #gameWideScreen{ width:100%;height:600px; }
@@ -14338,7 +14339,7 @@ a.button-join-small{ font-size: 17px !important; }
   .form-control, .input-text, #user_login, #user_pass{ height:32px; }
   #signup_div_wrapper label{font-size:13px;}
   .game-casino-suggestion img{ max-width:100px; }
-  .box-did-u-know h5, .box-did-u-know h2{ font-size:15px; }
+  .box-did-u-know h5, .box-did-u-know h2, .globalH2{ font-size:15px; }
   .general-description h2{ font-size: 18px; }
   .general-description h3{ font-size: 16px; }
   .modal-main .modal-body{ font-size: 13px; text-align: justify; color: #838E95; }
@@ -14393,6 +14394,7 @@ a.button-join-small{ font-size: 17px !important; }
   .provider-title{
     font-size:20px;
   }
+  .relatedGamesBoxList li{ font-size:.8rem; }
 }
 @media (max-width: 450px) {
   .knowledge-base h4{ font-size:1.05rem; }

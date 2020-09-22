@@ -1,5 +1,43 @@
 <?php
 
+// show a simple list of related games
+function aipim_showRelatedGames($provider = NULL, $exludeGames = Array()){
+  $ret = "";
+  if ($provider){
+
+
+    $the_query_games = new WP_Query( array(
+      'post_type' => 'juegos',
+      'posts_per_page' => -1,
+      'tax_query' => array(
+          array(
+              'taxonomy' => 'proveedores',
+              'field' => 'term_id',
+              'terms' => $provider["id"]
+          )
+      ),
+      'post_status' => 'publish'
+    ) );
+
+    if ($the_query_games->post_count > 0){
+      $ret .= "<div class='relatedGamesBox col-12 container mt-4'>";
+        $ret .= "<h2 class='relatedGamesBoxTitle globalH2'>".__("Other free games from", "aipim")." <a class='opacity-8 dotted-3' href='".$provider["url"]."'>".$provider["name"]."</a></h2>";
+        $ret .= "<ul class='list-unstyled row relatedGamesBoxList'>";
+        foreach ($the_query_games->posts as $game){
+
+           $ret .= "<li class='list-item col-4 border-top py-1 text-truncate'><a ".(in_array($game->ID, $exludeGames) ? "class='active'" : "" )." title='".esc_attr(get_the_title($game->ID))."' href='".esc_url( get_permalink($game->ID) )."'>".get_the_title($game->ID)."</a></li>";
+
+        }
+        $ret .= "</ul>";
+      $ret .= "</div>";
+    }
+
+  }
+  wp_reset_postdata();
+  return $ret;
+}
+
+// casinos filters
 function aipim_casinoTypeFilterForm(){
   ?>
   <div class="categoryCasinosFilters text-center my-2">

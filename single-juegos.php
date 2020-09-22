@@ -328,7 +328,7 @@
                                                         <div class="col-sm-3 text-center game-casino-suggestion align-middle" style="background-color:#eef1f1;padding:2%;">
                                                           <?php echo $casino_image; ?>
                                                         </div>
-                                                        <div class="col-sm" Xstyle="border-radius:0 10px 10px 0;">
+                                                        <div class="col-sm">
 
                                                           <div class="card border-light card-promo">
                                                             <div class="card-body<?php echo (!$has_welcome_offer ? " mt-0 mt-lg-2" : ""); ?>">
@@ -351,7 +351,7 @@
                                               </div>
 
 
-                                                <!-- Responsive sidebar put below the theme -->
+                                                <!-- Mobile sidebar put below the theme -->
                                                 <div class="d-lg-none">
                                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                                         <div>
@@ -491,6 +491,7 @@
                                                       ?>
                                                     </div>
                                                 </div>
+                                                <!-- End of mobile sidebar -->
 
                                                 <div class="d-flex justify-content-between align-items-center has-border">
                                                     <ul class="nav sub-nav sub-nav--has-border" role="tablist">
@@ -527,6 +528,12 @@
                                                     </div>
 
                                                 </div>
+
+                                                <?php
+                                                // here related games
+                                                echo aipim_showRelatedGames($provider, Array(get_the_ID()));
+                                                ?>
+
                                             </div>
                                         </div>
                                         <div class="col-lg-4 d-none d-lg-block pl-xs-0 pl-lg-5 casino-sidebar">
