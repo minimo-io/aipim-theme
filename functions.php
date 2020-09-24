@@ -946,7 +946,6 @@ function am_enqueue_scripts() {
   if (is_game()){
 
 
-
   }
 
 }

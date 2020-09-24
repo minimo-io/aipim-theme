@@ -479,7 +479,7 @@
                                                                   <?php echo $casino_image;  ?>
                                                               </div>
                                                               <div class="profile-author__author__description">
-                                                                  <p><?php echo ($c==0 ? "Este juego aparece en" : "Aparece también en" ); ?></p>
+                                                                  <p><?php echo ($c==0 ? __("This games appears at", "aipim") : __("It also appears at", "aipim") ); ?></p>
                                                                   <h6 class="profile-logo__author__title"><?php echo $casino->post_title;  ?></h6>
                                                               </div>
                                                           </a>
@@ -753,10 +753,10 @@
 
 
           <div class="row gameDesktopOptions">
-            <div class="col-10 pr-0 gameWideGamebox">
+            <div class="col-12 gameWideGamebox">
               <div id="gameWideScreen"></div>
             </div>
-            <div class="col-2 gameWideSidebar px-0 mx-0 pt-3">
+            <div class="col-2 gameWideSidebar d-none px-0 mx-0 pt-3">
               <center>
             		<ul class="row mb-0">
                   <?php
@@ -851,10 +851,72 @@
           </div>
       </div>
       <div class="modal-footer modalWideFooterGame">
-        <button type="button" class="btn btn-brand btn-sm btnWideFullscreen"><i class="fa fa-expand" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="<?php _e("Fullscreen", "aipim");  ?>"></i></button>
-        <button type="button" class="btn btn-brand btn-sm btn-gameSidebar" data-toggle="tooltip" data-placement="bottom" title="<?php _e("Toogle sidebar", "aipim"); ?>"><i class="fa fa-bars" aria-hidden="true"></i></button>
-        <button type="button" class="btn btn-brand btn-sm" onclick="aipimOpenContactBox();"><?php _e("Broken?", "aipim");  ?></button>
-        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times mr-1" aria-hidden="true"></i><?php _e("Close", "aipim");  ?></button>
+        <div class="container-fluid p-0">
+
+          <?php
+          foreach ($the_query_casinos->posts as $casino){
+
+            $casino_image = get_the_post_thumbnail_url($casino->ID, Array(400, 400), array( 'class' => 'profile-author__img', 'alt' => $the_query_casinos->posts[1]->post_title ));
+            $casino_link = get_post_permalink($casino->ID);
+            $casinoTitle = get_the_title($casino->ID);
+            // bonus link and title if any
+            $has_welcome_offer = true;
+            $bonus_link = get_field("link_default", $casino->ID);
+            $o_bonus_welcome = aipim_get_bonus_object_for_casino($casino->ID, "first_welcome"); // welcome bonus for casino
+
+            // if (empty($o_bonus_welcome)) continue; // no welcome bonus for this casino, so do not show a welcome offer
+            if (empty($o_bonus_welcome)) $has_welcome_offer = false; // no welcome bonus for this casino, so do not show a welcome offer
+
+            if ($has_welcome_offer == true){
+              $bonus_custom_link = get_field("bonus_link", $o_bonus_welcome->ID);
+              if (!empty($bonus_custom_link)) $bonus_link = $bonus_custom_link; // bonuses can have no link, then use the casino default link
+              $bonus_title = get_field("bonus_title", $o_bonus_welcome->ID);
+            }
+
+
+          ?>
+            <div class="row">
+              <div class="col-6">
+
+                <div class="theme-description__list__item p-0 border-0">
+                  <a class="profile-author" href="<?php echo esc_attr($casino_link); ?>">
+                  <div class="profile-author__logo mr-2" style="width:45px;height:45px;">
+                  <img src="<?php echo $casino_image; ?>" class="profile-author__img wp-post-image" alt="SpinUp" style="width:48px !important;"> </div>
+                  <div class="profile-author__author__description">
+                  <p><?php echo __("This games appears at", "aipim"); ?> <span style="color:black;"><?php echo $casinoTitle; ?></span></p>
+                  <h6 class="profile-logo__author__title"><?php echo $bonus_title; ?></h6>
+
+
+                  </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col text-center pl-0 mr-4">
+                <a href="<?php echo am_link_external($bonus_link, Array('type'=>'casino', 'id'=>$casino->ID));  ?>" rel="sponsored" target="_blank" style="min-width:100px;border-radius:23px;line-height:27px;color:white !important;" class="btn btn-brand btn-block up btn-sm btn-gameParticipate">
+                  <span Xclass="pull-left">
+                  <i class="fa fa-arrow-left mr-1" aria-hidden="true"></i></span>
+                  <?php
+                  if ($has_welcome_offer == true) echo __("PARTICIPATE WITH THE BONUS!", "aipim");
+                  if ($has_welcome_offer == false) echo __("PLAY AT ", "aipim").$casinoTitle;
+                  ?>
+                </a>
+              </div>
+            </div>
+          <?php
+            break;
+          }
+          ?>
+
+
+
+
+        </div>
+        <!-- <a class="btn btn-brand btn-checkout up btn-customcolor btn-sm" style="color:white;"><?php _e("Play for money"); ?></a> -->
+        <button data-favs-action="<?php echo $fav_action; ?>" class="btn btn-outline-brand btn-sm mb-0 ml-0 up btn-customcolor-outline favs-button" data-toggle="tooltip" data-placement="bottom" title="<?php echo $fav_text; ?>"><i class="fa <?php echo $fav_icon; ?>" aria-hidden="true"></i></button>
+        <button type="button" class="btn btn-outline-brand btn-sm btnWideFullscreen" data-toggle="tooltip" data-placement="bottom" title="<?php _e("Fullscreen", "aipim");  ?>"><i class="fa fa-expand" aria-hidden="true"></i></button>
+        <button type="button" class="btn btn-outline-brand btn-sm btn-gameSidebar" data-toggle="tooltip" data-placement="bottom" title="<?php _e("More games", "aipim"); ?>"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        <button type="button" class="btn btn-outline-brand btn-sm" onclick="aipimOpenContactBox();" data-toggle="tooltip" data-placement="bottom" title="<?php _e("Report broken game", "aipim"); ?>"><?php _e("Broken?", "aipim");  ?></button>
+        <button type="button" class="btn btn-brand btn-sm" data-dismiss="modal" aria-hidden="true"  data-toggle="tooltip" data-placement="bottom" title="<?php _e("Close", "aipim");  ?>"><i class="fa fa-times" aria-hidden="true"></i></button>
       </div>
       <div class="modal-footer modalWideFooterOptions">
         <a href="<?php echo am_link_external($bonus_link, Array('type'=>'casino', 'id'=>$o_casino->ID)); ?>" rel="sponsored" class="btn btn-brand btn-bg btn-block btn-table-more btn-sm"><i class="fa fa-external-link mr-1" aria-hidden="true"></i><?php _e("Let's do it!", "aipim"); ?></a>

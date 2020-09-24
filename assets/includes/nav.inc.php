@@ -70,7 +70,7 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
                             $subcategories = get_categories( array(
                                 'orderby' => 'name',
                                 'order'   => 'DESC',
-                                'hide_empty' => 0,
+                                'hide_empty' => 1,
                                 'hierarchical' => 1,
                                 'parent' => $category->term_id
                             ) );

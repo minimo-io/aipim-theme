@@ -79,7 +79,14 @@ $(document).ready(function () {
     setTimeout(function(){
       animateCSS(".card-bonus", "bounce");
       // animateCSS(".badge-bonus", "flash");
+
     }, (1000 * 5));
+
+    setInterval(function(){
+      if($(".btn-gameParticipate").length){
+        animateCSS(".btn-gameParticipate", "swing");
+      }
+    }, (1000 * 15));
 
     //Mobile preview Iframe action
     $('.btn-iframe-to-mobile-trigger').on('click', function (event) {
