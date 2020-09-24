@@ -118,6 +118,7 @@
                                                             <div class="card-body">
                                                                 <h2 class="card-title ml-1"><?php _e("Review of the casino","aipim");  ?> <?php the_title(); ?></h2>
                                                                 <?php echo do_shortcode('[contentIndex type="casino"]'); ?>
+                                                                <?php echo aipim_postAuthorMeta($post->post_author); ?>
                                                                 <div class="card-text general-description minimo-read-more minimo-read-more-short px-1">
 
                                                                   <?php echo "<p class='mb-3'>".get_the_excerpt()."</p>";  ?>

@@ -14232,6 +14232,15 @@ body.modal-open #main, body.modal-open #nav-header{
   font-size:28px;
 }
 .relatedGamesBox .active{ font-weight: bold;}
+.reviewMetadata img{
+  width:25px;
+  border-radius:100px !important;
+  padding-top:2px;
+}
+.reviewMetadata{
+  font-size:12px;
+  padding:0.5rem 1.25rem !important;
+}
 
 /* game modal  */
 #gameWideScreen{ width:100%;height:600px; }
@@ -14349,6 +14358,7 @@ a.button-join-small{ font-size: 17px !important; }
   .comment-own h3{ font-size: 18px; }
   .comment-own button, .comment-toolbox button{ font-size:12px; padding:5px; }
   .general-description, .alert, .theme-purchases, .theme-purchases a{ font-size:14px; }
+  .reviewMetadata{ font-size:13px; }
   .table-leadpartner-stats .badge{ font-size:13px; }
   .table-leadpartner-numbers{ font-size:20px !important; }
   .table-leadpartner-stats thead th, .table-leadpartner-stats thead td, .table-leadpartner-stats tbody th, .table-leadpartner-stats tbody td{
@@ -14395,6 +14405,11 @@ a.button-join-small{ font-size: 17px !important; }
     font-size:20px;
   }
   .relatedGamesBoxList li{ font-size:.8rem; }
+  .reviewMetadata img{
+    width:20px;
+    padding-top:5px;
+  }
+  .reviewMetadata{ padding:0.5rem 1.25rem !important; }
 }
 @media (max-width: 450px) {
   .knowledge-base h4{ font-size:1.05rem; }

@@ -164,6 +164,7 @@
                                                             <div class="card-body pb-0">
                                                                 <h2 class="card-title ml-1"><?php _e("Conclusion about the","aipim");  ?> <?php echo $single_category->slug; ?> <?php the_title(); ?></h2>
                                                                 <?php echo do_shortcode('[contentIndex type="game"]'); ?>
+                                                                <?php echo aipim_postAuthorMeta($post->post_author); ?>
                                                                 <div class="card-text general-description minimo-read-more minimo-read-more-short">
                                                                   <p class="mb-3"><?php echo get_the_excerpt();  ?></p>
                                                                   <?php the_content(); ?>

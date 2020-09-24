@@ -1,5 +1,34 @@
 <?php
+// show author meta and modification dates for content in main description
+// to be used in casinos & games reviews mainly
+function aipim_postAuthorMeta($authorId){
+  $ret = "";
+  if (empty($authorId)) return "";
 
+
+  $authorAvatar = get_avatar_url($authorId, ['size' => '20']);
+  $lastName = get_the_author_meta('user_lastname');
+  if ($lastName) $lastName = " ".substr($lastName,0,1).".";
+
+
+  $ret .= "<div class='card reviewMetadata p-2 mb-4'>";
+    $ret .= "<div class='row'>";
+      $ret .= "<div class='col'>";
+        $ret .= "<div class='text-nowrap'>";
+
+          $ret .= '<img src="'.$authorAvatar.'" class="img-fluid pull-left mr-2" alt="author">';
+          $ret .= '<span itemscope="" itemprop="author" itemtype="http://schema.org/Person" class="pull-left" style="line-height:2.1rem;">'.get_the_author_meta('user_firstname').$lastName.'</span>';
+          $ret .= '<span class="pull-left ml-1" style="line-height:2.1rem;">('.__("author", "aipim").')</span>';
+        $ret .= "</div>";
+      $ret .= "</div>";
+      $ret .= "<div class='col-4 text-right' style='line-height:2.1rem;'>";
+      $ret .= "<i class='fa fa-clock-o mr-1' aria-hidden='true'></i><time datetime='".get_the_date('c')."' itemprop='datePublished'>".human_time_diff( get_the_time('U'), current_time( 'timestamp' ) )."</time>";
+      $ret .= "</div>";
+    $ret .= "</div>";
+  $ret .= "</div>";
+
+  return $ret;
+}
 // show a simple list of related games
 function aipim_showRelatedGames($provider = NULL, $exludeGames = Array()){
   $ret = "";
