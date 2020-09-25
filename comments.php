@@ -130,6 +130,7 @@ $comments = array_reverse($comments); // reorder, newest first.
 
         // if exists display the user comment
         if (  isset($user_has_comment['comment']) && !empty($user_has_comment['comment']) ){
+					$sp_rating_count++;
           echo "<div class='comment-own rounded mb-4'>";
           echo '
             <div class="container">
@@ -148,7 +149,9 @@ $comments = array_reverse($comments); // reorder, newest first.
           echo aipim_comments_html($user_has_comment['comment'], $current_user, $post_type, $normal_comment, $user_has_comment['comment']);
 
           $comment_own_rating = get_comment_meta( $user_has_comment['comment']->comment_ID, 'rating', true );
+
           $comment_own_rating = round($comment_own_rating["value"], 2);
+					$sp_rating_sum += $comment_own_rating;
           ?>
           <form action="" method="post" id="review_edit_form" class="comment-form hidden">
         				<div class="form-group col-12 no-padding mb-0">
@@ -211,6 +214,10 @@ $comments = array_reverse($comments); // reorder, newest first.
 
           echo aipim_comments_html($comment, $current_user, $post_type, $normal_comment);
 
+					$comment_normal_rating = get_comment_meta( $comment->comment_ID, 'rating', true );
+					$sp_rating_sum += round($comment_normal_rating["value"], 2);
+
+					$sp_rating_count++;
         }
         echo '</div>';
 
@@ -219,7 +226,6 @@ $comments = array_reverse($comments); // reorder, newest first.
 
 </div>
 <?php
-
 
 
 
@@ -249,7 +255,7 @@ if ("juegos" == $post_type || "casinos" == $post_type || "bonus" == $post_type){
   $sp_rating_description = addslashes( str_replace(Array('"', "'", "\t", "\r", "\n"), " ",  strip_tags(get_the_excerpt())  ));
   $sp_rating_image = get_the_post_thumbnail_url();
 
-  if ($sp_rating_count == 0) $sp_rating_count = 1;
+  // if ($sp_rating_count == 0) $sp_rating_count = 1;
   if ($sp_rating_result <= 0) $sp_rating_result = 1;
   echo '<script type="application/ld+json">
         {
@@ -263,7 +269,7 @@ if ("juegos" == $post_type || "casinos" == $post_type || "bonus" == $post_type){
         },
         "mpn": "'.get_the_ID().'",
         "brand": {
-             "@type": "Thing",
+             "@type": "Brand",
              "name": "'.$sp_rating_org.'"
            },
         "name": "'.$sp_rating_name.'",

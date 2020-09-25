@@ -8,21 +8,30 @@ function aipim_postAuthorMeta($authorId){
 
   $authorAvatar = get_avatar_url($authorId, ['size' => '20']);
   $lastName = get_the_author_meta('user_lastname');
+
+
   if ($lastName) $lastName = " ".substr($lastName,0,1).".";
 
+  $metaDate = human_time_diff( get_the_time('U'), current_time( 'timestamp' ) );
+  $metaDate = str_replace("semanas", "sem.", $metaDate);
+  $metaDate = str_replace("semana", "sem.", $metaDate);
 
-  $ret .= "<div class='card reviewMetadata p-2 mb-4'>";
+  $authorMetaTooltip = ucfirst(__("author", "aipim"))." ".get_the_author_meta('display_name').". ".__("Registered", "aipim").": ".get_the_author_meta("user_registered");
+  $publishDateTooltip = __("Published").": ".get_the_date('r');
+
+  $ret .= "<div class='card reviewMetadata p-2 mb-1'>";
     $ret .= "<div class='row'>";
       $ret .= "<div class='col'>";
         $ret .= "<div class='text-nowrap'>";
-
-          $ret .= '<img src="'.$authorAvatar.'" class="img-fluid pull-left mr-2" alt="author">';
-          $ret .= '<span itemscope="" itemprop="author" itemtype="http://schema.org/Person" class="pull-left" style="line-height:2.1rem;">'.get_the_author_meta('user_firstname').$lastName.'</span>';
-          $ret .= '<span class="pull-left ml-1" style="line-height:2.1rem;">('.__("author", "aipim").')</span>';
+          $ret .= '<div style="width:fit-content;" data-toggle="tooltip" data-placement="top" title="'.esc_attr($authorMetaTooltip).'">';
+            $ret .= '<img src="'.$authorAvatar.'" class="img-fluid pull-left mr-2" alt="author">';
+            $ret .= '<span class="pull-left" style="line-height:2.1rem;">'.get_the_author_meta('user_firstname').$lastName.'</span>';
+            $ret .= '<span class="pull-left ml-1 d-none d-md-inline-block" style="line-height:2.1rem;">('.__("author", "aipim").')</span>';
+          $ret .= '</div>';
         $ret .= "</div>";
       $ret .= "</div>";
       $ret .= "<div class='col-4 text-right' style='line-height:2.1rem;'>";
-      $ret .= "<i class='fa fa-clock-o mr-1' aria-hidden='true'></i><time datetime='".get_the_date('c')."' itemprop='datePublished'>".human_time_diff( get_the_time('U'), current_time( 'timestamp' ) )."</time>";
+      $ret .= "<i class='fa fa-clock-o mr-1' aria-hidden='true'></i><time datetime='".get_the_date('c')."' data-toggle='tooltip' data-placement='top' title='".esc_attr($publishDateTooltip)."'>".$metaDate."</time>";
       $ret .= "</div>";
     $ret .= "</div>";
   $ret .= "</div>";

@@ -162,9 +162,10 @@
                                                     <div class="container-fluid">
                                                         <div class="card border-0">
                                                             <div class="card-body pb-0">
-                                                                <h2 class="card-title ml-1"><?php _e("Conclusion about the","aipim");  ?> <?php echo $single_category->slug; ?> <?php the_title(); ?></h2>
-                                                                <?php echo do_shortcode('[contentIndex type="game"]'); ?>
+                                                                <h2 class="card-title text-truncate ml-1"><?php _e("Conclusion about the","aipim");  ?> <?php echo $single_category->slug; ?> <?php the_title(); ?></h2>
                                                                 <?php echo aipim_postAuthorMeta($post->post_author); ?>
+                                                                <?php echo do_shortcode('[contentIndex type="game"]'); ?>
+
                                                                 <div class="card-text general-description minimo-read-more minimo-read-more-short">
                                                                   <p class="mb-3"><?php echo get_the_excerpt();  ?></p>
                                                                   <?php the_content(); ?>
@@ -233,7 +234,7 @@
                                                         <div class="<?php echo $thirdClass; ?> mt-3 mt-sm-0">
                                                             <div class="card">
                                                                 <div class="card-body text-center">
-                                                                    <h5 class="card-title"><?php _e("Paylines","aipim");  ?></h5>
+                                                                    <h5 class="card-title text-truncate"><?php _e("Paylines","aipim");  ?></h5>
                                                                     <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
                                                                         <?php the_field("lineas_de_pago"); ?>
                                                                     </p>
@@ -247,7 +248,7 @@
                                                           <div class="col-6 col-sm-12 mt-sm-0">
                                                               <div class="card mt-3 mt-md-3">
                                                                   <div class="card-body text-center">
-                                                                      <h5 class="card-title"><?php _e("Max Win","aipim");  ?></h5>
+                                                                      <h5 class="card-title text-truncate"><?php _e("Max Win","aipim");  ?></h5>
                                                                       <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
                                                                           x<?php echo $maxWin; ?>
                                                                       </p>

@@ -4,7 +4,7 @@ Author: Minimo
 Author URI: https://minimo.io/
 Text Domain: aipim
 Description: A community theme developed for Betizen.org based on themes.getbootstrap.com
-Version: 0.7.62
+Version: 0.7.71
 */
 
 /* ::root {
@@ -14305,7 +14305,10 @@ a.button-join-small{ font-size: 17px !important; }
   .navbar-toggler-icon{ width:1.1em; height:1.1em; }
   a.button-join-small{ font-size: 12px !important; }
   .home-numbers .card-text, .casino-single-featured .card-text{
-    font-size:1.8rem;
+    font-size:1.3rem !important;
+  }
+  .casino-single-featured h5{
+    font-size:15px;
   }
   .casino-table-image img{width:64px;}
   .table-ranking-ner{ font-size:21px !important; }

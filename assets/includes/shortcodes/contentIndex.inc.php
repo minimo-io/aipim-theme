@@ -13,7 +13,7 @@ function aipim_contentIndex_shortcode( $atts ) {
     $yt_link = get_field("youtube", $post->ID);
     // $ret .= '<h2 class="card-title catalog-blog-title post-title hero-h1 bd-text-purple-bright display-4" style="font-weight:bold;">'.__("Index", "aipim").'</h2>';
     $ret .= '
-            <div class="list-index list-group mt-4 mb-1">
+            <div class="list-index list-group mt-1 mb-4">
               <a href="#juegos" class="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">
                 '.__("Games", "aipim").'
                 '.get_score_style(get_field("games_score")).'
@@ -53,7 +53,7 @@ function aipim_contentIndex_shortcode( $atts ) {
   if ($atts["type"] == "game"){
     $yt_link = get_field("youtube", $post->ID);
     $ret .= '
-            <div class="list-index list-group mt-4 mb-1">
+            <div class="list-index list-group mt-1 mb-4">
               <a href="#premios" class="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">
                 '.__("Prizes, RTP and Volatility", "aipim").'
                 '.get_score_style(get_field("prizes_score")).'

@@ -117,8 +117,8 @@
                                                         <div class="card border-0">
                                                             <div class="card-body">
                                                                 <h2 class="card-title ml-1"><?php _e("Review of the casino","aipim");  ?> <?php the_title(); ?></h2>
-                                                                <?php echo do_shortcode('[contentIndex type="casino"]'); ?>
                                                                 <?php echo aipim_postAuthorMeta($post->post_author); ?>
+                                                                <?php echo do_shortcode('[contentIndex type="casino"]'); ?>
                                                                 <div class="card-text general-description minimo-read-more minimo-read-more-short px-1">
 
                                                                   <?php echo "<p class='mb-3'>".get_the_excerpt()."</p>";  ?>
@@ -146,7 +146,7 @@
                                                         <div class="col">
                                                             <div class="card">
                                                                 <div class="card-body text-center">
-                                                                    <h5 class="card-title"><?php _e("Max withdrawal","aipim");  ?></h5>
+                                                                    <h5 class="card-title text-truncate"><?php _e("Max withdrawal","aipim");  ?></h5>
                                                                     <p class="card-text display-4" Xstyle="line-height:58px;">
                                                                         <?php
                                                                         $max_cashout = get_field("retiro_maximo");
@@ -159,7 +159,7 @@
                                                         <div class="col">
                                                             <div class="card">
                                                                 <div class="card-body text-center">
-                                                                    <h5 class="card-title"><?php _e("Minimum deposit","aipim");  ?></h5>
+                                                                    <h5 class="card-title text-truncate"><?php _e("Minimum deposit","aipim");  ?></h5>
                                                                     <p class="card-text display-4">
                                                                         <?php
                                                                         the_field("deposito_minimo");
@@ -171,7 +171,7 @@
                                                         <div class="col-sm-4 mt-3 mt-sm-0">
                                                             <div class="card">
                                                                 <div class="card-body text-center">
-                                                                    <h5 class="card-title"><?php _e("Min withdrawal","aipim");  ?></h5>
+                                                                    <h5 class="card-title text-truncate"><?php _e("Min withdrawal","aipim");  ?></h5>
                                                                     <p class="card-text display-4">
                                                                         <?php the_field("retiro_minimo"); ?>
                                                                     </p>
