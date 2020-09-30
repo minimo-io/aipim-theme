@@ -8,7 +8,6 @@
     $category = reset(get_the_category($post->ID));
     $category_id = $category->cat_ID;
     $category_url = get_category_link( $category_id );
-    $order_by = (isset($_GET["orderby"]) ? $_GET["orderby"] : "" );
     ?>
     <main id="main" class="site-main main">
       <section class="section games">
@@ -24,23 +23,7 @@
                           </div>
                         </div>
                         <div class="col-md-4">
-
-                            <form action="<?php echo $category_url; ?>" method="GET">
-                                <div class="d-flex justify-content-md-end">
-                                    <select id="category_order_by" name="orderby" class="form-control text-gray-soft" id="inlineFormCustomSelect">
-                                      <option value="date" <?php echo ($order_by == "date" ? "selected" : ""); ?>><?php _e("Order by date", "aipim"); ?></option>
-                                      <option value="name" <?php echo ($order_by == "name" ? "selected" : ""); ?>><?php _e("Order by name", "aipim"); ?></option>
-                                    </select>
-                                </div>
-                            </form>
-                            <script>
-                                jQuery(document).ready(function () {
-                                    jQuery("#category_order_by").change(function () {
-                                        jQuery(this).closest("form").submit();
-                                    });
-                                });
-
-                            </script>
+                          <?php aipim_orderBox(); ?>
                         </div>
 
                     </div>

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
 "POT-Creation-Date: 2020-09-25T20:27:17+00:00\n"
-"PO-Revision-Date: 2020-09-25 17:34-0300\n"
+"PO-Revision-Date: 2020-09-29 17:24-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -1968,7 +1968,7 @@ msgstr ""
 
 #: single-juegos.php:901
 msgid "PARTICIPATE WITH THE BONUS!"
-msgstr "PARTICIPE DO BÔNUS!"
+msgstr "JOGUE COM O BÔNUS!"
 
 #: single-juegos.php:902
 msgid "PLAY AT "

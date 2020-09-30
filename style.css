@@ -12653,7 +12653,7 @@ ul.row {
         text-overflow: ellipsis;
         overflow: hidden; } }
   @media (min-width: 768px) {
-    .archive-title select[name="orderby"] {
+    .archive-title select[id="category_order_by"] {
       width: auto;
       }
     }

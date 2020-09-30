@@ -51,12 +51,13 @@ add_action('init', 'removeHeadLinks');
 add_action( 'init', 'create_post_types' );
 add_action( 'init', 'create_taxonomies', 0 );
 add_action('init','aipim_hide_dashboard');
-add_filter( 'pre_get_posts', 'themeprefix_show_cpt_archives' );
 add_action( 'after_setup_theme', 'am_setup' );
 // add_filter( 'wp_insert_post_data', 'default_comments_on' );
 add_action( 'widgets_init', 'am_widgets_init' );
-
 add_filter('duplicate_comment_id', '__return_false'); // allow diplicate comments (we are NOT using this field ya boy)
+
+
+add_filter('pre_get_posts', 'themeprefix_show_cpt_archives' );
 add_filter('pre_get_posts', 'am_sort_arc');
 add_filter('pre_get_posts','providers_page_games_only');
 
@@ -410,11 +411,15 @@ function providers_page_games_only( $query ) { // not casinos
 }
 
 function am_sort_arc($q) {
-    // order by ranking only at 'casinos' category
+    if( is_admin() ) {
+
+      return $query;
+
+    }
+    // order by ranking only at 'casinos' & 'bonuses' category
     if (
         $q->is_category()
         && $q->is_main_query()
-        && !is_admin()
         &&
         (
           stristr($q->query["category_name"], 'casinos') !== FALSE
@@ -432,6 +437,38 @@ function am_sort_arc($q) {
         // $q->set('orderby', 'ranking');
         $q->set('order', 'ASC');
     }
+
+    // custom para orders
+    // only modify queries for 'event' post type
+  	if(
+        isset($q->query_vars['orderby'])
+        && $q->is_category()
+        &&
+          (
+            stristr($q->query["category_name"], 'juegos') !== FALSE
+            ||
+            stristr($q->query["category_name"], 'jogos') !== FALSE
+            ||
+            stristr($q->query["category_name"], 'bonos') !== FALSE
+            ||
+            stristr($q->query["category_name"], 'promocoes') !== FALSE
+          )
+    ) {
+
+  		if ( $q->query_vars['orderby'] == "ranking" ){
+
+        $q->set('orderby', "meta_value_num" );
+    		$q->set('meta_key', 'ranking');
+
+        $orderAscDesc = 'DESC';
+        if (isset($q->query_vars['order'])) $orderAscDesc = $q->query_vars['order'];
+    		$q->set('order', $orderAscDesc);
+
+      }
+
+  	}
+
+
     return $q;
 }
 

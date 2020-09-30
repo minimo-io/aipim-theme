@@ -1,4 +1,46 @@
 <?php
+
+// post order box for categories
+function aipim_orderBox(){
+  $order_by = (isset($_GET["orderby"]) ? $_GET["orderby"] : "" );
+  $order = (isset($_GET["order"]) ? $_GET["order"] : "" );
+    ?>
+    <form action="<?php echo $category_url; ?>" method="GET">
+        <div class="d-flex justify-content-md-end">
+            <select id="category_order_by" name="metaorderby" class="form-control text-gray-soft" id="inlineFormCustomSelect">
+              <option value="date-DESC" <?php echo ($order_by == "date" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Newest", "aipim"); ?></option>
+              <option value="date-ASC" <?php echo ($order_by == "date" && $order == "ASC" ? "selected" : ""); ?>><?php _e("Oldest", "aipim"); ?></option>
+              <option value="ranking-ASC" <?php echo ($order_by == "ranking" && $order == "ASC" ? "selected" : ""); ?>><?php _e("Most voted", "aipim"); ?></option>
+              <option value="ranking-DESC" <?php echo ($order_by == "ranking" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Less voted", "aipim"); ?></option>
+
+
+              <option value="name-ASC" <?php echo ($order_by == "name" && $order == "ASC" ? "selected" : ""); ?>><?php _e("A -> Z", "aipim"); ?></option>
+              <option value="name-DESC" <?php echo ($order_by == "name" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Z -> A", "aipim"); ?></option>
+
+            </select>
+        </div>
+        <input id="orderby" name="orderby" type="hidden" value="" />
+        <input id="order" name="order" type="hidden" value="" />
+    </form>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery("#category_order_by").change(function () {
+                var orderVal = jQuery(this).val();
+                var aOrderVal = orderVal.split("-");
+                jQuery("#orderby").val( aOrderVal[0] );
+                jQuery("#order").val( aOrderVal[1] );
+                console.log( jQuery("#orderby").val() );
+                if (jQuery("#orderby").val() && jQuery("#order").val()){
+                  jQuery(this).closest("form").submit();
+                }
+            });
+        });
+
+    </script>
+    <?php
+}
+
+
 // show author meta and modification dates for content in main description
 // to be used in casinos & games reviews mainly
 function aipim_postAuthorMeta($authorId){
