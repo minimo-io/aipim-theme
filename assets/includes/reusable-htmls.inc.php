@@ -10,9 +10,15 @@ function aipim_orderBox(){
             <select id="category_order_by" name="metaorderby" class="form-control text-gray-soft" id="inlineFormCustomSelect">
               <option value="date-DESC" <?php echo ($order_by == "date" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Newest", "aipim"); ?></option>
               <option value="date-ASC" <?php echo ($order_by == "date" && $order == "ASC" ? "selected" : ""); ?>><?php _e("Oldest", "aipim"); ?></option>
+
               <option value="ranking-ASC" <?php echo ($order_by == "ranking" && $order == "ASC" ? "selected" : ""); ?>><?php _e("Most voted", "aipim"); ?></option>
               <option value="ranking-DESC" <?php echo ($order_by == "ranking" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Less voted", "aipim"); ?></option>
 
+              <?php if (!has_category(Array('bonos', 'promocoes'))){ ?>
+                <option value="rtp-DESC" <?php echo ($order_by == "rtp" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Highest RTP", "aipim"); ?></option>
+                <option value="HighestVolatility-DESC" <?php echo ($order_by == "HighestVolatility" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Highest volatility", "aipim"); ?></option>
+                <option value="LowestVolatility-DESC" <?php echo ($order_by == "LowestVolatility" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Lowest volatility", "aipim"); ?></option>
+              <?php } ?>
 
               <option value="name-ASC" <?php echo ($order_by == "name" && $order == "ASC" ? "selected" : ""); ?>><?php _e("A -> Z", "aipim"); ?></option>
               <option value="name-DESC" <?php echo ($order_by == "name" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Z -> A", "aipim"); ?></option>

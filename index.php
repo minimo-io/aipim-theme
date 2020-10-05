@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 <body class="home blog woocommerce dokan-theme-dokan">
-    <?php require_once(get_template_directory()."/assets/includes/nav.inc.php");  ?>
+    <?php
+    require_once(get_template_directory()."/assets/includes/nav.inc.php");
+    ?>
     <?php require_once("assets/includes/messages.inc.php");  ?>
     <main id="main" class="site-main main">
         <?php

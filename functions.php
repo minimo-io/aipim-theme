@@ -425,10 +425,6 @@ function am_sort_arc($q) {
           stristr($q->query["category_name"], 'casinos') !== FALSE
           ||
           stristr($q->query["category_name"], 'cassinos') !== FALSE
-          ||
-          stristr($q->query["category_name"], 'bonos') !== FALSE
-          ||
-          stristr($q->query["category_name"], 'promocoes') !== FALSE
         )
 
       ){
@@ -455,17 +451,52 @@ function am_sort_arc($q) {
           )
     ) {
 
+      $orderAscDesc = 'DESC';
+      if (isset($q->query_vars['order'])) $orderAscDesc = $q->query_vars['order'];
+
   		if ( $q->query_vars['orderby'] == "ranking" ){
 
         $q->set('orderby', "meta_value_num" );
     		$q->set('meta_key', 'ranking');
-
-        $orderAscDesc = 'DESC';
-        if (isset($q->query_vars['order'])) $orderAscDesc = $q->query_vars['order'];
     		$q->set('order', $orderAscDesc);
 
       }
+      if ( $q->query_vars['orderby'] == "HighestVolatility" ){
+        // $q->set('orderby', "meta_value" );
+    		// $q->set('meta_key', 'volatilidad');
+    		// $q->set('order', $orderAscDesc);
 
+        $meta_query = array(
+          array(
+            'key'     => 'volatilidad',
+            'value'   => array('Alta'),
+            'compare' => 'IN',
+          )
+        );
+        $q->set('meta_query',$meta_query);
+
+      }
+      if ( $q->query_vars['orderby'] == "LowestVolatility" ){
+        // $q->set('orderby', "meta_value" );
+    		// $q->set('meta_key', 'volatilidad');
+    		// $q->set('order', $orderAscDesc);
+
+        $meta_query = array(
+          array(
+            'key'     => 'volatilidad',
+            'value'   => array('Baja'),
+            'compare' => 'IN',
+          )
+        );
+        $q->set('meta_query',$meta_query);
+
+      }
+
+      if ( $q->query_vars['orderby'] == "rtp" ){
+        $q->set('orderby', "meta_value_num" );
+    		$q->set('meta_key', 'rtp');
+    		$q->set('order', $orderAscDesc);
+      }
   	}
 
 

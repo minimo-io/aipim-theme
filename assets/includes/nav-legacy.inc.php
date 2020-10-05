@@ -4,102 +4,6 @@ $blog_name = get_bloginfo("name");
 $login_url = wp_login_url( aipim_current_page() );
 if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
 ?>
-<style>
-  .btn-knowledge-purple{
-    background-color:#7952b3;
-    /* color:#006127; */
-    color:#f7f7f7;
-  }
-  @media (max-width: 576px) {
-    #globalNavbar{ height:100vh; }
-    /* .navbar-main, .navbar-main li{ margin:0 !important; padding:0 !important; }
-    .navbar-main{ display:block; text-align:center; list-style: none outside none; }
-    .navbar-main li:not(.nav-item-lg){
-      display:inline !important;
-      width:150px;
-      height:150px;
-      float:left;
-    }
-    .navbar-main li.nav-item-mobile:nth-child(odd) {
-      margin-right:20px !important;
-    }
-    .navbar-main a{
-      width:150px;
-      height:150px;
-      float:left;
-    } */
-    .navbar-main{
-      padding-left:0 !important;
-      padding-right:0 !important;
-      margin-right: -15px;
-      margin-top:1rem;
-    }
-    .navbar-main a{
-      padding: 6px 18px !important;
-      font-size:15px !important;
-
-      opacity: .9;
-    }
-    .navbar-main a:not(.btn-mobile-normal){
-      padding-top:0 !important;
-    }
-
-    .navbar-main a:hover{
-      opacity: 1;
-    }
-    .form-navbar{
-      border-bottom:0;
-      padding-bottom:10px;
-      margin-right:-30px;
-    }
-    #term-id-activity-mobile .dropdown-menu.show{ width:100%; }
-    #term-id-activity-mobile{
-      padding: 10px 15px !important;
-      margin-left: -10px;
-      margin-right: -30px;
-      border-top: 1px solid #e5e9ef;
-      border-bottom: 1px solid #e5e9ef;
-      border-bottom:1px solid #e5e9ef;
-    }
-    #term-id-activity-mobile a{ font-size:13px; color:black; opacity:.5; }
-
-    #term-id-5-mobile .btn-knowledge-purple:before,
-    #term-id-176-mobile .btn-knowledge-purple:before,
-    #term-id-44-mobile .btn-knowledge-purple:before,
-    #term-id-178-mobile .btn-knowledge-purple:before,
-    #term-id-74-mobile .btn-knowledge-purple:before,
-    #term-id-177-mobile .btn-knowledge-purple:before,
-    #term-id-4-mobile .btn-knowledge:before,
-    #term-id-174-mobile .btn-knowledge:before{
-      font-family: casino;
-      speak: none;
-      font-style: normal;
-      font-weight: 400;
-      font-variant: normal;
-      text-transform: none;
-      -webkit-font-smoothing: antialiased;
-      font-size: 26px;
-      position: relative;
-      top: 5px;
-      padding-right: 4px;
-    }
-    #term-id-5-mobile .btn-knowledge-purple:before, #term-id-176-mobile .btn-knowledge-purple:before{
-        content: "\e61e";
-    }
-    #term-id-44-mobile .btn-knowledge-purple:before, #term-id-178-mobile .btn-knowledge-purple:before {
-        content: "\e655";
-    }
-    #term-id-74-mobile .btn-knowledge-purple:before, #term-id-177-mobile .btn-knowledge-purple:before{
-      content: "\e63c";
-    }
-    #term-id-4-mobile .btn-knowledge:before, #term-id-174-mobile .btn-knowledge:before{
-        content: "\e661";
-    }
-    #term-id-4-mobile .dropdown-toggle:after, #term-id-174-mobile .dropdown-toggle:after{
-      top:17px;
-    }
-  }
-</style>
 <nav id="nav-header" class="navbar navbar-expand-lg bg-white navbar-light fixed-top">
     <div class="container">
       <a href="<?php echo get_bloginfo("url");  ?>" class="navbar-brand zoom">
@@ -131,7 +35,6 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
             <form class="form-inline form-navbar my-2 my-lg-0 order-2" method="GET" action="<?php echo aipim_search_url();  ?>">
                 <input class="form-control" name="s" type="text" placeholder="<?php _e("Search", "aipim");  ?>" value="<?php echo get_search_query();  ?>" />
             </form>
-            <div id="term-id-activity-mobile" class="nav-item d-lg-none"><?php aipim_language_selector_html(true); ?></div>
             <ul class="navbar-nav navbar-main ml-auto order-1">
             <?php
             $categories = get_categories( array(
@@ -158,7 +61,7 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
 
 
                         if (!empty($term_children) && get_field("no_subcast_en_menu", $category) != 1 ){
-                            $str_cat = '<li id="term-id-'.$category->term_id.'" class="nav-item nav-item-lg nav-item-spread dropdown d-none d-lg-block">';
+                            $str_cat = '<li id="term-id-'.$category->term_id.'" class="nav-item nav-item-spread dropdown d-none d-lg-block">';
                             $str_cat .= '<a class="nav-link dropdown-toggle" href="'.$category_url.'" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$category->name.'</a>';
                             $str_cat .= '<div class="dropdown-menu">';
                             $str_cat .= '<div class="navbar-collapse navbar-top-collapse">';
@@ -179,8 +82,8 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
                             $a_categories[] = $str_cat;
 
                             // mobile one
-                            $str_cat = '<li id="term-id-'.$category->term_id.'-mobile" class="nav-item nav-item-mobile Xnav-item-spread dropdown d-lg-none mb-3">';
-                            $str_cat .= '<a class="btn btn-lg mt-1 mb-1 btn-knowledge btn-knowledge btn-round btn-md-block mt-sm-1 dropdown-toggle" href="'.$category_url.'" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$category->name.'</a>';
+                            $str_cat = '<li id="term-id-'.$category->term_id.'-mobile" class="nav-item Xnav-item-spread dropdown d-lg-none mb-4">';
+                            $str_cat .= '<a class="mt-3 button button-brand btn-outline btn-sm button-join-small btn-block dropdown-toggle" href="'.$category_url.'" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$category->name.'</a>';
                             $str_cat .= '<div class="dropdown-menu">';
                             $str_cat .= '<div class="navbar-collapse navbar-top-collapse">';
                             $str_cat .= '<ul id="menu-top-menu" class="nav navbar-nav">';
@@ -204,9 +107,8 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
                             $bonus_count = aipim_wpml_count_posts("bonus");
                             $bonus_count = $bonus_count["publish"][ICL_LANGUAGE_CODE];
 
-                            $a_categories[] = '<li id="term-id-'.$category->term_id.'" class="nav-item nav-item-spread nav-item-lg d-none d-lg-block"><a class="nav-link" href="'.$category_url.'">'.$category->name.(get_field("show_count", $category) ? '<sup><span class="badge badge-bonus badge-pill badge-danger">'.$bonus_count.'</span></sup>' : "").'</a></li>';
-                            // $a_categories[] = '<li id="term-id-'.$category->term_id.'-mobile" class="nav-item nav-item-mobile Xnav-item-spread d-lg-none"><a class="mt-3 button button-brand btn-outline btn-sm button-join-small btn-block" href="'.$category_url.'">'.$category->name.'</a></li>';
-                            $a_categories[] = '<li id="term-id-'.$category->term_id.'-mobile" class="nav-item nav-item-mobile Xnav-item-spread d-lg-none"><a class="mt-1 btn btn-lg mb-1 btn-knowledge btn-knowledge-purple btn-round btn-md-block mt-sm-1" href="'.$category_url.'">'.$category->name.'</a></li>';
+                            $a_categories[] = '<li id="term-id-'.$category->term_id.'" class="nav-item nav-item-spread d-none d-lg-block"><a class="nav-link" href="'.$category_url.'">'.$category->name.(get_field("show_count", $category) ? '<sup><span class="badge badge-bonus badge-pill badge-danger">'.$bonus_count.'</span></sup>' : "").'</a></li>';
+                            $a_categories[] = '<li id="term-id-'.$category->term_id.'-mobile" class="nav-item Xnav-item-spread d-lg-none"><a class="mt-3 button button-brand btn-outline btn-sm button-join-small btn-block" href="'.$category_url.'">'.$category->name.'</a></li>';
                         }
                     }
 
@@ -223,21 +125,24 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
 
             ?>
 
-                <li id="term-id-activity" class="nav-item nav-item-spread nav-item-lg d-none d-lg-block dropdown" style="padding-right:30px;">
+                <li id="term-id-activity" class="nav-item nav-item-spread d-none d-lg-block dropdown" style="padding-right:30px;">
                   <?php aipim_language_selector_html(); ?>
                 </li>
 
-                <li class="d-lg-none nav-item nav-item-lg">
+                <li class="d-lg-none nav-item">
 
                 </li>
 
                 <?php if ( is_user_logged_in() ) {  ?>
-                  <li class="d-lg-none nav-item"><a class="btn-mobile-normal mt-3 button button-brand btn-outline btn-sm button-join-small btn-block" href="<?php echo bp_core_get_userlink( get_current_user_id(), false, true ); ?>"><?php _e("Profile", "aipim");  ?></a></li>
-                  <li class="d-lg-none"><a class="btn-mobile-normal mt-3 button button-brand btn-outline btn-sm button-join-small btn-block mb-3" href="<?php echo wp_logout_url( aipim_current_page() ); ?>"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;<?php _e("Exit", "aipim");  ?></a></li>
+                  <li class="d-lg-none nav-item"><a class="mt-3 button button-brand btn-outline btn-sm button-join-small btn-block" href="<?php echo bp_core_get_userlink( get_current_user_id(), false, true ); ?>"><?php _e("Profile", "aipim");  ?></a></li>
+                  <li class="d-lg-none"><a class="mt-3 button button-brand btn-outline btn-sm button-join-small btn-block mb-3" href="<?php echo wp_logout_url( aipim_current_page() ); ?>"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;<?php _e("Exit", "aipim");  ?></a></li>
                 <?php }else{
-                  echo '<li class="d-lg-none nav-item"><a class="btn-mobile-normal mt-3 mb-3 button button-brand btn-outline btn-sm button-join-small btn-block" href="'.$login_url.'"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;'.__("Sign in", "aipim").'</a></li>';
+                  echo '<li class="d-lg-none nav-item"><a class="mt-3 mb-3 button button-brand btn-outline btn-sm button-join-small btn-block" href="'.$login_url.'"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;'.__("Sign in", "aipim").'</a></li>';
                 } ?>
 
+                <li id="term-id-activity-mobile" class="nav-item d-lg-none">
+                  <?php aipim_language_selector_html(true); ?>
+                </li>
             </ul>
 
 
