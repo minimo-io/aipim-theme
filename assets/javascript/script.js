@@ -235,7 +235,7 @@ $(document).ready(function () {
         // html_loadmore +=        '</div>';
         // html_loadmore +=   '</td>';
         html_loadmore +=    '<td class="text-right">';
-        html_loadmore +=        '<a class="btn btn-brand btn-bg btn-table-more" href="'+ o_li.data("url") + '"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;Análisis</a>';
+        html_loadmore +=        '<a class="btn btn-brand btn-bg btn-table-more" href="'+ o_li.data("url") + '"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;'+ o_li.data("buttontext") +'</a>';
         html_loadmore +=    '</td>';
         html_loadmore += '</tr>';
 

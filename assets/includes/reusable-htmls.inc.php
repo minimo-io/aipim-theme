@@ -243,7 +243,7 @@ function aipim_provider_list_html($term, $class=''){
   $gamesCount = count($games);
   if ($gamesCount == 0) return;
   $ret = '';
-  $ret .= '<li class="col-md-4 galleryview-item'.(!empty($class) ? " ".$class : "").'" data-gamescount="'.$gamesCount.' '.__("games", "aipim").'" data-image="'.esc_url($term_image["url"]).'" data-title="'.$term->name.'" data-url="'.esc_url($term_link).'">';
+  $ret .= '<li class="col-md-4 galleryview-item'.(!empty($class) ? " ".$class : "").'" data-buttontext="'.ucfirst(__("games", "aipim")).'" data-gamescount="'.$gamesCount.' '.__("games", "aipim").'" data-image="'.esc_url($term_image["url"]).'" data-title="'.$term->name.'" data-url="'.esc_url($term_link).'">';
   $ret .= '  <div class="theme-card">';
   if (!empty($class)) $ret .= "<span class='featured-text'><i class='fa fa-bell mr-1' aria-hidden='true'></i>".__("featured", "aipim")."</span>";
   $ret .= '    <div class="theme-card__body">';
@@ -253,7 +253,7 @@ function aipim_provider_list_html($term, $class=''){
   }
   $ret .= '      </a>';
   $ret .= '      <a class="theme-card__body__overlay btn btn-brand btn-sm" href="'.$term_link.'">'.__("View games", "aipim").'</a>';
-  $ret .= '      <!--<div class="rtp-content"><p>RTP</p><h6>95.17%</h6></div>-->';
+  // $ret .= '      <!--<div class="rtp-content"><p>RTP</p><h6>95.17%</h6></div>-->';
   $ret .= '    </div>';
   $ret .= '    <div class="theme-card__footer">';
   $ret .= '      <div class="theme-card__footer__item">';
