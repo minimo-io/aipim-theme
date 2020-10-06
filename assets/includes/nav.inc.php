@@ -36,7 +36,7 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
     }
     .navbar-main a{
       padding: 6px 18px !important;
-      font-size:15px !important;
+      font-size:19px !important;
 
       opacity: .9;
     }
@@ -61,7 +61,7 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
       border-bottom: 1px solid #e5e9ef;
       border-bottom:1px solid #e5e9ef;
     }
-    #term-id-activity-mobile a{ font-size:13px; color:black; opacity:.5; }
+    #term-id-activity-mobile a{ font-size:15px; color:black; opacity:.5; }
 
     #term-id-5-mobile .btn-knowledge-purple:before,
     #term-id-176-mobile .btn-knowledge-purple:before,
@@ -97,6 +97,21 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
     }
     #term-id-4-mobile .dropdown-toggle:after, #term-id-174-mobile .dropdown-toggle:after{
       top:17px;
+    }
+    .btn-mobile-normal, .navbar-nav .dropdown-menu{
+      border-radius: 25px !important;
+    }
+    .navbar-nav .dropdown-menu {
+      text-align: center;
+      margin-top:.5rem;
+    }
+    .navbar-top-collapse>.nav>li>a{
+      font-size: 17px !important;
+      padding-bottom: 0px !important;
+
+    }
+    .dropdown-menu.show {
+      transition: all 200ms;
     }
   }
 </style>
