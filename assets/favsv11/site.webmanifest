@@ -3,12 +3,12 @@
     "short_name": "Betizen",
     "icons": [
         {
-            "src": "https://www.betizen.org/wp-content/themes/aipim-theme/assets/favsv1/android-chrome-192x192.png",
+            "src": "https://www.betizen.org/wp-content/themes/aipim-theme/assets/favsv11/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "https://www.betizen.org/wp-content/themes/aipim-theme/assets/favsv1/android-chrome-256x256.png",
+            "src": "https://www.betizen.org/wp-content/themes/aipim-theme/assets/favsv11/android-chrome-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
         }

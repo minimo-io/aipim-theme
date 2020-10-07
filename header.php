@@ -8,24 +8,14 @@
         <title><?php echo wp_title(' - ', false, "right"); ?></title>
         <link rel="profile" href="http://gmpg.org/xfn/11" />
 
-        <!-- <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/favs/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/assets/favs/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/assets/favs/favicon-16x16.png">
-        <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/favs/site.webmanifest">
-        <link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/assets/favs/safari-pinned-tab.svg" color="#9f00a7">
-        <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/favs/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/favsv11/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/assets/favsv11/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/assets/favsv11/favicon-16x16.png">
+        <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/favsv11/site.webmanifest">
+        <link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/assets/favsv11/safari-pinned-tab.svg" color="#7952b3">
+        <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/favsv11/favicon.ico">
         <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/assets/favs/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff"> -->
-
-        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/favsv1/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/aipim-theme/assets/favsv1/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/aipim-theme/assets/favsv1/favicon-16x16.png">
-        <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/favsv1/site.webmanifest">
-        <link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/assets/favsv1/safari-pinned-tab.svg" color="#7952b3">
-        <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/aipim-theme/assets/favsv1/favicon.ico">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/assets/favsv1/browserconfig.xml">
+        <meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/assets/favsv11/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
         <script src='<?php echo get_template_directory_uri(); ?>/assets/javascript/jquery.min.js'></script>
