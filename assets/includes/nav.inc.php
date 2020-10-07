@@ -4,117 +4,6 @@ $blog_name = get_bloginfo("name");
 $login_url = wp_login_url( aipim_current_page() );
 if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
 ?>
-<style>
-  .btn-knowledge-purple{
-    background-color:#7952b3;
-    /* color:#006127; */
-    color:#f7f7f7;
-  }
-  @media (max-width: 576px) {
-    #globalNavbar{ height:100vh; }
-    /* .navbar-main, .navbar-main li{ margin:0 !important; padding:0 !important; }
-    .navbar-main{ display:block; text-align:center; list-style: none outside none; }
-    .navbar-main li:not(.nav-item-lg){
-      display:inline !important;
-      width:150px;
-      height:150px;
-      float:left;
-    }
-    .navbar-main li.nav-item-mobile:nth-child(odd) {
-      margin-right:20px !important;
-    }
-    .navbar-main a{
-      width:150px;
-      height:150px;
-      float:left;
-    } */
-    .navbar-main{
-      padding-left:0 !important;
-      padding-right:0 !important;
-      margin-right: -15px;
-      margin-top:1rem;
-    }
-    .navbar-main a{
-      padding: 6px 18px !important;
-      font-size:19px !important;
-
-      opacity: .9;
-    }
-    .navbar-main a:not(.btn-mobile-normal){
-      padding-top:0 !important;
-    }
-
-    .navbar-main a:hover{
-      opacity: 1;
-    }
-    .form-navbar{
-      border-bottom:0;
-      padding-bottom:10px;
-      margin-right:-30px;
-    }
-    #term-id-activity-mobile .dropdown-menu.show{ width:100%; }
-    #term-id-activity-mobile{
-      padding: 10px 15px !important;
-      margin-left: -10px;
-      margin-right: -30px;
-      border-top: 1px solid #e5e9ef;
-      border-bottom: 1px solid #e5e9ef;
-      border-bottom:1px solid #e5e9ef;
-    }
-    #term-id-activity-mobile a{ font-size:15px; color:black; opacity:.5; }
-
-    #term-id-5-mobile .btn-knowledge-purple:before,
-    #term-id-176-mobile .btn-knowledge-purple:before,
-    #term-id-44-mobile .btn-knowledge-purple:before,
-    #term-id-178-mobile .btn-knowledge-purple:before,
-    #term-id-74-mobile .btn-knowledge-purple:before,
-    #term-id-177-mobile .btn-knowledge-purple:before,
-    #term-id-4-mobile .btn-knowledge:before,
-    #term-id-174-mobile .btn-knowledge:before{
-      font-family: casino;
-      speak: none;
-      font-style: normal;
-      font-weight: 400;
-      font-variant: normal;
-      text-transform: none;
-      -webkit-font-smoothing: antialiased;
-      font-size: 26px;
-      position: relative;
-      top: 5px;
-      padding-right: 4px;
-    }
-    #term-id-5-mobile .btn-knowledge-purple:before, #term-id-176-mobile .btn-knowledge-purple:before{
-        content: "\e61e";
-    }
-    #term-id-44-mobile .btn-knowledge-purple:before, #term-id-178-mobile .btn-knowledge-purple:before {
-        content: "\e655";
-    }
-    #term-id-74-mobile .btn-knowledge-purple:before, #term-id-177-mobile .btn-knowledge-purple:before{
-      content: "\e63c";
-    }
-    #term-id-4-mobile .btn-knowledge:before, #term-id-174-mobile .btn-knowledge:before{
-        content: "\e661";
-    }
-    #term-id-4-mobile .dropdown-toggle:after, #term-id-174-mobile .dropdown-toggle:after{
-      top:17px;
-    }
-    .btn-mobile-normal, .navbar-nav .dropdown-menu{
-      border-radius: 25px !important;
-    }
-    .navbar-nav .dropdown-menu {
-      text-align: center;
-      margin-top:.5rem;
-    }
-    .navbar-top-collapse>.nav>li>a{
-      font-size: 17px !important;
-      padding-bottom: 0px !important;
-
-    }
-    .dropdown-menu.show {
-      transition: all 200ms;
-    }
-  }
-</style>
 <nav id="nav-header" class="navbar navbar-expand-lg bg-white navbar-light fixed-top">
     <div class="container">
       <a href="<?php echo get_bloginfo("url");  ?>" class="navbar-brand zoom">
@@ -298,3 +187,7 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
         </div>
     </div>
 </nav>
+
+<?php if ($_GET["dev"]){ ?>
+  <div class="cookiePolicy"><div class="cookieDescription">We use cookies to improve your site experience, by continuing to use this website you accept such use as outlined in our <a class="cookiePrivacy" href="/en/game/reactoonz-2?privacy=true">cookie policy</a>.</div><div><button class="MuiButtonBase-root MuiButton-root muiButtonBase MuiButton-contained cookieAction MuiButton-containedSecondary muiButtonContainedSecondary" tabindex="0" type="button"><span class="MuiButton-label">Accept</span><span class="MuiTouchRipple-root"></span></button></div></div>
+<?php } ?>

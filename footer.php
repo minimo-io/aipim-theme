@@ -20,24 +20,30 @@
           }else{
               // require_once(get_template_directory()."/assets/includes/testimonials.inc.php");
           }
-            ?>
-            <div class="footer__item d-lg-flex justify-content-lg-between align-items-lg-center">
-                <ul id="menu-footer" class="nav sub-nav footer__sub-nav">
-                    <li id="menu-item-1194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194">
-                        <a title="Quienes-somos" href="<?php _e("/en/about-us/", "aipim"); ?>"><?php _e("About us", "aipim"); ?></a>
-                    </li>
-                    <li id="menu-item-1194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194">
-                        <a title="<?php _e("Glossary", "aipim"); ?>" href="<?php _e("/en/glossary/", "aipim"); ?>"><?php _e("Glossary", "aipim"); ?></a>
-                    </li>
-                    <li id="menu-item-1194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194">
-                        <a title="<?php _e("Providers", "aipim"); ?>" href="<?php _e("/en/providers/", "aipim"); ?>"><?php _e("Providers", "aipim"); ?></a>
-                    </li>
-                    <li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117">
-                        <a title="<?php _e("Affiliates", "aipim"); ?>" href="<?php _e("/en/affiliates/", "aipim"); ?>"><?php _e("Affiliates", "aipim"); ?></a>
-                    </li>
-                </ul>
-                <p class="hidden-sm-down d-none d-lg-block">v<?php $theme_data = wp_get_theme(); echo $theme_data->get( 'Version' )."  / "; ?><?php _e("Developed by", "aipim");  ?> <a class="maker-dot" href="https://minimo.io" target="_blank">Mínimo</a></p>
-            </div>
+          ?>
+          <div class="footer__item d-lg-flex justify-content-lg-between align-items-lg-center">
+            <ul id="menu-footer" class="nav sub-nav footer__sub-nav">
+                <li id="menu-item-1194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194">
+                    <a title="about-us" href="<?php _e("/en/about-us/", "aipim"); ?>"><?php _e("About us", "aipim"); ?></a>
+                </li>
+                <li id="menu-item-1194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194">
+                    <a title="<?php _e("Glossary", "aipim"); ?>" href="<?php _e("/en/glossary/", "aipim"); ?>"><?php _e("Glossary", "aipim"); ?></a>
+                </li>
+                <li id="menu-item-1194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194">
+                    <a title="<?php _e("Providers", "aipim"); ?>" href="<?php _e("/en/providers/", "aipim"); ?>"><?php _e("Providers", "aipim"); ?></a>
+                </li>
+                <li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117">
+                    <a title="<?php _e("Affiliates", "aipim"); ?>" href="<?php _e("/en/affiliates/", "aipim"); ?>"><?php _e("Affiliates", "aipim"); ?></a>
+                </li>
+            </ul>
+            <p class="hidden-sm-down d-none d-lg-block">v<?php $theme_data = wp_get_theme(); echo $theme_data->get( 'Version' )."  / "; ?><?php _e("Developed by", "aipim");  ?> <a class="maker-dot" href="https://minimo.io" target="_blank">Mínimo</a></p>
+          </div>
+          <div class="disclaimers disclaimers nav sub-nav Xfooter__sub-nav">
+            <img src='https://www.betizen.org/wp-content/uploads/2020/10/18-plus.png' />
+            <a href="#" data-target="#tc-modal" data-toggle="modal" data-hasbutton="0" data-title="<?php echo esc_attr(__("Play responsibly", "aipim")); ?>" data-content="<?php echo esc_attr("<div class='container disclaimersModal'><center><img src='https://www.betizen.org/wp-content/uploads/2020/10/betizen-typo.png' /></center><br><p class='text-uppercase'><strong>".__("Playing responsibly is all about knowing your limits and playing within your means.", "aipim")."</strong></p><p>".__("Remember that it is against the law for those under the age of 18 to gamble. Betizen is a product for adults who gamble responsibly. We want to bring transparency to the iGaming industry (for players, operators and affiliates), and because of that we take gambling problems seriously.<br>
+If you want to take a short break from gaming, you can do so by taking a Time-Out for a period of 24 hours, 48 hours, 7 days or 30 days.
+If you need help, we have an article for you in the blog, or you can get in touch with us so you can get help from third party professionals.", "aipim")."</p><button class='btn btn-brand btn-block btn-checkout text-uppercase' onclick='aipimOpenContactBox();'>".__("Get help", "aipim")."</button></div>"); ?>"><?php _e("Play responsibly", "aipim"); ?></a>
+          </div>
         </div>
     </div>
 </footer>
@@ -54,7 +60,8 @@ outline: #1e8cbe solid;
 
 
 
-<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/assets/javascript/script.js'></script>
+
+<?php wp_footer(); ?>
 
 <!-- Modal -->
 <div class="modal modal-main fade" id="tc-modal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -76,5 +83,3 @@ outline: #1e8cbe solid;
   </div>
 </div>
 <!-- /T & C Modal -->
-
-<?php wp_footer(); ?>

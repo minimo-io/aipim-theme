@@ -122,7 +122,7 @@ function get_score_style($score){
     return '';
   }
   if ($score == "good"){
-    return '<span class="badge badge-success badge-pill">+</span>';
+    return '<span class="badge badge-success badge-pill">&#10003;</span>';
   }
   if ($score == "average"){
     return '<span class="badge badge-warning badge-pill font-weight-bold">∼</span>';

@@ -141,12 +141,21 @@
 
 
                                                 <div class="container casino-featured casino-single-featured">
-
+                                                    <?php
+                                                    $max_cashout_details = trim(get_field("max_withdrawal_details"));
+                                                    ?>
                                                     <div class="row">
                                                         <div class="col">
                                                             <div class="card">
                                                                 <div class="card-body text-center">
-                                                                    <h5 class="card-title text-truncate"><?php _e("Max withdrawal","aipim");  ?></h5>
+                                                                    <h5 class="card-title text-truncate">
+                                                                      <?php _e("Max withdrawal","aipim");  ?>
+                                                                      <?php
+                                                                      if (!empty($max_cashout_details)){
+                                                                        echo '<a data-toggle="tooltip" data-placement="top" title="'.esc_attr($max_cashout_details).'"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>';
+                                                                      }
+                                                                      ?>
+                                                                    </h5>
                                                                     <p class="card-text display-4" Xstyle="line-height:58px;">
                                                                         <?php
                                                                         $max_cashout = get_field("retiro_maximo");

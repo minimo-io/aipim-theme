@@ -1016,6 +1016,8 @@ function am_enqueue_scripts() {
 
   }
 
+  wp_enqueue_script( 'betizen-js', get_template_directory_uri() . '/assets/javascript/script.js', array(), false, true );  
+
 }
 
 add_filter('wpseo_json_ld_output', 'bybe_remove_yoast_json', 10, 1);
