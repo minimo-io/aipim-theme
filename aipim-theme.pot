@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-10-18T22:31:29+00:00\n"
+"POT-Creation-Date: 2020-10-18T22:50:23+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: aipim\n"
@@ -862,6 +862,7 @@ msgstr ""
 #: assets/includes/shortcodes/startRightHere.inc.php:24
 #: buddypress/members/single/home.php:82
 #: buddypress/members/single/member-header.php:50
+#: footer.php:47
 #: single-bonus.php:84
 #: single-bonus.php:185
 #: single-bonus.php:274
@@ -1281,39 +1282,47 @@ msgstr ""
 msgid "Affiliates"
 msgstr ""
 
-#: footer.php:39
+#: footer.php:40
+msgid "Others"
+msgstr ""
+
+#: footer.php:46
 msgid "Transparency"
 msgstr ""
 
-#: footer.php:39
+#: footer.php:46
 msgid "/en/transparency/"
 msgstr ""
 
-#: footer.php:43
+#: footer.php:47
+msgid "Rankings"
+msgstr ""
+
+#: footer.php:55
 msgid "Developed by"
 msgstr ""
 
-#: footer.php:47
-#: footer.php:49
+#: footer.php:59
+#: footer.php:61
 msgid "Play responsibly"
 msgstr ""
 
-#: footer.php:47
+#: footer.php:59
 msgid "Playing responsibly is all about knowing your limits and playing within your means."
 msgstr ""
 
-#: footer.php:47
+#: footer.php:59
 msgid ""
 "Remember that it is against the law for those under the age of 18 to gamble. Betizen is a product for adults who gamble responsibly. We want to bring transparency to the iGaming industry (for players, operators and affiliates), and because of that we take gambling problems seriously.<br>\n"
 "If you want to take a short break from gaming, you can do so by taking a Time-Out for a period of 24 hours, 48 hours, 7 days or 30 days.\n"
 "If you need help, we have an article for you in the blog, or you can get in touch with us so you can get help from third party professionals."
 msgstr ""
 
-#: footer.php:49
+#: footer.php:61
 msgid "Get help"
 msgstr ""
 
-#: footer.php:75
+#: footer.php:87
 #: single-juegos.php:937
 msgid "Terms & Conditions"
 msgstr ""

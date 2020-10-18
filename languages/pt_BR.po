@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
-"POT-Creation-Date: 2020-10-18T22:31:29+00:00\n"
-"PO-Revision-Date: 2020-10-18 19:33-0300\n"
+"POT-Creation-Date: 2020-10-18T22:50:23+00:00\n"
+"PO-Revision-Date: 2020-10-18 19:55-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -1030,10 +1030,11 @@ msgstr "Somos a primeira comunidade de jogo com rankings"
 
 #: assets/includes/shortcodes/startRightHere.inc.php:24
 #: buddypress/members/single/home.php:82
-#: buddypress/members/single/member-header.php:50 single-bonus.php:84
-#: single-bonus.php:185 single-bonus.php:274 single-casinos.php:88
-#: single-casinos.php:249 single-casinos.php:394 single-juegos.php:137
-#: single-juegos.php:338 single-juegos.php:364 single-juegos.php:547
+#: buddypress/members/single/member-header.php:50 footer.php:47
+#: single-bonus.php:84 single-bonus.php:185 single-bonus.php:274
+#: single-casinos.php:88 single-casinos.php:249 single-casinos.php:394
+#: single-juegos.php:137 single-juegos.php:338 single-juegos.php:364
+#: single-juegos.php:547
 msgid "/en/ranks/"
 msgstr "/pt-br/avaliacoes/"
 
@@ -1063,7 +1064,7 @@ msgstr " e "
 
 #: assets/includes/shortcodes/startRightHere.inc.php:31 footer.php:36
 msgid "/en/affiliates/"
-msgstr "/pt-br/associados/"
+msgstr "/pt-br/programas-de-afiliados-brasil/"
 
 #: assets/includes/shortcodes/startRightHere.inc.php:31
 msgid "affiliate programs"
@@ -1506,25 +1507,33 @@ msgstr "/pt-br/fornecedores/"
 
 #: footer.php:36
 msgid "Affiliates"
-msgstr "Associados"
+msgstr "Afiliados"
 
-#: footer.php:39
+#: footer.php:40
+msgid "Others"
+msgstr "Outros"
+
+#: footer.php:46
 msgid "Transparency"
 msgstr "Transparência"
 
-#: footer.php:39
+#: footer.php:46
 msgid "/en/transparency/"
 msgstr "/pt-br/transparencia-e-estatisticas/"
 
-#: footer.php:43
+#: footer.php:47
+msgid "Rankings"
+msgstr "Avaliações"
+
+#: footer.php:55
 msgid "Developed by"
 msgstr "Desenvolvido por"
 
-#: footer.php:47 footer.php:49
+#: footer.php:59 footer.php:61
 msgid "Play responsibly"
 msgstr "Jogue com responsabilidade"
 
-#: footer.php:47
+#: footer.php:59
 msgid ""
 "Playing responsibly is all about knowing your limits and playing within your "
 "means."
@@ -1532,7 +1541,7 @@ msgstr ""
 "Jogar com responsabilidade significa conhecer seus limites e jogar dentro de "
 "suas possibilidades."
 
-#: footer.php:47
+#: footer.php:59
 msgid ""
 "Remember that it is against the law for those under the age of 18 to gamble. "
 "Betizen is a product for adults who gamble responsibly. We want to bring "
@@ -1552,11 +1561,11 @@ msgstr ""
 "Se precisar de ajuda, temos um artigo para você no blog, ou você pode entrar "
 "em contato conosco para obter ajuda de profissionais terceirizados."
 
-#: footer.php:49
+#: footer.php:61
 msgid "Get help"
 msgstr "Obter ajuda"
 
-#: footer.php:75 single-juegos.php:937
+#: footer.php:87 single-juegos.php:937
 msgid "Terms & Conditions"
 msgstr "Termos e Condições"
 
