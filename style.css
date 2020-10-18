@@ -14261,6 +14261,11 @@ body.modal-open #main, body.modal-open #nav-header{
   max-width:110px;
 }
 
+
+
+
+
+
 /* game modal  */
 #gameWideScreen{ width:100%;height:600px; }
 #gameWideScreen iframe{ width:100%;height:100%; border:0; }
@@ -14414,6 +14419,7 @@ a.button-join-small{ font-size: 17px !important; }
     right: 1px;
     position: absolute;
   }
+  .dropdown-normal:after{ position:relative !important; right:inherit !important; }  
   a.navbar-brand img{ width:100px;}
   .nav-notifications-box{ font-size:18px !important; }
   .navbar-toggler-icon{ width:1.1em; height:1.1em; }

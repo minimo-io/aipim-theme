@@ -1,5 +1,40 @@
 <?php
 
+// subscription box
+function aipimSubscriptionBox($category){
+  ?>
+  <div class="container mt-4">
+      <div class="row">
+        <div class="col pl-0">
+          <div class="alert alert-warning knowledge-base alert-dismissible fade show" role="alert">
+
+
+
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h4 class="alert-heading alert-knowledge-category text-center text-md-left">
+                    <?php _e("What exclusive bonuses and good news?", "aipim"); ?>
+                  </h4>
+                  <p class="d-none d-md-block"><?php the_field("conocimiento", $category); ?></p>
+                  <a href="https://wa.me/59896666902" rel="nofollow" target="_blank" class="btn btn-lg mb-1 btn-knowledge btn-knowledge-green btn-round btn-md-block mt-sm-1"><i class="fa fa-whatsapp mr-1" aria-hidden="true"></i><?php _e("Join Whatsapp", "aipim"); ?></a>
+                  <a target="_blank" rel="nofollow" href="<?php the_field("conocimiento_url", $category); ?>" class="btn btn-lg mb-1 btn-knowledge btn-round btn-md-block mt-sm-1"><i class="fa fa-envelope-o mr-1" aria-hidden="true"></i><?php _e("Join the newsletter", "aipim"); ?></a>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+  </div>
+  <?php
+}
+
 // post order box for categories
 function aipim_orderBox(){
   $order_by = (isset($_GET["orderby"]) ? $_GET["orderby"] : "" );
@@ -63,6 +98,12 @@ function aipim_postAuthorMeta($authorId){
   $metaDate = human_time_diff( get_the_time('U'), current_time( 'timestamp' ) );
   $metaDate = str_replace("semanas", "sem.", $metaDate);
   $metaDate = str_replace("semana", "sem.", $metaDate);
+
+  $metaDate = str_replace("segundos", "seg.", $metaDate);
+  $metaDate = str_replace("segundo", "seg.", $metaDate);
+
+  $metaDate = str_replace("minutos", "min.", $metaDate);
+  $metaDate = str_replace("minuto", "min.", $metaDate);
 
   $authorMetaTooltip = ucfirst(__("author", "aipim"))." ".get_the_author_meta('display_name').". ".__("Registered", "aipim").": ".get_the_author_meta("user_registered");
   $publishDateTooltip = __("Published").": ".get_the_date('r');

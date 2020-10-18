@@ -18,47 +18,15 @@
                       <div class="row align-items-end">
                           <div class="col Xcol-md-8">
                             <h1 class="page-title mb-2 mb-md-0"><?php echo single_cat_title();  ?> <span class="badge badge-dark"><?php echo $category->category_count; ?></span></h1>
-                            <div class="catalog-description mt-2 ml-1">
+                            <div class="catalog-description mt-2 ml-1 minimo-read-more" style="height:50px;">
                               <?php echo category_description( ); ?>
                             </div>
+                            <button id="btn-minimo-readmore" data-original-height="" data-status="off" data-text-more="Leer más" data-text-less="<?php _e("Read less", "aipim"); ?>" class="btn btn-light btn-sm btn-minimo-readmore mb-4 mb-md-0"><?php _e("Read more", "aipim"); ?></button>
                           </div>
                       </div>
 
 
-                      <?php
-                      if (1 == 1){
-                      ?>
-                        <div class="container mt-4">
-                            <div class="row">
-                              <div class="col pl-0">
-                                <div class="alert alert-warning knowledge-base alert-dismissible fade show" role="alert">
-
-
-
-                                  <div class="container">
-                                    <div class="row">
-                                      <div class="col">
-                                        <h4 class="alert-heading alert-knowledge-category text-center text-md-left"><?php _e("Before placing a bet learn to choose!", "aipim"); ?></h4>
-                                        <p class="d-none d-md-block"><?php the_field("conocimiento", $category); ?></p>
-                                        <a rel="nofollow" target="_blank" href="<?php echo get_option('am_guide_quick');  ?>" class="btn btn-lg mb-1 btn-knowledge btn-round btn-md-block mt-sm-1"><?php _e("Read quick guide (5 min.)", "aipim"); ?></a>
-                                        <a rel="nofollow" target="_blank" href="<?php echo get_option('am_guide_big');  ?>" class="btn btn-lg mb-1 btn-knowledge btn-round btn-md-block mt-sm-1"><?php _e("Read mega guide (30 min.)", "aipim"); ?></a>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                      <span aria-hidden="true">×</span>
-                                  </button>
-
-                                </div>
-                              </div>
-
-                            </div>
-                        </div>
-
-                      <?php
-                      }
-                      ?>
+                      <?php aipimSubscriptionBox($category);?>
 
                       <?php aipim_casinoTypeFilterForm(); ?>
 

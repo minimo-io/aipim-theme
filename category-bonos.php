@@ -26,47 +26,7 @@
                     </div>
 
                 </div>
-
-
-
-
-                      <?php
-                      if (1 == 1){
-                      ?>
-                        <div class="container mt-4">
-                            <div class="row">
-                              <div class="col pl-0">
-                                <div class="alert alert-warning knowledge-base alert-dismissible fade show" role="alert">
-
-
-
-                                  <div class="container">
-                                    <div class="row">
-                                      <div class="col">
-                                        <h4 class="alert-heading alert-knowledge-category text-center text-md-left">
-                                          <?php _e("What exclusive bonuses and good news?", "aipim"); ?>
-                                        </h4>
-                                        <p class="d-none d-md-block"><?php the_field("conocimiento", $category); ?></p>
-                                        <a href="https://wa.me/59896666902" rel="nofollow" target="_blank" class="btn btn-lg mb-1 btn-knowledge btn-knowledge-green btn-round btn-md-block mt-sm-1"><i class="fa fa-whatsapp mr-1" aria-hidden="true"></i><?php _e("Join Whatsapp", "aipim"); ?></a>
-                                        <a target="_blank" rel="nofollow" href="<?php the_field("conocimiento_url", $category); ?>" class="btn btn-lg mb-1 btn-knowledge btn-round btn-md-block mt-sm-1"><i class="fa fa-envelope-o mr-1" aria-hidden="true"></i><?php _e("Join the newsletter", "aipim"); ?></a>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                      <span aria-hidden="true">×</span>
-                                  </button>
-
-                                </div>
-                              </div>
-
-                            </div>
-                        </div>
-
-                      <?php
-                      }
-                      ?>
-
+                <?php aipimSubscriptionBox($category); ?>
               </div>
 
 

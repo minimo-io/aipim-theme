@@ -35,6 +35,22 @@
                 <li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117">
                     <a title="<?php _e("Affiliates", "aipim"); ?>" href="<?php _e("/en/affiliates/", "aipim"); ?>"><?php _e("Affiliates", "aipim"); ?></a>
                 </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle dropdown-normal" href="#others" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <?php _e("Others", "aipim"); ?>
+                  </a>
+                    <div class="dropdown-menu">
+                      <div class="navbar-collapse navbar-top-collapse">
+                        <ul id="menu-top-menu" class="nav navbar-nav">
+                          <li id="term-id-6" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-601">
+                            <a title="<?php _e("Transparency", "aipim"); ?>" href="<?php _e("/en/transparency/", "aipim"); ?>"><?php _e("Transparency", "aipim"); ?></a>
+                            <a title="<?php _e("Rankings", "aipim"); ?>" href="<?php _e("/en/ranks/", "aipim"); ?>"><?php _e("Rankings", "aipim"); ?></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </li>
+
             </ul>
             <p class="hidden-sm-down d-none d-lg-block">v<?php $theme_data = wp_get_theme(); echo $theme_data->get( 'Version' )."  / "; ?><?php _e("Developed by", "aipim");  ?> <a class="maker-dot" href="https://minimo.io" target="_blank">Mínimo</a></p>
           </div>
