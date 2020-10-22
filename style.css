@@ -4,7 +4,7 @@ Author: Minimo
 Author URI: https://minimo.io/
 Text Domain: aipim
 Description: A community theme developed for Betizen.org based on themes.getbootstrap.com
-Version: 0.7.82
+Version: 0.7.85
 */
 
 /* ::root {
@@ -14260,10 +14260,22 @@ body.modal-open #main, body.modal-open #nav-header{
 .disclaimersModal img{
   max-width:110px;
 }
-
-
-
-
+.transparency-tabs{
+  margin-top:2rem;
+  margin-bottom:1rem;
+}
+.betizen-transparency .tab-content{
+  margin-bottom:1rem;
+}
+.transparencyPartnersItem td{
+  vertical-align: middle;
+}
+.transparencyPartnersItem .transparencyUserName{
+  font-size:20px;
+}
+.transparencyHeroImage{
+  max-width:350px;
+}
 
 
 /* game modal  */
@@ -14419,7 +14431,7 @@ a.button-join-small{ font-size: 17px !important; }
     right: 1px;
     position: absolute;
   }
-  .dropdown-normal:after{ position:relative !important; right:inherit !important; }  
+  .dropdown-normal:after{ position:relative !important; right:inherit !important; }
   a.navbar-brand img{ width:100px;}
   .nav-notifications-box{ font-size:18px !important; }
   .navbar-toggler-icon{ width:1.1em; height:1.1em; }
@@ -14639,8 +14651,21 @@ a.button-join-small{ font-size: 17px !important; }
     .dropdown-menu.show {
       transition: all 200ms;
     }
-
-
+    .transparency-tabs .nav-link{
+      font-size: .8rem;
+    }
+    .transparency-tabs .nav-link{
+      padding: 4px 9px !important;
+    }
+    .transparencyPartnersItem .transparencyUserName{
+      font-size:17px;
+    }
+    .transparencyPartnersItem img{
+        width:50px !important;
+    }
+    .transparencyHeroImage{
+      max-width:250px !important;
+    }
 
 }
 @media (max-width: 450px) {

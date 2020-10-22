@@ -31,6 +31,7 @@ require_once(  get_template_directory() . '/assets/includes/shortcodes/contentIn
 require_once(  get_template_directory() . '/assets/includes/shortcodes/siteFigures.inc.php');
 require_once(  get_template_directory() . '/assets/includes/shortcodes/startRightHere.inc.php');
 require_once(  get_template_directory() . '/assets/includes/shortcodes/topBonuses.inc.php');
+require_once(  get_template_directory() . '/assets/includes/shortcodes/short-betizenTransparency.inc.php');
 // extra functionalities
 require_once(  get_template_directory() . '/assets/includes/user-ip-on-signup.inc.php');
 // xhr / ajax calls
@@ -1016,7 +1017,7 @@ function am_enqueue_scripts() {
 
   }
 
-  wp_enqueue_script( 'betizen-js', get_template_directory_uri() . '/assets/javascript/script.js', array(), false, true );  
+  wp_enqueue_script( 'betizen-js', get_template_directory_uri() . '/assets/javascript/script.js', array(), false, true );
 
 }
 
