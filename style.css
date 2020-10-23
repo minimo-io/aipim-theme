@@ -14276,6 +14276,9 @@ body.modal-open #main, body.modal-open #nav-header{
 .transparencyHeroImage{
   max-width:350px;
 }
+.affiliateHeroImage{
+  max-width:600px !important;
+}
 
 
 /* game modal  */
@@ -14665,6 +14668,9 @@ a.button-join-small{ font-size: 17px !important; }
     }
     .transparencyHeroImage{
       max-width:250px !important;
+    }
+    .affiliateHeroImage{
+      max-width:350px !important;
     }
 
 }
