@@ -95,7 +95,13 @@ function aipim_postAuthorMeta($authorId){
 
   if ($lastName) $lastName = " ".substr($lastName,0,1).".";
 
-  $metaDate = human_time_diff( get_the_time('U'), current_time( 'timestamp' ) );
+  $postModDate = get_the_modified_date('U'); // modification date
+  $postPubDate =  get_the_time('U'); // publishing date
+
+  $postMetaPubModDate = $postModDate;
+  if (empty($postMetaPubModDate)) $postMetaPubModDate = $postPubDate;
+
+  $metaDate = human_time_diff( $postMetaPubModDate, current_time( 'timestamp' ) );
   $metaDate = str_replace("semanas", "sem.", $metaDate);
   $metaDate = str_replace("semana", "sem.", $metaDate);
 
@@ -106,7 +112,10 @@ function aipim_postAuthorMeta($authorId){
   $metaDate = str_replace("minuto", "min.", $metaDate);
 
   $authorMetaTooltip = ucfirst(__("author", "aipim"))." ".get_the_author_meta('display_name').". ".__("Registered", "aipim").": ".get_the_author_meta("user_registered");
+
   $publishDateTooltip = __("Published").": ".get_the_date('r');
+  if (!empty($postModDate)) $publishDateTooltip .= "<br>".__("Modified", "aipim").": ".get_the_modified_date('r');
+  $publishDateTooltip = str_replace("+0000", "", $publishDateTooltip);
 
   $ret .= "<div class='card reviewMetadata p-2 mb-1'>";
     $ret .= "<div class='row'>";
@@ -120,7 +129,7 @@ function aipim_postAuthorMeta($authorId){
         $ret .= "</div>";
       $ret .= "</div>";
       $ret .= "<div class='col-4 text-right' style='line-height:2.1rem;'>";
-      $ret .= "<i class='fa fa-clock-o mr-1' aria-hidden='true'></i><time datetime='".get_the_date('c')."' data-toggle='tooltip' data-placement='top' title='".esc_attr($publishDateTooltip)."'>".$metaDate."</time>";
+      $ret .= "<i class='fa fa-clock-o mr-1' aria-hidden='true'></i><time datetime='".get_the_date('c')."' data-toggle='tooltip' data-placement='top' data-html='true' title='".esc_attr($publishDateTooltip)."'>".$metaDate."</time>";
       $ret .= "</div>";
     $ret .= "</div>";
   $ret .= "</div>";
