@@ -45,6 +45,7 @@
                           <li id="term-id-6" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-601">
                             <a title="<?php _e("Transparency", "aipim"); ?>" href="<?php _e("/en/transparency/", "aipim"); ?>"><?php _e("Transparency", "aipim"); ?></a>
                             <a title="<?php _e("Rankings", "aipim"); ?>" href="<?php _e("/en/ranks/", "aipim"); ?>"><?php _e("Rankings", "aipim"); ?></a>
+                            <a title="<?php _e("Partners", "aipim"); ?>" href="<?php _e("/en/partners/", "aipim"); ?>"><?php _e("Partners", "aipim"); ?></a>
                           </li>
                         </ul>
                       </div>
