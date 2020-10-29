@@ -558,15 +558,20 @@ function aipim_loadmore_casinos_html($o_casino, $redirect_to_casino = false, $ty
 
   $casino_link_external = am_link_external(get_field("link_default", $o_casino->ID), Array('type'=>'casino', 'id'=>$o_casino->ID));
 
+  $casinoRank = get_field("ranking", $o_casino->ID);
+
   if ($type == "normal") $html_loadmore .= '<tr class="'.$casinoTypesStr.'">';
   if ($type == "new") $html_loadmore .= '<tr class="newCasinoTR'.$casinoTypesStr.'">';
   $html_loadmore .=    '<th scope="row" class="table-ranking-ner">';
-  if ($type == "normal") $html_loadmore .=        '#'.get_field("ranking", $o_casino->ID);
+  if ($type == "normal") $html_loadmore .=        '#'.$casinoRank;
   if ($type == "new") $html_loadmore .=        '<span class="badge badge-pill badge-danger animated infinite pulse"><i class="fa fa-bell mr-1" aria-hidden="true"></i>'.__("New!", "aipim").'</span>';
   $html_loadmore .=    '</th>';
   $html_loadmore .=   '<td>';
   $html_loadmore .=        '<a class="casino-table-image" href="'.$casino_url.'">';
   $html_loadmore .=            $casino_thumb;
+  if ($casinoRank == 1) $html_loadmore .=        '<span class="medal medal-gold"></span>';
+  if ($casinoRank == 2) $html_loadmore .=        '<span class="medal medal-silver"></span>';  
+  if ($casinoRank == 3) $html_loadmore .=        '<span class="medal medal-bronze"></span>';
   $html_loadmore .=        '</a>';
   $html_loadmore .=    '</td>';
   $html_loadmore .=    '<td class="text-left d-none d-md-table-cell">'.$o_casino->post_title.'</td>';

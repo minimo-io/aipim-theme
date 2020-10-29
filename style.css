@@ -4,7 +4,7 @@ Author: Minimo
 Author URI: https://minimo.io/
 Text Domain: aipim
 Description: A community theme developed for Betizen.org based on themes.getbootstrap.com
-Version: 0.7.85
+Version: 0.8.00
 */
 
 /* ::root {
@@ -13023,6 +13023,7 @@ a.hover-underline:hover{text-decoration:underline !important;}
     font-size:20px;
     text-align:center;
 }
+.casino-table-image{ position:relative; }
 .casino-table-image img{ width:80px; border-radius:40px; max-width:inherit; }
 .btn-table-more{ font-size:16px; }
 .table-rating .gdrts-rating-text{ margin:0;padding:0; line-height:10px; font-size:15px; padding-top:10px; }
@@ -14279,7 +14280,26 @@ body.modal-open #main, body.modal-open #nav-header{
 .affiliateHeroImage{
   max-width:600px !important;
 }
-
+.medal{
+  background-image:url('/wp-content/uploads/2020/10/medals.png');
+  width: 14px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  top: -25px;
+  right: 7px;
+  position: absolute;
+}
+.medal-gold{
+  background-position: 0 0;
+}
+.medal-silver{
+  background-position: -13px 0;
+}
+.medal-bronze{
+  background-position: -26px 0;
+}
 
 /* game modal  */
 #gameWideScreen{ width:100%;height:600px; }
