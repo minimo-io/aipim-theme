@@ -77,6 +77,10 @@
 
         $youtube_video = get_field("youtube");
 
+        // blackjack values
+        $bjMinBet = get_field("min_bet");
+        $bjMaxBet = get_field("max_bet");
+
         // $provider["id"]
         $the_query_casinos = new WP_Query( array(
             'post_type' => 'casinos',
@@ -230,18 +234,38 @@
                                                         <?php
                                                         $thirdClass = "col-6 col-sm";
                                                         if (empty($maxWin)) $thirdClass = "col-sm-4";
-                                                        ?>
-                                                        <div class="<?php echo $thirdClass; ?> mt-3 mt-sm-0">
-                                                            <div class="card">
-                                                                <div class="card-body text-center">
-                                                                    <h5 class="card-title text-truncate"><?php _e("Paylines","aipim");  ?></h5>
-                                                                    <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
-                                                                        <?php the_field("lineas_de_pago"); ?>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <?php
+
+                                                        if ($game_categories[0]->slug == "blackjack"){
+                                                          ?>
+                                                          <div class="<?php echo $thirdClass; ?> mt-3 mt-sm-0">
+                                                              <div class="card">
+                                                                  <div class="card-body text-center">
+                                                                      <h5 class="card-title text-truncate"><?php _e("Min/Max","aipim");  ?></h5>
+                                                                      <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
+                                                                          <?php
+                                                                          echo $bjMinBet."/".$bjMaxBet;
+                                                                          ?>
+                                                                      </p>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <?php
+                                                        }else{
+
+                                                          ?>
+                                                          <div class="<?php echo $thirdClass; ?> mt-3 mt-sm-0">
+                                                              <div class="card">
+                                                                  <div class="card-body text-center">
+                                                                      <h5 class="card-title text-truncate"><?php _e("Paylines","aipim");  ?></h5>
+                                                                      <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
+                                                                          <?php the_field("lineas_de_pago"); ?>
+                                                                      </p>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <?php
+                                                        }
+
 
                                                         if (!empty($maxWin)){
                                                           ?>
