@@ -53,6 +53,13 @@ function aipim_orderBox(){
                 <option value="rtp-DESC" <?php echo ($order_by == "rtp" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Highest RTP", "aipim"); ?></option>
                 <option value="HighestVolatility-DESC" <?php echo ($order_by == "HighestVolatility" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Highest volatility", "aipim"); ?></option>
                 <option value="LowestVolatility-DESC" <?php echo ($order_by == "LowestVolatility" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Lowest volatility", "aipim"); ?></option>
+              <?php }else{ ?>
+                <option value="WelcomeBonus-DESC" <?php echo ($order_by == "WelcomeBonus" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Welcome bonus", "aipim"); ?></option>
+                <option value="NoDepositBonus-DESC" <?php echo ($order_by == "NoDepositBonus" && $order == "DESC" ? "selected" : ""); ?>><?php _e("No deposit", "aipim"); ?></option>
+                <option value="HighRollerBonus-DESC" <?php echo ($order_by == "HighRollerBonus" && $order == "DESC" ? "selected" : ""); ?>><?php _e("High roller", "aipim"); ?></option>
+                <option value="CashbackBonus-DESC" <?php echo ($order_by == "CashbackBonus" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Cashback", "aipim"); ?></option>
+                <option value="FreeSpinsBonus-DESC" <?php echo ($order_by == "FreeSpinsBonus" && $order == "DESC" ? "selected" : ""); ?>><?php _e("Free Spins", "aipim"); ?></option>
+
               <?php } ?>
 
               <option value="name-ASC" <?php echo ($order_by == "name" && $order == "ASC" ? "selected" : ""); ?>><?php _e("A -> Z", "aipim"); ?></option>
@@ -570,13 +577,13 @@ function aipim_loadmore_casinos_html($o_casino, $redirect_to_casino = false, $ty
   $html_loadmore .=        '<a class="casino-table-image" href="'.$casino_url.'">';
   $html_loadmore .=            $casino_thumb;
   if ($casinoRank == 1) $html_loadmore .=        '<span class="medal medal-gold"></span>';
-  if ($casinoRank == 2) $html_loadmore .=        '<span class="medal medal-silver"></span>';  
+  if ($casinoRank == 2) $html_loadmore .=        '<span class="medal medal-silver"></span>';
   if ($casinoRank == 3) $html_loadmore .=        '<span class="medal medal-bronze"></span>';
   $html_loadmore .=        '</a>';
   $html_loadmore .=    '</td>';
   $html_loadmore .=    '<td class="text-left d-none d-md-table-cell">'.$o_casino->post_title.'</td>';
   $html_loadmore .=    '<td class="table-rating d-none d-md-table-cell">';
-  $html_loadmore .=       do_shortcode("[wppr_avg_rating size='20' hide_count='0' post_id='".$o_casino->ID."']");
+  $html_loadmore .=       do_shortcode("[wppr_avg_rating label='".__("opinions", "aipim")."' size='20' hide_count='0' post_id='".$o_casino->ID."']");
   $html_loadmore .=    '</td>';
   $html_loadmore .=    '<td>';
   $html_loadmore .=        '<div class="table-comments">';

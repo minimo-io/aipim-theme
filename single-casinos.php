@@ -263,7 +263,7 @@
                                                             <a class="theme-purchases__item__inner text-center" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler">
                                                                 <?php
                                                                 // echo gdrts_posts_render_rating();
-                                                                echo do_shortcode("[wppr_avg_rating size='35']");
+                                                                echo do_shortcode("[wppr_avg_rating label='".__("opinions", "aipim")."' size='35']");
                                                                 ?>
                                                             </a>
                                                             <div class="theme-purchases__item__inner text-center am-favorite" style="display:none;">
@@ -398,7 +398,7 @@
                                                     <a class="theme-purchases__item__inner text-center pt-0" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true">
                                                         <?php
                                                         // echo gdrts_posts_render_rating();
-                                                        echo do_shortcode("[wppr_avg_rating size='35']");
+                                                        echo do_shortcode("[wppr_avg_rating label='".__("opinions", "aipim")."' size='35']");
                                                         ?>
                                                     </a>
                                                     <div class="theme-purchases__item__inner text-center am-favorite" style="display:none;">

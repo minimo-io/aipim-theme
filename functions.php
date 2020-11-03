@@ -493,6 +493,66 @@ function am_sort_arc($q) {
 
       }
 
+      if ( $q->query_vars['orderby'] == "WelcomeBonus" ){
+        $meta_query = array(
+          array(
+            'key'     => 'bonus_type',
+            'value'   => array('welcome_bonus'),
+            'compare' => 'IN',
+          )
+        );
+        $q->set('meta_query',$meta_query);
+
+      }
+
+      if ( $q->query_vars['orderby'] == "NoDepositBonus" ){
+        $meta_query = array(
+          array(
+            'key'     => 'bonus_type',
+            'value'   => array('no_deposit_bonus'),
+            'compare' => 'IN',
+          )
+        );
+        $q->set('meta_query',$meta_query);
+
+      }
+
+      if ( $q->query_vars['orderby'] == "HighRollerBonus" ){
+        $meta_query = array(
+          array(
+            'key'     => 'bonus_type',
+            'value'   => array('high_roller_bonus'),
+            'compare' => 'IN',
+          )
+        );
+        $q->set('meta_query',$meta_query);
+
+      }
+
+      if ( $q->query_vars['orderby'] == "CashbackBonus" ){
+        $meta_query = array(
+          array(
+            'key'     => 'bonus_type',
+            'value'   => array('cashback_bonus'),
+            'compare' => 'IN',
+          )
+        );
+        $q->set('meta_query',$meta_query);
+
+      }
+
+      if ( $q->query_vars['orderby'] == "FreeSpinsBonus" ){
+        $meta_query = array(
+          array(
+            'key'     => 'bonus_type',
+            'value'   => array('freespins_bonus'),
+            'compare' => 'IN',
+          )
+        );
+        $q->set('meta_query',$meta_query);
+
+      }
+
       if ( $q->query_vars['orderby'] == "rtp" ){
         $q->set('orderby', "meta_value_num" );
     		$q->set('meta_key', 'rtp');
@@ -1019,6 +1079,22 @@ function am_enqueue_scripts() {
 
   wp_enqueue_script( 'betizen-js', get_template_directory_uri() . '/assets/javascript/script.js', array(), false, true );
 
+}
+
+function aipim_get_user_role($user_id) {
+    global $wp_roles;
+
+    $roles = array();
+    $user = new WP_User( $user_id );
+    if ( !empty( $user->roles ) && is_array( $user->roles ) ) {
+      foreach ( $user->roles as $role ){
+          $roleTranslated = translate_user_role( $role );
+          if ($roleTranslated == "wpseo_editor" || $roleTranslated == "author") $roleTranslated = __("author", "aipim");
+          if ($roleTranslated == "leadpartner_user") $roleTranslated = __("partner", "aipim");
+          $roles[] .= $roleTranslated;
+      }
+    }
+    return implode(', ',$roles);
 }
 
 add_filter('wpseo_json_ld_output', 'bybe_remove_yoast_json', 10, 1);

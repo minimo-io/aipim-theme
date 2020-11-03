@@ -235,7 +235,7 @@
                                                         $thirdClass = "col-6 col-sm";
                                                         if (empty($maxWin)) $thirdClass = "col-sm-4";
 
-                                                        if ($game_categories[0]->slug == "blackjack"){
+                                                        if(stristr($game_categories[0]->slug, 'blackjack') != FALSE) {
                                                           ?>
                                                           <div class="<?php echo $thirdClass; ?> mt-3 mt-sm-0">
                                                               <div class="card">
@@ -402,7 +402,7 @@
                                                             <a class="theme-purchases__item__inner text-center" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler">
                                                                 <?php
                                                                 // echo gdrts_posts_render_rating();
-                                                                echo do_shortcode("[wppr_avg_rating size='35']");
+                                                                echo do_shortcode("[wppr_avg_rating size='35' label='".__("opinions", "aipim")."']");
                                                                 ?>
                                                             </a>
                                                             <div class="theme-purchases__item__inner text-center am-favorite" style="display:none;">
@@ -575,7 +575,7 @@
                                                     <a class="theme-purchases__item__inner text-center pt-0" data-toggle="tab" href="#reviews-tab" role="tab" js-handle="review-toggler" aria-expanded="true">
                                                         <?php
                                                         // echo gdrts_posts_render_rating();
-                                                        echo do_shortcode("[wppr_avg_rating size='35']");
+                                                        echo do_shortcode("[wppr_avg_rating size='35' label='".__("opinions", "aipim")."']");
                                                         ?>
                                                     </a>
                                                     <div class="theme-purchases__item__inner text-center am-favorite" style="display:none;">

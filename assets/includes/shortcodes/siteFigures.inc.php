@@ -183,7 +183,7 @@ function short_aipimFigures( $atts ) {
 												<a href="'.get_permalink($o_bonus->ID).'">
 													<img class="mb-2" width="'.($atts["small"] == 'yes' ? "100" : "120" ).'" src="'.get_the_post_thumbnail_url($o_bonus->ID, 'am-300').'" alt="'.__("bonus-image", "aipim").'">
 													</a>
-												<center>'. do_shortcode("[wppr_avg_rating size='".($atts["small"] == 'yes' ? "25" : "28" )."' hide_count='0' post_id='".$o_bonus->ID."']").'</center>
+												<center>'. do_shortcode("[wppr_avg_rating label='".__("opinions", "aipim")."' size='".($atts["small"] == 'yes' ? "25" : "28" )."' hide_count='0' post_id='".$o_bonus->ID."']").'</center>
 											</div>';
 	      // $ret .= '    '.get_field("bonus_title", $o_bonus->ID).''.$atts["small"];
 	      $ret .= '
