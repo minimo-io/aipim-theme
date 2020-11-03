@@ -58,6 +58,12 @@ function am_ranking_calc() {
                     $score_total = $votes_count;
                 }
 
+                // substract the initial score given by us
+                // this will allow us to still have a casino ranked as "fair"
+                // but also have it lower in the ranks if needed
+                $initialScore = get_field("initialscorevalue", $casino);
+                if (!empty($initialScore)) $score_total = $score_total + $initialScore;
+                
 
                 $casinos_scores[$casino->ID] = $score_total;
             }
