@@ -82,11 +82,34 @@
         $bjMaxBet = get_field("max_bet");
 
         // $provider["id"]
+
+
+        // Here you add your meta_query to get the value from post_meta
+        // $args['meta_query'] => array(
+        //     array(
+        //         'key'     => 'ranking',
+        //         'value'   => 'YOUR VALUE',
+        //         'compare' => 'LIKE',
+        //     ),
+        // );
+
         $the_query_casinos = new WP_Query( array(
             'post_type' => 'casinos',
             'posts_per_page' => 2,
+
+            'meta_key'=>'considerforads',
             'orderby' => 'rand',
+            'meta_query'  => array(
+              'relation' => 'OR',
+             Array(
+              'key'     => 'considerforads',
+              'value'   => '1',
+              'compare'=>'LIKE'
+            ),
+            ),
+
             'tax_query' => Array(
+                // 'relation' => 'AND',
                 Array(
                     'taxonomy' => 'proveedores',
                     'field' => 'term_id',
@@ -115,6 +138,7 @@
                                 <div class="d-flex">
                                     <div class="profile__avatar">
                                       <?php
+
                                       $game_box_square = get_field('imagen_juego_square');
                                       // var_dump($game_box_square);
                                       ?>
