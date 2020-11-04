@@ -493,6 +493,22 @@ function am_sort_arc($q) {
 
       }
 
+      if ( $q->query_vars['orderby'] == "HighestExposition" ){
+
+        $q->set('orderby', "meta_value_num" );
+    		$q->set('meta_key', 'max_exposition');
+    		$q->set('order', $orderAscDesc);
+
+      }
+
+      if ( $q->query_vars['orderby'] == "LowestRollover" ){
+
+        $q->set('orderby', "meta_value_num" );
+    		$q->set('meta_key', 'rollover');
+    		$q->set('order', $orderAscDesc);
+
+      }
+
       if ( $q->query_vars['orderby'] == "WelcomeBonus" ){
         $meta_query = array(
           array(
