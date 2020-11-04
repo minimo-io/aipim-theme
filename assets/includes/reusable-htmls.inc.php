@@ -184,9 +184,9 @@ function aipim_showRelatedGames($provider = NULL, $exludeGames = Array()){
 }
 
 // casinos filters
-function aipim_casinoTypeFilterForm(){
+function aipim_casinoTypeFilterForm($aQueryType = 'ajax'){
   ?>
-  <div class="categoryCasinosFilters text-center my-2">
+  <div class="<?php echo ($aQueryType == 'inline' ? "categoryCasinosFiltersInline" : "categoryCasinosFilters" ); ?> text-center my-2">
     <?php
     $casinoTypes = get_terms([
         'taxonomy' => "casinos_types",
@@ -213,10 +213,10 @@ function aipim_casinoTypeFilterForm(){
         <div class="d-flex justify-content-md-end">
           <select id="category_order_by" name="orderby" class="form-control text-gray-soft">
             <?php
-            echo '<option value="0">'.__("All", "aipim").'</option>';
+            echo '<option class="selectType-0" value="0">'.__("All", "aipim").'</option>';
             foreach($casinoTypes as $tag) {
               $tag_link = get_tag_link( $tag->term_id );
-              if ($tag->count > 0) echo '<option value="'.$tag->term_id.'">'.$tag->name.' ('.$tag->count.')</option>';
+              if ($tag->count > 0) echo '<option class="selectType-'.$tag->term_id.'" value="'.$tag->term_id.'">'.$tag->name.' ('.$tag->count.')</option>';
             }
             ?>
           </select>
@@ -570,7 +570,7 @@ function aipim_loadmore_casinos_html($o_casino, $redirect_to_casino = false, $ty
 
   $casinoRank = get_field("ranking", $o_casino->ID);
 
-  if ($type == "normal") $html_loadmore .= '<tr class="'.$casinoTypesStr.'">';
+  if ($type == "normal") $html_loadmore .= '<tr class="casinoItem '.$casinoTypesStr.'">';
   if ($type == "new") $html_loadmore .= '<tr class="newCasinoTR'.$casinoTypesStr.'">';
   $html_loadmore .=    '<th scope="row" class="table-ranking-ner">';
   if ($type == "normal") $html_loadmore .=        '#'.$casinoRank;

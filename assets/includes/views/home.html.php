@@ -90,7 +90,7 @@
                 <a class="theme-cards__heading__button btn btn-outline-brand btn-sm" href="<?php echo site_url().__("/en/online-casinos/", "aipim"); ?>"><?php _e("See all", "aipim");  ?></a>
             </div>
             <div id="casinos-table" class="row pt-0">
-                <div class="container mx-0 px-0"><?php aipim_casinoTypeFilterForm(); ?></div>
+                <div class="container mx-0 px-0"><?php aipim_casinoTypeFilterForm("ajax"); ?></div>
                 <table class="table table-striped">
                     <tbody class="casinos-table-body">
                         <?php

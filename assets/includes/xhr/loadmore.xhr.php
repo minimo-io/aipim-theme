@@ -39,21 +39,34 @@ function aipim_loadmore() {
 
     $loadmore_action = $_POST['loadmore_action'];
     $loadmore_count = $_POST['loadmore_count'] + 1;
+    $loadmore_type = $_POST['loadmore_type']; // casino type for some cases
     // $loadmore_count = 2;
 
       // load more casinos
     if ($loadmore_action == "load-top-casinos"){
 
-        $the_query_casinos = new WP_Query( array(
-            'showposts' => 5,
-            'post_type' => 'casinos',
-            'posts_per_page' => 5,
-            'paged' => $loadmore_count,
-            'meta_key' => 'ranking',
-            'orderby' => 'meta_value_num',
-            'order' => 'ASC',
-            'post_status' => 'publish'
-        ) );
+      $args = array(
+          'showposts' => 5,
+          'post_type' => 'casinos',
+          'posts_per_page' => 5,
+          'paged' => $loadmore_count,
+          'meta_key' => 'ranking',
+          'orderby' => 'meta_value_num',
+          'order' => 'ASC',
+          'post_status' => 'publish'
+      );
+      if (!empty($loadmore_type)){
+        $args['tax_query'] = array(
+            array (
+              'taxonomy' => 'casinos_types',
+              'field' => 'term_id',
+              'terms' => $loadmore_type
+            )
+        );
+
+      }
+
+        $the_query_casinos = new WP_Query( $args );
         $html_loadmore = "";
         foreach ($the_query_casinos->posts as $casino){
 

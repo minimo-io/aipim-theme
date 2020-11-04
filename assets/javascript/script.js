@@ -387,13 +387,14 @@ jQuery(function($) {
     });
 
     // casino filters --------------------
-    $(".categoryCasinosFilters button").click(function(){
+    $(".categoryCasinosFiltersInline button").click(function(){
 
       var oButton = $(this);
       var buttonCasinoTypeId = oButton.data( "casinotype" );
-      $(".categoryCasinosFilters button").removeClass("active");
+      $(".categoryCasinosFiltersInline button").removeClass("active");
       animateCSS(".btnType-"+buttonCasinoTypeId, "flash", null, true);
       oButton.addClass("active");
+
 
       if (buttonCasinoTypeId != 0){
         $("#casinos-table tr").hide();
@@ -401,13 +402,16 @@ jQuery(function($) {
       }else{
         $("#casinos-table tr").show();
       }
+
     });
-    $(".categoryCasinosFilters select").change(function(){
+
+
+    $(".categoryCasinosFiltersInline select").change(function(){
 
       var oSelect = $(this);
       var selectCasinoTypeId = oSelect.val();
-      var oButton = $(".categoryCasinosFilters .btnType-"+selectCasinoTypeId)
-      $(".categoryCasinosFilters button").removeClass("active");
+      var oButton = $(".categoryCasinosFiltersInline .btnType-"+selectCasinoTypeId)
+      $(".categoryCasinosFiltersInline button").removeClass("active");
       oButton.addClass("active");
 
       if (selectCasinoTypeId != 0){

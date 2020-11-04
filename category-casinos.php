@@ -28,7 +28,7 @@
 
                       <?php aipimSubscriptionBox($category);?>
 
-                      <?php aipim_casinoTypeFilterForm(); ?>
+                      <?php aipim_casinoTypeFilterForm("inline"); ?>
 
               </div>
 
