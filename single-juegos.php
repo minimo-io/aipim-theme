@@ -265,7 +265,7 @@
                                                               <div class="card">
                                                                   <div class="card-body text-center">
                                                                       <h5 class="card-title text-truncate"><?php _e("Min/Max","aipim");  ?></h5>
-                                                                      <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
+                                                                      <p class="card-text display-4" style="font-size:2.56rem;">
                                                                           <?php
                                                                           echo $bjMinBet."/".$bjMaxBet;
                                                                           ?>
