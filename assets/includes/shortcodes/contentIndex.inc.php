@@ -8,16 +8,49 @@ function aipim_contentIndex_shortcode( $atts ) {
 		'type' => 'casino',
 	), $atts, 'short_alert' );
 
+  $casinoTypes = get_the_terms( $post->ID, 'casinos_types' );
 
   if ($atts["type"] == "casino"){
     $yt_link = get_field("youtube", $post->ID);
     // $ret .= '<h2 class="card-title catalog-blog-title post-title hero-h1 bd-text-purple-bright display-4" style="font-weight:bold;">'.__("Index", "aipim").'</h2>';
+
+    $ret .= '<div class="list-index list-group mt-1 mb-4">';
+
+    if ($casinoTypes[0]->slug == "apuestas-deportivas"){
+      $ret .= '
+                <a href="#juegos" class="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">
+                  '.__("Odds", "aipim").'
+                  '.get_score_style(get_field("games_score")).'
+                </a>
+              ';
+    }elseif ($casinoTypes[0]->slug == "poker"){
+      $ret .= '
+                <a href="#juegos" class="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">
+                  '.__("Games & Events", "aipim").'
+                  '.get_score_style(get_field("games_score")).'
+                </a>
+              ';
+    }else{
+      $ret .= '
+                <a href="#juegos" class="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">
+                  '.__("Games", "aipim").'
+                  '.get_score_style(get_field("games_score")).'
+                </a>
+              ';
+    }
+
+
+
+    if ($casinoTypes[0]->slug == "poker"){
+      $ret .= '
+                <a href="#software" class="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">
+                  '.__("Software", "aipim").'
+                  '.get_score_style(get_field("software_score")).'
+                </a>
+              ';
+    }
+
     $ret .= '
-            <div class="list-index list-group mt-1 mb-4">
-              <a href="#juegos" class="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">
-                '.__("Games", "aipim").'
-                '.get_score_style(get_field("games_score")).'
-              </a>
               <a href="#bonos" class="list-group-item d-flex justify-content-between align-items-center font-weight-bolder">
                 '.__("Bonus and promotions", "aipim").'
                 '.get_score_style(get_field("bonus_score")).'
@@ -79,8 +112,10 @@ function aipim_contentIndex_shortcode( $atts ) {
 
 	return $ret;
 }
+
 function aipim_contentIndexTitles_shortcode($atts){
   $ret = "";
+  global $post;
 
   $atts = shortcode_atts( array(
 		'section' => 'games',
@@ -89,7 +124,18 @@ function aipim_contentIndexTitles_shortcode($atts){
 
   // for casinos
   if ($atts["section"] == "games"){
-    return '<h2 id="juegos" class="contentIndexTitle">'.(!empty($atts["title"]) ? $atts["title"] : __("Games", "aipim") ).'</h2>';
+    $casinoTypes = get_the_terms( $post->ID, 'casinos_types' );
+    if ($casinoTypes[0]->slug == "poker"){
+      return '<h2 id="juegos" class="contentIndexTitle">'.(!empty($atts["title"]) ? $atts["title"] : __("Games & Events", "aipim") ).'</h2>';
+    }else if ($casinoTypes[0]->slug == "apuestas-deportivas"){
+      return '<h2 id="juegos" class="contentIndexTitle">'.(!empty($atts["title"]) ? $atts["title"] : __("Odds", "aipim") ).'</h2>';
+    }else{
+      return '<h2 id="juegos" class="contentIndexTitle">'.(!empty($atts["title"]) ? $atts["title"] : __("Games", "aipim") ).'</h2>';
+    }
+
+  }
+  if ($atts["section"] == "software"){
+    return '<h2 id="software" class="contentIndexTitle">'.(!empty($atts["title"]) ? $atts["title"] : __("Software", "aipim") ).'</h2>';
   }
   if ($atts["section"] == "promotions"){
     return '<h2 id="bonos" class="contentIndexTitle">'.(!empty($atts["title"]) ? $atts["title"] : __("Bonus and promotions", "aipim") ).'</h2>';
