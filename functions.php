@@ -16,7 +16,19 @@ function is_bonus(){
   if (is_single() && get_post_type( get_the_ID() ) == "bonus") $ret = true;
   return $ret;
 }
-
+function is_roulette($game_categories){
+  $ret = false;
+  if (
+    stristr($game_categories[0]->slug, 'ruleta') != FALSE
+    ||
+    stristr($game_categories[0]->slug, 'roulette') != FALSE
+    ||
+    stristr($game_categories[0]->slug, 'roleta') != FALSE
+  ){
+    $ret = true;
+  }
+  return $ret;
+}
 // globals
 require_once(  get_template_directory() . '/assets/includes/admin.inc.php'); // aipim admin panel
 require_once(  get_template_directory() . '/assets/includes/reusable-htmls.inc.php'); // system wide reusable html outputs
@@ -1018,6 +1030,12 @@ function aipim_volatility_label_translate($v_val){
   if ($v_val == "Media") return __("Medium", "aipim");
   if ($v_val == "Media/Alta") return __("Medium/High", "aipim");
   if ($v_val == "Alta") return __("High", "aipim");
+}
+function aipim_roulette_label_translate($v_val){
+  if ($v_val == "-") return "-";
+  if ($v_val == "american") return __("American", "aipim");
+  if ($v_val == "european") return __("European", "aipim");
+  if ($v_val == "french") return __("French", "aipim");
 }
 
 // disable Yoast rich snippets

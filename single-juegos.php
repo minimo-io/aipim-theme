@@ -77,7 +77,7 @@
 
         $youtube_video = get_field("youtube");
 
-        // blackjack values
+        // blackjack values & roulette
         $bjMinBet = get_field("min_bet");
         $bjMaxBet = get_field("max_bet");
 
@@ -242,24 +242,55 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-6 col-sm">
-                                                            <div class="card">
-                                                                <div class="card-body text-center">
-                                                                    <h5 class="card-title">
-                                                                      <?php _e("Volatility","aipim");  ?>
-                                                                      <a href="<?php _e("/en/articles/what-does-volatility-in-slots-mean/", "aipim") ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>
-                                                                    </h5>
-                                                                    <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
-                                                                      <?php echo aipim_volatility_label_translate($f_volatilidad); ?>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+
+                                                        <?php
+                                                        if (is_roulette($game_categories)){
+                                                          $rouletteType = get_field("roulette_type");
+                                                          ?>
+                                                          <div class="col-6 col-sm">
+                                                              <div class="card">
+                                                                  <div class="card-body text-center">
+                                                                      <h5 class="card-title">
+                                                                        <?php _e("Type","aipim");  ?>
+                                                                        <!-- <a href="<?php _e("/en/articles/what-does-volatility-in-slots-mean/", "aipim") ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a> -->
+                                                                      </h5>
+                                                                      <p class="card-text display-4" style="font-size:2.2rem;">
+                                                                        <?php echo aipim_roulette_label_translate($rouletteType); ?>
+                                                                      </p>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <?php
+                                                        }else{
+                                                          ?>
+                                                          <div class="col-6 col-sm">
+                                                              <div class="card">
+                                                                  <div class="card-body text-center">
+                                                                      <h5 class="card-title">
+                                                                        <?php _e("Volatility","aipim");  ?>
+                                                                        <a href="<?php _e("/en/articles/what-does-volatility-in-slots-mean/", "aipim") ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a>
+                                                                      </h5>
+                                                                      <p class="card-text display-4" <?php echo ($f_volatilidad == "Media/Alta" || $f_volatilidad == "Baja/Media" ? "style='font-size:2.2rem;'" : ""); ?>>
+                                                                        <?php echo aipim_volatility_label_translate($f_volatilidad); ?>
+                                                                      </p>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <?php
+                                                        }
+                                                        ?>
+
+
+
                                                         <?php
                                                         $thirdClass = "col-6 col-sm";
                                                         if (empty($maxWin)) $thirdClass = "col-sm-4";
 
-                                                        if(stristr($game_categories[0]->slug, 'blackjack') != FALSE) {
+                                                        if(
+                                                          stristr($game_categories[0]->slug, 'blackjack') != FALSE
+                                                          ||
+                                                          is_roulette($game_categories)
+                                                      ) {
                                                           ?>
                                                           <div class="<?php echo $thirdClass; ?> mt-3 mt-sm-0">
                                                               <div class="card">
