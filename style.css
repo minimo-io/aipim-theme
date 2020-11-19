@@ -14404,6 +14404,7 @@ body.modal-open #main, body.modal-open #nav-header{
     font-weight: 600;
     width: 84px;
     height: 48px;
+    padding:.75rem .8rem;
 }
 .muiButtonContainedSecondary {
     font-size: 1rem;
@@ -14698,6 +14699,15 @@ a.button-join-small{ font-size: 17px !important; }
     .teamwork-logo-column{
       padding:0;
       padding-bottom:1rem;
+    }
+    .cookiePolicy .cookieDescription{
+      font-size:.8rem;
+    }
+    .cookiePolicy .cookieAction{
+      font-size:.8rem;
+      height: 38px;
+      width: 100%;
+      padding: .6rem 1rem;
     }
 }
 @media (max-width: 450px) {
