@@ -75,6 +75,9 @@
           $rtp_value .= "%";
         }
 
+        $rieles = trim(get_field("rieles"));
+
+
         $youtube_video = get_field("youtube");
 
         // blackjack values & roulette
@@ -261,6 +264,22 @@
                                                               </div>
                                                           </div>
                                                           <?php
+                                                        }else if (stristr($game_categories[0]->slug, 'baccarat') != FALSE){
+                                                          ?>
+                                                          <div class="col-6 col-sm">
+                                                              <div class="card">
+                                                                  <div class="card-body text-center">
+                                                                      <h5 class="card-title">
+                                                                        <?php _e("Cards","aipim");  ?>
+                                                                        <!-- <a href="<?php _e("/en/articles/what-does-volatility-in-slots-mean/", "aipim") ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a> -->
+                                                                      </h5>
+                                                                      <p class="card-text display-4" style="font-size:2.2rem;">
+                                                                        <?php the_field("amount_of_cards"); ?>
+                                                                      </p>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <?php
                                                         }else{
                                                           ?>
                                                           <div class="col-6 col-sm">
@@ -288,6 +307,8 @@
 
                                                         if(
                                                           stristr($game_categories[0]->slug, 'blackjack') != FALSE
+                                                          ||
+                                                          stristr($game_categories[0]->slug, 'baccarat') != FALSE
                                                           ||
                                                           is_roulette($game_categories)
                                                       ) {
@@ -494,9 +515,14 @@
                                                           ?>
 
                                                       </div>
-                                                      <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Reels", "aipim"); ?></span>
-                                                        <span><?php echo get_field("rieles"); ?></span>
-                                                      </div>
+                                                      <?php
+                                                      if (!empty($rieles)){
+                                                      ?>
+                                                        <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Reels", "aipim"); ?></span>
+                                                          <span><?php echo $rieles; ?></span>
+                                                        </div>
+                                                      <?php } ?>
+
                                                       <?php if (!empty(get_field("jackpot"))){ ?>
                                                         <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Jackpot (max.)", "aipim"); ?></span><span><?php the_field("jackpot");  ?></span></div>
                                                       <?php } ?>
@@ -671,56 +697,62 @@
                                                       ?>
 
                                                   </div>
-                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Reels", "aipim"); ?></span>
-                                                    <span><?php echo get_field("rieles"); ?></span>
-                                                  </div>
-                                                  <?php if (!empty(get_field("jackpot"))){ ?>
-                                                    <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Jackpot (max.)", "aipim"); ?></span><span><?php the_field("jackpot");  ?></span></div>
-                                                  <?php } ?>
+                                                  <?php
+                                                  if (!empty($rieles)){
+                                                  ?>
+                                                    <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Reels", "aipim"); ?></span>
+                                                      <span><?php echo $rieles; ?></span>
+                                                    </div>
 
-                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Bonus game", "aipim"); ?></span><span>
-                                                    <?php
-                                                     $bonus = get_field("bonus");
-                                                     if (!empty($bonus) && $bonus != "0"){
-                                                         echo __("Yes", "aipim");
-                                                     }else{
-                                                         echo __("No", "aipim");
-                                                     }
-                                                     ?></span>
-                                                  </div>
-                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Free spins", "aipim"); ?></span><span>
-                                                    <?php
-                                                     $giros_gratis = get_field("giros_gratis");
-                                                     $bool_show = __("No", "aipim");
-                                                     if ( $bool_show == true) $bool_show = __("Yes", "aipim");
-                                                     echo $bool_show;
-                                                     ?></span>
-                                                  </div>
-                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Multiplier", "aipim"); ?></span><span>
-                                                    <?php
-                                                     $giros_gratis = get_field("multiplicador");
-                                                     $bool_show = __("No", "aipim");
-                                                     if ( $bool_show == true) $bool_show = __("Yes", "aipim");
-                                                     echo $bool_show;
-                                                     ?></span>
-                                                  </div>
-                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Wilds", "aipim"); ?></span><span>
-                                                    <?php
-                                                     $giros_gratis = get_field("comodin");
-                                                     $bool_show = __("No", "aipim");
-                                                     if ( $bool_show == true) $bool_show = __("Yes", "aipim");
-                                                     echo $bool_show;
-                                                     ?></span>
-                                                  </div>
-                                                  <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Scatter", "aipim"); ?></span><span>
-                                                    <?php
-                                                     $giros_gratis = get_field("scatter");
-                                                     $bool_show = __("No", "aipim");
-                                                     if ( $bool_show == true) $bool_show = __("Yes", "aipim");
-                                                     echo $bool_show;
-                                                     ?></span>
-                                                  </div>
+                                                    <?php if (!empty(get_field("jackpot"))){ ?>
+                                                      <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Jackpot (max.)", "aipim"); ?></span><span><?php the_field("jackpot");  ?></span></div>
+                                                    <?php } ?>
 
+                                                    <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Bonus game", "aipim"); ?></span><span>
+                                                      <?php
+                                                       $bonus = get_field("bonus");
+                                                       if (!empty($bonus) && $bonus != "0"){
+                                                           echo __("Yes", "aipim");
+                                                       }else{
+                                                           echo __("No", "aipim");
+                                                       }
+                                                       ?></span>
+                                                    </div>
+                                                    <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Free spins", "aipim"); ?></span><span>
+                                                      <?php
+                                                       $giros_gratis = get_field("giros_gratis");
+                                                       $bool_show = __("No", "aipim");
+                                                       if ( $bool_show == true) $bool_show = __("Yes", "aipim");
+                                                       echo $bool_show;
+                                                       ?></span>
+                                                    </div>
+                                                    <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Multiplier", "aipim"); ?></span><span>
+                                                      <?php
+                                                       $giros_gratis = get_field("multiplicador");
+                                                       $bool_show = __("No", "aipim");
+                                                       if ( $bool_show == true) $bool_show = __("Yes", "aipim");
+                                                       echo $bool_show;
+                                                       ?></span>
+                                                    </div>
+                                                    <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Wilds", "aipim"); ?></span><span>
+                                                      <?php
+                                                       $giros_gratis = get_field("comodin");
+                                                       $bool_show = __("No", "aipim");
+                                                       if ( $bool_show == true) $bool_show = __("Yes", "aipim");
+                                                       echo $bool_show;
+                                                       ?></span>
+                                                    </div>
+                                                    <div class="theme-description__list__item"><span class="theme-description__item__title"><?php _e("Scatter", "aipim"); ?></span><span>
+                                                      <?php
+                                                       $giros_gratis = get_field("scatter");
+                                                       $bool_show = __("No", "aipim");
+                                                       if ( $bool_show == true) $bool_show = __("Yes", "aipim");
+                                                       echo $bool_show;
+                                                       ?></span>
+                                                    </div>
+                                                  <?php
+                                                  }
+                                                  ?>
                                                   <div class="theme-description__list__item align-items-center"><span class="theme-description__item__title"><?php _e("Questions?", "aipim");  ?></span><a class="btn btn-xs btn-outline-brand btn-customcolor-outline" href="mailto:<?php echo AM_CONTACT_TO;  ?>"><?php _e("Contact us", "aipim");  ?></a></div>
 
                                                   <?php
