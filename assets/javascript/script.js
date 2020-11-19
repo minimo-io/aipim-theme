@@ -6,9 +6,14 @@ function aipimNote(o){
     // o.text;
     // o.actionText
     // o.action
+    if (o.remove == true){
+      $(".cookiePolicy").addClass("d-none");
+      return;
+    }
     $(".cookiePolicy").removeClass("d-none");
     $(".cookiePolicy .cookieDescription").html(o.text);
     $(".cookiePolicy .cookieAction").html(o.actionText);
+    $(".cookiePolicy .cookieAction").addClass(o.action); // set the class for the button, then we should add an event handler for this class
 }
 function game_play(){
 
@@ -336,6 +341,8 @@ jQuery(function($) {
 
     // $('button.single_add_to_cart_button').removeClass('button').addClass('btn btn-danger');
     // $('a.button').removeClass('button').addClass('btn btn-danger');
+
+    // Cookies.remove('bztc')
     var cookieTC = false;
     if(! Cookies.get('bztc')){
       cookieTC = 0;
@@ -347,11 +354,16 @@ jQuery(function($) {
     if (cookieTC == 0){
       aipimNote({
         'text': bzTranslation.acceptCookie,
-        'action': 'acceptCookie',
+        'action': 'btnAcceptCookies',
         'actionText': bzTranslation.acceptCookieBtnText
       });
 
     }
+
+    $(".btnAcceptCookies").click(function(){
+      Cookies.set('bztc', 1, { expires: 30 });
+      aipimNote({ 'remove': true });
+    });
 
     $('ul.dropdown-menu li.dropdown').hover(function() {
         $(this).addClass('open');
