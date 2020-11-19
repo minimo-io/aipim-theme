@@ -264,6 +264,22 @@
                                                               </div>
                                                           </div>
                                                           <?php
+                                                        }else if (stristr($game_categories[0]->slug, 'video-poker') != FALSE){
+                                                          ?>
+                                                          <div class="col-6 col-sm">
+                                                              <div class="card">
+                                                                  <div class="card-body text-center">
+                                                                      <h5 class="card-title">
+                                                                        <?php _e("Hands","aipim");  ?>
+                                                                        <!-- <a href="<?php _e("/en/articles/what-does-volatility-in-slots-mean/", "aipim") ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a> -->
+                                                                      </h5>
+                                                                      <p class="card-text display-4">
+                                                                        <?php the_field("hands_count"); ?>
+                                                                      </p>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <?php
                                                         }else if (stristr($game_categories[0]->slug, 'baccarat') != FALSE){
                                                           ?>
                                                           <div class="col-6 col-sm">
@@ -309,6 +325,8 @@
                                                           stristr($game_categories[0]->slug, 'blackjack') != FALSE
                                                           ||
                                                           stristr($game_categories[0]->slug, 'baccarat') != FALSE
+                                                          ||
+                                                          stristr($game_categories[0]->slug, 'video-poker') != FALSE
                                                           ||
                                                           is_roulette($game_categories)
                                                       ) {
