@@ -1,5 +1,14 @@
 function aipim_notification(o_not){
     alert(o_not.text);
+    // when all ready use the aipimNote() fn below
+}
+function aipimNote(o){
+    // o.text;
+    // o.actionText
+    // o.action
+    $(".cookiePolicy").removeClass("d-none");
+    $(".cookiePolicy .cookieDescription").html(o.text);
+    $(".cookiePolicy .cookieAction").html(o.actionText);
 }
 function game_play(){
 
@@ -327,6 +336,22 @@ jQuery(function($) {
 
     // $('button.single_add_to_cart_button').removeClass('button').addClass('btn btn-danger');
     // $('a.button').removeClass('button').addClass('btn btn-danger');
+    var cookieTC = false;
+    if(! Cookies.get('bztc')){
+      cookieTC = 0;
+      Cookies.set('bztc', cookieTC, { expires: 30 });
+    }else{
+      cookieTC = Cookies.get('bztc');
+    }
+
+    if (cookieTC == 0){
+      aipimNote({
+        'text': bzTranslation.acceptCookie,
+        'action': 'acceptCookie',
+        'actionText': bzTranslation.acceptCookieBtnText
+      });
+
+    }
 
     $('ul.dropdown-menu li.dropdown').hover(function() {
         $(this).addClass('open');

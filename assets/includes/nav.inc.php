@@ -188,6 +188,12 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
     </div>
 </nav>
 
-<?php if ($_GET["dev"]){ ?>
-  <div class="cookiePolicy"><div class="cookieDescription">We use cookies to improve your site experience, by continuing to use this website you accept such use as outlined in our <a class="cookiePrivacy" href="/en/game/reactoonz-2?privacy=true">cookie policy</a>.</div><div><button class="MuiButtonBase-root MuiButton-root muiButtonBase MuiButton-contained cookieAction MuiButton-containedSecondary muiButtonContainedSecondary" tabindex="0" type="button"><span class="MuiButton-label">Accept</span><span class="MuiTouchRipple-root"></span></button></div></div>
-<?php } ?>
+
+<div class="cookiePolicy d-none">
+  <div class="cookieDescription">
+    We use cookies to improve your site experience, by continuing to use this website you accept such use as outlined in our <a class="cookiePrivacy" href="#">cookie policy</a>.
+  </div>
+  <div>
+    <button class="MuiButtonBase-root MuiButton-root muiButtonBase MuiButton-contained cookieAction MuiButton-containedSecondary muiButtonContainedSecondary" tabindex="0" type="button"><span class="MuiButton-label">Accept</span><span class="MuiTouchRipple-root"></span></button>
+  </div>
+</div>

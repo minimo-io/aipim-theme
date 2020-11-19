@@ -1111,7 +1111,17 @@ function am_enqueue_scripts() {
 
   }
 
-  wp_enqueue_script( 'betizen-js', get_template_directory_uri() . '/assets/javascript/script.js', array(), false, true );
+
+  wp_enqueue_script( 'cookies-js', 'https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js', array(), false, true );
+
+  // register, localize & enqueue betizen script
+  wp_register_script( 'betizen-js', get_template_directory_uri() . '/assets/javascript/script.js' );
+  $bzTranslation = array(
+      'acceptCookie' => __( 'We use cookies to improve your site experience, by continuing to use this website you accept such use as outlined in our cookie policy.', 'aipim' ),
+      'acceptCookieBtnText' => __("Accept", "aipim")
+  );
+  wp_localize_script( 'betizen-js', 'bzTranslation', $bzTranslation );
+  wp_enqueue_script( 'betizen-js', get_template_directory_uri() . '/assets/javascript/script.js', array('cookies-js'), false, true );
 
 }
 
