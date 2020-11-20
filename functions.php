@@ -604,6 +604,8 @@ function default_comments_on( $data ) {
 
 function removeHeadLinks() {
     remove_action('wp_head', 'wp_generator');
+    remove_action( 'wp_head', 'feed_links', 2 ); // Links to the general feeds: Post and Comment Feed
+    remove_action( 'wp_head', 'feed_links_extra', 3 );
     // remove_action('wp_head', 'rsd_link');
     // remove_action('wp_head', 'wlwmanifest_link');
     // remove_action('wp_head', 'wp_resource_hints', 2);

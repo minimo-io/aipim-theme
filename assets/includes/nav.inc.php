@@ -139,7 +139,7 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
                   <li class="d-lg-none nav-item"><a class="btn-mobile-normal mt-3 button button-brand btn-outline btn-sm button-join-small btn-block" href="<?php echo bp_core_get_userlink( get_current_user_id(), false, true ); ?>"><?php _e("Profile", "aipim");  ?></a></li>
                   <li class="d-lg-none"><a class="btn-mobile-normal mt-3 button button-brand btn-outline btn-sm button-join-small btn-block mb-3" href="<?php echo wp_logout_url( aipim_current_page() ); ?>"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;<?php _e("Exit", "aipim");  ?></a></li>
                 <?php }else{
-                  echo '<li class="d-lg-none nav-item"><a class="btn-mobile-normal mt-3 mb-3 button button-brand btn-outline btn-sm button-join-small btn-block" href="'.$login_url.'"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;'.__("Sign in", "aipim").'</a></li>';
+                  echo '<li class="d-lg-none nav-item"><a class="btn-mobile-normal mt-3 mb-3 button button-brand btn-outline btn-sm button-join-small btn-block" href="'.$login_url.'" rel="noindex"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;'.__("Sign in", "aipim").'</a></li>';
                 } ?>
 
             </ul>
@@ -151,7 +151,7 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
                     <a class="button button-brand btn-lg mb-5 mb-lg-2 btn-round mt-2" href="<?php echo wp_registration_url(); ?>"><?php _e("Sign up", "aipim");  ?></a>
                   </li>
                     <li class="nav-item margin-secondary-btn">
-                      <a class="button btn-outline btn-lg mb-5 mb-lg-2 btn-round mt-2" href="<?php echo $login_url; ?>"><?php _e("Sign in", "aipim");  ?></a>
+                      <a rel="noindex" class="button btn-outline btn-lg mb-5 mb-lg-2 btn-round mt-2" href="<?php echo $login_url; ?>"><?php _e("Sign in", "aipim");  ?></a>
                     </li>
                 </ul>
             <?php }  ?>
@@ -191,7 +191,7 @@ if (is_404()) $login_url = site_url( 'wp-login.php', 'login' );
 
 <div class="cookiePolicy d-none">
   <div class="cookieDescription">
-    We use cookies to improve your site experience, by continuing to use this website you accept such use as outlined in our <a class="cookiePrivacy" href="#">cookie policy</a>.
+
   </div>
   <div>
     <button class="MuiButtonBase-root MuiButton-root muiButtonBase MuiButton-contained cookieAction MuiButton-containedSecondary muiButtonContainedSecondary" tabindex="0" type="button"><span class="MuiButton-label">Accept</span><span class="MuiTouchRipple-root"></span></button>

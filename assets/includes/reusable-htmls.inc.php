@@ -343,7 +343,8 @@ function aipim_provider_list_html($term, $class=''){
 // build the language selector
 function aipim_language_selector_html($language_name_visible = false){
   $visitor_geocode = aipim_geocode_flag();
-  $langs = icl_get_languages('skip_missing=0&orderby=custom&order=asc&link_empty_to={%lang}');
+  // $langs = icl_get_languages('skip_missing=0&orderby=custom&order=asc&link_empty_to={%lang}');
+  $langs = icl_get_languages('skip_missing=1&orderby=custom&order=asc&link_empty_to=');
 
   $current_language = $langs[ICL_LANGUAGE_CODE];
   $language_code = aipim_get_short_language_code($current_language); // this will return 'es'
@@ -357,7 +358,6 @@ function aipim_language_selector_html($language_name_visible = false){
     $language_code = aipim_get_short_language_code($lang);
     $local_flag = aipim_replace_with_local_flag($language_code, $visitor_geocode["country_ISO"]);
     echo '<a class="dropdown-item '.($lang_key==ICL_LANGUAGE_CODE ? " font-weight-bold " : "").' flag-icon-background flag-icon-'.$local_flag.'" href="'.$lang["url"].'">'.$lang["native_name"].'</a>';
-
     $lang_count++;
   }
   echo "</div>";

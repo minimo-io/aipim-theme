@@ -99,7 +99,7 @@ $comments = array_reverse($comments); // reorder, newest first.
 					 _e("You must be registered to leave an opinion.", "aipim");
 					 echo '<p class="text-gray fs-14">';
 						 _e("If you already have an account", "aipim");
-						 echo ' <a href="'.wp_login_url( get_permalink() ).'">'.__("access with your username", "aipim").'</a> ';
+						 echo ' <a rel="nofollow" href="'.wp_login_url( get_permalink() ).'">'.__("access with your username", "aipim").'</a> ';
 						 _e("to share your opinion.", "aipim");
 					 echo '</p>';
 					echo '</div>';
