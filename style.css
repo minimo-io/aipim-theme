@@ -14254,9 +14254,15 @@ body.modal-open #main, body.modal-open #nav-header{
 .disclaimers a:hover{
   text-decoration:underline;
 }
-.disclaimers img{
+.disclaimers img.disclaimers-18plus{
   max-width:25px;
+  max-height: 25px;
   margin-right: .8rem;
+}
+img.disclaimers-bga{
+  max-width: 190px;
+  top: -3px;
+  position: relative;
 }
 .disclaimersModal img{
   max-width:110px;

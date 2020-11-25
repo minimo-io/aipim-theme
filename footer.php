@@ -56,10 +56,15 @@
             <p class="hidden-sm-down d-none d-lg-block">v<?php $theme_data = wp_get_theme(); echo $theme_data->get( 'Version' )."  / "; ?><?php _e("Developed by", "aipim");  ?> <a class="maker-dot" href="https://minimo.io" target="_blank">Mínimo</a></p>
           </div>
           <div class="disclaimers disclaimers nav sub-nav Xfooter__sub-nav">
-            <img src='https://www.betizen.org/wp-content/uploads/2020/10/18-plus.png' />
-            <a href="#" data-target="#tc-modal" data-toggle="modal" data-hasbutton="0" data-title="<?php echo esc_attr(__("Play responsibly", "aipim")); ?>" data-content="<?php echo esc_attr("<div class='container disclaimersModal'><center><img src='https://www.betizen.org/wp-content/uploads/2020/10/betizen-typo.png' /></center><br><p class='text-uppercase'><strong>".__("Playing responsibly is all about knowing your limits and playing within your means.", "aipim")."</strong></p><p>".__("Remember that it is against the law for those under the age of 18 to gamble. Betizen is a product for adults who gamble responsibly. We want to bring transparency to the iGaming industry (for players, operators and affiliates), and because of that we take gambling problems seriously.<br>
+            <img class="disclaimers-18plus" src='https://www.betizen.org/wp-content/uploads/2020/10/18-plus.png' />
+            <a class="mt-0 pt-0" href="https://www.begambleaware.org/" target="_blank" rel="nofollow" Xdata-target="#tc-modal" Xdata-toggle="modal" Xdata-hasbutton="0" Xdata-title="<?php echo esc_attr(__("Play responsibly", "aipim")); ?>" data-content="<?php echo esc_attr("<div class='container disclaimersModal'><center><img src='https://www.betizen.org/wp-content/uploads/2020/10/betizen-typo.png' /></center><br><p class='text-uppercase'><strong>".__("Playing responsibly is all about knowing your limits and playing within your means.", "aipim")."</strong></p><p>".__("Remember that it is against the law for those under the age of 18 to gamble. Betizen is a product for adults who gamble responsibly. We want to bring transparency to the iGaming industry (for players, operators and affiliates), and because of that we take gambling problems seriously.<br>
 If you want to take a short break from gaming, you can do so by taking a Time-Out for a period of 24 hours, 48 hours, 7 days or 30 days.
-If you need help, we have an article for you in the blog, or you can get in touch with us so you can get help from third party professionals.", "aipim")."</p><button class='btn btn-brand btn-block btn-checkout text-uppercase' onclick='aipimOpenContactBox();'>".__("Get help", "aipim")."</button></div>"); ?>"><?php _e("Play responsibly", "aipim"); ?></a>
+If you need help, we have an article for you in the blog, or you can get in touch with us so you can get help from third party professionals.", "aipim")."</p><button class='btn btn-brand btn-block btn-checkout text-uppercase' onclick='aipimOpenContactBox();'>".__("Get help", "aipim")."</button></div>"); ?>">
+              <?php
+              // _e("Play responsibly", "aipim");
+              ?>
+              <img class="disclaimers-bga" src="/wp-content/uploads/2020/11/begambleawareorg.png" />
+            </a>
           </div>
         </div>
     </div>
