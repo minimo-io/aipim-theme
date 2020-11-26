@@ -264,6 +264,21 @@
                                                               </div>
                                                           </div>
                                                           <?php
+                                                        }else if (stristr($game_categories[0]->slug, 'video-bingo') != FALSE){
+                                                          ?>
+                                                          <div class="col-6 col-sm">
+                                                              <div class="card">
+                                                                  <div class="card-body text-center">
+                                                                      <h5 class="card-title">
+                                                                        <?php _e("Bingo","aipim");  ?>
+                                                                      </h5>
+                                                                      <p class="card-text display-4">
+                                                                        <?php the_field("bingo_type"); ?>
+                                                                      </p>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                          <?php
                                                         }else if (stristr($game_categories[0]->slug, 'video-poker') != FALSE){
                                                           ?>
                                                           <div class="col-6 col-sm">
@@ -327,6 +342,8 @@
                                                           stristr($game_categories[0]->slug, 'baccarat') != FALSE
                                                           ||
                                                           stristr($game_categories[0]->slug, 'video-poker') != FALSE
+                                                          ||
+                                                          stristr($game_categories[0]->slug, 'video-bingo') != FALSE
                                                           ||
                                                           is_roulette($game_categories)
                                                       ) {
