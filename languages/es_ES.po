@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
-"POT-Creation-Date: 2020-11-19T20:33:26+00:00\n"
-"PO-Revision-Date: 2020-11-19 17:35-0300\n"
+"POT-Creation-Date: 2020-12-08T15:23:10+00:00\n"
+"PO-Revision-Date: 2020-12-08 12:37-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -206,7 +206,7 @@ msgid "Z -> A"
 msgstr "Z -> A"
 
 #: assets/includes/reusable-htmls.inc.php:124
-#: assets/includes/reusable-htmls.inc.php:137 functions.php:1136
+#: assets/includes/reusable-htmls.inc.php:137 functions.php:1138
 msgid "author"
 msgstr "autor"
 
@@ -258,7 +258,7 @@ msgstr "Más"
 msgid "Play for free"
 msgstr "Jugar gratis"
 
-#: assets/includes/reusable-htmls.inc.php:477 single-juegos.php:305
+#: assets/includes/reusable-htmls.inc.php:477 single-juegos.php:320
 msgid "Volatility"
 msgstr "Volatilidad"
 
@@ -273,7 +273,7 @@ msgstr "¡Nuevo!"
 #: assets/includes/reusable-htmls.inc.php:589
 #: assets/includes/shortcodes/siteFigures.inc.php:186 single-bonus.php:202
 #: single-bonus.php:281 single-casinos.php:266 single-casinos.php:401
-#: single-juegos.php:499 single-juegos.php:677
+#: single-juegos.php:516 single-juegos.php:694
 msgid "opinions"
 msgstr "opiniones"
 
@@ -377,8 +377,8 @@ msgid "/en/bonuses/"
 msgstr "/bonos/"
 
 #: assets/includes/shortcodes/aipimFigures.inc.php:49
-#: assets/includes/shortcodes/siteFigures.inc.php:50 functions.php:735
-#: functions.php:739
+#: assets/includes/shortcodes/siteFigures.inc.php:50 functions.php:737
+#: functions.php:741
 msgid "Bonuses"
 msgstr "Bonos"
 
@@ -395,14 +395,14 @@ msgstr "/juegos/"
 #: assets/includes/shortcodes/aipimFigures.inc.php:61
 #: assets/includes/shortcodes/contentIndex.inc.php:36
 #: assets/includes/shortcodes/contentIndex.inc.php:133
-#: assets/includes/shortcodes/siteFigures.inc.php:62 functions.php:672
-#: functions.php:677
+#: assets/includes/shortcodes/siteFigures.inc.php:62 functions.php:674
+#: functions.php:679
 msgid "Games"
 msgstr "Juegos"
 
 #: assets/includes/shortcodes/aipimFigures.inc.php:73
 #: assets/includes/shortcodes/siteFigures.inc.php:74 single-bonus.php:246
-#: single-casinos.php:333 single-juegos.php:623
+#: single-casinos.php:333 single-juegos.php:640
 msgid "Reviews"
 msgstr "Reseñas"
 
@@ -571,7 +571,7 @@ msgstr ""
 "Antes de apostar en línea, es bueno familiarizarse con los juegos y las "
 "pruebas que realizamos para ver cómo pagan."
 
-#: assets/includes/shortcodes/domore.inc.php:24 single-juegos.php:689
+#: assets/includes/shortcodes/domore.inc.php:24 single-juegos.php:706
 msgid "Free play"
 msgstr "Jugar gratis"
 
@@ -1015,10 +1015,10 @@ msgstr "Por favor completa una respuesta"
 #: assets/includes/shortcodes/short-playertest.inc.php:700
 #: assets/includes/shortcodes/short-playertest.inc.php:709
 #: assets/includes/shortcodes/short-playertest.inc.php:718
-#: single-juegos.php:552 single-juegos.php:562 single-juegos.php:570
-#: single-juegos.php:578 single-juegos.php:586 single-juegos.php:733
-#: single-juegos.php:743 single-juegos.php:751 single-juegos.php:759
-#: single-juegos.php:767
+#: single-juegos.php:569 single-juegos.php:579 single-juegos.php:587
+#: single-juegos.php:595 single-juegos.php:603 single-juegos.php:750
+#: single-juegos.php:760 single-juegos.php:768 single-juegos.php:776
+#: single-juegos.php:784
 msgid "Yes"
 msgstr "Sí"
 
@@ -1030,10 +1030,10 @@ msgstr "Sí"
 #: assets/includes/shortcodes/short-playertest.inc.php:701
 #: assets/includes/shortcodes/short-playertest.inc.php:710
 #: assets/includes/shortcodes/short-playertest.inc.php:719
-#: single-juegos.php:554 single-juegos.php:561 single-juegos.php:569
-#: single-juegos.php:577 single-juegos.php:585 single-juegos.php:735
-#: single-juegos.php:742 single-juegos.php:750 single-juegos.php:758
-#: single-juegos.php:766
+#: single-juegos.php:571 single-juegos.php:578 single-juegos.php:586
+#: single-juegos.php:594 single-juegos.php:602 single-juegos.php:752
+#: single-juegos.php:759 single-juegos.php:767 single-juegos.php:775
+#: single-juegos.php:783
 msgid "No"
 msgstr "No"
 
@@ -1105,8 +1105,8 @@ msgstr "Somos la primera comunidad de juego con rankings"
 #: buddypress/members/single/member-header.php:50 footer.php:47
 #: single-bonus.php:84 single-bonus.php:185 single-bonus.php:274
 #: single-casinos.php:88 single-casinos.php:249 single-casinos.php:394
-#: single-juegos.php:168 single-juegos.php:456 single-juegos.php:482
-#: single-juegos.php:670
+#: single-juegos.php:168 single-juegos.php:473 single-juegos.php:499
+#: single-juegos.php:687
 msgid "/en/ranks/"
 msgstr "/rankings/"
 
@@ -1287,16 +1287,37 @@ msgstr "Director de Marketing"
 msgid "Product developer"
 msgstr "Product developer"
 
-#: assets/includes/views/category.html.php:8
-msgid "Home"
-msgstr "Inicio"
+#: assets/includes/views/category-ruleta.inc.php:28
+msgid "How to play"
+msgstr "¿Cómo jugar"
 
+#: assets/includes/views/category-ruleta.inc.php:31
+msgid "Variations of"
+msgstr "Variantes"
+
+#: assets/includes/views/category-ruleta.inc.php:34
+msgid "Bets & Payments"
+msgstr "Apuestas y pagos"
+
+#: assets/includes/views/category-ruleta.inc.php:37
+msgid "Strategies"
+msgstr "Estrategias"
+
+#: assets/includes/views/category-ruleta.inc.php:40
+msgid "F.A.Q"
+msgstr "Preguntas"
+
+#: assets/includes/views/category-ruleta.inc.php:60
 #: assets/includes/views/category.html.php:89
 #: assets/includes/views/page.html.php:11 category-bonos.php:49
-#: category-casinos.php:49 category.php:47 search.php:41 tag.php:59
+#: category-casinos.php:49 category.php:53 search.php:41 tag.php:59
 #: taxonomy-proveedores.php:80
 msgid "Sorry, no posts matched your criteria."
 msgstr "Disculpa, pero no encontramos ningún resultado para tu búsqueda."
+
+#: assets/includes/views/category.html.php:8
+msgid "Home"
+msgstr "Inicio"
 
 #: assets/includes/views/home.html.php:26
 msgid "Join free"
@@ -1361,7 +1382,7 @@ msgstr "Seguir casino"
 msgid "Activity"
 msgstr "Actividad"
 
-#: buddypress/assets/emails/single-bp-email.php:468 functions.php:902
+#: buddypress/assets/emails/single-bp-email.php:468 functions.php:904
 msgid "The trusted community for learning to bet online"
 msgstr "La comunidad confiable para aprender a ganar online"
 
@@ -1570,7 +1591,7 @@ msgstr "Glosario"
 msgid "/en/glossary/"
 msgstr "/glosario/"
 
-#: footer.php:33 functions.php:824
+#: footer.php:33 functions.php:826
 msgid "Providers"
 msgstr "Proveedores"
 
@@ -1610,7 +1631,7 @@ msgstr "/socios/"
 msgid "Developed by"
 msgstr "Creado por"
 
-#: footer.php:60 footer.php:62
+#: footer.php:60
 msgid "Play responsibly"
 msgstr "Juega responsablemente"
 
@@ -1648,220 +1669,220 @@ msgstr ""
 msgid "Get help"
 msgstr "Obtener ayuda"
 
-#: footer.php:88 single-juegos.php:1066
+#: footer.php:93 single-juegos.php:1083
 msgid "Terms & Conditions"
 msgstr "Términos y condiciones"
 
-#: functions.php:673
+#: functions.php:675
 msgid "Game"
 msgstr "Juego"
 
-#: functions.php:674 functions.php:706 functions.php:737
+#: functions.php:676 functions.php:708 functions.php:739
 msgid "Add new"
 msgstr "Agregar nuevo"
 
-#: functions.php:676
+#: functions.php:678
 msgid "New game published"
 msgstr "Nuevo juego publicado"
 
-#: functions.php:678
+#: functions.php:680
 msgid "%1$s posted a new <a href=\"%2$s\">game</a>"
 msgstr "%1$s publicó un nuevo <a href=“%2$s”>juego</a>"
 
-#: functions.php:679
+#: functions.php:681
 msgid "%1$s posted a new <a href=\"%2$s\">game</a>, on the site %3$s"
 msgstr "%1$s publicó un nuevo <a href=“%2$s”>juego</a>, en el sitio %3$s"
 
-#: functions.php:680
+#: functions.php:682
 msgid "Comments about games"
 msgstr "Comentarios sobre los juegos"
 
-#: functions.php:681
+#: functions.php:683
 msgid "Games comments"
 msgstr "Comentarios sobre los juegos"
 
-#: functions.php:682
+#: functions.php:684
 msgid "%1$s commented on a <a href=\"%2$s\">game</a>"
 msgstr "%1$s comentó en el <a href=“%2$s”>juego</a>"
 
-#: functions.php:683
+#: functions.php:685
 msgid "%1$s commented on a <a href=\"%2$s\">game</a>, on the site %3$s"
 msgstr "%1$s comentó en el <a href=“%2$s”>juego</a>, en el sitio %3$s"
 
-#: functions.php:704 functions.php:708
+#: functions.php:706 functions.php:710
 msgid "Casinos"
 msgstr "Casinos"
 
-#: functions.php:705 functions.php:771 single-bonus.php:236
+#: functions.php:707 functions.php:773 single-bonus.php:236
 #: single-bonus.php:300
 msgid "Casino"
 msgstr "Casino"
 
-#: functions.php:707
+#: functions.php:709
 msgid "New casino published"
 msgstr "Nuevo casino publicado"
 
-#: functions.php:709
+#: functions.php:711
 msgid "%1$s posted a new <a href=\"%2$s\">casino</a>"
 msgstr "%1$s publicó un nuevo <a href=“%2$s”>casino</a>"
 
-#: functions.php:710
+#: functions.php:712
 msgid "%1$s posted a new <a href=\"%2$s\">casino</a>, on the site %3$s"
 msgstr "%1$s publicó un nuevo <a href=“%2$s”>casino</a>, en el sitio %3$s"
 
-#: functions.php:711
+#: functions.php:713
 msgid "Comments about casinos"
 msgstr "Comentarios sobre casinos"
 
-#: functions.php:712
+#: functions.php:714
 msgid "Casinos comments"
 msgstr "Comentarios sobre casinos"
 
-#: functions.php:713
+#: functions.php:715
 msgid "%1$s commented on a <a href=\"%2$s\">casino</a>"
 msgstr "%1$s comentó en un <a href=“%2$s”>casino</a>"
 
-#: functions.php:714
+#: functions.php:716
 msgid "%1$s commented on a <a href=\"%2$s\">casino</a>, on the site %3$s"
 msgstr "%1$s comentó en un <a href=“%2$s”>casino</a>, en el sitio %3$s"
 
-#: functions.php:736
+#: functions.php:738
 msgid "Bonus"
 msgstr "Bono"
 
-#: functions.php:738
+#: functions.php:740
 msgid "New bonus published"
 msgstr "Nuevo bono publicado"
 
-#: functions.php:740
+#: functions.php:742
 msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>"
 msgstr "%1$s publicó un nuevo <a href=“%2$s”>bono</a>"
 
-#: functions.php:741
+#: functions.php:743
 msgid "%1$s posted a new <a href=\"%2$s\">bonus</a>, on the site %3$s"
 msgstr "%1$s publicó un nuevo <a href=“%2$s”>bono</a>, en el sitio %3$s"
 
-#: functions.php:742 functions.php:743
+#: functions.php:744 functions.php:745
 msgid "Comments about bonuses"
 msgstr "Comentarios sobre bonos"
 
-#: functions.php:744
+#: functions.php:746
 msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>"
 msgstr "%1$s comentó en un <a href=“%2$s”>bono</a>"
 
-#: functions.php:745
+#: functions.php:747
 msgid "%1$s commented on a <a href=\"%2$s\">bonus</a>, on the site %3$s"
 msgstr "%1$s comentó en un <a href=“%2$s”>bono</a>, en el sitio %3$s"
 
-#: functions.php:782
+#: functions.php:784
 msgid "Lead Partner"
 msgstr "Lead Partner"
 
-#: functions.php:796
+#: functions.php:798
 msgid "Auxiliary sidebar"
 msgstr "Barra lateral auxiliar"
 
-#: functions.php:817 taxonomy-proveedores.php:32
+#: functions.php:819 taxonomy-proveedores.php:32
 msgid "All providers"
 msgstr "Todos los proveedores"
 
-#: functions.php:845
+#: functions.php:847
 msgid "Search casino type"
 msgstr "Buscar tipo de casino"
 
-#: functions.php:846
+#: functions.php:848
 msgid "All types of casinos"
 msgstr "Todo tipo de casinos"
 
-#: functions.php:853
+#: functions.php:855
 msgid "Casino types"
 msgstr "Tipos de casinos"
 
-#: functions.php:898
+#: functions.php:900
 msgid "Betizen - The trusted community for learning to bet online"
 msgstr "Betizen - La comunidad confiable para aprender a ganar online"
 
-#: functions.php:913
+#: functions.php:915
 msgid "Casino to casino"
 msgstr "Casino al casino"
 
-#: functions.php:917
+#: functions.php:919
 msgid "Casino post"
 msgstr "Post del casino"
 
-#: functions.php:920
+#: functions.php:922
 msgid "Not linked to any casino"
 msgstr "No vinculado a ningún casino"
 
-#: functions.php:1015
+#: functions.php:1017
 msgid "Fair"
 msgstr "Justo"
 
-#: functions.php:1016
+#: functions.php:1018
 msgid "Acceptable"
 msgstr "Aceptable"
 
-#: functions.php:1017
+#: functions.php:1019
 msgid "Caution"
 msgstr "Precaución"
 
-#: functions.php:1018
+#: functions.php:1020
 msgid "Dishonest"
 msgstr "Fraudulento"
 
-#: functions.php:1019
+#: functions.php:1021
 msgid "Dangerous"
 msgstr "Peligroso"
 
-#: functions.php:1021
+#: functions.php:1023
 msgid "Positive"
 msgstr "Positivo"
 
-#: functions.php:1022
+#: functions.php:1024
 msgid "Regular"
 msgstr "Regular"
 
-#: functions.php:1023
+#: functions.php:1025
 msgid "Negative"
 msgstr "Negativo"
 
-#: functions.php:1028
+#: functions.php:1030
 msgid "Low"
 msgstr "Baja"
 
-#: functions.php:1029
+#: functions.php:1031
 msgid "Low/Medium"
 msgstr "Baja/Media"
 
-#: functions.php:1030
+#: functions.php:1032
 msgid "Medium"
 msgstr "Media"
 
-#: functions.php:1031
+#: functions.php:1033
 msgid "Medium/High"
 msgstr "Media/Alta"
 
-#: functions.php:1032
+#: functions.php:1034
 msgid "High"
 msgstr "Alta"
 
-#: functions.php:1036
+#: functions.php:1038
 msgid "American"
 msgstr "Americana"
 
-#: functions.php:1037
+#: functions.php:1039
 msgid "European"
 msgstr "Europea"
 
-#: functions.php:1038
+#: functions.php:1040
 msgid "French"
 msgstr "Francesa"
 
-#: functions.php:1106
+#: functions.php:1108
 msgid "Copied!"
 msgstr "¡Copiado!"
 
-#: functions.php:1120
+#: functions.php:1122
 msgid ""
 "We use cookies to improve your site experience, by continuing to use this "
 "website you accept such use as outlined in our cookie policy."
@@ -1870,11 +1891,11 @@ msgstr ""
 "utilizando este sitio web, acepta dicho uso como se describe en nuestra "
 "política de cookies."
 
-#: functions.php:1121
+#: functions.php:1123
 msgid "Accept"
 msgstr "Aceptar"
 
-#: functions.php:1137
+#: functions.php:1139
 msgid "partner"
 msgstr "socio"
 
@@ -1891,7 +1912,7 @@ msgid "Bonus status"
 msgstr "Estado del bono"
 
 #: single-bonus.php:81 single-bonus.php:189 single-casinos.php:85
-#: single-casinos.php:253 single-juegos.php:165 single-juegos.php:486
+#: single-casinos.php:253 single-juegos.php:165 single-juegos.php:503
 msgid "Review"
 msgstr "Opinar"
 
@@ -1917,7 +1938,7 @@ msgstr "Código"
 msgid "Bonus Terms & Condiciones details "
 msgstr "Detalle de las condiciones del bono "
 
-#: single-bonus.php:183 single-juegos.php:479
+#: single-bonus.php:183 single-juegos.php:496
 msgid "Rank"
 msgstr "Ranking"
 
@@ -1930,16 +1951,16 @@ msgid "Published"
 msgstr "Publicado"
 
 #: single-bonus.php:239 single-bonus.php:303 single-casinos.php:304
-#: single-casinos.php:454 single-juegos.php:591 single-juegos.php:774
+#: single-casinos.php:454 single-juegos.php:608 single-juegos.php:791
 msgid "Questions?"
 msgstr "¿Preguntas?"
 
 #: single-bonus.php:239 single-bonus.php:303 single-casinos.php:304
-#: single-casinos.php:454 single-juegos.php:591 single-juegos.php:774
+#: single-casinos.php:454 single-juegos.php:608 single-juegos.php:791
 msgid "Contact us"
 msgstr "Contáctanos"
 
-#: single-bonus.php:293 single-casinos.php:413 single-juegos.php:690
+#: single-bonus.php:293 single-casinos.php:413 single-juegos.php:707
 msgid "Write review"
 msgstr "Escribir opinión"
 
@@ -1975,7 +1996,7 @@ msgstr "Licencia(s)"
 msgid "Withdrawal times"
 msgstr "Tiempos de retiro"
 
-#: single-casinos.php:343 single-juegos.php:624
+#: single-casinos.php:343 single-juegos.php:641
 msgid "Promotions"
 msgstr "Promociones"
 
@@ -2027,7 +2048,7 @@ msgstr "Originalmente"
 msgid "Conclusion about the"
 msgstr "Conclusión sobre el"
 
-#: single-juegos.php:218 single-juegos.php:455 single-juegos.php:488
+#: single-juegos.php:218 single-juegos.php:472 single-juegos.php:505
 msgid "Play"
 msgstr "Jugar"
 
@@ -2043,48 +2064,52 @@ msgstr "/blog/que-es-el-rtp-en-las-tragamonedas/"
 msgid "Type"
 msgstr "Tipo"
 
-#: single-juegos.php:258 single-juegos.php:274 single-juegos.php:290
-#: single-juegos.php:306
+#: single-juegos.php:258 single-juegos.php:289 single-juegos.php:305
+#: single-juegos.php:321
 msgid "/en/articles/what-does-volatility-in-slots-mean/"
 msgstr "/blog/que-es-la-volatilidad-de-las-tragamonedas/"
 
 #: single-juegos.php:273
+msgid "Bingo"
+msgstr "Bingo"
+
+#: single-juegos.php:288
 msgid "Hands"
 msgstr "Manos"
 
-#: single-juegos.php:289
+#: single-juegos.php:304
 msgid "Cards"
 msgstr "Barajas"
 
-#: single-juegos.php:337
+#: single-juegos.php:354
 msgid "Min/Max"
 msgstr ""
 
-#: single-juegos.php:353
+#: single-juegos.php:370
 msgid "Paylines"
 msgstr "Líneas de pago"
 
-#: single-juegos.php:369
+#: single-juegos.php:386
 msgid "Max Win"
 msgstr "Ganancia max."
 
-#: single-juegos.php:458
+#: single-juegos.php:475
 msgid "Play in the casino"
 msgstr "Jugar en el casino"
 
-#: single-juegos.php:512 single-juegos.php:701
+#: single-juegos.php:529 single-juegos.php:718
 msgid "Tests carried out"
 msgstr "Pruebas realizadas"
 
-#: single-juegos.php:514 single-juegos.php:703
+#: single-juegos.php:531 single-juegos.php:720
 msgid "500 spins"
 msgstr "500 giros"
 
-#: single-juegos.php:515 single-juegos.php:704
+#: single-juegos.php:532 single-juegos.php:721
 msgid "500 Spin Test Result"
 msgstr "Resultado de la prueba de 500 giros"
 
-#: single-juegos.php:515 single-juegos.php:704
+#: single-juegos.php:532 single-juegos.php:721
 msgid ""
 "<p>To see the detail and to know what is the <strong>500 spins test</strong> "
 "visit <a target=\"_blank\" href=\"/en/articles/500-spins-test\">this page</"
@@ -2094,75 +2119,75 @@ msgstr ""
 "quinientos giros</strong> visita <a target=\\”_blank\\” href=\\”/blog/prueba-"
 "de-500-giros\\”>esta página</a>.</p>"
 
-#: single-juegos.php:520
+#: single-juegos.php:537
 msgid "Provider"
 msgstr "Proveedor"
 
-#: single-juegos.php:527 single-juegos.php:709
+#: single-juegos.php:544 single-juegos.php:726
 msgid "Category"
 msgstr "Categoría"
 
-#: single-juegos.php:539 single-juegos.php:721
+#: single-juegos.php:556 single-juegos.php:738
 msgid "Reels"
 msgstr "Rieles"
 
-#: single-juegos.php:545 single-juegos.php:726
+#: single-juegos.php:562 single-juegos.php:743
 msgid "Jackpot (max.)"
 msgstr "Acumulado (max.)"
 
-#: single-juegos.php:548 single-juegos.php:729
+#: single-juegos.php:565 single-juegos.php:746
 msgid "Bonus game"
 msgstr "Pantalla de bono"
 
-#: single-juegos.php:558 single-juegos.php:739
+#: single-juegos.php:575 single-juegos.php:756
 msgid "Free spins"
 msgstr "Giros gratis"
 
-#: single-juegos.php:566 single-juegos.php:747
+#: single-juegos.php:583 single-juegos.php:764
 msgid "Multiplier"
 msgstr "Multiplicador"
 
-#: single-juegos.php:574 single-juegos.php:755
+#: single-juegos.php:591 single-juegos.php:772
 msgid "Wilds"
 msgstr "Comodines"
 
-#: single-juegos.php:582 single-juegos.php:763
+#: single-juegos.php:599 single-juegos.php:780
 msgid "Scatter"
 msgstr "Scatter"
 
-#: single-juegos.php:607 single-juegos.php:1017
+#: single-juegos.php:624 single-juegos.php:1034
 msgid "This games appears at"
 msgstr "Este juego aparece en"
 
-#: single-juegos.php:607
+#: single-juegos.php:624
 msgid "It also appears at"
 msgstr "También aparece en"
 
-#: single-juegos.php:789
+#: single-juegos.php:806
 msgid "This game appears in"
 msgstr "Este juego aparece en"
 
-#: single-juegos.php:789
+#: single-juegos.php:806
 msgid "It also appears in"
 msgstr "Aparece también en"
 
-#: single-juegos.php:852 single-juegos.php:1050 single-juegos.php:1054
+#: single-juegos.php:869 single-juegos.php:1067 single-juegos.php:1071
 msgid "Close"
 msgstr "Cerrar"
 
-#: single-juegos.php:853 single-juegos.php:1047
+#: single-juegos.php:870 single-juegos.php:1064
 msgid "Fullscreen"
 msgstr "Pantalla completa"
 
-#: single-juegos.php:965
+#: single-juegos.php:982
 msgid "To play this game on mobile"
 msgstr "Para jugar este juego en dispositivos móviles"
 
-#: single-juegos.php:967
+#: single-juegos.php:984
 msgid "we recommend visiting"
 msgstr "recomendamos visitar"
 
-#: single-juegos.php:972
+#: single-juegos.php:989
 msgid ""
 "Some games are NOT available to play on mobile due to restrictions from game "
 "providers. Not much we can do at the moment more that recommending the best "
@@ -2173,27 +2198,27 @@ msgstr ""
 "podamos hacer en este momento más que recomendar el mejor casino donde poder "
 "encontrarlos para jugar gratis o por dinero."
 
-#: single-juegos.php:1030
+#: single-juegos.php:1047
 msgid "PARTICIPATE WITH THE BONUS!"
 msgstr "¡JUEGA CON EL BONO!"
 
-#: single-juegos.php:1031
+#: single-juegos.php:1048
 msgid "PLAY AT "
 msgstr "JUGAR EN "
 
-#: single-juegos.php:1048
+#: single-juegos.php:1065
 msgid "More games"
 msgstr "Mas juegos"
 
-#: single-juegos.php:1049
+#: single-juegos.php:1066
 msgid "Report broken game"
 msgstr "Reportar juego roto"
 
-#: single-juegos.php:1049
+#: single-juegos.php:1066
 msgid "Broken?"
 msgstr "¿No funciona?"
 
-#: single-juegos.php:1053
+#: single-juegos.php:1070
 msgid "Let's do it!"
 msgstr "¡A por ello!"
 
