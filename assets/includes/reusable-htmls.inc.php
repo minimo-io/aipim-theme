@@ -494,7 +494,6 @@ function aipim_loadmore_games_html($game, $type = "catalog"){
   // game sidebar
   if ($type == "sidebar"){
     $game_box_square = get_field('imagen_juego_square', $game->ID);
-
     $html_loadmore .= '<li class="col-12 mt-2 pl-0">';
     $html_loadmore .=    '<div class="mb-1'.($isFeatured ? " gameListFeatured" : "").'">';
     // var_dump($game_box_square);
