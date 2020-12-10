@@ -84,17 +84,6 @@
         $bjMinBet = get_field("min_bet");
         $bjMaxBet = get_field("max_bet");
 
-        // $provider["id"]
-
-
-        // Here you add your meta_query to get the value from post_meta
-        // $args['meta_query'] => array(
-        //     array(
-        //         'key'     => 'ranking',
-        //         'value'   => 'YOUR VALUE',
-        //         'compare' => 'LIKE',
-        //     ),
-        // );
 
         $the_query_casinos = new WP_Query( array(
             'post_type' => 'casinos',

@@ -1,5 +1,68 @@
 <?php
 
+// small promo box
+function aipimPromoBox($category, $providers){
+  ?>
+  <div>
+    <h2 id="where-to-play-roulette" class="generalH2 text-center"><?php echo __("Where to play", "aipim")." ".$category->name."?"; ?></h2>
+    <div class="theme-cards-holder" style="border-bottom:0;">
+      <?php
+      $aProviders = Array();
+      foreach ($providers as $oTerm){
+        array_push($aProviders, $oTerm[0]->term_id);
+      }
+      $the_query_casinosSpecialCategory = new WP_Query( array(
+        'post_type' => 'casinos',
+        'posts_per_page' => 1,
+
+        'meta_key'=>'considerforads',
+        'orderby' => 'rand',
+        'meta_query'  => array(
+          'relation' => 'OR',
+         Array(
+          'key'     => 'considerforads',
+          'value'   => '1',
+          'compare'=>'LIKE'
+        ),
+        ),
+
+        'tax_query' => Array(
+            // 'relation' => 'AND',
+            Array(
+                'taxonomy' => 'proveedores',
+                'field' => 'term_id',
+                'terms' => $aProviders
+            )
+        )
+      ) );
+      foreach ($the_query_casinosSpecialCategory->posts as $casino){
+         // echo aipim_loadmore_general_html($casino);
+         $casino_promo_code = am_link_external(get_field("link_default", $casino->ID), Array('type'=>'casino', 'id'=>$casino->ID));
+         ?>
+         <div class="aipim-promo-box">
+           <div class="thumb">
+             <a href="<?php echo $casino_promo_code; ?>" aria-label="link" rel="nofollow">
+               <img src="<?php echo get_the_post_thumbnail_url($casino->ID, 'am-300'); ?>" data-src="<?php echo get_the_post_thumbnail_url($casino->ID, 'am-400'); ?>" alt="casino-featured" border="0" title="casino-featured" data-was-processed="true">
+             </a>
+           </div>
+           <div class="welcome-bonus">
+             <h3 class="bonus-offer"><?php _e("Ready to play the best table games? Join our #1 casino site!", "aipim"); ?></h3>
+           </div>
+           <div class="cta-wrap">
+             <a href="<?php echo esc_url( $casino_promo_code ); ?>" class="btn btn-light btn-sm mr-1 mt-1 text-uppercase sm-btn-block" role="button" rel="nofollow">
+               <?php _e("Visit casino", "aipim"); ?>
+             </a>
+           </div>
+         </div>
+         <?php
+      }
+      wp_reset_postdata();
+      ?>
+    </div>
+  </div>
+  <?php
+}
+
 // subscription box
 function aipimSubscriptionBox($category){
   ?>
