@@ -494,6 +494,13 @@ function aipim_loadmore_games_html($game, $type = "catalog"){
   // game sidebar
   if ($type == "sidebar"){
     $game_box_square = get_field('imagen_juego_square', $game->ID);
+    if (!is_array($game_box_square)){
+      $game_box_square_src = wp_get_attachment_image_src( $game_box_square, 'full' );
+      if ($game_box_square_src[0]) $game_box_square = Array('sizes' => Array('thumbnail'));
+      $game_box_square['sizes']['thumbnail'] = $game_box_square_src[0];
+    }
+
+
     $html_loadmore .= '<li class="col-12 mt-2 pl-0">';
     $html_loadmore .=    '<div class="mb-1'.($isFeatured ? " gameListFeatured" : "").'">';
     // var_dump($game_box_square);

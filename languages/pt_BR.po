@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
-"POT-Creation-Date: 2020-12-08T15:23:10+00:00\n"
-"PO-Revision-Date: 2020-12-08 12:38-0300\n"
+"POT-Creation-Date: 2020-12-09T20:41:43+00:00\n"
+"PO-Revision-Date: 2020-12-09 17:43-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -236,7 +236,7 @@ msgstr "jogos"
 
 #: assets/includes/reusable-htmls.inc.php:308
 #: assets/includes/reusable-htmls.inc.php:449
-#: assets/includes/reusable-htmls.inc.php:502
+#: assets/includes/reusable-htmls.inc.php:508
 msgid "featured"
 msgstr "destaque"
 
@@ -262,61 +262,61 @@ msgstr "Jogar grátis"
 msgid "Volatility"
 msgstr "Volatilidade"
 
-#: assets/includes/reusable-htmls.inc.php:530
+#: assets/includes/reusable-htmls.inc.php:536
 msgid "Visit casino"
 msgstr "Visite o cassino"
 
-#: assets/includes/reusable-htmls.inc.php:577
+#: assets/includes/reusable-htmls.inc.php:583
 msgid "New!"
 msgstr "Novo!"
 
-#: assets/includes/reusable-htmls.inc.php:589
+#: assets/includes/reusable-htmls.inc.php:595
 #: assets/includes/shortcodes/siteFigures.inc.php:186 single-bonus.php:202
 #: single-bonus.php:281 single-casinos.php:266 single-casinos.php:401
 #: single-juegos.php:516 single-juegos.php:694
 msgid "opinions"
 msgstr "avaliações"
 
-#: assets/includes/reusable-htmls.inc.php:593
-#: assets/includes/reusable-htmls.inc.php:594 single-casinos.php:244
+#: assets/includes/reusable-htmls.inc.php:599
+#: assets/includes/reusable-htmls.inc.php:600 single-casinos.php:244
 #: single-casinos.php:424
 msgid "Reputation details"
 msgstr "Detalhes da reputação"
 
-#: assets/includes/reusable-htmls.inc.php:599
+#: assets/includes/reusable-htmls.inc.php:605
 #: assets/includes/shortcodes/siteFigures.inc.php:192
 msgid "Analysis"
 msgstr "Análise"
 
-#: assets/includes/reusable-htmls.inc.php:604 single-casinos.php:132
+#: assets/includes/reusable-htmls.inc.php:610 single-casinos.php:132
 #: single-casinos.php:227 single-casinos.php:255 single-casinos.php:412
 msgid "Visit"
 msgstr "Visita"
 
-#: assets/includes/reusable-htmls.inc.php:679
-#: assets/includes/reusable-htmls.inc.php:733
-#: assets/includes/reusable-htmls.inc.php:887
+#: assets/includes/reusable-htmls.inc.php:685
+#: assets/includes/reusable-htmls.inc.php:739
+#: assets/includes/reusable-htmls.inc.php:893
 #: assets/includes/shortcodes/siteFigures.inc.php:122
 msgid "active"
 msgstr "ativo"
 
-#: assets/includes/reusable-htmls.inc.php:679
-#: assets/includes/reusable-htmls.inc.php:733
-#: assets/includes/reusable-htmls.inc.php:887
+#: assets/includes/reusable-htmls.inc.php:685
+#: assets/includes/reusable-htmls.inc.php:739
+#: assets/includes/reusable-htmls.inc.php:893
 #: assets/includes/shortcodes/siteFigures.inc.php:122
 msgid "inactive"
 msgstr "inativo"
 
-#: assets/includes/reusable-htmls.inc.php:705
-#: assets/includes/reusable-htmls.inc.php:738
+#: assets/includes/reusable-htmls.inc.php:711
+#: assets/includes/reusable-htmls.inc.php:744
 #: assets/includes/shortcodes/siteFigures.inc.php:130
 #: assets/includes/shortcodes/siteFigures.inc.php:184
 #: assets/includes/shortcodes/siteFigures.inc.php:222
 msgid "bonus-image"
 msgstr "imagem-bonus"
 
-#: assets/includes/reusable-htmls.inc.php:706
-#: assets/includes/reusable-htmls.inc.php:739
+#: assets/includes/reusable-htmls.inc.php:712
+#: assets/includes/reusable-htmls.inc.php:745
 #: assets/includes/shortcodes/siteFigures.inc.php:131
 #: assets/includes/shortcodes/siteFigures.inc.php:176
 #: assets/includes/shortcodes/siteFigures.inc.php:223
@@ -324,26 +324,26 @@ msgstr "imagem-bonus"
 msgid "More info"
 msgstr "Mais info"
 
-#: assets/includes/reusable-htmls.inc.php:718
-#: assets/includes/reusable-htmls.inc.php:747
-#: assets/includes/reusable-htmls.inc.php:934
+#: assets/includes/reusable-htmls.inc.php:724
+#: assets/includes/reusable-htmls.inc.php:753
+#: assets/includes/reusable-htmls.inc.php:940
 #: assets/includes/shortcodes/siteFigures.inc.php:148 single-bonus.php:294
 msgid "Get bonus"
 msgstr "Obter bônus"
 
-#: assets/includes/reusable-htmls.inc.php:814
+#: assets/includes/reusable-htmls.inc.php:820
 msgid "official response"
 msgstr "resposta oficial"
 
-#: assets/includes/reusable-htmls.inc.php:839
+#: assets/includes/reusable-htmls.inc.php:845
 msgid "reply"
 msgstr "resposta"
 
-#: assets/includes/reusable-htmls.inc.php:840
+#: assets/includes/reusable-htmls.inc.php:846
 msgid "login to reply"
 msgstr "entre para responder"
 
-#: assets/includes/reusable-htmls.inc.php:941
+#: assets/includes/reusable-htmls.inc.php:947
 msgid "This bonus is <b><u>inactive</u></b>."
 msgstr "Este bônus é <b><u>inativo</u></b>."
 
@@ -1279,26 +1279,35 @@ msgid "Product developer"
 msgstr "Product developer"
 
 #: assets/includes/views/category-ruleta.inc.php:28
+msgid "Where to play"
+msgstr "Onde jogar"
+
+#: assets/includes/views/category-ruleta.inc.php:31
+#: assets/includes/views/category-ruleta.inc.php:131
 msgid "How to play"
 msgstr "Como jogar"
 
-#: assets/includes/views/category-ruleta.inc.php:31
+#: assets/includes/views/category-ruleta.inc.php:34
+#: assets/includes/views/category-ruleta.inc.php:134
 msgid "Variations of"
 msgstr "Variações"
 
-#: assets/includes/views/category-ruleta.inc.php:34
+#: assets/includes/views/category-ruleta.inc.php:37
+#: assets/includes/views/category-ruleta.inc.php:137
 msgid "Bets & Payments"
 msgstr "Apostas e pagamentos"
 
-#: assets/includes/views/category-ruleta.inc.php:37
+#: assets/includes/views/category-ruleta.inc.php:40
+#: assets/includes/views/category-ruleta.inc.php:140
 msgid "Strategies"
 msgstr "Estratégias"
 
-#: assets/includes/views/category-ruleta.inc.php:40
+#: assets/includes/views/category-ruleta.inc.php:43
+#: assets/includes/views/category-ruleta.inc.php:143
 msgid "F.A.Q"
 msgstr "Perguntas"
 
-#: assets/includes/views/category-ruleta.inc.php:60
+#: assets/includes/views/category-ruleta.inc.php:120
 #: assets/includes/views/category.html.php:89
 #: assets/includes/views/page.html.php:11 category-bonos.php:49
 #: category-casinos.php:49 category.php:53 search.php:41 tag.php:59
