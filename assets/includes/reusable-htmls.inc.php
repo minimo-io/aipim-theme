@@ -1,7 +1,7 @@
 <?php
 
 // small promo box
-function aipimPromoBox($category, $providers){
+function aipimPromoBox($category, $providers, $promoText = ""){
   ?>
   <div>
     <h2 id="where-to-play-roulette" class="generalH2 text-center"><?php echo __("Where to play", "aipim")." ".$category->name."?"; ?></h2>
@@ -46,7 +46,16 @@ function aipimPromoBox($category, $providers){
              </a>
            </div>
            <div class="welcome-bonus">
-             <h3 class="bonus-offer"><?php _e("Ready to play the best table games? Join our #1 casino site!", "aipim"); ?></h3>
+             <h3 class="bonus-offer">
+               <?php
+               if (empty($promoText)){
+                 _e("Ready to play the best games? Join our #1 casino site!", "aipim");
+               }else{
+                 echo $promoText;
+               }
+
+               ?>
+             </h3>
            </div>
            <div class="cta-wrap">
              <a href="<?php echo esc_url( $casino_promo_code ); ?>" class="btn btn-light btn-sm mr-1 mt-1 text-uppercase sm-btn-block" role="button" rel="nofollow">

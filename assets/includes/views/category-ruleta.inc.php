@@ -27,8 +27,8 @@
                         <i class="fa fa-tag mr-1" aria-hidden="true"></i><?php echo __("How to play", "aipim")." ".$category->name."?"; ?>
                       </a>
 
-                    </div>
                   </div>
+                </div>
                 <?php
                 if (!empty(get_field("conocimiento", $category))){
                   aipimSubscriptionBox($category);
@@ -84,7 +84,6 @@
 
 
         </div>
-
           <div class="theme-cards-holder" style="border-bottom:0;display:none;">
               <ul class="row">
                   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
