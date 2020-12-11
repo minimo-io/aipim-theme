@@ -35,10 +35,10 @@
     </div>
 </section>
 
-
-
 <section class="section">
     <div class="container">
+      <!-- <div class="container mt-3 mb-4 px-0"><?php aipimPromoBox($category, Array(), "", false); ?></div> -->
+
       <?php echo do_shortcode("[sitefigures]"); ?>
       <!-- <br> -->
       <br><br>

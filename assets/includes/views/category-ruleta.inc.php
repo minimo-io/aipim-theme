@@ -126,44 +126,4 @@
 
       </div>
   </section>
-  <style>
-    .aipim-promo-box {
-        border-radius: 5px;
-        background-image: radial-gradient(circle at 88% 50%, #197419, rgb(40, 167, 69) 22%);
-        padding: 15px 55px 15px 15px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .aipim-promo-box img{
-      max-width:80px;
-    }
-    .aipim-promo-box .bonus-offer{
-      color:white !important;
-    }
-    .aipim-promo-box .thumb {
-        width: 144px;
-        height: 80px;
-        border-radius: 5px;
-        text-align:center;
-    }
-    @media screen and (max-width: 767px){
-      .aipim-promo-box {
-          display: block;
-          padding:15px;
-          /* background-image: radial-gradient(circle at 50% 58%, #197419, #0f450f 60%); */
-      }
-      .aipim-promo-box .thumb {
-          margin: 0 auto 15px auto;
-      }
-      .aipim-promo-box .bonus-offer{
-        font-size:20px;
-        text-align:center;
-        margin-bottom:18px;
-      }
-      .aipim-promo-box img{ margin-bottom:95px; }
-    }
-
-  </style>
 </main>

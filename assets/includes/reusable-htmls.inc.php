@@ -1,17 +1,19 @@
 <?php
 
 // small promo box
-function aipimPromoBox($category, $providers, $promoText = ""){
+function aipimPromoBox($category, $providers = Array(), $promoText = "", $showTitle = true){
   ?>
   <div>
-    <h2 id="where-to-play-roulette" class="generalH2 text-center"><?php echo __("Where to play", "aipim")." ".$category->name."?"; ?></h2>
+    <?php
+    if ($showTitle){
+      echo '<h2 id="where-to-play-roulette" class="generalH2 text-center">'.__("Where to play", "aipim")." ".$category->name."?".'</h2>';
+    }
+     ?>
+
     <div class="theme-cards-holder" style="border-bottom:0;">
       <?php
-      $aProviders = Array();
-      foreach ($providers as $oTerm){
-        array_push($aProviders, $oTerm[0]->term_id);
-      }
-      $the_query_casinosSpecialCategory = new WP_Query( array(
+
+      $queryParams = array(
         'post_type' => 'casinos',
         'posts_per_page' => 1,
 
@@ -19,22 +21,29 @@ function aipimPromoBox($category, $providers, $promoText = ""){
         'orderby' => 'rand',
         'meta_query'  => array(
           'relation' => 'OR',
-         Array(
-          'key'     => 'considerforads',
-          'value'   => '1',
-          'compare'=>'LIKE'
-        ),
-        ),
-
-        'tax_query' => Array(
+           Array(
+            'key'     => 'considerforads',
+            'value'   => '1',
+            'compare'=>'LIKE'
+          ),
+        )
+      );
+      if (!empty($providers)){
+        $aProviders = Array();
+        foreach ($providers as $oTerm){
+          array_push($aProviders, $oTerm[0]->term_id);
+        }
+        $queryParams['tax_query'] = Array(
             // 'relation' => 'AND',
             Array(
                 'taxonomy' => 'proveedores',
                 'field' => 'term_id',
                 'terms' => $aProviders
             )
-        )
-      ) );
+        );
+      }
+
+      $the_query_casinosSpecialCategory = new WP_Query( $queryParams );
       foreach ($the_query_casinosSpecialCategory->posts as $casino){
          // echo aipim_loadmore_general_html($casino);
          $casino_promo_code = am_link_external(get_field("link_default", $casino->ID), Array('type'=>'casino', 'id'=>$casino->ID));
