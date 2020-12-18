@@ -68,7 +68,7 @@
       <?php
     }else{
 
-      require_once(get_template_directory()."/assets/includes/views/category-ruleta.inc.php");
+      require_once(get_template_directory()."/assets/includes/views/special-category.inc.php");
 
     }
     ?>
