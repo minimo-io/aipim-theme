@@ -278,7 +278,11 @@
                                                                         <!-- <a href="<?php _e("/en/articles/what-does-volatility-in-slots-mean/", "aipim") ?>"><sup><i class="fa fa-info-circle" aria-hidden="true"></i></sup></a> -->
                                                                       </h5>
                                                                       <p class="card-text display-4">
-                                                                        <?php the_field("hands_count"); ?>
+                                                                        <?php
+                                                                        $hands = get_field("hands_count");
+                                                                        if (empty($hands)) $hands = "x";
+                                                                        echo $hands;
+                                                                        ?>
                                                                       </p>
                                                                   </div>
                                                               </div>
