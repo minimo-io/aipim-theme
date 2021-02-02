@@ -14316,12 +14316,18 @@ img.disclaimers-bga{
 /* promo box */
 .aipim-promo-box {
     border-radius: 5px;
-    background-image: radial-gradient(circle at 88% 50%, #197419, rgb(40, 167, 69) 22%);
+
     padding: 15px 55px 15px 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+}
+.aipim-promo-box-green{
+  background-image: radial-gradient(circle at 88% 50%, #197419, rgb(40, 167, 69) 22%);
+}
+.aipim-promo-box-light{
+  background-image: radial-gradient(circle at 88% 50%, #e7b8ff, #b68bcc 22%);
 }
 .aipim-promo-box img{
   max-width:80px;

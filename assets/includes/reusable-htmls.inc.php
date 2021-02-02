@@ -1,7 +1,7 @@
 <?php
 
 // small promo box
-function aipimPromoBox($category, $providers = Array(), $promoText = "", $showTitle = true){
+function aipimPromoBox($category, $providers = Array(), $promoText = "", $showTitle = true, $promoColor = ""){
   ?>
   <div>
     <?php
@@ -42,13 +42,15 @@ function aipimPromoBox($category, $providers = Array(), $promoText = "", $showTi
             )
         );
       }
+      $boxColor = "aipim-promo-box-green";
+      if (!empty($promoColor)) $boxColor = $promoColor;
 
       $the_query_casinosSpecialCategory = new WP_Query( $queryParams );
       foreach ($the_query_casinosSpecialCategory->posts as $casino){
          // echo aipim_loadmore_general_html($casino);
          $casino_promo_code = am_link_external(get_field("link_default", $casino->ID), Array('type'=>'casino', 'id'=>$casino->ID));
          ?>
-         <div class="aipim-promo-box">
+         <div class="aipim-promo-box <?php echo $boxColor; ?>">
            <div class="thumb">
              <a href="<?php echo $casino_promo_code; ?>" aria-label="link" rel="nofollow">
                <img src="<?php echo get_the_post_thumbnail_url($casino->ID, 'am-300'); ?>" data-src="<?php echo get_the_post_thumbnail_url($casino->ID, 'am-400'); ?>" alt="casino-featured" border="0" title="casino-featured" data-was-processed="true">
@@ -58,7 +60,7 @@ function aipimPromoBox($category, $providers = Array(), $promoText = "", $showTi
              <h3 class="bonus-offer">
                <?php
                if (empty($promoText)){
-                 _e("Ready to play the best games? Join our #1 casino site!", "aipim");
+                 _e("Ready to play the best games? Join a first class casino!", "aipim");
                }else{
                  echo $promoText;
                }
