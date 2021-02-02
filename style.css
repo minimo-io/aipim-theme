@@ -14312,6 +14312,13 @@ img.disclaimers-bga{
 .generalH2{
   font-size:25px;
 }
+.special-cat-image{
+  top:50px;
+  position:relative;
+}
+.special-cat-roulette{
+  max-width:300px !important;
+}
 
 /* promo box */
 .aipim-promo-box {
@@ -14766,6 +14773,9 @@ a.button-join-small{ font-size: 17px !important; }
     }
     .generalH2{
       font-size:20px;
+    }
+    .special-cat-image{
+      top:inherit;
     }
 }
 @media (max-width: 450px) {

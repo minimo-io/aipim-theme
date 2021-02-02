@@ -13,17 +13,16 @@
                         ?>
                       </div>
                     </div>
-                    <div class="col-md-4 d-none d-md-block text-center">
+                    <div class="col-md-4 text-center">
                       <?php
-                      $defaultSpecialImage =
                       $specialImage = get_field("special_image", $category);
                       if (!empty($specialImage)){
                         $aSpecialImage = wp_get_attachment_image_src($specialImage, 'full');
                         if (isset($aSpecialImage[0])) $specialImage = $aSpecialImage[0];
-                        echo '<img alt="roulette" style="position:relative; Xmax-width:300px;top:50px;" src="'.$specialImage.'">';
+                        echo '<img alt="special-image" class="special-cat-image" src="'.$specialImage.'">';
                       }else{
                         $specialImage = 'https://www.betizen.org/wp-content/uploads/2020/12/roulette-mobile.png';
-                        echo '<img alt="roulette" style="position:relative; max-width:300px;top:50px;" src="'.$specialImage.'">';
+                        echo '<img alt="roulette" class="special-cat-image special-cat-roulette" src="'.$specialImage.'">';
                       }
 
 
