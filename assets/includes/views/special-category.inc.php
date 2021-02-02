@@ -25,7 +25,7 @@
                         $specialImage = 'https://www.betizen.org/wp-content/uploads/2020/12/roulette-mobile.png';
                         echo '<img alt="roulette" style="position:relative; max-width:300px;top:50px;" src="'.$specialImage.'">';
                       }
-                      
+
 
 
                       ?>
@@ -65,7 +65,41 @@
                   <div class="row gameDesktopOptions">
                   <div class="gameWideGamebox col-10 pr-0">
                   <div id="gameWideScreen">
-                    <?php echo $defaultGameCode; ?>
+                    <div class="feature-screenshot">
+                        <div data-columns="4" style="opacity: 1; transition: opacity .25s ease-in-out;">
+
+                            <div data-thumb="<?php echo get_the_post_thumbnail_url($defaultGame->ID, 'am-1200'); ?>" style="opacity:.5;">
+                                <?php
+                                // echo '<a '.($is_offline == true ? '' : $mobileLink ).'>';
+                                ?>
+
+                                    <img width="100%" height="600"
+                                         src="<?php echo get_the_post_thumbnail_url($defaultGame->ID, 'am-800'); ?>"
+                                         Xclass="attachment-large_crop size-large_crop"
+                                         style="max-height:600px;"
+                                         alt=""
+                                         title="thumb"
+                                          />
+                                <!-- </a> -->
+                            </div>
+                        </div>
+                        <?php
+                        if (! $is_offline){
+                          echo '<a class="game-play-box game-play-box-desktop" href="#" data-toggle="modal" data-target="#gameWideModal"><div class="game-play-button"><span></span></div></a>';
+//                          echo '<a class="game-play-box game-play-box-mobile" '.$mobileLink.'><div class="game-play-button"><span></span></div></a>';
+                        }
+                        ?>
+                    </div>
+                    <script>
+                     var game_code = '<?php echo str_replace("'", '"',get_field("codigo", $defaultGame));  ?>';
+                     $(document).ready(function(){
+                       $(".game-play-box-desktop").click(function(){
+                         $("#gameWideScreen").empty().append(game_code);
+
+                       });
+                     });
+                    </script>
+                    <?php //echo $defaultGameCode; ?>
                   </div>
                   </div>
                   <div class="col-2 gameWideSidebar px-0 mx-0 pt-3">
