@@ -100,8 +100,8 @@ function aipimSubscriptionBox($category){
                     <?php _e("What exclusive bonuses and good news?", "aipim"); ?>
                   </h4>
                   <p class="d-none d-md-block"><?php the_field("conocimiento", $category); ?></p>
-                  <a href="https://wa.me/59896666902" rel="nofollow" target="_blank" class="btn btn-lg mb-1 btn-knowledge btn-knowledge-green btn-round btn-md-block mt-sm-1"><i class="fa fa-whatsapp mr-1" aria-hidden="true"></i><?php _e("Join Whatsapp", "aipim"); ?></a>
                   <a target="_blank" rel="nofollow" href="<?php the_field("conocimiento_url", $category); ?>" class="btn btn-lg mb-1 btn-knowledge btn-round btn-md-block mt-sm-1"><i class="fa fa-envelope-o mr-1" aria-hidden="true"></i><?php _e("Join the newsletter", "aipim"); ?></a>
+                  <a href="https://wa.me/59896666902" rel="nofollow" target="_blank" class="btn btn-lg mb-1 btn-knowledge btn-knowledge-green btn-round btn-md-block mt-sm-1"><i class="fa fa-whatsapp mr-1" aria-hidden="true"></i><?php _e("Join Whatsapp", "aipim"); ?></a>                  
                 </div>
               </div>
             </div>
