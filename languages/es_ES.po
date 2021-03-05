@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aipim 1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/aipim-theme\n"
-"POT-Creation-Date: 2021-02-02T16:04:35+00:00\n"
-"PO-Revision-Date: 2021-02-26 14:24-0300\n"
+"POT-Creation-Date: 2021-03-05T21:01:23+00:00\n"
+"PO-Revision-Date: 2021-03-05 18:02-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -130,7 +130,7 @@ msgid "Sign up"
 msgstr "Registrarse"
 
 #: assets/includes/reusable-htmls.inc.php:9
-#: assets/includes/views/special-category.inc.php:38
+#: assets/includes/views/special-category.inc.php:37
 msgid "Where to play"
 msgstr "¿Dónde jugar"
 
@@ -148,12 +148,12 @@ msgid "What exclusive bonuses and good news?"
 msgstr "¿Alertas y novededes sobre casinos y juegos confiables?"
 
 #: assets/includes/reusable-htmls.inc.php:103
-msgid "Join Whatsapp"
-msgstr "Envíanos tu consulta"
-
-#: assets/includes/reusable-htmls.inc.php:104
 msgid "Join the newsletter"
 msgstr "¡Únete gratis!"
+
+#: assets/includes/reusable-htmls.inc.php:104
+msgid "Join Whatsapp"
+msgstr "Envíanos tu consulta"
 
 #: assets/includes/reusable-htmls.inc.php:129
 msgid "Newest"
@@ -551,6 +551,18 @@ msgstr "Funciones y mecánica"
 #: assets/includes/shortcodes/contentIndex.inc.php:161
 msgid "Theme and Design"
 msgstr "Temática y diseño"
+
+#: assets/includes/shortcodes/contentIndex.inc.php:171
+msgid "Good"
+msgstr "Bueno"
+
+#: assets/includes/shortcodes/contentIndex.inc.php:174
+msgid "Average"
+msgstr "Medio"
+
+#: assets/includes/shortcodes/contentIndex.inc.php:177
+msgid "Bad"
+msgstr "Malo"
 
 #: assets/includes/shortcodes/domore.inc.php:16
 msgid "List of trustworthy casinos"
@@ -1303,7 +1315,7 @@ msgstr "Inicio"
 
 #: assets/includes/views/category.html.php:89
 #: assets/includes/views/page.html.php:11
-#: assets/includes/views/special-category.inc.php:110 category-bonos.php:49
+#: assets/includes/views/special-category.inc.php:143 category-bonos.php:49
 #: category-casinos.php:49 category.php:53 search.php:41 tag.php:59
 #: taxonomy-proveedores.php:80
 msgid "Sorry, no posts matched your criteria."
@@ -1352,24 +1364,24 @@ msgstr "Los mejores juegos"
 msgid "These are the best games according to other users"
 msgstr "Estos son los mejores juegos de acuerdo a otros usuarios"
 
-#: assets/includes/views/special-category.inc.php:41
-#: assets/includes/views/special-category.inc.php:122
+#: assets/includes/views/special-category.inc.php:40
+#: assets/includes/views/special-category.inc.php:155
 msgid "How to play"
 msgstr "¿Cómo jugar"
 
-#: assets/includes/views/special-category.inc.php:126
+#: assets/includes/views/special-category.inc.php:159
 msgid "Variations of"
 msgstr "Variantes"
 
-#: assets/includes/views/special-category.inc.php:129
+#: assets/includes/views/special-category.inc.php:162
 msgid "Bets & Payments"
 msgstr "Apuestas y pagos"
 
-#: assets/includes/views/special-category.inc.php:132
+#: assets/includes/views/special-category.inc.php:165
 msgid "Strategies"
 msgstr "Estrategias"
 
-#: assets/includes/views/special-category.inc.php:135
+#: assets/includes/views/special-category.inc.php:168
 msgid "F.A.Q"
 msgstr "Preguntas"
 

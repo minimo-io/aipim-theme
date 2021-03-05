@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-02-02T16:04:35+00:00\n"
+"POT-Creation-Date: 2021-03-05T21:01:23+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: aipim\n"
@@ -138,7 +138,7 @@ msgid "Sign up"
 msgstr ""
 
 #: assets/includes/reusable-htmls.inc.php:9
-#: assets/includes/views/special-category.inc.php:38
+#: assets/includes/views/special-category.inc.php:37
 msgid "Where to play"
 msgstr ""
 
@@ -156,11 +156,11 @@ msgid "What exclusive bonuses and good news?"
 msgstr ""
 
 #: assets/includes/reusable-htmls.inc.php:103
-msgid "Join Whatsapp"
+msgid "Join the newsletter"
 msgstr ""
 
 #: assets/includes/reusable-htmls.inc.php:104
-msgid "Join the newsletter"
+msgid "Join Whatsapp"
 msgstr ""
 
 #: assets/includes/reusable-htmls.inc.php:129
@@ -552,6 +552,18 @@ msgstr ""
 #: assets/includes/shortcodes/contentIndex.inc.php:99
 #: assets/includes/shortcodes/contentIndex.inc.php:161
 msgid "Theme and Design"
+msgstr ""
+
+#: assets/includes/shortcodes/contentIndex.inc.php:171
+msgid "Good"
+msgstr ""
+
+#: assets/includes/shortcodes/contentIndex.inc.php:174
+msgid "Average"
+msgstr ""
+
+#: assets/includes/shortcodes/contentIndex.inc.php:177
+msgid "Bad"
 msgstr ""
 
 #: assets/includes/shortcodes/domore.inc.php:16
@@ -1071,7 +1083,7 @@ msgstr ""
 
 #: assets/includes/views/category.html.php:89
 #: assets/includes/views/page.html.php:11
-#: assets/includes/views/special-category.inc.php:110
+#: assets/includes/views/special-category.inc.php:143
 #: category-bonos.php:49
 #: category-casinos.php:49
 #: category.php:53
@@ -1124,24 +1136,24 @@ msgstr ""
 msgid "These are the best games according to other users"
 msgstr ""
 
-#: assets/includes/views/special-category.inc.php:41
-#: assets/includes/views/special-category.inc.php:122
+#: assets/includes/views/special-category.inc.php:40
+#: assets/includes/views/special-category.inc.php:155
 msgid "How to play"
 msgstr ""
 
-#: assets/includes/views/special-category.inc.php:126
+#: assets/includes/views/special-category.inc.php:159
 msgid "Variations of"
 msgstr ""
 
-#: assets/includes/views/special-category.inc.php:129
+#: assets/includes/views/special-category.inc.php:162
 msgid "Bets & Payments"
 msgstr ""
 
-#: assets/includes/views/special-category.inc.php:132
+#: assets/includes/views/special-category.inc.php:165
 msgid "Strategies"
 msgstr ""
 
-#: assets/includes/views/special-category.inc.php:135
+#: assets/includes/views/special-category.inc.php:168
 msgid "F.A.Q"
 msgstr ""
 
