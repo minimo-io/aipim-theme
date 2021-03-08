@@ -153,7 +153,13 @@
                                                                                   <div class="card-body text-center">
                                                                                       <h5 class="card-title"><?php _e("Code","aipim");  ?></h5>
                                                                                       <p class="card-text display-4">
-                                                                                          <?php the_field("bonus_code"); ?>
+                                                                                          <?php
+                                                                                          $bonusCode = get_field("bonus_code");
+                                                                                          if (empty($bonusCode)){
+                                                                                            $bonusCode = "-";
+                                                                                          }
+                                                                                          echo $bonusCode;
+                                                                                          ?>
                                                                                       </p>
                                                                                   </div>
                                                                               </div>
